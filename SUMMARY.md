@@ -1,9 +1,9 @@
 # Summary
 
 * [首页](README.md)
-* [HybridSE](hybridse/README.md)
-* [FEDB](fedb/README.md)
-* [NativeSpark](nativespark/introduction/README.md)
+* HybridSE
+* FEDB
+* NativeSpark
   * [介绍](nativespark/introduction/README.md)
   * 使用文档
     * [使用教程](nativespark/usage/usage.md)
