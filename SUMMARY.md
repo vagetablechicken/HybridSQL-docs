@@ -3,6 +3,9 @@
 * [首页](README.md)
 * HybridSE
 * FEDB
+  * [介绍](fedb/README.md)
+  * 使用文档
+    * [部署](fedb/usage/fedb_deploy.md)
 * NativeSpark
   * [介绍](nativespark/introduction/README.md)
   * 使用文档
