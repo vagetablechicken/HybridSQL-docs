@@ -2,7 +2,11 @@
 
 * [首页](README.md)
 * HybridSE
-  * [介绍](hybridse/README.md)
+  * [介绍](hybridse/introduction/README.md)
+  * 使用文档
+    * [快速开始](./hybridse/usage/quick_start.md)
+    * [SQL语法手册](./hybridse/usage/language_guide/reference.md)
+    * 
 * FEDB
   * [介绍](fedb/README.md)
   * 使用文档
