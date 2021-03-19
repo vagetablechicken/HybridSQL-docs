@@ -1,4 +1,4 @@
-# hybridse::vm::DataHandler
+# DataHandler
 
 `include <vm/catalog.h>`
 

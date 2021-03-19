@@ -1,4 +1,4 @@
-# hybridse::vm::Catalog
+# Catalog
 
 `include <vm/catalog.h>`
 
