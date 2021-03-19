@@ -2,6 +2,7 @@
 
 * [首页](README.md)
 * HybridSE
+  * [介绍](hybridse/README.md)
 * FEDB
   * [介绍](fedb/README.md)
   * 使用文档
