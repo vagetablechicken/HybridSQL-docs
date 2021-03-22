@@ -6,6 +6,13 @@
     * 使用文档
         * [快速开始](./hybridse/usage/quick_start.md)
         * [C++接口](hybridse/usage/api/c++/SUMMARY.md)
+            * [Catalog](hybridse/usage/api/c++/SUMMARY.md#Catalog)
+                * [Catalog](hybridse/usage/api/c++/catalog/catalog.md)
+                * [DataHandler](hybridse/usage/api/c++/catalog/data_handler.md)
+            * [Engine](hybridse/usage/api/c++/engine/compile_info.md)
+                * [CompileType](hybridse/usage/api/c++/engine/compile_info.md#CompileType)
+                * [CompileInfo](hybridse/usage/api/c++/engine/compile_info.md#CompileInfo)
+                * [EngineMode](hybridse/usage/api/c++/engine/engine_mode.md#EngineMode)
     * SQL语法手册
         * [语言结构](hybridse/language_guide/lexical.md)
         * [表达式，函数和运算](hybridse/language_guide/expressions_functions_and_operators.md)

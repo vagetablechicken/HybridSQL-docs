@@ -1,37 +1,3 @@
-# EngineMode
-
-## Summary
-
-`EngineMode`定义了若干Engine模式
-
-```c++
-enum EngineMode { kBatchMode, kRequestMode, kBatchRequestMode };
-```
-
-| Enum Type           | Description                                                  |
-| :------------------ | ------------------------------------------------------------ |
-| `kBatchMode`        | 批式数据处理模式，是传统的SQL执行模式。                      |
-| `kRequestMode`      | 请求式数据处理模式，是`OLDA`下的处理处理模式。一次SQL查询需要传入一条请求数据，在窗口聚合计算时，将以该请求数据作为`CURRENT_ROW`来划定窗口范围计算。 |
-| `kBatchRequestMode` | 批量请求式数据处理模式，`请求式数据处理模式`的变体，唯一的区别是，一次SQL查询可以传入一条或者多条请求数据。 |
-
-# BatchRequestInfo
-
-
-
-# CompileType
-
-## Summary
-
-`CompileType`定义来HybridSE的编译类型，目前仅支持`SQL`编译
-
-```c++
-enum ComileType {
-    kCompileSQL,
-};
-```
-
-
-
 # CompileInfo
 
 ## Summary
@@ -77,7 +43,7 @@ virtual bool get_ir_buffer(const base::RawBuffer& buf) = 0;
 const ComileType GetCompileType() const
 ```
 
-获取编译的类型，目前HybridSE仅支持一种编译类型[ComileType](#CompileType)
+获取编译的类型，目前HybridSE仅支持一种编译类型[ComileType](./compile_type.md#CompileType)
 
 #### GetEngineMode
 
@@ -85,7 +51,7 @@ const ComileType GetCompileType() const
 const EngineMode GetEngineMode() const
 ```
 
-返回编译的[`EngineMode`](#EngineMode) 类型信息
+返回编译的[`EngineMode`](./engine_mode.md#EngineMode) 类型信息
 
 #### GetSQL
 
@@ -119,7 +85,7 @@ const std::string& GetRequestName() const
 
 返回查询请求表名，若不存在请求表，则返回`""`。
 
->  注意，仅仅在[`kRequestMode`](#EngineMode)或者[`kBatchRequestMode`](#EngineMode)模式下，查询存在请求表，其他模式下，该接口返回空字符串。
+>  注意，仅仅在[`kRequestMode`](./engine_mode.md#EngineMode)或者[`kBatchRequestMode`](./engine_mode.md#EngineMode)模式下，查询存在请求表，其他模式下，该接口返回空字符串。
 
 
 
@@ -131,4 +97,19 @@ const BatchRequestInfo& GetBatchRequestInfo() const
 
 返回批请求信息。
 
-> 注意，仅仅在[`kBatchRequestMode`](#EngineMode)模式下，查询编译信息种存在批请求信息[`BatchRequestInfo`](#BatchRequestInfo)。
+> 注意，仅仅在[`kBatchRequestMode`](./engine_mode.md#EngineMode)模式下，查询编译信息种存在批请求信息[`BatchRequestInfo`](./engine_mode.md#BatchRequestInfo)。
+
+
+
+# CompileType
+
+## Summary
+
+`CompileType`定义来HybridSE的编译类型，目前仅支持`SQL`编译
+
+```c++
+enum ComileType {
+    kCompileSQL,
+};
+```
+

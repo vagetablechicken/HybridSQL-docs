@@ -2,19 +2,19 @@
 
 ## Catalog
 
-| Members                                                      | Description |
-| ------------------------------------------------------------ | ----------- |
-| [hybridse::vm::Catalog](./catalog/catalog.md#Catalog)        |             |
-| [hybirdse::vm::DataHandler](./catalog/data_handler.md#DataHanlder) |             |
-| TableHandler                                                 |             |
-| PartitionHandler                                             |             |
-| RowHandler                                                   |             |
-| AysncRowHandler                                              |             |
-| ErrorTableHandler                                            |             |
-| ErrorRowHandler                                              |             |
-| Tablet                                                       |             |
-|                                                              |             |
-|                                                              |             |
+| Members                                              | Description |
+| ---------------------------------------------------- | ----------- |
+| [Catalog](./catalog/catalog.md#Catalog)              |             |
+| [DataHandler](./catalog/data_handler.md#DataHanlder) |             |
+| TableHandler                                         |             |
+| PartitionHandler                                     |             |
+| RowHandler                                           |             |
+| AysncRowHandler                                      |             |
+| ErrorTableHandler                                    |             |
+| ErrorRowHandler                                      |             |
+| Tablet                                               |             |
+|                                                      |             |
+|                                                      |             |
 
 ## Codec
 
@@ -31,10 +31,11 @@
 
 | Members                 |            |
 | ----------------------- | ---------- |
-| [CompileInfo](./engine/engine_context.md#CompileInfo) |            |
+| [CompileInfo](./engine/compile_info.md#CompileInfo) |            |
+| [CompileType](./engine/compile_info.md#CompileType) | |
 | CompileInfoCache        |            |
 | Engine                  |  |
-| [EngineMode](./engine/engine_context.md#EngineMode) |  |
+| [EngineMode](./engine/engine_mode.md#EngineMode) |  |
 | EngineOptions           |            |
 | ExplainOutput           |            |
 | RunSession              |            |
