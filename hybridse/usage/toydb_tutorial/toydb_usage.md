@@ -3,16 +3,16 @@
 ## 编译
 
 ```shell
-mkdir -p ./hybridse/build
-cd ./hybridse/build/
-
-cmake .. -DEXAMPLES_ENABLE=ON
-make -j4
+cd /HybridSE
+mkdir build 
+cmake .. -DEXAMPLES_ENABLE=ON 
+make -j4 hybridse_proto && make -j4 hybride_parser && make toydb -j4
 ```
 
 ## 启动
+
 ```shell
-cd ../examples/toydb/onebox
+cd /HybridSE/examples/toydb/onebox
 sh start_all.sh
 sh start_cli.sh
 ```
@@ -21,20 +21,22 @@ sh start_cli.sh
 
 #### 启动dbms
 ```shell script
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=dbms  --fesql_port=9211  >dbms.log 2>&1 &
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"$BUILD_DIR/src/toydb" --role=dbms  --toydb_port=9211 > dbms.log 2>&1 &
+sleep 5
 ```
 
 #### 启动tablet
 
 ```shell script
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=tablet --fesql_endpoint=127.0.0.1:9212 --fesql_port=9212 --dbms_endpoint=127.0.0.1:9211 >tablet.log 2>&1 &
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"$BUILD_DIR/src/toydb" --role=tablet --toydb_endpoint=127.0.0.1:9212 --toydb_port=9212 --dbms_endpoint=127.0.0.1:9211 > tablet.log 2>&1 &
+sleep 5
 ```
 #### 启动简易CLI客户端
 ```shell
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=client --tablet_endpoint=127.0.0.1:9212 --fesql_endpoint=127.0.0.1:9211
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"${BUILD_DIR}/src/toydb" --role=client --tablet_endpoint=127.0.0.1:9212 --toydb_endpoint=127.0.0.1:9211
 ```
 
 
