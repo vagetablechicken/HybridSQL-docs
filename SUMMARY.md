@@ -1,7 +1,7 @@
 # Summary
 
 * [首页](README.md)
-* [介绍](hybridse/introduction/README.md)
+* HybridSE
     * [介绍](hybridse/introduction/README.md)
     * 使用文档
         * [快速开始](./hybridse/usage/quick_start.md)
