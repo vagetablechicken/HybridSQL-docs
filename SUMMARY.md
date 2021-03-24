@@ -5,7 +5,7 @@
     * [介绍](hybridse/introduction/README.md)
     * 使用文档
         * [快速开始](./hybridse/usage/quick_start.md)
-        * [C++接口](hybridse/usage/api/c++/SUMMARY.md)
+        * [C++](hybridse/usage/api/c++/SUMMARY.md)
             * [Catalog](hybridse/usage/api/c++/SUMMARY.md#Catalog)
                 * [Catalog](hybridse/usage/api/c++/catalog/catalog.md)
                 * [DataHandler](hybridse/usage/api/c++/catalog/data_handler.md)

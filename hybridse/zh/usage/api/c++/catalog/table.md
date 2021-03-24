@@ -10,6 +10,8 @@ typedef ::google::protobuf::RepeatedPtrField<::fesql::type::ColumnDef> Schema;
 
 schema是[`ColumnDef`](#ColumnDef)的集合
 
+
+
 ## ColumnDef
 
 ```protobuf

@@ -4,38 +4,23 @@
 
 ## Summary
 
-`DataHandler`继承自` ListV<Row>`定义了HybridSE的标准行编码数据处理接口，定义了一系列数据集的访问接口
+`DataHandler` is the basic data process abstraction in HyhridSE. It contains the basic operations available on all row-based dataset handlers, such as TableHandler, Partitionhandler.
+
+Internally, each DataHandler is characterized by properties as followed:
 
 | Constructors and Destructors |
 | :--------------------------- |
 | [DataHandler](#DataHandler)  |
 
-| Public functions                          | Return type          |
-| :---------------------------------------- | -------------------- |
-| [GetSchema](#GetSchema)                   | `const Schema*`      |
-| [GetName](#GetName)                       | `const std::string&` |
-| [GetDatabase](#GetDatabase)               | `const std::string&` |
-| [GetHanlderType](#GetHanlderType)         | `const HandlerType`  |
-| [GetHandlerTypeName](#GetHandlerTypeName) | `const std::string`  |
-
-```
-class DataHandler : public ListV<Row> {
- public:
-    DataHandler() {}
-    virtual ~DataHandler() {}
-    // get the schema of table
-    virtual const Schema* GetSchema() = 0;
-
-    // get the table name
-    virtual const std::string& GetName() = 0;
-
-    // get the db name
-    virtual const std::string& GetDatabase() = 0;
-    virtual const HandlerType GetHanlderType() = 0;
-    virtual const std::string GetHandlerTypeName() = 0;
-    virtual base::Status GetStatus() { return base::Status::OK(); }
-};
-```
+| Public functions                          | Return type                    |
+| :---------------------------------------- | ------------------------------ |
+| [GetSchema](#GetSchema)                   | `const Schema*`                |
+| [GetName](#GetName)                       | `const std::string&`           |
+| [GetDatabase](#GetDatabase)               | `const std::string&`           |
+| [GetHanlderType](#GetHanlderType)         | `const HandlerType`            |
+| [GetHandlerTypeName](#GetHandlerTypeName) | `const std::string`            |
+| [GetIterator](#GetIterator)               | `std::unique_ptr<RowIterator>` |
+| [GetCount](#GetCount)                     | `const uint64_t`               |
 
 ## Public functions
 
@@ -45,15 +30,15 @@ class DataHandler : public ListV<Row> {
 DataHandler() {}
 ```
 
-DataHandler的构造函数。
+Constructor of DataHandle
 
 #### GetHanlderType
 
 ```c++
-virtual HandlerType GetHanlderType() = 0;
+virtual HandlerType GetHanlderType()
 ```
 
-返回数据集的类型
+Return the Type of Handler. e.g.
 
 ```c++
 enum HandlerType { kRowHandler, kTableHandler, kPartitionHandler };
@@ -63,7 +48,23 @@ enum HandlerType { kRowHandler, kTableHandler, kPartitionHandler };
 
 ```c++
 // get handler type name
-virtual const std::string GetHandlerTypeName() = 0;
+virtual const std::string GetHandlerTypeName()
 ```
 
-返回数据集的类型名字
+Return the name of handler
+
+#### GetIterator
+
+```c++
+std::unique_ptr<RowIterator> GetIterator()
+```
+
+Return the row Iterator for the sake of row-based dataset
+
+#### GetCount
+
+```c++
+const uint64_t GetCount()
+```
+
+Return the number of rows in the dataset

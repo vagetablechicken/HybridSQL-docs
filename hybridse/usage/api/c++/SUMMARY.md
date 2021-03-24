@@ -2,19 +2,19 @@
 
 ## Catalog
 
-| Members                                              | Description |
-| ---------------------------------------------------- | ----------- |
-| [Catalog](./catalog/catalog.md#Catalog)              |             |
-| [DataHandler](./catalog/data_handler.md#DataHanlder) |             |
-| TableHandler                                         |             |
-| PartitionHandler                                     |             |
-| RowHandler                                           |             |
-| AysncRowHandler                                      |             |
-| ErrorTableHandler                                    |             |
-| ErrorRowHandler                                      |             |
-| Tablet                                               |             |
-|                                                      |             |
-|                                                      |             |
+| Members                                                      | Description |
+| ------------------------------------------------------------ | ----------- |
+| [Catalog](./catalog/catalog.md#Catalog)                      |             |
+| [DataHandler](./catalog/data_handler.md#DataHanlder)         |             |
+| [TableHandler](./catalog/table_handler.md)                   |             |
+| PartitionHandler                                             |             |
+| RowHandler                                                   |             |
+| AysncRowHandler                                              |             |
+| ErrorTableHandler                                            |             |
+| ErrorRowHandler                                              |             |
+| Tablet                                                       |             |
+| [RowIterator](./catalog/row_iterator.md#RowIterator)         |             |
+| [WindowIteraor](./catalog/window_iterator.md#WindowIterator) |             |
 
 ## Codec
 
@@ -46,27 +46,3 @@
 | LocalTablet             |            |
 | LocalTabletTableHandler |            |
 
-
-
-## SDK
-
-| Members       |      |
-| ------------- | ---- |
-|               |      |
-| DatabaseDef   |      |
-| ExecuteRequst |      |
-| ExecuteResult |      |
-| DataType      |      |
-| DBMSSdk       |      |
-| GroupDef      |      |
-| RequestRow    |      |
-| ResultSet     |      |
-| Schema        |      |
-| SchemaImpl    |      |
-| Status        |      |
-| Table         |      |
-| TableImpl     |      |
-| TableSet      |      |
-| TableSetImpl  |      |
-| Value         |      |
-|               |      |
