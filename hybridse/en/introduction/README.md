@@ -28,7 +28,8 @@ HybridSE是一个模块化的SQL编译器和执行器，提供了SQL语法校验
   同一套SQL语法解析和CodeGen代码生成逻辑，保证使用HybridSE的离线和在线系统落地时计算语意一致，SQL中内置UDF/UDAF语法也避免跨语言系统的函数一致性问题。
 
 # Getting Started
-## Prepare Code & Docker
+
+## Prepare code and docker 
 
 ```shell
 git clone git@github.com:4paradigm/HybridSE.git
@@ -38,8 +39,6 @@ cd /Hybridse
 # init enviroment before build
 source tools/init_env.profile.sh
 ```
-
-建议开发者使用我们提供的镜像编译和安装库。若需要使用自己的开发环境，请确保相关依赖库正确安装。编译环境和依赖库可参考 [HybridSQL-docker](https://github.com/4paradigm/HybridSQL-docker/blob/main/README.md)
 
 ## Build
 
@@ -60,9 +59,9 @@ cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_INSTALL_DIR"
 make -j4 install
 ```
 
-更详细的编译和安装配置可以参考 [快速开始HybridSE](../usage/quick_start.md) 
+Consult the [Quick Started with HybridSE](../usage/quick_start.md) page for detailed information on configuring and compiling HybridSE.
 
-## Run tests
+## Run unit test
 
 ```shell
 cd /Hybridse
@@ -83,7 +82,7 @@ make -j4 hybridse_proto && make -j4 hybridse_parser && make -j4 simple_engine_de
 ./src/simple_engine_demo
 ```
 
-## Run ToyDB
+## Run ToyDB Demo
 
 - Build ToyDB
 
@@ -102,7 +101,9 @@ sh start_all.sh
 sh start_cli.sh
 ```
 
-ToyDB是基于HybridSE开发的简易内存数据库. 它支持基本的数据库操作和SQL查询语句。详细使用参见 [ToyDB使用手册](./toydb_usage/toydb_quickstart.md)
+Toydb is a toy In-Memory Database developed upon HybridSE. It supported basic database operations and NewSQL query statements. 
+
+We also offer an [ToyDB quick start](./toydb_usage/toydb_quickstart.md) for quickly learning the basics of using Toydb.
 
 ## 生态项目
 

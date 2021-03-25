@@ -33,7 +33,7 @@ Construct an Catalog
 virtual bool IndexSupport() = 0;
 ```
 
-Return `true` if index based optimization is enable, otherwise return `false`
+Implemented by subclasses return whether index-based-optimization is supported or not.
 
 #### GetDatabase
 
@@ -43,7 +43,7 @@ virtual std::shared_ptr<type::Database> GetDatabase(
     const std::string& db) = 0;
 ```
 
-Return `Database` instance with given dababase name `db`
+Implemented by subclasses to return database info.
 
 #### GetTable
 
@@ -53,13 +53,13 @@ virtual std::shared_ptr<TableHandler> GetTable(
     const std::string& db, const std::string& table_name) = 0;
 ```
 
-Return `TableHandler` instance with given dababase name `db`
+Implemented by subclasses to return a  table handler with given table name
 
 #### GetProcedureInfo
 
 ```c++
 virtual std::shared_ptr<fesql::sdk::ProcedureInfo> GetProcedureInfo(
-    const std::string& db, const std::string& sp_name) = 0;
+    const std::string& db, const std::string& sp_name)
 ```
 
 Return `ProcedureInfo` instance with given dababase name `db` and procedure name `sp_name`

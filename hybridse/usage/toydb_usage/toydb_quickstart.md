@@ -1,63 +1,67 @@
+# ToyDB快速开始
 
 ## 编译
-```shell
-mkdir -p ./hybridse/build
-cd ./hybridse/build/
 
-cmake .. -DEXAMPLES_ENABLE=ON
-make -j4
+```shell
+cd /HybridSE
+mkdir build 
+cmake .. -DEXAMPLES_ENABLE=ON 
+make -j4 hybridse_proto && make -j4 hybride_parser && make toydb -j4
 ```
 
-## 启动
+## 启动 ToyDB
+
 ```shell
-cd ../examples/toydb/onebox
+cd /HybridSE/examples/toydb/onebox
 sh start_all.sh
 sh start_cli.sh
 ```
 
-### 启动命令说明
-
 #### 启动dbms
 ```shell script
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=dbms  --fesql_port=9211  >dbms.log 2>&1 &
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"$BUILD_DIR/src/toydb" --role=dbms  --toydb_port=9211 > dbms.log 2>&1 &
+sleep 5
 ```
 
 #### 启动tablet
 
 ```shell script
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=tablet --fesql_endpoint=127.0.0.1:9212 --fesql_port=9212 --dbms_endpoint=127.0.0.1:9211 >tablet.log 2>&1 &
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"$BUILD_DIR/src/toydb" --role=tablet --toydb_endpoint=127.0.0.1:9212 --toydb_port=9212 --dbms_endpoint=127.0.0.1:9211 > tablet.log 2>&1 &
+sleep 5
 ```
-#### 启动简易CLI客户端
+#### 启动控制台客户端
 ```shell
-BUILD_DIR=../../../build/examples/toydb
-${BUILD_DIR}/src/fesql --role=client --tablet_endpoint=127.0.0.1:9212 --fesql_endpoint=127.0.0.1:9211
+BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
+"${BUILD_DIR}/src/toydb" --role=client --tablet_endpoint=127.0.0.1:9212 --toydb_endpoint=127.0.0.1:9211
 ```
 
 
-## ToyDB使用示例
+## ToyDB examples
 
-### 创建数据库和表
-#### 创建数据库
+### 数据库操作
+#### Create database
 
 ```mysql
 CREATE DATABASE db_name
 ```
 
-#### 进入数据库
+#### Go into database
 
 ```MYSQL
 USE db_name;
 ```
 
-#### 查看所有数据库列表信息
+#### Show databse list 
 
 ```mysql
  SHOW DATABASES;
 ```
 
-#### 建表
+### 表操作
+
+#### Create table
 
 ```mysql
 -- create table t1
@@ -72,7 +76,7 @@ create table IF NOT EXISTS t1(
 );
 ```
 
-#### 查看表结构
+#### Show table schema
 
 ```SQL
 DESC t1;
@@ -85,13 +89,13 @@ DESC t1;
 +---------+---------+------+
 ```
 
-#### 查看当前数据库下表信息
+#### Show table list 
 
 ```mysql
 SHOW TABLES;
 ```
 
-#### 插入表数据
+#### Insert data
 
 ```SQL
 -- prepare t1 data 
@@ -107,17 +111,15 @@ insert into t1 values(11, 5, 6.6, 4000, 8, "string2");
 insert into t1 values(11, 6, 7.7, 5000, 9, "string3");
 ```
 
+### SQL查询
 
-
-### 查询SQL
-
-#### 简单的查询语句
+#### Simple query statement
 ```sql
 -- simple query 
 SELECT column1, column2, column1 + (2*column5) as f1 FROM t1 limit 10;
 ```
 
-### 查询window聚合结果
+#### Window query statement
 
 ```sql
 -- window query t1

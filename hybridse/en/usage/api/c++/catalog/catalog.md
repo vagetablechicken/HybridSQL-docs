@@ -2,11 +2,9 @@
 
 `include <vm/catalog.h>`
 
-
-
 ## Summary
 
-`Catalog`定义HybridSE的标准数据接口，包含一组纯虚函数（或虚函数），用户需要继承并实现自己的`CatalogImpl`
+ `Catalog` class is the Catalog interface for HybridSE. Users should implement their own  `Catalog`
 
 | Constructors and Destructors |
 | :--------------------------- |
@@ -27,7 +25,7 @@
 Catalog() {}
 ```
 
-Catalog的构造函数。
+Construct an Catalog 
 
 #### IndexSupport
 
@@ -35,7 +33,7 @@ Catalog的构造函数。
 virtual bool IndexSupport() = 0;
 ```
 
-返回`true`时，Catalog支持索引优化。否则，Catalog不支持索引优化。
+Implemented by subclasses return whether index-based-optimization is supported or not.
 
 #### GetDatabase
 
@@ -45,7 +43,7 @@ virtual std::shared_ptr<type::Database> GetDatabase(
     const std::string& db) = 0;
 ```
 
-根据给定的数据库名`db`,搜索并返回相应的数据库实例
+Implemented by subclasses to return database info.
 
 #### GetTable
 
@@ -55,13 +53,13 @@ virtual std::shared_ptr<TableHandler> GetTable(
     const std::string& db, const std::string& table_name) = 0;
 ```
 
-返回Catalog中`db.table_name`所对应的表
+Implemented by subclasses to return a  table handler with given table name
 
 #### GetProcedureInfo
 
 ```c++
 virtual std::shared_ptr<fesql::sdk::ProcedureInfo> GetProcedureInfo(
-    const std::string& db, const std::string& sp_name) = 0;
+    const std::string& db, const std::string& sp_name)
 ```
 
-根据给定数据库名`db`以及存储过程名`sp_name`，搜索并返回相应的存储过程信息。
+Return `ProcedureInfo` instance with given dababase name `db` and procedure name `sp_name`

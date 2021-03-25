@@ -1,4 +1,4 @@
-# 快速开始
+# Quick Start
 
 ## Build
 
@@ -13,7 +13,7 @@ cd /Hybridse
 source tools/init_env.profile.sh
 ```
 
-建议开发者使用我们提供的镜像编译和安装库。若需要使用自己的开发环境，请确保相关依赖库正确安装。编译环境和依赖库可参考 [HybridSQL-docker](https://github.com/4paradigm/HybridSQL-docker/blob/main/README.md)
+We strongly recommand developers building hybridse with HybridSQL-docker. Otherwise, the developer have to install related thirdparty lib. See the [HybridSQL-docker](https://github.com/4paradigm/HybridSQL-docker/blob/main/README.md)
 
 ### Configure and build
 
@@ -34,17 +34,17 @@ cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_DIRECTORY"
 make -j4 install
 ```
 
-编译配置项说明:
+Some Common options:
 
-- `-DCMAKE_BUILD_TYPE=type`:  可选的编译类型包括 Debug, Release, RelWithDebInfo (defualt is `RelWithDebInfo`), 编译类型
+- `-DCMAKE_BUILD_TYPE=type`:  Optional valid *type* are Debug, Release, RelWithDebInfo (defualt is `RelWithDebInfo`)
 - `-DCMAKE_INSTALL_PREFIX=directory`: Specify for *directory* the full path name of where you want the HybridSE libraries to be installed (default `/usr/local`)
-- `-DTESTING_ENABLE=On`: 开启测试的编译 (default is `OFF`)
-- `-DEXAMPLES_ENABLE=On`: 开启`examples`模块的编译(default is `OFF`)
-- `-DBENCHMARK_ENABLE=On`: 开启`benchmark`模块的编译 (default is `OFF`)
-- `-DJAVASDK_ENABLE=On`: 开启JAVA SDK的编译 (default is `ON`)
-- `-DPYSDK_ENABLE=On` : 开启Python SDK的编译(default is `ON`)
+- `-DTESTING_ENABLE=On`: Compile with test enabled (default is `OFF`)
+- `-DEXAMPLES_ENABLE=On`: Compile with examples disabled (default is `OFF`)
+- `-DBENCHMARK_ENABLE=On`: Compile with benchmark enabled (default is `OFF`)
+- `-DJAVASDK_ENABLE=On`: Compile with java sdk enabled (default is `ON`)
+- `-DPYSDK_ENABLE=On` : Compile with python sdk enabled (default is `ON`)
 
-## Run tests
+## Run unit test
 
 ```shell
 cd /Hybridse
@@ -65,7 +65,7 @@ make -j4 hybridse_proto && make -j4 hybridse_parser && make -j4 simple_engine_de
 ./src/simple_engine_demo
 ```
 
-## Run ToyDB
+## Run ToyDB Demo
 
 ### Build ToyDB
 
@@ -84,5 +84,7 @@ sh start_all.sh
 sh start_cli.sh
 ```
 
-ToyDB是基于HybridSE开发的简易内存数据库. 它支持基本的数据库操作和SQL查询语句。详细使用参见 [ToyDB使用手册](./toydb_usage/toydb_quickstart.md)
+Toydb is a toy In-Memory Database developed upon HybridSE. It supported basic database operations and NewSQL query statements. 
+
+We also offer an [ToyDB quick start](./toydb_usage/toydb_quickstart.md) for quickly learning the basics of using Toydb.
 
