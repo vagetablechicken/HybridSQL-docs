@@ -4,7 +4,7 @@
 
 ## Summary
 
-Catalog interface for HybridSE. User should his own implementation of `Catalog`
+ `Catalog` class is the Catalog interface for HybridSE. Users should implement their own  `Catalog`
 
 | Constructors and Destructors |
 | :--------------------------- |
