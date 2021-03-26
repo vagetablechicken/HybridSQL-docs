@@ -89,34 +89,17 @@ void SeekToFirst()
 
 Method **SeekToFirst()** seek to the beginning of the dataset.
 
-### Example
+## Example
+
+### MemWindowIterator
 
 The following example shows how to implement simple memory window iterator by inheriting from `WindowIterator`
 
+The following example shows how to implement simple memory table iterator by inheriting `RowIterator`
+
+- Implement constructor by initialize schema and   `MemSegmentMap`  partitions. 
+
 ```c++
-typedef std::map<std::string, MemTimeTable, std::greater<std::string>>
-    MemSegmentMap;
-
-class MemWindowIterator : public WindowIterator {
- public:
-    MemWindowIterator(const MemSegmentMap* partitions, const Schema* schema);
-    ~MemWindowIterator();
-
-    void Seek(const std::string& key);
-    void SeekToFirst();
-    void Next();
-    bool Valid();
-    std::unique_ptr<RowIterator> GetValue();
-    RowIterator* GetRawValue();
-    const Row GetKey();
-
- private:
-    const MemSegmentMap* partitions_;
-    const Schema* schema_;
-    MemSegmentMap::const_iterator iter_;
-    const MemSegmentMap::const_iterator start_iter_;
-    const MemSegmentMap::const_iterator end_iter_;
-};
 MemWindowIterator::MemWindowIterator(const MemSegmentMap* partitions,
                                      const Schema* schema)
     : WindowIterator(),
@@ -126,7 +109,11 @@ MemWindowIterator::MemWindowIterator(const MemSegmentMap* partitions,
       start_iter_(partitions->cbegin()),
       end_iter_(partitions->cend()) {}
 MemWindowIterator::~MemWindowIterator() {}
+```
 
+- Implement basic operation of  `WindowIterator`
+
+```c++
 void MemWindowIterator::Seek(const std::string& key) {
     iter_ = partitions_->find(key);
 }
@@ -137,7 +124,10 @@ std::unique_ptr<RowIterator> MemWindowIterator::GetValue() {
     return std::unique_ptr<RowIterator>(
         new MemTimeTableIterator(&(iter_->second), schema_));
 }
+
+RowIterator* MemWindowIterator::GetRawValue() {
+    return new MemTimeTableIterator(&(iter_->second), schema_);
+}
+
 const Row MemWindowIterator::GetKey() { return Row(iter_->first); }
-
 ```
-

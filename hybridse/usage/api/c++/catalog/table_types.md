@@ -110,3 +110,9 @@ Map of [`IndexSt`](#IndexSt)
 typedef std::map<std::string, ColInfo> Types;
 ```
 
+### OrderType
+
+```c++
+enum OrderType { kDescOrder, kAscOrder, kNoneOrder };
+```
+

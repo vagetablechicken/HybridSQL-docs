@@ -85,33 +85,15 @@ void SeekToFirst()
 
 Implemented by subclasses to seek to the beginning of the dataset.
 
-### Example
+## Example
 
-The following example shows how to implement simple memory table iterator by inheriting from `RowIterator`
+### MemTimeTableIterator
+
+The following example shows how to implement simple memory table iterator by inheriting `RowIterator`
+
+- Implement constructor by initialize schema and  `MemTimeTable` . 
 
 ```c++
-typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
-
-class MemTimeTableIterator : public RowIterator {
- public:
-    MemTimeTableIterator(const MemTimeTable* table, const vm::Schema* schema);
-    ~MemTimeTableIterator();
-    void Seek(const uint64_t& ts);
-    void SeekToFirst();
-    const uint64_t& GetKey() const;
-    void Next();
-    bool Valid() const;
-    const Row& GetValue() override;
-    bool IsSeekable() const override;
-
- private:
-    const MemTimeTable* table_;
-    const Schema* schema_;
-    const MemTimeTable::const_iterator start_iter_;
-    const MemTimeTable::const_iterator end_iter_;
-    MemTimeTable::const_iterator iter_;
-};
-
 MemTimeTableIterator::MemTimeTableIterator(const MemTimeTable* table,
                                            const vm::Schema* schema)
     : table_(table),
@@ -119,8 +101,11 @@ MemTimeTableIterator::MemTimeTableIterator(const MemTimeTable* table,
       start_iter_(table->cbegin()),
       end_iter_(table->cend()),
       iter_(table->cbegin()) {}
-MemTimeTableIterator::~MemTimeTableIterator() {}
+```
 
+- Implement basic operation of  `Iterator`
+
+```c++
 void MemTimeTableIterator::Seek(const uint64_t& ts) {
     iter_ = start_iter_;
     while (iter_ != end_iter_) {
@@ -138,7 +123,6 @@ const Row& hybridse::vm::MemTimeTableIterator::GetValue() {
 void MemTimeTableIterator::Next() { iter_++; }
 bool MemTimeTableIterator::Valid() const { return end_iter_ > iter_; }
 bool MemTimeTableIterator::IsSeekable() const { return true; }
+const Row MemWindowIterator::GetKey() { return Row(iter_->first); }
 ```
-
-
 

@@ -83,6 +83,8 @@ make -j4 hybridse_proto && make -j4 hybridse_parser && make -j4 simple_engine_de
 ./src/simple_engine_demo
 ```
 
+`simple_engine_demo`是基于HyrbidSE实现的内存表SQL查询引擎。更多细节可参见文档[如何实现一个简单引擎](../usage/simple_engine_demo.md)
+
 ## Run ToyDB
 
 - Build ToyDB

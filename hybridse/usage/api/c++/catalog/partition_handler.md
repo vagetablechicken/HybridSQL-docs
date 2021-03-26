@@ -1,14 +1,12 @@
-# TableHandler
-
-`#include<vm/catalog.h>`
+# PartitionHandler
 
 ## Summary
 
-TableHandler is dataset operation abstraction. It inherit from `DataHandler` and  should be implemented by subclasses.
+PartitionHandler is dataset operation abstraction. It inherit from `TableHandler` and  should be implemented by subclasses.
 
-| Constructors and Destructors  | Description                                     |
-| :---------------------------- | ----------------------------------------------- |
-| [TableHandler](#TableHandler) | inherit from [`DataHandler`](./data_handler.md) |
+| Constructors and Destructors          | Description                                       |
+| :------------------------------------ | ------------------------------------------------- |
+| [PartitionHandler](#PartitionHandler) | inherit from [`TableHandler`](./table_handler.md) |
 
 | Public functions                          | Return type                         |
 | :---------------------------------------- | ----------------------------------- |
@@ -32,23 +30,22 @@ TableHandler is dataset operation abstraction. It inherit from `DataHandler` and
 #### GetHanlderType
 
 ```c++
-TableHandler()
+PartitionHandler()
 ```
 
-Constructor of TableHandler
+Constructor of PartitionHandler
 
 #### GetHanlderType
 
-Return `HandlerType::kTableHandler`
+Return `HandlerType::kPartitionHandler`
 
 #### GetHandlerTypeName
 
 ```c++
-// get handler type name
 virtual const std::string GetHandlerTypeName()
 ```
 
-Return the name of handler, and default is `"TableHandler"`
+Return the name of handler, and default is `"PartitionHandler"`
 
 #### GetDatabase
 
@@ -114,10 +111,6 @@ const IndexHint& GetIndex()
 
 Implemented by subclasses  to return table index info. See [IndexHint](./table_types.md#IndexHint).
 
-```c++
-enum HandlerType { kRowHandler, kTableHandler, kPartitionHandler };
-```
-
 #### GetWindowIterator
 
 ```c++
@@ -138,56 +131,68 @@ Return partition handler of specifiy partition binding to given index_name. Defa
 
 ```c++
 virtual std::shared_ptr<Tablet> GetTablet(const std::string& index_name,
-                                              const std::string& key) {
-        return std::shared_ptr<Tablet>();
-}
+                                              const std::string& key)
 ```
 
 Return  `Tablet` binding to specify index and key. Default return `null` tablet. See `Tablet`
 
+#### GetSegment
+
+```c++
+virtual std::shared_ptr<TableHandler> GetSegment(const std::string& key)
+```
+
+Return table handler of specifiy segment binding to given key. Default return `null` partition. Defualt return `null`  table handler.  See [TableHandler](./table_handler.md/#TableHandler).
+
+#### GetSegments
+
+```c++
+std::vector<std::shared_ptr<TableHandler>> GetSegments(
+    const std::vector<std::string>& keys)
+```
+
+Return a set of table handles of specify segments binding to given keys set. See [TableHandler](./table_handler.md/#TableHandler).
+
 ## Examples
 
-### MemTimeTableHandler
+### MemPartitionHandler
 
-The following example shows how to implement simple memory time table handler by inheriting `TableHandler`
+The following example shows how to implement simple memory table partitions handler by inheriting from `PartitionHandler`
 
 - Implement constructor by initialize schema and database name. 
 
 ```c++
-MemTimeTableHandler::MemTimeTableHandler(const std::string& table_name,
+MemPartitionHandler::MemPartitionHandler(const std::string& table_name,
                                          const std::string& db,
                                          const Schema* schema)
-    : TableHandler(),
+    : PartitionHandler(),
       table_name_(table_name),
       db_(db),
       schema_(schema),
-      types_(),
-      index_hint_(),
-      table_(),
       order_type_(kNoneOrder) {}
 ```
 
 - Implement Meta information GetXXX operation 
 
 ```c++
-const Schema* MemTimeTableHandler::GetSchema() { return schema_; }
-const std::string& MemTimeTableHandler::GetName() { return table_name_; }
-const IndexHint& MemTimeTableHandler::GetIndex() { return index_hint_; }
-const std::string& MemTimeTableHandler::GetDatabase() { return db_; }
-const Types& MemTimeTableHandler::GetTypes() { return types_; }
-const IndexHint& MemTimeTableHandler::GetIndex() { return index_hint_; }
+const Schema* MemPartitionHandler::GetSchema() { return schema_; }
+const std::string& MemPartitionHandler::GetName() { return table_name_; }
+const std::string& MemPartitionHandler::GetDatabase() { return db_; }
+const Types& MemPartitionHandler::GetTypes() { return types_; }
+const IndexHint& MemPartitionHandler::GetIndex() { return index_hint_; }
 ```
 
-- Implement `GetIterator`  by using[ `MemTimeTableIterator`](./row_iterator.md#MemTimeTableIterator)
+- Implement `GetWindowIterator`  by using[ `MemWindowIterator`](./window_iterator.md#MemWindowIterator)
 
 ```c++
-std::unique_ptr<WindowIterator> MemPartitionHandler::GetIterator() {
-    std::unique_ptr<MemTimeTableIterator> it(
-        new MemTimeTableIterator(&table_, schema_));
-    return std::move(it);
+std::unique_ptr<WindowIterator> MemPartitionHandler::GetWindowIterator() {
+    return std::unique_ptr<WindowIterator>(
+        new MemWindowIterator(&partitions_, schema_));
 }
 ```
 
-- `GetWindowIterator` unsupported for the sake of simplifying
+- `GetIterator` unsupported for the sake of simplifying
 - We also add operations to `AddRow` into storage for testing 
+
+
 

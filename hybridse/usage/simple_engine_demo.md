@@ -1,18 +1,34 @@
-# Design a simple Engine based on HybridSE
+# 实现一个简单内存表SQL引擎
 
-HybridSE提供C++编程接口，用户可以在C/C++项目中使用[HybridSE的C++SDK](../usage/api/c++/reference.md)实现自己的引擎。
+本文旨在帮助开发者在C/C++项目中，使用C++编程接口用[HybridSE的C++SDK](./api/c++/SUMMARY.md)打造自己的SQL引擎。考虑到存储系统不是本文关注的重点，我们将简化存储层并使用内存表作为底层存储，这可以让我们更好关注引擎实现以及存储系统适配这些细节。
 
-## First step: Implement SimpleCatalog and SimpleTableHandler
+在深入详述实现细节以前，让我们简要概述实现一个简单内存表SQL引擎需要的步骤：
 
-In order to create a HybridSE Engine for our own purpose, we have to implement a  `Catalog` class specifically adapt to our Strorage system. That means it will contain  the infomation of the dataset and will define a set of operations to access data efficiently. 
+1. 设计内存表结构
+2. 实现数据接口(`Catalog`, `TableHandler`)子类: `SimpleCatalog`,`SimpleTableHandler`
+3. 配置引擎`EngineOption`
+4. 构造引擎实例`Engine`
+5. 编译查询
+6. 执行查询
+
+## 1. 内存表存储
+
+<img src="images/image-simple-storage.png" alt="image-20210326122554032" align="left" style="zoom:50%;" />
+
+```c++
+typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
+typedef std::map<std::string, MemTimeTable> MemSegmentMap;
+```
+
+## 2. 实现数据接口
 
 ### SimpleCatalog
 
-In this case, we just simplily implement a `SimpleCatalog`, where two maps( `table_handlers_` and `databases_` ) are adopted to manage the database and table information and data.
+想要开发HybridSE引擎，首先要实现与所在存储系统相适应`Catalog`。这意味着，需要实现数据集元信息的查询接口以及数据访问接口。
 
 ```c++
 /**
- * Simple Catalog without actual data bindings.
+ * Simple Catalog 
  */
 class SimpleCatalog : public Catalog {
  public:
@@ -37,6 +53,10 @@ class SimpleCatalog : public Catalog {
 
 ```
 
+- 实现构造函数
+
+`SimpleCatalog`的构造函数几乎没有额外工作，进提供`index-based-optimzation`的开关初始化。这意味在，初始化后的`SimpleCatalog`的数据库元信息和数据都是空的。
+
 ```c++
 SimpleCatalog::SimpleCatalog(const bool enable_index)
     : enable_index_(enable_index) {}
@@ -59,9 +79,9 @@ std::shared_ptr<TableHandler> SimpleCatalog::GetTable(
 }
 ```
 
-#### Additinal functions
+- 数据操作
 
-`AddDatabase` and `InsertRows`  aren't  necessary for a  `Catalog` class, but here we truely need them to help us to initialize  database and prepare data.
+对于`Catalog`来说，`AddDatabase` 和 `InsertRows`  都不是必须的。我们引入这两个操作方便添加元数据和数据。
 
 ```c++
 void SimpleCatalog::AddDatabase(const hybridse::type::Database &db) {
@@ -90,6 +110,18 @@ bool SimpleCatalog::InsertRows(const std::string &db_name,
     return true;
 }
 ```
+
+### SimpleTableHandler
+
+`SimpleTableHandler`是
+
+### MemIteratorHandler
+
+### MemWindowIteratorHandler
+
+
+
+## Step 1: 实现SimpleCatalog和SimpleTableHandler
 
 
 
