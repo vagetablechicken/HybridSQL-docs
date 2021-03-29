@@ -16,15 +16,15 @@ Inherits from WindowIterator
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[MemWindowIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-memwindowiterator)**(const [MemSegmentMap](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-memsegmentmap) * partitions, const Schema * schema) |
-| | **[~MemWindowIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-~memwindowiterator)**() |
-| void | **[Seek](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seek)**(const std::string & key) |
-| void | **[SeekToFirst](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seektofirst)**() |
-| void | **[Next](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-next)**() |
-| bool | **[Valid](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid)**() |
-| std::unique_ptr< RowIterator > | **[GetValue](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getvalue)**() |
-| RowIterator * | **[GetRawValue](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getrawvalue)**() |
-| const Row | **[GetKey](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)**() |
+| | **[MemWindowIterator](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-memwindowiterator)**(const [MemSegmentMap](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memsegmentmap) * partitions, const Schema * schema) |
+| | **[~MemWindowIterator](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-~memwindowiterator)**() |
+| void | **[Seek](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seek)**(const std::string & key) |
+| void | **[SeekToFirst](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seektofirst)**() |
+| void | **[Next](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-next)**() |
+| bool | **[Valid](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid)**() |
+| std::unique_ptr< RowIterator > | **[GetValue](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getvalue)**() |
+| RowIterator * | **[GetRawValue](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getrawvalue)**() |
+| const Row | **[GetKey](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)**() |
 
 ## Public Functions Documentation
 
@@ -98,4 +98,4 @@ const Row GetKey()
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:49 PDT
+Updated on 28 March 2021 at 19:41:19 PDT

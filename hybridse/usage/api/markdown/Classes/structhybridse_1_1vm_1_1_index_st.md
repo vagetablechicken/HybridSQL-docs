@@ -14,10 +14,10 @@ title: hybridse::vm::IndexSt
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[name](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_index_st.md#variable-name)**  |
-| uint32_t | **[index](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_index_st.md#variable-index)**  |
-| uint32_t | **[ts_pos](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_index_st.md#variable-ts_pos)**  |
-| std::vector< ColInfo > | **[keys](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_index_st.md#variable-keys)**  |
+| std::string | **[name](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-name)**  |
+| uint32_t | **[index](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-index)**  |
+| uint32_t | **[ts_pos](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-ts_pos)**  |
+| std::vector< ColInfo > | **[keys](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-keys)**  |
 
 ## Public Attributes Documentation
 
@@ -51,4 +51,4 @@ std::vector< ColInfo > keys;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:48 PDT
+Updated on 28 March 2021 at 19:41:19 PDT

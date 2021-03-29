@@ -14,30 +14,30 @@ title: hybridse::vm::WindowRange
 
 |                | Name           |
 | -------------- | -------------- |
-| enum| **[WindowPositionStatus](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow} |
+| enum| **[WindowPositionStatus](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow} |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**() |
-| | **[WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**([Window::WindowFrameType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) frame_type, int64_t start_offset, int64_t end_offset, uint64_t rows_preceding, uint64_t max_size) |
-| virtual | **[~WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-~windowrange)**() |
-| const [WindowPositionStatus](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus) | **[GetWindowPositionStatus](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-getwindowpositionstatus)**(bool out_of_rows, bool before_window, bool exceed_window) const |
-| [WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsWindow](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-createrowswindow)**(uint64_t rows_preceding) |
-| [WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsRangeWindow](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-createrowsrangewindow)**(int64_t start_offset, int64_t end_offset, uint64_t max_size =0) |
-| [WindowRange](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsMergeRowsRangeWindow](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#function-createrowsmergerowsrangewindow)**(int64_t start_offset, uint64_t rows_preceding, uint64_t max_size =0) |
+| | **[WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**() |
+| | **[WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**([Window::WindowFrameType](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) frame_type, int64_t start_offset, int64_t end_offset, uint64_t rows_preceding, uint64_t max_size) |
+| virtual | **[~WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-~windowrange)**() |
+| const [WindowPositionStatus](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus) | **[GetWindowPositionStatus](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-getwindowpositionstatus)**(bool out_of_rows, bool before_window, bool exceed_window) const |
+| [WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsWindow](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowswindow)**(uint64_t rows_preceding) |
+| [WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsRangeWindow](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsrangewindow)**(int64_t start_offset, int64_t end_offset, uint64_t max_size =0) |
+| [WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md) | **[CreateRowsMergeRowsRangeWindow](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsmergerowsrangewindow)**(int64_t start_offset, uint64_t rows_preceding, uint64_t max_size =0) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| [Window::WindowFrameType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) | **[frame_type_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**  |
-| int64_t | **[start_offset_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**  |
-| int64_t | **[end_offset_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**  |
-| uint64_t | **[start_row_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**  |
-| uint64_t | **[end_row_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**  |
-| uint64_t | **[max_size_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**  |
+| [Window::WindowFrameType](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) | **[frame_type_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**  |
+| int64_t | **[start_offset_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**  |
+| int64_t | **[end_offset_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**  |
+| uint64_t | **[start_row_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**  |
+| uint64_t | **[end_row_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**  |
+| uint64_t | **[max_size_](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**  |
 
 ## Public Types Documentation
 
@@ -169,4 +169,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:49 PDT
+Updated on 28 March 2021 at 19:41:19 PDT

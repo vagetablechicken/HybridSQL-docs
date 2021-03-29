@@ -14,13 +14,13 @@ title: hybridse::vm::ExplainOutput
 
 |                | Name           |
 | -------------- | -------------- |
-| vm::Schema | **[input_schema](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-input_schema)**  |
-| std::string | **[logical_plan](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-logical_plan)**  |
-| std::string | **[physical_plan](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-physical_plan)**  |
-| std::string | **[ir](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-ir)**  |
-| vm::Schema | **[output_schema](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-output_schema)**  |
-| std::string | **[request_name](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-request_name)**  |
-| [vm::Router](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_router.md) | **[router](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md#variable-router)**  |
+| vm::Schema | **[input_schema](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-input_schema)**  |
+| std::string | **[logical_plan](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-logical_plan)**  |
+| std::string | **[physical_plan](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-physical_plan)**  |
+| std::string | **[ir](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-ir)**  |
+| vm::Schema | **[output_schema](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-output_schema)**  |
+| std::string | **[request_name](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-request_name)**  |
+| [vm::Router](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_router.md) | **[router](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-router)**  |
 
 ## Public Attributes Documentation
 
@@ -75,4 +75,4 @@ vm::Router router;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:48 PDT
+Updated on 28 March 2021 at 19:41:19 PDT

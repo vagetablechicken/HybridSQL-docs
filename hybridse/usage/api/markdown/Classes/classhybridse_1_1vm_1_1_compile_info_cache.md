@@ -14,8 +14,8 @@ title: hybridse::vm::CompileInfoCache
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual std::shared_ptr< [hybridse::vm::CompileInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md) > | **[GetRequestInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info_cache.md#function-getrequestinfo)**(const std::string & db, const std::string & sp_name, base::Status & status) =0 |
-| virtual std::shared_ptr< [hybridse::vm::CompileInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md) > | **[GetBatchRequestInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info_cache.md#function-getbatchrequestinfo)**(const std::string & db, const std::string & sp_name, base::Status & status) =0 |
+| virtual std::shared_ptr< [hybridse::vm::CompileInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info.md) > | **[GetRequestInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info_cache.md#function-getrequestinfo)**(const std::string & db, const std::string & sp_name, base::Status & status) =0 |
+| virtual std::shared_ptr< [hybridse::vm::CompileInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info.md) > | **[GetBatchRequestInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info_cache.md#function-getbatchrequestinfo)**(const std::string & db, const std::string & sp_name, base::Status & status) =0 |
 
 ## Public Functions Documentation
 
@@ -43,4 +43,4 @@ virtual std::shared_ptr< hybridse::vm::CompileInfo > GetBatchRequestInfo(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:48 PDT
+Updated on 28 March 2021 at 19:41:19 PDT

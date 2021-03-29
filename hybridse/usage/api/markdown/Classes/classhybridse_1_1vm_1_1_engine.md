@@ -14,16 +14,16 @@ title: hybridse::vm::Engine
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Engine](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-engine)**(const std::shared_ptr< [Catalog](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_catalog.md) > & cl, const [EngineOptions](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine_options.md) & options) |
-| | **[Engine](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-engine)**(const std::shared_ptr< [Catalog](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_catalog.md) > & cl) |
-| | **[~Engine](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-~engine)**() |
-| bool | **[Get](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-get)**(const std::string & sql, const std::string & db, [RunSession](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_run_session.md) & session, base::Status & status) |
-| bool | **[GetDependentTables](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-getdependenttables)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, std::set< std::string > * tables, base::Status & status) |
-| bool | **[Explain](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-explain)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, [ExplainOutput](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md) * explain_output, base::Status * status) |
-| bool | **[Explain](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-explain)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, const std::set< size_t > & common_column_indices, [ExplainOutput](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_explain_output.md) * explain_output, base::Status * status) |
-| void | **[UpdateCatalog](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-updatecatalog)**(std::shared_ptr< [Catalog](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_catalog.md) > cl) |
-| void | **[ClearCacheLocked](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-clearcachelocked)**(const std::string & db) |
-| void | **[InitializeGlobalLLVM](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_engine.md#function-initializegloballlvm)**() |
+| | **[Engine](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-engine)**(const std::shared_ptr< [Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md) > & cl, const [EngineOptions](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine_options.md) & options) |
+| | **[Engine](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-engine)**(const std::shared_ptr< [Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md) > & cl) |
+| | **[~Engine](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-~engine)**() |
+| bool | **[Get](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-get)**(const std::string & sql, const std::string & db, [RunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_run_session.md) & session, base::Status & status) |
+| bool | **[GetDependentTables](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-getdependenttables)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, std::set< std::string > * tables, base::Status & status) |
+| bool | **[Explain](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-explain)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, [ExplainOutput](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md) * explain_output, base::Status * status) |
+| bool | **[Explain](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-explain)**(const std::string & sql, const std::string & db, [EngineMode](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode, const std::set< size_t > & common_column_indices, [ExplainOutput](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md) * explain_output, base::Status * status) |
+| void | **[UpdateCatalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-updatecatalog)**(std::shared_ptr< [Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md) > cl) |
+| void | **[ClearCacheLocked](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-clearcachelocked)**(const std::string & db) |
+| void | **[InitializeGlobalLLVM](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md#function-initializegloballlvm)**() |
 
 ## Public Functions Documentation
 
@@ -132,4 +132,4 @@ static void InitializeGlobalLLVM()
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:34:48 PDT
+Updated on 28 March 2021 at 19:41:19 PDT
