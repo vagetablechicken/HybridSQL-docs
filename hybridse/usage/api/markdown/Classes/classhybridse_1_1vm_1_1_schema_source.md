@@ -14,23 +14,23 @@ title: hybridse::vm::SchemaSource
 
 |                | Name           |
 | -------------- | -------------- |
-| const hybridse::codec::Schema * | **[GetSchema](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const |
-| size_t | **[GetColumnID](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnid)**(size_t idx) const |
-| const std::string & | **[GetColumnName](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnname)**(size_t idx) const |
-| const hybridse::type::Type | **[GetColumnType](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumntype)**(size_t idx) const |
-| const std::string & | **[GetSourceName](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcename)**() const |
-| void | **[SetSchema](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const codec::Schema * schema) |
-| void | **[SetSourceName](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsourcename)**(const std::string & name) |
-| void | **[SetColumnID](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setcolumnid)**(size_t idx, size_t column_id) |
-| void | **[SetSource](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsource)**(size_t idx, size_t child_idx, size_t child_column_id) |
-| void | **[SetNonSource](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setnonsource)**(size_t idx) |
-| int | **[GetSourceColumnID](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcecolumnid)**(size_t idx) const |
-| int | **[GetSourceChildIdx](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcechildidx)**(size_t idx) const |
-| bool | **[IsSourceColumn](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-issourcecolumn)**(size_t idx) const |
-| bool | **[IsStrictSourceColumn](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-isstrictsourcecolumn)**(size_t idx) const |
-| size_t | **[size](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-size)**() const |
-| void | **[Clear](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-clear)**() |
-| std::string | **[ToString](/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-tostring)**() const |
+| const hybridse::codec::Schema * | **[GetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const |
+| size_t | **[GetColumnID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnid)**(size_t idx) const |
+| const std::string & | **[GetColumnName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnname)**(size_t idx) const |
+| const hybridse::type::Type | **[GetColumnType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumntype)**(size_t idx) const |
+| const std::string & | **[GetSourceName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcename)**() const |
+| void | **[SetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const codec::Schema * schema) |
+| void | **[SetSourceName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-setsourcename)**(const std::string & name) |
+| void | **[SetColumnID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-setcolumnid)**(size_t idx, size_t column_id) |
+| void | **[SetSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-setsource)**(size_t idx, size_t child_idx, size_t child_column_id) |
+| void | **[SetNonSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-setnonsource)**(size_t idx) |
+| int | **[GetSourceColumnID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcecolumnid)**(size_t idx) const |
+| int | **[GetSourceChildIdx](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcechildidx)**(size_t idx) const |
+| bool | **[IsSourceColumn](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-issourcecolumn)**(size_t idx) const |
+| bool | **[IsStrictSourceColumn](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-isstrictsourcecolumn)**(size_t idx) const |
+| size_t | **[size](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-size)**() const |
+| void | **[Clear](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-clear)**() |
+| std::string | **[ToString](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md#function-tostring)**() const |
 
 ## Public Functions Documentation
 
@@ -182,4 +182,4 @@ std::string ToString() const
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:49 PDT

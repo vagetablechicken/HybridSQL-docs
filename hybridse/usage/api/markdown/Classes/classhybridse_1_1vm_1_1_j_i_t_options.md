@@ -14,14 +14,14 @@ title: hybridse::vm::JITOptions
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[is_enable_mcjit](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_mcjit)**() const |
-| void | **[set_enable_mcjit](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_mcjit)**(bool flag) |
-| bool | **[is_enable_vtune](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_vtune)**() const |
-| void | **[set_enable_vtune](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_vtune)**(bool flag) |
-| bool | **[is_enable_gdb](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_gdb)**() const |
-| void | **[set_enable_gdb](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_gdb)**(bool flag) |
-| bool | **[is_enable_perf](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_perf)**() const |
-| void | **[set_enable_perf](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_perf)**(bool flag) |
+| bool | **[is_enable_mcjit](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_mcjit)**() const |
+| void | **[set_enable_mcjit](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_mcjit)**(bool flag) |
+| bool | **[is_enable_vtune](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_vtune)**() const |
+| void | **[set_enable_vtune](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_vtune)**(bool flag) |
+| bool | **[is_enable_gdb](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_gdb)**() const |
+| void | **[set_enable_gdb](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_gdb)**(bool flag) |
+| bool | **[is_enable_perf](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-is_enable_perf)**() const |
+| void | **[set_enable_perf](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md#function-set_enable_perf)**(bool flag) |
 
 ## Public Functions Documentation
 
@@ -91,4 +91,4 @@ inline void set_enable_perf(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:49 PDT

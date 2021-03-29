@@ -10,72 +10,72 @@ title: hybridse::vm::MemTableHandler
 
 `#include <mem_catalog.h>`
 
-Inherits from [hybridse::vm::TableHandler](/Classes/classhybridse_1_1vm_1_1_table_handler.md), [hybridse::vm::DataHandler](/Classes/classhybridse_1_1vm_1_1_data_handler.md), hybridse::codec::ListV< Row >
+Inherits from [hybridse::vm::TableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md), [hybridse::vm::DataHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md), hybridse::codec::ListV< Row >
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[MemTableHandler](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**() |
-| | **[MemTableHandler](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**(const Schema * schema) |
-| | **[MemTableHandler](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**(const std::string & table_name, const std::string & db, const Schema * schema) |
-| | **[~MemTableHandler](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-~memtablehandler)**() override |
-| virtual const [Types](/Namespaces/namespacehybridse_1_1vm.md#typedef-types) & | **[GetTypes](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gettypes)**() override |
-| virtual const Schema * | **[GetSchema](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getschema)**() |
-| virtual const std::string & | **[GetName](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getname)**() |
-| virtual const [IndexHint](/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) & | **[GetIndex](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getindex)**() |
-| virtual const std::string & | **[GetDatabase](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getdatabase)**() |
-| std::unique_ptr< RowIterator > | **[GetIterator](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getiterator)**() override |
-| RowIterator * | **[GetRawIterator](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getrawiterator)**() override |
-| virtual std::unique_ptr< WindowIterator > | **[GetWindowIterator](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getwindowiterator)**(const std::string & idx_name) |
-| void | **[AddRow](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-addrow)**(const Row & row) |
-| void | **[Reverse](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-reverse)**() |
-| virtual const uint64_t | **[GetCount](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getcount)**() |
-| virtual Row | **[At](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-at)**(uint64_t pos) |
-| virtual const [OrderType](/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) | **[GetOrderType](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getordertype)**() const |
-| void | **[SetOrderType](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-setordertype)**(const [OrderType](/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) order_type) |
-| virtual const std::string | **[GetHandlerTypeName](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gethandlertypename)**() override |
+| | **[MemTableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**() |
+| | **[MemTableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**(const Schema * schema) |
+| | **[MemTableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-memtablehandler)**(const std::string & table_name, const std::string & db, const Schema * schema) |
+| | **[~MemTableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-~memtablehandler)**() override |
+| virtual const [Types](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-types) & | **[GetTypes](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gettypes)**() override |
+| virtual const Schema * | **[GetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getschema)**() |
+| virtual const std::string & | **[GetName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getname)**() |
+| virtual const [IndexHint](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-indexhint) & | **[GetIndex](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getindex)**() |
+| virtual const std::string & | **[GetDatabase](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getdatabase)**() |
+| std::unique_ptr< RowIterator > | **[GetIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getiterator)**() override |
+| RowIterator * | **[GetRawIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getrawiterator)**() override |
+| virtual std::unique_ptr< WindowIterator > | **[GetWindowIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getwindowiterator)**(const std::string & idx_name) |
+| void | **[AddRow](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-addrow)**(const Row & row) |
+| void | **[Reverse](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-reverse)**() |
+| virtual const uint64_t | **[GetCount](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getcount)**() |
+| virtual Row | **[At](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-at)**(uint64_t pos) |
+| virtual const [OrderType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-ordertype) | **[GetOrderType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getordertype)**() const |
+| void | **[SetOrderType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-setordertype)**(const [OrderType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-ordertype) order_type) |
+| virtual const std::string | **[GetHandlerTypeName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gethandlertypename)**() override |
 
 ## Protected Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[Resize](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-resize)**(const size_t size) |
-| bool | **[SetRow](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-setrow)**(const size_t idx, const Row & row) |
+| void | **[Resize](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-resize)**(const size_t size) |
+| bool | **[SetRow](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#function-setrow)**(const size_t idx, const Row & row) |
 
 ## Protected Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| const std::string | **[table_name_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-table_name_)**  |
-| const std::string | **[db_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-db_)**  |
-| const Schema * | **[schema_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-schema_)**  |
-| [Types](/Namespaces/namespacehybridse_1_1vm.md#typedef-types) | **[types_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-types_)**  |
-| [IndexHint](/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) | **[index_hint_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-index_hint_)**  |
-| [MemTable](/Namespaces/namespacehybridse_1_1vm.md#typedef-memtable) | **[table_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-table_)**  |
-| [OrderType](/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) | **[order_type_](/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-order_type_)**  |
+| const std::string | **[table_name_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-table_name_)**  |
+| const std::string | **[db_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-db_)**  |
+| const Schema * | **[schema_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-schema_)**  |
+| [Types](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-types) | **[types_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-types_)**  |
+| [IndexHint](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-indexhint) | **[index_hint_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-index_hint_)**  |
+| [MemTable](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#typedef-memtable) | **[table_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-table_)**  |
+| [OrderType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-ordertype) | **[order_type_](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_mem_table_handler.md#variable-order_type_)**  |
 
 ## Additional inherited members
 
-**Public Functions inherited from [hybridse::vm::TableHandler](/Classes/classhybridse_1_1vm_1_1_table_handler.md)**
+**Public Functions inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md)**
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TableHandler](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**() |
-| virtual | **[~TableHandler](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-~tablehandler)**() |
-| virtual const [HandlerType](/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) | **[GetHanlderType](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethanldertype)**() override |
-| virtual std::shared_ptr< [PartitionHandler](/Classes/classhybridse_1_1vm_1_1_partition_handler.md) > | **[GetPartition](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getpartition)**(const std::string & index_name) |
-| virtual std::shared_ptr< [Tablet](/Classes/classhybridse_1_1vm_1_1_tablet.md) > | **[GetTablet](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::string & pk) |
-| virtual std::shared_ptr< [Tablet](/Classes/classhybridse_1_1vm_1_1_tablet.md) > | **[GetTablet](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks) |
+| | **[TableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**() |
+| virtual | **[~TableHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-~tablehandler)**() |
+| virtual const [HandlerType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-handlertype) | **[GetHanlderType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-gethanldertype)**() override |
+| virtual std::shared_ptr< [PartitionHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_partition_handler.md) > | **[GetPartition](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-getpartition)**(const std::string & index_name) |
+| virtual std::shared_ptr< [Tablet](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_tablet.md) > | **[GetTablet](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::string & pk) |
+| virtual std::shared_ptr< [Tablet](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_tablet.md) > | **[GetTablet](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks) |
 
-**Public Functions inherited from [hybridse::vm::DataHandler](/Classes/classhybridse_1_1vm_1_1_data_handler.md)**
+**Public Functions inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md)**
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[DataHandler](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**() |
-| virtual | **[~DataHandler](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-~datahandler)**() |
-| virtual const [HandlerType](/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) | **[GetHanlderType](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0 |
-| virtual base::Status | **[GetStatus](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**() |
+| | **[DataHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**() |
+| virtual | **[~DataHandler](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-~datahandler)**() |
+| virtual const [HandlerType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-handlertype) | **[GetHanlderType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0 |
+| virtual base::Status | **[GetStatus](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**() |
 
 
 ## Public Functions Documentation
@@ -121,7 +121,7 @@ inline virtual const Types & GetTypes() override
 ```
 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetTypes](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
+**Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
 ### function GetSchema
@@ -133,7 +133,7 @@ inline virtual const Schema * GetSchema()
 
 **Return**: 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetSchema](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
+**Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
 Implemented by subclasses to return table schema. 
@@ -148,7 +148,7 @@ inline virtual const std::string & GetName()
 
 **Return**: 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetName](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
+**Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
 Implemented by subclasses to return table name. 
@@ -161,7 +161,7 @@ inline virtual const IndexHint & GetIndex()
 ```
 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetIndex](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
+**Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
 ### function GetDatabase
@@ -173,7 +173,7 @@ inline virtual const std::string & GetDatabase()
 
 **Return**: 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
+**Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
 Implemented by subclasses to return the name of database. 
@@ -202,7 +202,7 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 ```
 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetWindowIterator](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getwindowiterator)
+**Reimplements**: [hybridse::vm::TableHandler::GetWindowIterator](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-getwindowiterator)
 
 
 ### function AddRow
@@ -244,7 +244,7 @@ inline virtual const OrderType GetOrderType() const
 ```
 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetOrderType](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getordertype)
+**Reimplements**: [hybridse::vm::TableHandler::GetOrderType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-getordertype)
 
 
 ### function SetOrderType
@@ -265,7 +265,7 @@ inline virtual const std::string GetHandlerTypeName() override
 
 **Return**: 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetHandlerTypeName](/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethandlertypename)
+**Reimplements**: [hybridse::vm::TableHandler::GetHandlerTypeName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_table_handler.md#function-gethandlertypename)
 
 
 Implemented by subclasses return the name of handler type 
@@ -345,4 +345,4 @@ OrderType order_type_;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:49 PDT

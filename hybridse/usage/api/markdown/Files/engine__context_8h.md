@@ -9,17 +9,17 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/engine_context.h
 
 | Name           |
 | -------------- |
-| **[hybridse](/Namespaces/namespacehybridse.md)**  |
-| **[hybridse::vm](/Namespaces/namespacehybridse_1_1vm.md)**  |
+| **[hybridse](/hybridse/usage/api/markdownNamespaces/namespacehybridse.md)**  |
+| **[hybridse::vm](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[hybridse::vm::BatchRequestInfo](/Classes/structhybridse_1_1vm_1_1_batch_request_info.md)**  |
-| class | **[hybridse::vm::CompileInfo](/Classes/classhybridse_1_1vm_1_1_compile_info.md)**  |
-| class | **[hybridse::vm::CompileInfoCache](/Classes/classhybridse_1_1vm_1_1_compile_info_cache.md)**  |
-| class | **[hybridse::vm::JITOptions](/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md)**  |
+| struct | **[hybridse::vm::BatchRequestInfo](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_batch_request_info.md)**  |
+| class | **[hybridse::vm::CompileInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md)**  |
+| class | **[hybridse::vm::CompileInfoCache](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info_cache.md)**  |
+| class | **[hybridse::vm::JITOptions](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_j_i_t_options.md)**  |
 
 
 
@@ -136,4 +136,4 @@ class JITOptions {
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:49 PDT

@@ -16,34 +16,34 @@ title: hybridse::vm::SchemasContext
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[SchemasContext](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-schemascontext)**() |
-| | **[SchemasContext](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-schemascontext)**(const PhysicalOpNode * root) |
-| | **[~SchemasContext](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-~schemascontext)**() |
-| base::Status | **[ResolveColumnIndexByName](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnindexbyname)**(const std::string & relation_name, const std::string & column_name, size_t * schema_idx, size_t * col_idx) const |
-| base::Status | **[ResolveColumnIndexByID](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnindexbyid)**(size_t column_id, size_t * schema_idx, size_t * col_idx) const |
-| base::Status | **[ResolveColumnNameByID](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnnamebyid)**(size_t column_id, std::string * name) const |
-| base::Status | **[ResolveColumnRefIndex](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnrefindex)**(const node::ColumnRefNode * column_ref, size_t * schema_idx, size_t * col_idx) const |
-| base::Status | **[ResolveColumnID](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnid)**(const std::string & relation_name, const std::string & column_name, size_t * column_id) const |
-| base::Status | **[ResolveColumnID](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnid)**(const std::string & relation_name, const std::string & column_name, size_t * column_id, int * child_path_idx, size_t * child_column_id, size_t * source_column_id, const PhysicalOpNode ** source_node) const |
-| base::Status | **[ResolveExprDependentColumns](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolveexprdependentcolumns)**(const node::ExprNode * expr, std::set< size_t > * column_ids) const |
-| base::Status | **[ResolveExprDependentColumns](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolveexprdependentcolumns)**(const node::ExprNode * expr, std::vector< const node::ExprNode * > * columns) const |
-| const std::string & | **[GetName](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getname)**() const |
-| const PhysicalOpNode * | **[GetRoot](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getroot)**() const |
-| const codec::RowFormat * | **[GetRowFormat](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getrowformat)**(size_t idx) const |
-| const [SchemaSource](/Classes/classhybridse_1_1vm_1_1_schema_source.md) * | **[GetSchemaSource](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasource)**(size_t idx) const |
-| const codec::Schema * | **[GetSchema](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschema)**(size_t idx) const |
-| size_t | **[GetSchemaSourceSize](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasourcesize)**() const |
-| void | **[SetName](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-setname)**(const std::string & name) |
-| [SchemaSource](/Classes/classhybridse_1_1vm_1_1_schema_source.md) * | **[AddSource](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-addsource)**() |
-| void | **[Merge](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-merge)**(size_t child_idx, const [SchemasContext](/Classes/classhybridse_1_1vm_1_1_schemas_context.md) * child) |
-| void | **[MergeWithNewID](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-mergewithnewid)**(size_t child_idx, const [SchemasContext](/Classes/classhybridse_1_1vm_1_1_schemas_context.md) * child, PhysicalPlanContext * plan_ctx) |
-| void | **[Clear](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-clear)**() |
-| void | **[Build](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-build)**() |
-| bool | **[Empty](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-empty)**() const |
-| size_t | **[GetColumnNum](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getcolumnnum)**() const |
-| const codec::Schema * | **[GetOutputSchema](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getoutputschema)**() const |
-| void | **[BuildTrivial](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const codec::Schema * > & schemas) |
-| void | **[BuildTrivial](/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const type::TableDef * > & tables) |
+| | **[SchemasContext](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-schemascontext)**() |
+| | **[SchemasContext](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-schemascontext)**(const PhysicalOpNode * root) |
+| | **[~SchemasContext](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-~schemascontext)**() |
+| base::Status | **[ResolveColumnIndexByName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnindexbyname)**(const std::string & relation_name, const std::string & column_name, size_t * schema_idx, size_t * col_idx) const |
+| base::Status | **[ResolveColumnIndexByID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnindexbyid)**(size_t column_id, size_t * schema_idx, size_t * col_idx) const |
+| base::Status | **[ResolveColumnNameByID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnnamebyid)**(size_t column_id, std::string * name) const |
+| base::Status | **[ResolveColumnRefIndex](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnrefindex)**(const node::ColumnRefNode * column_ref, size_t * schema_idx, size_t * col_idx) const |
+| base::Status | **[ResolveColumnID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnid)**(const std::string & relation_name, const std::string & column_name, size_t * column_id) const |
+| base::Status | **[ResolveColumnID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolvecolumnid)**(const std::string & relation_name, const std::string & column_name, size_t * column_id, int * child_path_idx, size_t * child_column_id, size_t * source_column_id, const PhysicalOpNode ** source_node) const |
+| base::Status | **[ResolveExprDependentColumns](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolveexprdependentcolumns)**(const node::ExprNode * expr, std::set< size_t > * column_ids) const |
+| base::Status | **[ResolveExprDependentColumns](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-resolveexprdependentcolumns)**(const node::ExprNode * expr, std::vector< const node::ExprNode * > * columns) const |
+| const std::string & | **[GetName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getname)**() const |
+| const PhysicalOpNode * | **[GetRoot](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getroot)**() const |
+| const codec::RowFormat * | **[GetRowFormat](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getrowformat)**(size_t idx) const |
+| const [SchemaSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md) * | **[GetSchemaSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasource)**(size_t idx) const |
+| const codec::Schema * | **[GetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getschema)**(size_t idx) const |
+| size_t | **[GetSchemaSourceSize](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasourcesize)**() const |
+| void | **[SetName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-setname)**(const std::string & name) |
+| [SchemaSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schema_source.md) * | **[AddSource](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-addsource)**() |
+| void | **[Merge](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-merge)**(size_t child_idx, const [SchemasContext](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md) * child) |
+| void | **[MergeWithNewID](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-mergewithnewid)**(size_t child_idx, const [SchemasContext](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md) * child, PhysicalPlanContext * plan_ctx) |
+| void | **[Clear](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-clear)**() |
+| void | **[Build](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-build)**() |
+| bool | **[Empty](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-empty)**() const |
+| size_t | **[GetColumnNum](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getcolumnnum)**() const |
+| const codec::Schema * | **[GetOutputSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-getoutputschema)**() const |
+| void | **[BuildTrivial](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const codec::Schema * > & schemas) |
+| void | **[BuildTrivial](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const type::TableDef * > & tables) |
 
 ## Detailed Description
 
@@ -363,4 +363,4 @@ void BuildTrivial(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:49 PDT

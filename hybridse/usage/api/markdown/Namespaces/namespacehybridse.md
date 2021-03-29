@@ -9,7 +9,7 @@ title: hybridse
 
 | Name           |
 | -------------- |
-| **[hybridse::vm](/Namespaces/namespacehybridse_1_1vm.md)**  |
+| **[hybridse::vm](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md)**  |
 
 
 
@@ -18,4 +18,4 @@ title: hybridse
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:48 PDT

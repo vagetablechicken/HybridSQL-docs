@@ -14,9 +14,9 @@ title: hybridse::vm::BatchRequestInfo
 
 |                | Name           |
 | -------------- | -------------- |
-| std::set< size_t > | **[common_column_indices](/Classes/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_column_indices)**  |
-| std::set< size_t > | **[common_node_set](/Classes/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_node_set)**  |
-| std::set< size_t > | **[output_common_column_indices](/Classes/structhybridse_1_1vm_1_1_batch_request_info.md#variable-output_common_column_indices)**  |
+| std::set< size_t > | **[common_column_indices](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_column_indices)**  |
+| std::set< size_t > | **[common_node_set](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_node_set)**  |
+| std::set< size_t > | **[output_common_column_indices](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_batch_request_info.md#variable-output_common_column_indices)**  |
 
 ## Public Attributes Documentation
 
@@ -43,4 +43,4 @@ std::set< size_t > output_common_column_indices;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:48 PDT

@@ -14,21 +14,21 @@ title: hybridse::vm::CompileInfo
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[CompileInfo](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-compileinfo)**() |
-| virtual | **[~CompileInfo](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-~compileinfo)**() |
-| virtual bool | **[GetIRBuffer](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getirbuffer)**(const base::RawBuffer & buf) =0 |
-| virtual size_t | **[GetIRSize](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getirsize)**() =0 |
-| virtual const [EngineMode](/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) | **[GetEngineMode](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getenginemode)**() const =0 |
-| virtual const std::string & | **[GetSQL](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getsql)**() const =0 |
-| virtual const Schema & | **[GetSchema](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getschema)**() const =0 |
-| virtual const [ComileType](/Namespaces/namespacehybridse_1_1vm.md#enum-comiletype) | **[GetCompileType](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getcompiletype)**() const =0 |
-| virtual const std::string & | **[GetEncodedSchema](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getencodedschema)**() const =0 |
-| virtual const Schema & | **[GetRequestSchema](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getrequestschema)**() const =0 |
-| virtual const std::string & | **[GetRequestName](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getrequestname)**() const =0 |
-| virtual const [hybridse::vm::BatchRequestInfo](/Classes/structhybridse_1_1vm_1_1_batch_request_info.md) & | **[GetBatchRequestInfo](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getbatchrequestinfo)**() const =0 |
-| virtual const hybridse::vm::PhysicalOpNode * | **[GetPhysicalPlan](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getphysicalplan)**() const =0 |
-| virtual void | **[DumpPhysicalPlan](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-dumpphysicalplan)**(std::ostream & output, const std::string & tab) =0 |
-| virtual void | **[DumpClusterJob](/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-dumpclusterjob)**(std::ostream & output, const std::string & tab) =0 |
+| | **[CompileInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-compileinfo)**() |
+| virtual | **[~CompileInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-~compileinfo)**() |
+| virtual bool | **[GetIRBuffer](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getirbuffer)**(const base::RawBuffer & buf) =0 |
+| virtual size_t | **[GetIRSize](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getirsize)**() =0 |
+| virtual const [EngineMode](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-enginemode) | **[GetEngineMode](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getenginemode)**() const =0 |
+| virtual const std::string & | **[GetSQL](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getsql)**() const =0 |
+| virtual const Schema & | **[GetSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getschema)**() const =0 |
+| virtual const [ComileType](/hybridse/usage/api/markdownNamespaces/namespacehybridse_1_1vm.md#enum-comiletype) | **[GetCompileType](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getcompiletype)**() const =0 |
+| virtual const std::string & | **[GetEncodedSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getencodedschema)**() const =0 |
+| virtual const Schema & | **[GetRequestSchema](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getrequestschema)**() const =0 |
+| virtual const std::string & | **[GetRequestName](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getrequestname)**() const =0 |
+| virtual const [hybridse::vm::BatchRequestInfo](/hybridse/usage/api/markdownClasses/structhybridse_1_1vm_1_1_batch_request_info.md) & | **[GetBatchRequestInfo](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getbatchrequestinfo)**() const =0 |
+| virtual const hybridse::vm::PhysicalOpNode * | **[GetPhysicalPlan](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-getphysicalplan)**() const =0 |
+| virtual void | **[DumpPhysicalPlan](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-dumpphysicalplan)**(std::ostream & output, const std::string & tab) =0 |
+| virtual void | **[DumpClusterJob](/hybridse/usage/api/markdownClasses/classhybridse_1_1vm_1_1_compile_info.md#function-dumpclusterjob)**(std::ostream & output, const std::string & tab) =0 |
 
 ## Public Functions Documentation
 
@@ -147,4 +147,4 @@ virtual void DumpClusterJob(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:23:48 PDT
+Updated on 28 March 2021 at 19:34:48 PDT
