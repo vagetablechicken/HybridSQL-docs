@@ -14,12 +14,12 @@ title: hybridse::vm::SchemaSource
 
 |                | Name           |
 | -------------- | -------------- |
-| const hybridse::codec::Schema * | **[GetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const |
+| const [hybridse::codec::Schema](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * | **[GetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const |
 | size_t | **[GetColumnID](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnid)**(size_t idx) const |
 | const std::string & | **[GetColumnName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnname)**(size_t idx) const |
 | const hybridse::type::Type | **[GetColumnType](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumntype)**(size_t idx) const |
 | const std::string & | **[GetSourceName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcename)**() const |
-| void | **[SetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const codec::Schema * schema) |
+| void | **[SetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const [codec::Schema](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema) |
 | void | **[SetSourceName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsourcename)**(const std::string & name) |
 | void | **[SetColumnID](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setcolumnid)**(size_t idx, size_t column_id) |
 | void | **[SetSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsource)**(size_t idx, size_t child_idx, size_t child_column_id) |
@@ -182,4 +182,4 @@ std::string ToString() const
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

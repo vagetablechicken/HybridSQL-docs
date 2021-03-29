@@ -24,7 +24,7 @@ Inherits from RowIterator
 | const uint64_t & | **[GetKey](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getkey)**() const |
 | void | **[Next](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-next)**() |
 | bool | **[Valid](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-valid)**() const |
-| const Row & | **[GetValue](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getvalue)**() override |
+| const [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) & | **[GetValue](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getvalue)**() override |
 | bool | **[IsSeekable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-isseekable)**() const override |
 
 ## Public Functions Documentation
@@ -111,4 +111,4 @@ bool IsSeekable() const override
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

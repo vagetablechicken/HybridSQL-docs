@@ -20,7 +20,7 @@ Inherits from [hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/class
 | | **[~MemCatalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-~memcatalog)**() |
 | bool | **[Init](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-init)**() |
 | virtual std::shared_ptr< type::Database > | **[GetDatabase](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-getdatabase)**(const std::string & db)<br>Implemented by subclasses to return database information.  |
-| virtual std::shared_ptr< [TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md) > | **[GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name)<br>Implemented by subclasses to return a table handler with given table name.  |
+| virtual std::shared_ptr< [TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md) > | **[GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name) |
 | virtual bool | **[IndexSupport](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-indexsupport)**() override<br>Implemented by subclasses return whether index is supported or not.  |
 
 ## Additional inherited members
@@ -31,7 +31,7 @@ Inherits from [hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/class
 | -------------- | -------------- |
 | | **[Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**() |
 | virtual | **[~Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**() |
-| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > | **[GetProcedureInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)<br>Return `ProcedureInfo` instance with given database name `db` and procedure name `sp_name` |
+| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > | **[GetProcedureInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name) |
 
 
 ## Public Functions Documentation
@@ -79,9 +79,11 @@ inline virtual std::shared_ptr< TableHandler > GetTable(
 )
 ```
 
-Implemented by subclasses to return a table handler with given table name. 
 
 **Reimplements**: [hybridse::vm::Catalog::GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-gettable)
+
+
+Implemented by subclasses to return a table handler with given table name 
 
 
 ### function IndexSupport
@@ -97,4 +99,4 @@ Implemented by subclasses return whether index is supported or not.
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

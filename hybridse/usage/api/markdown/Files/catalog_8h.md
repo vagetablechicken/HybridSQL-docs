@@ -17,18 +17,18 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/catalog.h
 |                | Name           |
 | -------------- | -------------- |
 | struct | **[hybridse::vm::IndexSt](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
-| class | **[hybridse::vm::DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>[DataHandler]() is the basic dataset operation abstraction.  |
-| class | **[hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)**  |
-| class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)**  |
-| class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)**  |
-| class | **[hybridse::vm::RowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_row_handler.md)**  |
-| class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)**  |
-| class | **[hybridse::vm::TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md)**  |
-| class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)**  |
-| class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_partition_handler.md)**  |
-| class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)**  |
-| class | **[hybridse::vm::Tablet](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_tablet.md)**  |
-| class | **[hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md)**  |
+| class | **[hybridse::vm::DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>The basic dataset operation abstraction.  |
+| class | **[hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)** <br>A sequence of [DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
+| class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
+| class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
+| class | **[hybridse::vm::RowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_row_handler.md)** <br>A row operation abstraction.  |
+| class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)** <br>A row's error handler, representing a error row.  |
+| class | **[hybridse::vm::TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md)** <br>A table dataset operation abstraction.  |
+| class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)** <br>A table dataset's error handler, representing a error table.  |
+| class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_partition_handler.md)** <br>The abstraction of partition dataset operation.  |
+| class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)** <br>A wrapper of table handler which is used as a asynchronous row handler.  |
+| class | **[hybridse::vm::Tablet](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_tablet.md)** <br>A component responsible to Query subtask.  |
+| class | **[hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md)** <br>A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  |
 
 
 
@@ -79,11 +79,12 @@ using hybridse::codec::Schema;
 using hybridse::codec::WindowIterator;
 
 constexpr uint32_t INVALID_POS = UINT32_MAX;
+
 struct IndexSt {
-    std::string name;
-    uint32_t index;
-    uint32_t ts_pos;
-    std::vector<ColInfo> keys;
+    std::string name;           
+    uint32_t index;             
+    uint32_t ts_pos;            
+    std::vector<ColInfo> keys;  
 };
 
 typedef ::google::protobuf::RepeatedPtrField<::hybridse::type::IndexDef>
@@ -114,6 +115,7 @@ class DataHandler : public ListV<Row> {
     virtual const std::string GetHandlerTypeName() = 0;
     virtual base::Status GetStatus() { return base::Status::OK(); }
 };
+
 class DataHandlerList {
  public:
     DataHandlerList() {}
@@ -121,6 +123,7 @@ class DataHandlerList {
     virtual size_t GetSize() = 0;
     virtual std::shared_ptr<DataHandler> Get(size_t idx) = 0;
 };
+
 class DataHandlerVector : public DataHandlerList {
  public:
     DataHandlerVector() : data_handlers_() {}
@@ -142,6 +145,7 @@ class DataHandlerRepeater : public DataHandlerList {
     DataHandlerRepeater(std::shared_ptr<DataHandler> data_handler, size_t size)
         : size_(size), data_handler_(data_handler) {}
     ~DataHandlerRepeater() {}
+
     size_t GetSize() { return size_; }
     std::shared_ptr<DataHandler> Get(size_t idx) {
         return idx < size_ ? data_handler_ : std::shared_ptr<DataHandler>();
@@ -151,6 +155,7 @@ class DataHandlerRepeater : public DataHandlerList {
     size_t size_;
     std::shared_ptr<DataHandler> data_handler_;
 };
+
 class RowHandler : public DataHandler {
  public:
     RowHandler() {}
@@ -160,10 +165,15 @@ class RowHandler : public DataHandler {
         return std::unique_ptr<RowIterator>();
     }
     RowIterator* GetRawIterator() override { return nullptr; }
+
     const uint64_t GetCount() override { return 0; }
+
     Row At(uint64_t pos) override { return Row(); }
+
     const HandlerType GetHanlderType() override { return kRowHandler; }
+
     virtual const Row& GetValue() = 0;
+
     const std::string GetHandlerTypeName() override { return "RowHandler"; }
 };
 
@@ -176,7 +186,9 @@ class ErrorRowHandler : public RowHandler {
           schema_(nullptr),
           row_() {}
     ~ErrorRowHandler() {}
-    virtual const Row& GetValue() { return row_; }
+
+    virtual const Row& GetValue() final { return row_; }
+
     const std::string GetHandlerTypeName() override {
         return "ErrorRowHandler";
     }
@@ -199,31 +211,35 @@ class TableHandler : public DataHandler {
 
     virtual ~TableHandler() {}
 
-    // get the types
     virtual const Types& GetTypes() = 0;
 
-    // get the index information
     virtual const IndexHint& GetIndex() = 0;
-    // get the table iterator
 
     virtual std::unique_ptr<WindowIterator> GetWindowIterator(
         const std::string& idx_name) = 0;
+
     const HandlerType GetHanlderType() override { return kTableHandler; }
+
     virtual std::shared_ptr<PartitionHandler> GetPartition(
         const std::string& index_name) {
         return std::shared_ptr<PartitionHandler>();
     }
+
     const std::string GetHandlerTypeName() override { return "TableHandler"; }
+
     virtual const OrderType GetOrderType() const { return kNoneOrder; }
+
     virtual std::shared_ptr<Tablet> GetTablet(const std::string& index_name,
                                               const std::string& pk) {
         return std::shared_ptr<Tablet>();
     }
+
     virtual std::shared_ptr<Tablet> GetTablet(
         const std::string& index_name, const std::vector<std::string>& pks) {
         return std::shared_ptr<Tablet>();
     }
 };
+
 class ErrorTableHandler : public TableHandler {
  public:
     ErrorTableHandler()
@@ -258,10 +274,13 @@ class ErrorTableHandler : public TableHandler {
         return std::unique_ptr<WindowIterator>();
     }
     virtual Row At(uint64_t pos) { return Row(); }
+
     const uint64_t GetCount() override { return 0; }
+
     const std::string GetHandlerTypeName() override {
         return "ErrorTableHandler";
     }
+
     virtual base::Status GetStatus() { return status_; }
 
  protected:
@@ -273,10 +292,12 @@ class ErrorTableHandler : public TableHandler {
     IndexHint index_hint_;
     OrderType order_type_;
 };
+
 class PartitionHandler : public TableHandler {
  public:
     PartitionHandler() : TableHandler() {}
     ~PartitionHandler() {}
+
     virtual std::unique_ptr<RowIterator> GetIterator() {
         return std::unique_ptr<RowIterator>();
     }
@@ -285,15 +306,17 @@ class PartitionHandler : public TableHandler {
         const std::string& idx_name) {
         return std::unique_ptr<WindowIterator>();
     }
+
     virtual std::unique_ptr<WindowIterator> GetWindowIterator() = 0;
+
     const HandlerType GetHanlderType() override { return kPartitionHandler; }
+
     virtual Row At(uint64_t pos) { return Row(); }
+
     virtual std::shared_ptr<TableHandler> GetSegment(const std::string& key) {
         return std::shared_ptr<TableHandler>();
     }
 
-    // Return batch segments with given keys vector
-    // this is default implementation of GetSegments
     virtual std::vector<std::shared_ptr<TableHandler>> GetSegments(
         const std::vector<std::string>& keys) {
         std::vector<std::shared_ptr<TableHandler>> segments;
@@ -307,6 +330,7 @@ class PartitionHandler : public TableHandler {
     }
     const OrderType GetOrderType() const { return kNoneOrder; }
 };
+
 class AysncRowHandler : public RowHandler {
  public:
     AysncRowHandler(size_t idx,
@@ -325,6 +349,7 @@ class AysncRowHandler : public RowHandler {
         }
     }
     virtual ~AysncRowHandler() {}
+
     const Row& GetValue() override {
         if (!status_.isRunning()) {
             return value_;
@@ -336,6 +361,8 @@ class AysncRowHandler : public RowHandler {
     const Schema* GetSchema() override { return schema_; }
     const std::string& GetName() override { return table_name_; }
     const std::string& GetDatabase() override { return db_; }
+
+ private:
     base::Status status_;
     std::string table_name_;
     std::string db_;
@@ -361,7 +388,7 @@ class Tablet {
         const bool is_procedure, const bool is_debug) = 0;
 };
 
-//
+
 class Catalog {
  public:
     Catalog() {}
@@ -391,4 +418,4 @@ class Catalog {
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

@@ -1,5 +1,6 @@
 ---
 title: hybridse::vm::DataHandlerVector
+summary: A implementation of DataHandlerList. 
 
 ---
 
@@ -7,7 +8,7 @@ title: hybridse::vm::DataHandlerVector
 
 
 
-
+A implementation of [DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md). 
 `#include <catalog.h>`
 
 Inherits from [hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)
@@ -19,8 +20,8 @@ Inherits from [hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Class
 | | **[DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-datahandlervector)**() |
 | | **[~DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-~datahandlervector)**() |
 | void | **[Add](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-add)**(std::shared_ptr< [DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md) > data_handler) |
-| virtual size_t | **[GetSize](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-getsize)**() |
-| virtual std::shared_ptr< [DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md) > | **[Get](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-get)**(size_t idx) |
+| virtual size_t | **[GetSize](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-getsize)**()<br>Return the number of elements.  |
+| virtual std::shared_ptr< [DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md) > | **[Get](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-get)**(size_t idx)<br>Return the idx-th element. Return `null` when position is out of range.  |
 
 ## Additional inherited members
 
@@ -63,6 +64,7 @@ inline void Add(
 inline virtual size_t GetSize()
 ```
 
+Return the number of elements. 
 
 **Reimplements**: [hybridse::vm::DataHandlerList::GetSize](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-getsize)
 
@@ -75,10 +77,11 @@ inline virtual std::shared_ptr< DataHandler > Get(
 )
 ```
 
+Return the idx-th element. Return `null` when position is out of range. 
 
 **Reimplements**: [hybridse::vm::DataHandlerList::Get](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-get)
 
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

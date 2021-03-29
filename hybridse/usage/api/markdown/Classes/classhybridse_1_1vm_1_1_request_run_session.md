@@ -18,8 +18,8 @@ Inherits from [hybridse::vm::RunSession](/hybridse/usage/api/markdown/Classes/cl
 | -------------- | -------------- |
 | | **[RequestRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-requestrunsession)**() |
 | | **[~RequestRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-~requestrunsession)**() |
-| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-run)**(const Row & in_row, Row * output) |
-| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-run)**(uint32_t task_id, const Row & in_row, Row * output) |
+| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-run)**(const [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) & in_row, [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) * output) |
+| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-run)**(uint32_t task_id, const [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) & in_row, [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) * output) |
 | virtual const Schema & | **[GetRequestSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-getrequestschema)**() const |
 | virtual const std::string & | **[GetRequestName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md#function-getrequestname)**() const |
 
@@ -105,4 +105,4 @@ inline virtual const std::string & GetRequestName() const
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

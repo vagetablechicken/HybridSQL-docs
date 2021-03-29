@@ -14,7 +14,7 @@ title: hybridse::vm::AscComparor
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[operator()](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_asc_comparor.md#function-operator())**(std::pair< uint64_t, Row > i, std::pair< uint64_t, Row > j) |
+| bool | **[operator()](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_asc_comparor.md#function-operator())**(std::pair< uint64_t, [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > i, std::pair< uint64_t, [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > j) |
 
 ## Public Functions Documentation
 
@@ -30,4 +30,4 @@ inline bool operator()(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:18 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

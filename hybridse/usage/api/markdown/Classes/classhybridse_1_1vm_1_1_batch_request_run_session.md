@@ -20,8 +20,8 @@ Inherits from [hybridse::vm::RunSession](/hybridse/usage/api/markdown/Classes/cl
 | | **[~BatchRequestRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-~batchrequestrunsession)**() |
 | const Schema & | **[GetRequestSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-getrequestschema)**() const |
 | const std::string & | **[GetRequestName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-getrequestname)**() const |
-| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-run)**(const uint32_t id, const std::vector< Row > & request_batch, std::vector< Row > & output) |
-| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-run)**(const std::vector< Row > & request_batch, std::vector< Row > & output) |
+| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-run)**(const uint32_t id, const std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > & request_batch, std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > & output) |
+| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-run)**(const std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > & request_batch, std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > & output) |
 | void | **[AddCommonColumnIdx](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-addcommoncolumnidx)**(size_t idx) |
 | const std::set< size_t > & | **[common_column_indices](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-common_column_indices)**() const |
 
@@ -123,4 +123,4 @@ inline const std::set< size_t > & common_column_indices() const
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:18 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

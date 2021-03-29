@@ -29,9 +29,9 @@ title: hybridse::vm::SchemasContext
 | base::Status | **[ResolveExprDependentColumns](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-resolveexprdependentcolumns)**(const node::ExprNode * expr, std::vector< const node::ExprNode * > * columns) const |
 | const std::string & | **[GetName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getname)**() const |
 | const PhysicalOpNode * | **[GetRoot](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getroot)**() const |
-| const codec::RowFormat * | **[GetRowFormat](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getrowformat)**(size_t idx) const |
+| const [codec::RowFormat](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row_format.md) * | **[GetRowFormat](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getrowformat)**(size_t idx) const |
 | const [SchemaSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md) * | **[GetSchemaSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasource)**(size_t idx) const |
-| const codec::Schema * | **[GetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschema)**(size_t idx) const |
+| const [codec::Schema](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * | **[GetSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschema)**(size_t idx) const |
 | size_t | **[GetSchemaSourceSize](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getschemasourcesize)**() const |
 | void | **[SetName](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-setname)**(const std::string & name) |
 | [SchemaSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md) * | **[AddSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-addsource)**() |
@@ -41,8 +41,8 @@ title: hybridse::vm::SchemasContext
 | void | **[Build](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-build)**() |
 | bool | **[Empty](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-empty)**() const |
 | size_t | **[GetColumnNum](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getcolumnnum)**() const |
-| const codec::Schema * | **[GetOutputSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getoutputschema)**() const |
-| void | **[BuildTrivial](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const codec::Schema * > & schemas) |
+| const [codec::Schema](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * | **[GetOutputSchema](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-getoutputschema)**() const |
+| void | **[BuildTrivial](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const [codec::Schema](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * > & schemas) |
 | void | **[BuildTrivial](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-buildtrivial)**(const std::vector< const type::TableDef * > & tables) |
 
 ## Detailed Description
@@ -363,4 +363,4 @@ void BuildTrivial(
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

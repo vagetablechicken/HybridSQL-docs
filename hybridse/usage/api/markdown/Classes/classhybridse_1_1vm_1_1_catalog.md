@@ -1,5 +1,6 @@
 ---
 title: hybridse::vm::Catalog
+summary: A Catalog handler which defines a set of operation for, e.g, database, table and index management. 
 
 ---
 
@@ -7,7 +8,7 @@ title: hybridse::vm::Catalog
 
 
 
- [More...](#detailed-description)
+A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  [More...](#detailed-description)
 
 
 `#include <catalog.h>`
@@ -22,8 +23,8 @@ Inherited by [hybridse::vm::MemCatalog](/hybridse/usage/api/markdown/Classes/cla
 | virtual | **[~Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**() |
 | virtual bool | **[IndexSupport](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-indexsupport)**() =0<br>Implemented by subclasses return whether index is supported or not.  |
 | virtual std::shared_ptr< type::Database > | **[GetDatabase](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getdatabase)**(const std::string & db) =0<br>Implemented by subclasses to return database information.  |
-| virtual std::shared_ptr< [TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md) > | **[GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name) =0<br>Implemented by subclasses to return a table handler with given table name.  |
-| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > | **[GetProcedureInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)<br>Return `ProcedureInfo` instance with given database name `db` and procedure name `sp_name` |
+| virtual std::shared_ptr< [TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md) > | **[GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name) =0 |
+| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > | **[GetProcedureInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name) |
 
 ## Detailed Description
 
@@ -31,8 +32,9 @@ Inherited by [hybridse::vm::MemCatalog](/hybridse/usage/api/markdown/Classes/cla
 class hybridse::vm::Catalog;
 ```
 
+A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management. 
 
-`[Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md)` class defines a set of operation for, e.g, database, table and index management. Users should implement the subclasses for their own purpose 
+Users should implement the subclasses for their own purpose 
 
 ## Public Functions Documentation
 
@@ -83,9 +85,11 @@ virtual std::shared_ptr< TableHandler > GetTable(
 ) =0
 ```
 
-Implemented by subclasses to return a table handler with given table name. 
 
 **Reimplemented by**: [hybridse::vm::MemCatalog::GetTable](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-gettable)
+
+
+Implemented by subclasses to return a table handler with given table name 
 
 
 ### function GetProcedureInfo
@@ -97,8 +101,10 @@ inline virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > GetProcedureInfo(
 )
 ```
 
+
 Return `ProcedureInfo` instance with given database name `db` and procedure name `sp_name`
+
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

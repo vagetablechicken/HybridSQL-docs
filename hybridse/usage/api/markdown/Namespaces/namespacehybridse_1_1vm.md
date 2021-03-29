@@ -11,24 +11,24 @@ title: hybridse::vm
 | -------------- | -------------- |
 | struct | **[hybridse::vm::AscComparor](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_asc_comparor.md)**  |
 | struct | **[hybridse::vm::AscKeyComparor](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_asc_key_comparor.md)**  |
-| class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)**  |
+| class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)** <br>A wrapper of table handler which is used as a asynchronous row handler.  |
 | struct | **[hybridse::vm::BatchRequestInfo](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_batch_request_info.md)**  |
 | class | **[hybridse::vm::BatchRequestRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md)**  |
 | class | **[hybridse::vm::BatchRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md)**  |
-| class | **[hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md)**  |
+| class | **[hybridse::vm::Catalog](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_catalog.md)** <br>A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  |
 | class | **[hybridse::vm::CompileInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info.md)**  |
 | class | **[hybridse::vm::CompileInfoCache](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info_cache.md)**  |
 | class | **[hybridse::vm::ConcatTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md)**  |
 | class | **[hybridse::vm::CurrentHistoryWindow](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_current_history_window.md)**  |
-| class | **[hybridse::vm::DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>[DataHandler]() is the basic dataset operation abstraction.  |
-| class | **[hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)**  |
-| class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)**  |
-| class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)**  |
+| class | **[hybridse::vm::DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>The basic dataset operation abstraction.  |
+| class | **[hybridse::vm::DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)** <br>A sequence of [DataHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
+| class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
+| class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
 | struct | **[hybridse::vm::DescComparor](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_desc_comparor.md)**  |
 | class | **[hybridse::vm::Engine](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine.md)**  |
 | class | **[hybridse::vm::EngineOptions](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_engine_options.md)**  |
-| class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)**  |
-| class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)**  |
+| class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)** <br>A row's error handler, representing a error row.  |
+| class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)** <br>A table dataset's error handler, representing a error table.  |
 | struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_explain_output.md)**  |
 | class | **[hybridse::vm::HistoryWindow](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_history_window.md)**  |
 | struct | **[hybridse::vm::IndexSt](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
@@ -43,16 +43,16 @@ title: hybridse::vm
 | class | **[hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)**  |
 | class | **[hybridse::vm::MemTimeTableIterator](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md)**  |
 | class | **[hybridse::vm::MemWindowIterator](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md)**  |
-| class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_partition_handler.md)**  |
+| class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_partition_handler.md)** <br>The abstraction of partition dataset operation.  |
 | class | **[hybridse::vm::RequestRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_run_session.md)**  |
 | class | **[hybridse::vm::RequestUnionTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md)**  |
 | class | **[hybridse::vm::Router](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_router.md)**  |
-| class | **[hybridse::vm::RowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_row_handler.md)**  |
+| class | **[hybridse::vm::RowHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_row_handler.md)** <br>A row operation abstraction.  |
 | class | **[hybridse::vm::RunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_run_session.md)**  |
 | class | **[hybridse::vm::SchemasContext](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schemas_context.md)**  |
 | class | **[hybridse::vm::SchemaSource](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_schema_source.md)**  |
-| class | **[hybridse::vm::TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md)**  |
-| class | **[hybridse::vm::Tablet](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_tablet.md)**  |
+| class | **[hybridse::vm::TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md)** <br>A table dataset operation abstraction.  |
+| class | **[hybridse::vm::Tablet](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_tablet.md)** <br>A component responsible to Query subtask.  |
 | class | **[hybridse::vm::Window](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window.md)**  |
 | class | **[hybridse::vm::WindowRange](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_window_range.md)**  |
 
@@ -65,11 +65,11 @@ title: hybridse::vm
 | enum| **[EngineMode](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode)** { kBatchMode, kRequestMode, kBatchRequestMode} |
 | enum| **[ComileType](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-comiletype)** { kCompileSQL} |
 | typedef ::google::protobuf::RepeatedPtrField<::hybridse::type::IndexDef > | **[IndexList](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-indexlist)**  |
-| typedef std::map< std::string, ColInfo > | **[Types](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-types)**  |
+| typedef std::map< std::string, [ColInfo](/hybridse/usage/api/markdown/Classes/structhybridse_1_1codec_1_1_col_info.md) > | **[Types](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-types)**  |
 | typedef std::map< std::string, [IndexSt](/hybridse/usage/api/markdown/Classes/structhybridse_1_1vm_1_1_index_st.md) > | **[IndexHint](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint)**  |
 | typedef std::map< [EngineMode](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode), std::map< std::string, boost::compute::detail::lru_cache< std::string, std::shared_ptr< [CompileInfo](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_compile_info.md) > > > > | **[EngineLRUCache](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-enginelrucache)**  |
-| typedef std::deque< std::pair< uint64_t, Row > > | **[MemTimeTable](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable)**  |
-| typedef std::vector< Row > | **[MemTable](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtable)**  |
+| typedef std::deque< std::pair< uint64_t, [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > > | **[MemTimeTable](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable)**  |
+| typedef std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > | **[MemTable](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtable)**  |
 | typedef std::map< std::string, [MemTimeTable](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable), std::greater< std::string > > | **[MemSegmentMap](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memsegmentmap)**  |
 | typedef std::map< std::string, std::map< std::string, std::shared_ptr< [MemTimeTableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md) > > > | **[MemTables](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-memtables)**  |
 | typedef std::map< std::string, std::shared_ptr< type::Database > > | **[Databases](/hybridse/usage/api/markdown/Namespaces/namespacehybridse_1_1vm.md#typedef-databases)**  |
@@ -305,4 +305,4 @@ constexpr uint32_t INVALID_POS = UINT32_MAX;
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:18 PDT
+Updated on 29 March 2021 at 10:12:21 PDT

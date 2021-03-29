@@ -18,7 +18,7 @@ Inherits from [hybridse::vm::RunSession](/hybridse/usage/api/markdown/Classes/cl
 | -------------- | -------------- |
 | | **[BatchRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-batchrunsession)**(bool mini_batch =false) |
 | | **[~BatchRunSession](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-~batchrunsession)**() |
-| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-run)**(std::vector< Row > & output, uint64_t limit =0) |
+| int32_t | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-run)**(std::vector< [Row](/hybridse/usage/api/markdown/Classes/classhybridse_1_1codec_1_1_row.md) > & output, uint64_t limit =0) |
 | std::shared_ptr< [TableHandler](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_table_handler.md) > | **[Run](/hybridse/usage/api/markdown/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-run)**() |
 
 ## Additional inherited members
@@ -87,4 +87,4 @@ std::shared_ptr< TableHandler > Run()
 
 -------------------------------
 
-Updated on 28 March 2021 at 19:41:19 PDT
+Updated on 29 March 2021 at 10:12:21 PDT
