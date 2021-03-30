@@ -8,6 +8,8 @@
 2. 实现数据接口(`Catalog`, `TableHandler`)子类: `SimpleCatalog`,`SimpleTableHandler`
 3. 构造和执行引擎
 
+完整的示例可参考[simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
+
 ## 1. 内存表存储
 
 <img src="images/image-simple-storage.png" alt="image-20210326122554032" align="left" style="zoom:50%;" />
@@ -73,9 +75,7 @@ std::shared_ptr<TableHandler> SimpleCatalog::GetTable(
 
 对于`Catalog`来说，[`AddDatabase` ](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc#L26)和 [`InsertRows` ](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc#L48)都不是必须的。我们引入这两个操作方便添加元数据和数据。
 
-### SimpleCatalogTableHandler
-
-[`SimpleCatalogTableHandler`](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h#L33)是我们为Simple Engine实现的`TableHandler`。
+### [SimpleCatalogTableHandler](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)
 
 #### 内部结构
 
@@ -97,7 +97,7 @@ std::shared_ptr<MemTableHandler> full_table_storage_;
 
 #### 接口实现
 
-我们列出几处关键函数和接口实现（更新细节可查阅[simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h#L33)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc#L64):
+我们列出几处关键函数和接口实现（更新细节可查阅[simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc):
 
 - 构造函数
 
@@ -129,7 +129,7 @@ const std::string &SimpleCatalogTableHandler::GetDatabase() {
 
 - GetWindowIterator
 
-使用`MemPartitionHandler`使得分组迭代器`GetWindowIterator()`的实现变得很简单，仅需要根据`index_name`找到对应的分组表`MemPartitionHandler`，然后直接调用`MemPartitionHandler->GetWindowIterator()`。更多细节请查询[mem_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc#L159)
+使用`MemPartitionHandler`使得分组迭代器`GetWindowIterator()`的实现变得很简单，仅需要根据`index_name`找到对应的分组表`MemPartitionHandler`，然后直接调用`MemPartitionHandler->GetWindowIterator()`。更多细节请查询[mem_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc)
 
 ```c++
 std::unique_ptr<WindowIterator> SimpleCatalogTableHandler::GetWindowIterator(
@@ -152,7 +152,7 @@ std::unique_ptr<RowIterator> SimpleCatalogTableHandler::GetIterator() {
 }
 ```
 
-更多细节请查询[MemTableHandler::GetIterator()](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc#L239)
+更多细节请查询[MemTableHandler::GetIterator()](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc)
 
 - GetCount和At接口
 
@@ -174,10 +174,6 @@ hybridse::codec::Row SimpleCatalogTableHandler::At(uint64_t pos) {
 ## 3. 构造和执行引擎
 
 ### 构建引擎
-
-- 配置引擎`EngineOption`
-
-我们简单只用默认引擎配置`EngineOptions options;`
 
 - 构造`SimpleCatalog`
 
@@ -232,6 +228,14 @@ hybridse::codec::Row SimpleCatalogTableHandler::At(uint64_t pos) {
     if (!catalog->InsertRows("simple_db", "t1", t1_rows)) {
         return SIMPLE_ENGINE_DATA_ERROR;
     }
+```
+
+- 配置引擎`EngineOption`
+
+我们简单只用默认引擎配置`EngineOptions options;`
+
+```c++
+EngineOptions options;
 ```
 
 - 构造`Engine`示例
