@@ -31,21 +31,21 @@ title: hybridse::vm::CompileInfo
 
 ## Public Functions
 
-#### CompileInfo
+#### CompileInfo { function CompileInfo }
 
 ```cpp
 inline CompileInfo()
 ```
 
 
-#### ~CompileInfo
+#### ~CompileInfo { function ~CompileInfo }
 
 ```cpp
 inline virtual ~CompileInfo()
 ```
 
 
-#### GetIRBuffer
+#### GetIRBuffer { function GetIRBuffer }
 
 ```cpp
 virtual bool GetIRBuffer(
@@ -54,77 +54,77 @@ virtual bool GetIRBuffer(
 ```
 
 
-#### GetIRSize
+#### GetIRSize { function GetIRSize }
 
 ```cpp
 virtual size_t GetIRSize() =0
 ```
 
 
-#### GetEngineMode
+#### GetEngineMode { function GetEngineMode }
 
 ```cpp
 virtual const EngineMode GetEngineMode() const =0
 ```
 
 
-#### GetSQL
+#### GetSQL { function GetSQL }
 
 ```cpp
 virtual const std::string & GetSQL() const =0
 ```
 
 
-#### GetSchema
+#### GetSchema { function GetSchema }
 
 ```cpp
 virtual const Schema & GetSchema() const =0
 ```
 
 
-#### GetCompileType
+#### GetCompileType { function GetCompileType }
 
 ```cpp
 virtual const ComileType GetCompileType() const =0
 ```
 
 
-#### GetEncodedSchema
+#### GetEncodedSchema { function GetEncodedSchema }
 
 ```cpp
 virtual const std::string & GetEncodedSchema() const =0
 ```
 
 
-#### GetRequestSchema
+#### GetRequestSchema { function GetRequestSchema }
 
 ```cpp
 virtual const Schema & GetRequestSchema() const =0
 ```
 
 
-#### GetRequestName
+#### GetRequestName { function GetRequestName }
 
 ```cpp
 virtual const std::string & GetRequestName() const =0
 ```
 
 
-#### GetBatchRequestInfo
+#### GetBatchRequestInfo { function GetBatchRequestInfo }
 
 ```cpp
 virtual const hybridse::vm::BatchRequestInfo & GetBatchRequestInfo() const =0
 ```
 
 
-#### GetPhysicalPlan
+#### GetPhysicalPlan { function GetPhysicalPlan }
 
 ```cpp
 virtual const hybridse::vm::PhysicalOpNode * GetPhysicalPlan() const =0
 ```
 
 
-#### DumpPhysicalPlan
+#### DumpPhysicalPlan { function DumpPhysicalPlan }
 
 ```cpp
 virtual void DumpPhysicalPlan(
@@ -134,7 +134,7 @@ virtual void DumpPhysicalPlan(
 ```
 
 
-#### DumpClusterJob
+#### DumpClusterJob { function DumpClusterJob }
 
 ```cpp
 virtual void DumpClusterJob(
@@ -146,4 +146,4 @@ virtual void DumpClusterJob(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

@@ -65,7 +65,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### AysncRowHandler
+#### AysncRowHandler { function AysncRowHandler }
 
 ```cpp
 inline AysncRowHandler(
@@ -78,14 +78,14 @@ inline AysncRowHandler(
 Create with given table_handler and row position index. status_ is set with common::kRunning 
 
 
-#### ~AysncRowHandler
+#### ~AysncRowHandler { function ~AysncRowHandler }
 
 ```cpp
 inline virtual ~AysncRowHandler()
 ```
 
 
-#### GetValue
+#### GetValue { function GetValue }
 
 ```cpp
 inline virtual const Row & GetValue() override
@@ -98,7 +98,7 @@ inline virtual const Row & GetValue() override
 Return the row value. Sync row value by invoking aysnc_table_handler_->At(idx_) if status isn't common::kRunning 
 
 
-#### GetSchema
+#### GetSchema { function GetSchema }
 
 ```cpp
 inline virtual const Schema * GetSchema() override
@@ -109,7 +109,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName
+#### GetName { function GetName }
 
 ```cpp
 inline virtual const std::string & GetName() override
@@ -120,7 +120,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase
+#### GetDatabase { function GetDatabase }
 
 ```cpp
 inline virtual const std::string & GetDatabase() override
@@ -133,4 +133,4 @@ Return the name of database.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

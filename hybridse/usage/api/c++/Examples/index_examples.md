@@ -1,8 +1,8 @@
 ---
-title: Modules
+title: Examples
 
 ---
-# Modules
+# Examples
 
 
 

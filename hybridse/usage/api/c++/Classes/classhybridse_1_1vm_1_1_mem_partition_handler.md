@@ -76,14 +76,14 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### MemPartitionHandler
+#### MemPartitionHandler { function MemPartitionHandler }
 
 ```cpp
 MemPartitionHandler()
 ```
 
 
-#### MemPartitionHandler
+#### MemPartitionHandler { function MemPartitionHandler }
 
 ```cpp
 explicit MemPartitionHandler(
@@ -92,7 +92,7 @@ explicit MemPartitionHandler(
 ```
 
 
-#### MemPartitionHandler
+#### MemPartitionHandler { function MemPartitionHandler }
 
 ```cpp
 MemPartitionHandler(
@@ -103,14 +103,14 @@ MemPartitionHandler(
 ```
 
 
-#### ~MemPartitionHandler
+#### ~MemPartitionHandler { function ~MemPartitionHandler }
 
 ```cpp
 ~MemPartitionHandler()
 ```
 
 
-#### GetTypes
+#### GetTypes { function GetTypes }
 
 ```cpp
 virtual const Types & GetTypes() override
@@ -121,7 +121,7 @@ Return table column Types information.
 **Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
-#### GetIndex
+#### GetIndex { function GetIndex }
 
 ```cpp
 virtual const IndexHint & GetIndex() override
@@ -132,7 +132,7 @@ Return the index information.
 **Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
-#### GetSchema
+#### GetSchema { function GetSchema }
 
 ```cpp
 virtual const Schema * GetSchema() override
@@ -143,7 +143,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName
+#### GetName { function GetName }
 
 ```cpp
 virtual const std::string & GetName() override
@@ -154,7 +154,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase
+#### GetDatabase { function GetDatabase }
 
 ```cpp
 virtual const std::string & GetDatabase() override
@@ -165,7 +165,7 @@ Return the name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetWindowIterator
+#### GetWindowIterator { function GetWindowIterator }
 
 ```cpp
 virtual std::unique_ptr< WindowIterator > GetWindowIterator()
@@ -178,7 +178,7 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator()
 Return WindowIterator to iterate datasets segment-by-segment. 
 
 
-#### AddRow
+#### AddRow { function AddRow }
 
 ```cpp
 bool AddRow(
@@ -189,7 +189,7 @@ bool AddRow(
 ```
 
 
-#### Sort
+#### Sort { function Sort }
 
 ```cpp
 void Sort(
@@ -198,21 +198,21 @@ void Sort(
 ```
 
 
-#### Reverse
+#### Reverse { function Reverse }
 
 ```cpp
 void Reverse()
 ```
 
 
-#### Print
+#### Print { function Print }
 
 ```cpp
 void Print()
 ```
 
 
-#### GetCount
+#### GetCount { function GetCount }
 
 ```cpp
 inline virtual const uint64_t GetCount()
@@ -226,7 +226,7 @@ Returns the number of elements in this list.
 It count element by traverse the list 
 
 
-#### GetSegment
+#### GetSegment { function GetSegment }
 
 ```cpp
 inline virtual std::shared_ptr< TableHandler > GetSegment(
@@ -241,7 +241,7 @@ inline virtual std::shared_ptr< TableHandler > GetSegment(
 Return Return table handler of specific segment binding to given key. Return `null` by default. 
 
 
-#### SetOrderType
+#### SetOrderType { function SetOrderType }
 
 ```cpp
 inline void SetOrderType(
@@ -250,7 +250,7 @@ inline void SetOrderType(
 ```
 
 
-#### GetOrderType
+#### GetOrderType { function GetOrderType }
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -263,7 +263,7 @@ inline virtual const OrderType GetOrderType() const
 Return order type of the dataset, and return kNoneOrder by default. 
 
 
-#### GetHandlerTypeName
+#### GetHandlerTypeName { function GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -276,4 +276,4 @@ Return the name of handler, and return `"PartitionHandler"` by default.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

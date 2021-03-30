@@ -42,7 +42,7 @@ title: hybridse::vm::RunSession
 
 ## Public Functions
 
-#### RunSession
+#### RunSession { function RunSession }
 
 ```cpp
 explicit RunSession(
@@ -51,35 +51,35 @@ explicit RunSession(
 ```
 
 
-#### ~RunSession
+#### ~RunSession { function ~RunSession }
 
 ```cpp
 virtual ~RunSession()
 ```
 
 
-#### GetSchema
+#### GetSchema { function GetSchema }
 
 ```cpp
 inline virtual const Schema & GetSchema() const
 ```
 
 
-#### GetEncodedSchema
+#### GetEncodedSchema { function GetEncodedSchema }
 
 ```cpp
 inline virtual const std::string & GetEncodedSchema() const
 ```
 
 
-#### GetCompileInfo
+#### GetCompileInfo { function GetCompileInfo }
 
 ```cpp
 inline virtual std::shared_ptr< hybridse::vm::CompileInfo > GetCompileInfo()
 ```
 
 
-#### SetCompileInfo
+#### SetCompileInfo { function SetCompileInfo }
 
 ```cpp
 bool SetCompileInfo(
@@ -88,28 +88,28 @@ bool SetCompileInfo(
 ```
 
 
-#### EnableDebug
+#### EnableDebug { function EnableDebug }
 
 ```cpp
 inline void EnableDebug()
 ```
 
 
-#### DisableDebug
+#### DisableDebug { function DisableDebug }
 
 ```cpp
 inline void DisableDebug()
 ```
 
 
-#### IsDebug
+#### IsDebug { function IsDebug }
 
 ```cpp
 inline bool IsDebug()
 ```
 
 
-#### SetSpName
+#### SetSpName { function SetSpName }
 
 ```cpp
 inline void SetSpName(
@@ -118,7 +118,7 @@ inline void SetSpName(
 ```
 
 
-#### engine_mode
+#### engine_mode { function engine_mode }
 
 ```cpp
 inline EngineMode engine_mode() const
@@ -164,4 +164,4 @@ friend Engine;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

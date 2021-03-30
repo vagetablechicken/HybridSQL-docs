@@ -24,14 +24,14 @@ title: hybridse::vm::JITOptions
 
 ## Public Functions
 
-#### is_enable_mcjit
+#### is_enable_mcjit { function is_enable_mcjit }
 
 ```cpp
 inline bool is_enable_mcjit() const
 ```
 
 
-#### set_enable_mcjit
+#### set_enable_mcjit { function set_enable_mcjit }
 
 ```cpp
 inline void set_enable_mcjit(
@@ -40,14 +40,14 @@ inline void set_enable_mcjit(
 ```
 
 
-#### is_enable_vtune
+#### is_enable_vtune { function is_enable_vtune }
 
 ```cpp
 inline bool is_enable_vtune() const
 ```
 
 
-#### set_enable_vtune
+#### set_enable_vtune { function set_enable_vtune }
 
 ```cpp
 inline void set_enable_vtune(
@@ -56,14 +56,14 @@ inline void set_enable_vtune(
 ```
 
 
-#### is_enable_gdb
+#### is_enable_gdb { function is_enable_gdb }
 
 ```cpp
 inline bool is_enable_gdb() const
 ```
 
 
-#### set_enable_gdb
+#### set_enable_gdb { function set_enable_gdb }
 
 ```cpp
 inline void set_enable_gdb(
@@ -72,14 +72,14 @@ inline void set_enable_gdb(
 ```
 
 
-#### is_enable_perf
+#### is_enable_perf { function is_enable_perf }
 
 ```cpp
 inline bool is_enable_perf() const
 ```
 
 
-#### set_enable_perf
+#### set_enable_perf { function set_enable_perf }
 
 ```cpp
 inline void set_enable_perf(
@@ -90,4 +90,4 @@ inline void set_enable_perf(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

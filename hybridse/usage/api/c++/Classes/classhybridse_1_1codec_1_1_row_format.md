@@ -20,7 +20,7 @@ title: hybridse::codec::RowFormat
 
 ## Public Functions
 
-#### RowFormat
+#### RowFormat { function RowFormat }
 
 ```cpp
 explicit RowFormat(
@@ -29,14 +29,14 @@ explicit RowFormat(
 ```
 
 
-#### ~RowFormat
+#### ~RowFormat { function ~RowFormat }
 
 ```cpp
 inline virtual ~RowFormat()
 ```
 
 
-#### GetStringColumnInfo
+#### GetStringColumnInfo { function GetStringColumnInfo }
 
 ```cpp
 bool GetStringColumnInfo(
@@ -46,7 +46,7 @@ bool GetStringColumnInfo(
 ```
 
 
-#### GetColumnInfo
+#### GetColumnInfo { function GetColumnInfo }
 
 ```cpp
 const ColInfo * GetColumnInfo(
@@ -57,4 +57,4 @@ const ColInfo * GetColumnInfo(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

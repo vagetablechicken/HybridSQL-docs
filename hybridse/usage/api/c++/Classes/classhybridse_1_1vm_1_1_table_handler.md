@@ -52,21 +52,21 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### TableHandler
+#### TableHandler { function TableHandler }
 
 ```cpp
 inline TableHandler()
 ```
 
 
-#### ~TableHandler
+#### ~TableHandler { function ~TableHandler }
 
 ```cpp
 inline virtual ~TableHandler()
 ```
 
 
-#### GetTypes
+#### GetTypes { function GetTypes }
 
 ```cpp
 virtual const Types & GetTypes() =0
@@ -77,7 +77,7 @@ Return table column Types information.
 **Reimplemented by**: [hybridse::vm::MemSegmentHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_segment_handler.md#function-gettypes), [hybridse::vm::ErrorTableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gettypes), [hybridse::vm::MemTableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gettypes), [hybridse::vm::MemTimeTableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-gettypes), [hybridse::vm::MemPartitionHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md#function-gettypes), [hybridse::vm::RequestUnionTableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md#function-gettypes)
 
 
-#### GetIndex
+#### GetIndex { function GetIndex }
 
 ```cpp
 virtual const IndexHint & GetIndex() =0
@@ -88,7 +88,7 @@ Return the index information.
 **Reimplemented by**: [hybridse::vm::MemTableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-getindex), [hybridse::vm::MemTimeTableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-getindex), [hybridse::vm::MemSegmentHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_segment_handler.md#function-getindex), [hybridse::vm::ErrorTableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getindex), [hybridse::vm::MemPartitionHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md#function-getindex), [hybridse::vm::RequestUnionTableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md#function-getindex)
 
 
-#### GetWindowIterator
+#### GetWindowIterator { function GetWindowIterator }
 
 ```cpp
 virtual std::unique_ptr< WindowIterator > GetWindowIterator(
@@ -103,7 +103,7 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
 
-#### GetHanlderType
+#### GetHanlderType { function GetHanlderType }
 
 ```cpp
 inline virtual const HandlerType GetHanlderType() override
@@ -119,7 +119,7 @@ inline virtual const HandlerType GetHanlderType() override
 Return the HandlerType of the dataset. Return HandlerType::kTableHandler by default 
 
 
-#### GetPartition
+#### GetPartition { function GetPartition }
 
 ```cpp
 inline virtual std::shared_ptr< PartitionHandler > GetPartition(
@@ -131,7 +131,7 @@ inline virtual std::shared_ptr< PartitionHandler > GetPartition(
 Return partition handler of specify partition binding to given index. Return `null` by default. 
 
 
-#### GetHandlerTypeName
+#### GetHandlerTypeName { function GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -145,7 +145,7 @@ Return the name of handler and return "TableHandler" by default.
 **Reimplemented by**: [hybridse::vm::ErrorTableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gethandlertypename), [hybridse::vm::PartitionHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md#function-gethandlertypename), [hybridse::vm::MemTableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md#function-gethandlertypename), [hybridse::vm::MemTimeTableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-gethandlertypename), [hybridse::vm::Window::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-gethandlertypename), [hybridse::vm::MemSegmentHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_segment_handler.md#function-gethandlertypename), [hybridse::vm::MemPartitionHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md#function-gethandlertypename)
 
 
-#### GetOrderType
+#### GetOrderType { function GetOrderType }
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -158,7 +158,7 @@ inline virtual const OrderType GetOrderType() const
 Return the order type of the dataset, and return OrderType::kNoneOrder by default. 
 
 
-#### GetTablet
+#### GetTablet { function GetTablet }
 
 ```cpp
 inline virtual std::shared_ptr< Tablet > GetTablet(
@@ -171,7 +171,7 @@ inline virtual std::shared_ptr< Tablet > GetTablet(
 Return [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) binding to specify index and key. Return `null` by default. 
 
 
-#### GetTablet
+#### GetTablet { function GetTablet }
 
 ```cpp
 inline virtual std::shared_ptr< Tablet > GetTablet(
@@ -186,4 +186,4 @@ Return [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.m
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

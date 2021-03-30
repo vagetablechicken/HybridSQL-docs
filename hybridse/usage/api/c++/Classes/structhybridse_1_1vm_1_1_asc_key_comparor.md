@@ -17,7 +17,7 @@ title: hybridse::vm::AscKeyComparor
 
 ## Public Functions
 
-#### operator()
+#### operator() { function operator() }
 
 ```cpp
 inline bool operator()(
@@ -29,4 +29,4 @@ inline bool operator()(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT

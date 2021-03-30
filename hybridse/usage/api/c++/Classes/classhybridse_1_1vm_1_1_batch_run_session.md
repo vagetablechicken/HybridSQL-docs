@@ -47,7 +47,7 @@ Inherited from [hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classh
 
 ## Public Functions
 
-#### BatchRunSession
+#### BatchRunSession { function BatchRunSession }
 
 ```cpp
 inline explicit BatchRunSession(
@@ -56,14 +56,14 @@ inline explicit BatchRunSession(
 ```
 
 
-#### ~BatchRunSession
+#### ~BatchRunSession { function ~BatchRunSession }
 
 ```cpp
 inline ~BatchRunSession()
 ```
 
 
-#### Run
+#### Run { function Run }
 
 ```cpp
 int32_t Run(
@@ -73,7 +73,7 @@ int32_t Run(
 ```
 
 
-#### Run
+#### Run { function Run }
 
 ```cpp
 std::shared_ptr< TableHandler > Run()
@@ -82,4 +82,4 @@ std::shared_ptr< TableHandler > Run()
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:34:52 PDT
+Updated on 29 March 2021 at 17:58:50 PDT
