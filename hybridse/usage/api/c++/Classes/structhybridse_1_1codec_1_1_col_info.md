@@ -20,10 +20,10 @@ title: hybridse::codec::ColInfo
 
 | Public attributes|    |
 | -------------- | -------------- |
-| ::hybridse::type::Type | **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**  |
-| uint32_t | **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**  |
-| uint32_t | **[offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**  |
-| std::string | **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**  |
+| **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**| ::hybridse::type::Type  |
+| **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**| uint32_t  |
+| **[offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**| uint32_t  |
+| **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**| std::string  |
 
 ## Public Functions
 
@@ -78,4 +78,4 @@ std::string name;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:05:16 PDT
+Updated on 29 March 2021 at 19:04:07 PDT

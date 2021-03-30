@@ -20,8 +20,8 @@ title: hybridse::codec::StringColInfo
 
 | Public attributes|    |
 | -------------- | -------------- |
-| uint32_t | **[str_next_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_next_offset)**  |
-| uint32_t | **[str_start_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_start_offset)**  |
+| **[str_next_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_next_offset)**| uint32_t  |
+| **[str_start_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_start_offset)**| uint32_t  |
 
 ## Inherited members
 Inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)
@@ -30,14 +30,12 @@ Inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/struct
 |**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**()|  |
 |**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**(const std::string & name, ::hybridse::type::Type type, uint32_t idx, uint32_t offset)|  |
 
-**Public Attributes inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)**
-
-|                | Name           |
+|**Inherited attributes **| |
 | -------------- | -------------- |
-| ::hybridse::type::Type | **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**  |
-| uint32_t | **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**  |
-| uint32_t | **[offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**  |
-| std::string | **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**  |
+| **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**|::hybridse::type::Type  |
+| **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**|uint32_t  |
+| **[offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**|uint32_t  |
+| **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**|std::string  |
 
 
 ## Public Functions
@@ -81,4 +79,4 @@ uint32_t str_start_offset;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:05:16 PDT
+Updated on 29 March 2021 at 19:04:07 PDT

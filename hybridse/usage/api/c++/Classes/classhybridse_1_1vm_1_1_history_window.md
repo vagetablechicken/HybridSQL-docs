@@ -48,8 +48,8 @@ Inherited by [hybridse::vm::CurrentHistoryWindow](/hybridse/usage/api/c++/Classe
 Inherited from [hybridse::vm::Window](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md)
 | **Inherited public types** | |
 | -------------- | -------------- |
-|  **[WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)** { kFrameRows, kFrameRowsRange, kFrameRowsMergeRowsRange}
-|enum|
+|  **[WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)** { kFrameRows, kFrameRowsRange, kFrameRowsMergeRowsRange}|
+  enum|
 
 | **Inherited public functions** | Name           |
 | -------------- | -------------- |
@@ -66,12 +66,10 @@ Inherited from [hybridse::vm::Window](/hybridse/usage/api/c++/Classes/classhybri
 |**[exclude_current_time](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-exclude_current_time)**() const| const bool  |
 |**[set_exclude_current_time](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-set_exclude_current_time)**(const bool flag)| void  |
 
-**Protected Attributes inherited from [hybridse::vm::Window](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md)**
-
-|                | Name           |
+|**Inherited protected attributes| |
 | -------------- | -------------- |
-| bool | **[exclude_current_time_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#variable-exclude_current_time_)**  |
-| bool | **[instance_not_in_window_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#variable-instance_not_in_window_)**  |
+| **[exclude_current_time_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#variable-exclude_current_time_)**|bool  |
+| **[instance_not_in_window_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#variable-instance_not_in_window_)**|bool  |
 
 Inherited from [hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)
 | **Inherited public functions** | Name           |
@@ -102,17 +100,15 @@ Inherited from [hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Class
 |**[GetOrderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-getordertype)**() const| virtual const [OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype)  |
 |**[GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-gethandlertypename)**() override| virtual const std::string <br>Return the name of handler and return "TableHandler" by default.  |
 
-**Protected Attributes inherited from [hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)**
-
-|                | Name           |
+|**Inherited protected attributes| |
 | -------------- | -------------- |
-| const std::string | **[table_name_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-table_name_)**  |
-| const std::string | **[db_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-db_)**  |
-| const Schema * | **[schema_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-schema_)**  |
-| [Types](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types) | **[types_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-types_)**  |
-| [IndexHint](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) | **[index_hint_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-index_hint_)**  |
-| [MemTimeTable](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable) | **[table_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-table_)**  |
-| [OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) | **[order_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-order_type_)**  |
+| **[table_name_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-table_name_)**|const std::string  |
+| **[db_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-db_)**|const std::string  |
+| **[schema_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-schema_)**|const Schema *  |
+| **[types_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-types_)**|[Types](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types)  |
+| **[index_hint_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-index_hint_)**|[IndexHint](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint)  |
+| **[table_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-table_)**|[MemTimeTable](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable)  |
+| **[order_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-order_type_)**|[OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype)  |
 
 Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
 | **Inherited public functions** | Name           |
@@ -259,4 +255,4 @@ MemTimeTable current_history_buffer_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:05:16 PDT
+Updated on 29 March 2021 at 19:04:07 PDT
