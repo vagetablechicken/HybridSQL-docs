@@ -42,14 +42,14 @@ Inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/struct
 
 ## Public Functions
 
-#### StringColInfo { function StringColInfo }
+#### StringColInfo { #function-StringColInfo }
 
 ```cpp
 inline StringColInfo()
 ```
 
 
-#### StringColInfo { function StringColInfo }
+#### StringColInfo { #function-StringColInfo }
 
 ```cpp
 inline StringColInfo(
@@ -81,4 +81,4 @@ uint32_t str_start_offset;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

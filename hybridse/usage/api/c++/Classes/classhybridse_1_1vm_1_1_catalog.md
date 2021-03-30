@@ -32,21 +32,21 @@ Users should implement the subclasses for their own purpose
 
 ## Public Functions
 
-#### Catalog { function Catalog }
+#### Catalog { #function-Catalog }
 
 ```cpp
 inline Catalog()
 ```
 
 
-#### ~Catalog { function ~Catalog }
+#### ~Catalog { #function-~Catalog }
 
 ```cpp
 inline virtual ~Catalog()
 ```
 
 
-#### IndexSupport { function IndexSupport }
+#### IndexSupport { #function-IndexSupport }
 
 ```cpp
 virtual bool IndexSupport() =0
@@ -57,7 +57,7 @@ Return whether index is supported or not.
 **Reimplemented by**: [hybridse::vm::MemCatalog::IndexSupport](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-indexsupport)
 
 
-#### GetDatabase { function GetDatabase }
+#### GetDatabase { #function-GetDatabase }
 
 ```cpp
 virtual std::shared_ptr< type::Database > GetDatabase(
@@ -70,7 +70,7 @@ Return database information.
 **Reimplemented by**: [hybridse::vm::MemCatalog::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-getdatabase)
 
 
-#### GetTable { function GetTable }
+#### GetTable { #function-GetTable }
 
 ```cpp
 virtual std::shared_ptr< TableHandler > GetTable(
@@ -86,7 +86,7 @@ virtual std::shared_ptr< TableHandler > GetTable(
 Return a table handler with given table name 
 
 
-#### GetProcedureInfo { function GetProcedureInfo }
+#### GetProcedureInfo { #function-GetProcedureInfo }
 
 ```cpp
 inline virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > GetProcedureInfo(
@@ -101,4 +101,4 @@ Return ProcedureInfo instance with given database name `db` and procedure name `
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

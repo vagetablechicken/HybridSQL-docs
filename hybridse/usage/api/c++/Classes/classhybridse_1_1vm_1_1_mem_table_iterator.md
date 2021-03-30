@@ -26,7 +26,7 @@ title: hybridse::vm::MemTableIterator
 
 ## Public Functions
 
-#### MemTableIterator { function MemTableIterator }
+#### MemTableIterator { #function-MemTableIterator }
 
 ```cpp
 MemTableIterator(
@@ -36,7 +36,7 @@ MemTableIterator(
 ```
 
 
-#### MemTableIterator { function MemTableIterator }
+#### MemTableIterator { #function-MemTableIterator }
 
 ```cpp
 MemTableIterator(
@@ -48,14 +48,14 @@ MemTableIterator(
 ```
 
 
-#### ~MemTableIterator { function ~MemTableIterator }
+#### ~MemTableIterator { #function-~MemTableIterator }
 
 ```cpp
 ~MemTableIterator()
 ```
 
 
-#### Seek { function Seek }
+#### Seek { #function-Seek }
 
 ```cpp
 void Seek(
@@ -64,42 +64,42 @@ void Seek(
 ```
 
 
-#### SeekToFirst { function SeekToFirst }
+#### SeekToFirst { #function-SeekToFirst }
 
 ```cpp
 void SeekToFirst()
 ```
 
 
-#### GetKey { function GetKey }
+#### GetKey { #function-GetKey }
 
 ```cpp
 const uint64_t & GetKey() const
 ```
 
 
-#### GetValue { function GetValue }
+#### GetValue { #function-GetValue }
 
 ```cpp
 const Row & GetValue()
 ```
 
 
-#### Next { function Next }
+#### Next { #function-Next }
 
 ```cpp
 void Next()
 ```
 
 
-#### Valid { function Valid }
+#### Valid { #function-Valid }
 
 ```cpp
 bool Valid() const
 ```
 
 
-#### IsSeekable { function IsSeekable }
+#### IsSeekable { #function-IsSeekable }
 
 ```cpp
 bool IsSeekable() const override
@@ -108,4 +108,4 @@ bool IsSeekable() const override
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

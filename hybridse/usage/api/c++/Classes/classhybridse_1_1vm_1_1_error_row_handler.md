@@ -56,7 +56,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### ErrorRowHandler { function ErrorRowHandler }
+#### ErrorRowHandler { #function-ErrorRowHandler }
 
 ```cpp
 inline ErrorRowHandler(
@@ -67,14 +67,14 @@ inline ErrorRowHandler(
 
 Creating [ErrorRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md) with status code and error msg. 
 
-#### ~ErrorRowHandler { function ~ErrorRowHandler }
+#### ~ErrorRowHandler { #function-~ErrorRowHandler }
 
 ```cpp
 inline ~ErrorRowHandler()
 ```
 
 
-#### GetValue { function GetValue }
+#### GetValue { #function-GetValue }
 
 ```cpp
 inline virtual const Row & GetValue()
@@ -85,7 +85,7 @@ Return empty Row as value.
 **Reimplements**: [hybridse::vm::RowHandler::GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-getvalue)
 
 
-#### GetHandlerTypeName { function GetHandlerTypeName }
+#### GetHandlerTypeName { #function-GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -96,7 +96,7 @@ Return handler type name, and return "ErrorRowHandler" by default.
 **Reimplements**: [hybridse::vm::RowHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-gethandlertypename)
 
 
-#### GetSchema { function GetSchema }
+#### GetSchema { #function-GetSchema }
 
 ```cpp
 inline virtual const Schema * GetSchema() override
@@ -107,7 +107,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { function GetName }
+#### GetName { #function-GetName }
 
 ```cpp
 inline virtual const std::string & GetName() override
@@ -118,7 +118,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase { function GetDatabase }
+#### GetDatabase { #function-GetDatabase }
 
 ```cpp
 inline virtual const std::string & GetDatabase() override
@@ -129,7 +129,7 @@ Return the name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetStatus { function GetStatus }
+#### GetStatus { #function-GetStatus }
 
 ```cpp
 inline virtual base::Status GetStatus()
@@ -142,4 +142,4 @@ Return dataset status. Default is hybridse::common::kOk.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

@@ -69,21 +69,21 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### PartitionHandler { function PartitionHandler }
+#### PartitionHandler { #function-PartitionHandler }
 
 ```cpp
 inline PartitionHandler()
 ```
 
 
-#### ~PartitionHandler { function ~PartitionHandler }
+#### ~PartitionHandler { #function-~PartitionHandler }
 
 ```cpp
 inline ~PartitionHandler()
 ```
 
 
-#### GetIterator { function GetIterator }
+#### GetIterator { #function-GetIterator }
 
 ```cpp
 inline virtual std::unique_ptr< RowIterator > GetIterator()
@@ -96,7 +96,7 @@ inline virtual std::unique_ptr< RowIterator > GetIterator()
 Return the iterator of row iterator. Return null by default 
 
 
-#### GetRawIterator { function GetRawIterator }
+#### GetRawIterator { #function-GetRawIterator }
 
 ```cpp
 inline virtual RowIterator * GetRawIterator()
@@ -109,7 +109,7 @@ inline virtual RowIterator * GetRawIterator()
 Return the iterator of row iterator Return null by default 
 
 
-#### GetWindowIterator { function GetWindowIterator }
+#### GetWindowIterator { #function-GetWindowIterator }
 
 ```cpp
 inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
@@ -124,7 +124,7 @@ inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
 
-#### GetWindowIterator { function GetWindowIterator }
+#### GetWindowIterator { #function-GetWindowIterator }
 
 ```cpp
 virtual std::unique_ptr< WindowIterator > GetWindowIterator() =0
@@ -137,7 +137,7 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator() =0
 Return WindowIterator to iterate datasets segment-by-segment. 
 
 
-#### GetHanlderType { function GetHanlderType }
+#### GetHanlderType { #function-GetHanlderType }
 
 ```cpp
 inline virtual const HandlerType GetHanlderType() override
@@ -148,7 +148,7 @@ Return HandlerType::kPartitionHandler by default.
 **Reimplements**: [hybridse::vm::TableHandler::GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethanldertype)
 
 
-#### At { function At }
+#### At { #function-At }
 
 ```cpp
 inline virtual Row At(
@@ -161,7 +161,7 @@ Return empty row, cause partition dataset does not support At operation.
 **Reimplements**: [hybridse::codec::ListV::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-at)
 
 
-#### GetSegment { function GetSegment }
+#### GetSegment { #function-GetSegment }
 
 ```cpp
 inline virtual std::shared_ptr< TableHandler > GetSegment(
@@ -176,7 +176,7 @@ inline virtual std::shared_ptr< TableHandler > GetSegment(
 Return Return table handler of specific segment binding to given key. Return `null` by default. 
 
 
-#### GetSegments { function GetSegments }
+#### GetSegments { #function-GetSegments }
 
 ```cpp
 inline virtual std::vector< std::shared_ptr< TableHandler > > GetSegments(
@@ -188,7 +188,7 @@ inline virtual std::vector< std::shared_ptr< TableHandler > > GetSegments(
 Return a sequence of table handles of specify segments binding to given keys set. 
 
 
-#### GetHandlerTypeName { function GetHandlerTypeName }
+#### GetHandlerTypeName { #function-GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -202,7 +202,7 @@ Return the name of handler, and return `"PartitionHandler"` by default.
 **Reimplemented by**: [hybridse::vm::MemPartitionHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md#function-gethandlertypename)
 
 
-#### GetOrderType { function GetOrderType }
+#### GetOrderType { #function-GetOrderType }
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -220,4 +220,4 @@ Return order type of the dataset, and return kNoneOrder by default.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:28 PDT

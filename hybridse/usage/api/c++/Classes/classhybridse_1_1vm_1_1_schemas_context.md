@@ -51,14 +51,14 @@ Utility context to resolve column spec into detailed column information. This cl
 
 ## Public Functions
 
-#### SchemasContext { function SchemasContext }
+#### SchemasContext { #function-SchemasContext }
 
 ```cpp
 inline SchemasContext()
 ```
 
 
-#### SchemasContext { function SchemasContext }
+#### SchemasContext { #function-SchemasContext }
 
 ```cpp
 inline explicit SchemasContext(
@@ -67,14 +67,14 @@ inline explicit SchemasContext(
 ```
 
 
-#### ~SchemasContext { function ~SchemasContext }
+#### ~SchemasContext { #function-~SchemasContext }
 
 ```cpp
 ~SchemasContext()
 ```
 
 
-#### ResolveColumnIndexByName { function ResolveColumnIndexByName }
+#### ResolveColumnIndexByName { #function-ResolveColumnIndexByName }
 
 ```cpp
 base::Status ResolveColumnIndexByName(
@@ -89,7 +89,7 @@ base::Status ResolveColumnIndexByName(
 Given relation name and column name, return schema slice index and column index within current context. 
 
 
-#### ResolveColumnIndexByID { function ResolveColumnIndexByID }
+#### ResolveColumnIndexByID { #function-ResolveColumnIndexByID }
 
 ```cpp
 base::Status ResolveColumnIndexByID(
@@ -103,7 +103,7 @@ base::Status ResolveColumnIndexByID(
 Given unique column id, return schema slice index and column index within schema slice within current context. 
 
 
-#### ResolveColumnNameByID { function ResolveColumnNameByID }
+#### ResolveColumnNameByID { #function-ResolveColumnNameByID }
 
 ```cpp
 base::Status ResolveColumnNameByID(
@@ -116,7 +116,7 @@ base::Status ResolveColumnNameByID(
 Given unique column id, return column name. 
 
 
-#### ResolveColumnRefIndex { function ResolveColumnRefIndex }
+#### ResolveColumnRefIndex { #function-ResolveColumnRefIndex }
 
 ```cpp
 base::Status ResolveColumnRefIndex(
@@ -130,7 +130,7 @@ base::Status ResolveColumnRefIndex(
 Resolve index for column reference expression 
 
 
-#### ResolveColumnID { function ResolveColumnID }
+#### ResolveColumnID { #function-ResolveColumnID }
 
 ```cpp
 base::Status ResolveColumnID(
@@ -144,7 +144,7 @@ base::Status ResolveColumnID(
 Given relation name and column name, return column unique id under current context. 
 
 
-#### ResolveColumnID { function ResolveColumnID }
+#### ResolveColumnID { #function-ResolveColumnID }
 
 ```cpp
 base::Status ResolveColumnID(
@@ -162,7 +162,7 @@ base::Status ResolveColumnID(
 Resolve source column by relation name and column name recursively. If it can be resolved in current node, `child_path_id` is -1, else `child_path_id` is the index of the child which the column is resolved from. 
 
 
-#### ResolveExprDependentColumns { function ResolveExprDependentColumns }
+#### ResolveExprDependentColumns { #function-ResolveExprDependentColumns }
 
 ```cpp
 base::Status ResolveExprDependentColumns(
@@ -175,7 +175,7 @@ base::Status ResolveExprDependentColumns(
 Resolve all columns input expression will depend on. Return column id list. 
 
 
-#### ResolveExprDependentColumns { function ResolveExprDependentColumns }
+#### ResolveExprDependentColumns { #function-ResolveExprDependentColumns }
 
 ```cpp
 base::Status ResolveExprDependentColumns(
@@ -185,7 +185,7 @@ base::Status ResolveExprDependentColumns(
 ```
 
 
-#### GetName { function GetName }
+#### GetName { #function-GetName }
 
 ```cpp
 const std::string & GetName() const
@@ -195,14 +195,14 @@ const std::string & GetName() const
 Get the relation name for this schema context, default "" 
 
 
-#### GetRoot { function GetRoot }
+#### GetRoot { #function-GetRoot }
 
 ```cpp
 const PhysicalOpNode * GetRoot() const
 ```
 
 
-#### GetRowFormat { function GetRowFormat }
+#### GetRowFormat { #function-GetRowFormat }
 
 ```cpp
 const codec::RowFormat * GetRowFormat(
@@ -214,7 +214,7 @@ const codec::RowFormat * GetRowFormat(
 Get detailed format for `idx`th schema source. 
 
 
-#### GetSchemaSource { function GetSchemaSource }
+#### GetSchemaSource { #function-GetSchemaSource }
 
 ```cpp
 const SchemaSource * GetSchemaSource(
@@ -226,7 +226,7 @@ const SchemaSource * GetSchemaSource(
 Get `idx`th schema source. 
 
 
-#### GetSchema { function GetSchema }
+#### GetSchema { #function-GetSchema }
 
 ```cpp
 const codec::Schema * GetSchema(
@@ -238,7 +238,7 @@ const codec::Schema * GetSchema(
 Get raw schema for `idx`th schema source. 
 
 
-#### GetSchemaSourceSize { function GetSchemaSourceSize }
+#### GetSchemaSourceSize { #function-GetSchemaSourceSize }
 
 ```cpp
 size_t GetSchemaSourceSize() const
@@ -248,7 +248,7 @@ size_t GetSchemaSourceSize() const
 Get num of total schema sources. 
 
 
-#### SetName { function SetName }
+#### SetName { #function-SetName }
 
 ```cpp
 void SetName(
@@ -260,7 +260,7 @@ void SetName(
 Set the relation name for this schema context. 
 
 
-#### AddSource { function AddSource }
+#### AddSource { #function-AddSource }
 
 ```cpp
 SchemaSource * AddSource()
@@ -270,7 +270,7 @@ SchemaSource * AddSource()
 Add new schema source and return the mutable instance of added source. 
 
 
-#### Merge { function Merge }
+#### Merge { #function-Merge }
 
 ```cpp
 void Merge(
@@ -283,7 +283,7 @@ void Merge(
 Add schema sources from child and inherit column identifiers. 
 
 
-#### MergeWithNewID { function MergeWithNewID }
+#### MergeWithNewID { #function-MergeWithNewID }
 
 ```cpp
 void MergeWithNewID(
@@ -297,28 +297,28 @@ void MergeWithNewID(
 Add schema sources from child with new column identifiers. The source informations are set to traceback which child column the new column is from. 
 
 
-#### Clear { function Clear }
+#### Clear { #function-Clear }
 
 ```cpp
 void Clear()
 ```
 
 
-#### Build { function Build }
+#### Build { #function-Build }
 
 ```cpp
 void Build()
 ```
 
 
-#### Empty { function Empty }
+#### Empty { #function-Empty }
 
 ```cpp
 inline bool Empty() const
 ```
 
 
-#### GetColumnNum { function GetColumnNum }
+#### GetColumnNum { #function-GetColumnNum }
 
 ```cpp
 size_t GetColumnNum() const
@@ -328,14 +328,14 @@ size_t GetColumnNum() const
 Get total column num of all schema sources. 
 
 
-#### GetOutputSchema { function GetOutputSchema }
+#### GetOutputSchema { #function-GetOutputSchema }
 
 ```cpp
 const codec::Schema * GetOutputSchema() const
 ```
 
 
-#### BuildTrivial { function BuildTrivial }
+#### BuildTrivial { #function-BuildTrivial }
 
 ```cpp
 void BuildTrivial(
@@ -347,7 +347,7 @@ void BuildTrivial(
 Helper method to init schemas context with trival schema sources this can be commonly used when no plan node is provided. 
 
 
-#### BuildTrivial { function BuildTrivial }
+#### BuildTrivial { #function-BuildTrivial }
 
 ```cpp
 void BuildTrivial(
@@ -358,4 +358,4 @@ void BuildTrivial(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:28 PDT

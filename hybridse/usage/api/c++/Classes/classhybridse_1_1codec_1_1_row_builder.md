@@ -32,7 +32,7 @@ title: hybridse::codec::RowBuilder
 
 ## Public Functions
 
-#### RowBuilder { function RowBuilder }
+#### RowBuilder { #function-RowBuilder }
 
 ```cpp
 explicit RowBuilder(
@@ -41,14 +41,14 @@ explicit RowBuilder(
 ```
 
 
-#### ~RowBuilder { function ~RowBuilder }
+#### ~RowBuilder { #function-~RowBuilder }
 
 ```cpp
 ~RowBuilder() =default
 ```
 
 
-#### CalTotalLength { function CalTotalLength }
+#### CalTotalLength { #function-CalTotalLength }
 
 ```cpp
 uint32_t CalTotalLength(
@@ -57,7 +57,7 @@ uint32_t CalTotalLength(
 ```
 
 
-#### SetBuffer { function SetBuffer }
+#### SetBuffer { #function-SetBuffer }
 
 ```cpp
 bool SetBuffer(
@@ -67,7 +67,7 @@ bool SetBuffer(
 ```
 
 
-#### SetBuffer { function SetBuffer }
+#### SetBuffer { #function-SetBuffer }
 
 ```cpp
 bool SetBuffer(
@@ -77,7 +77,7 @@ bool SetBuffer(
 ```
 
 
-#### SetBuffer { function SetBuffer }
+#### SetBuffer { #function-SetBuffer }
 
 ```cpp
 bool SetBuffer(
@@ -86,7 +86,7 @@ bool SetBuffer(
 ```
 
 
-#### AppendBool { function AppendBool }
+#### AppendBool { #function-AppendBool }
 
 ```cpp
 bool AppendBool(
@@ -95,7 +95,7 @@ bool AppendBool(
 ```
 
 
-#### AppendInt32 { function AppendInt32 }
+#### AppendInt32 { #function-AppendInt32 }
 
 ```cpp
 bool AppendInt32(
@@ -104,7 +104,7 @@ bool AppendInt32(
 ```
 
 
-#### AppendInt16 { function AppendInt16 }
+#### AppendInt16 { #function-AppendInt16 }
 
 ```cpp
 bool AppendInt16(
@@ -113,7 +113,7 @@ bool AppendInt16(
 ```
 
 
-#### AppendInt64 { function AppendInt64 }
+#### AppendInt64 { #function-AppendInt64 }
 
 ```cpp
 bool AppendInt64(
@@ -122,7 +122,7 @@ bool AppendInt64(
 ```
 
 
-#### AppendTimestamp { function AppendTimestamp }
+#### AppendTimestamp { #function-AppendTimestamp }
 
 ```cpp
 bool AppendTimestamp(
@@ -131,7 +131,7 @@ bool AppendTimestamp(
 ```
 
 
-#### AppendDate { function AppendDate }
+#### AppendDate { #function-AppendDate }
 
 ```cpp
 bool AppendDate(
@@ -142,7 +142,7 @@ bool AppendDate(
 ```
 
 
-#### AppendFloat { function AppendFloat }
+#### AppendFloat { #function-AppendFloat }
 
 ```cpp
 bool AppendFloat(
@@ -151,7 +151,7 @@ bool AppendFloat(
 ```
 
 
-#### AppendDouble { function AppendDouble }
+#### AppendDouble { #function-AppendDouble }
 
 ```cpp
 bool AppendDouble(
@@ -160,7 +160,7 @@ bool AppendDouble(
 ```
 
 
-#### AppendString { function AppendString }
+#### AppendString { #function-AppendString }
 
 ```cpp
 bool AppendString(
@@ -170,7 +170,7 @@ bool AppendString(
 ```
 
 
-#### AppendNULL { function AppendNULL }
+#### AppendNULL { #function-AppendNULL }
 
 ```cpp
 bool AppendNULL()
@@ -179,4 +179,4 @@ bool AppendNULL()
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

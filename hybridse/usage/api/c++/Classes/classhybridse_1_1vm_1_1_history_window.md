@@ -154,7 +154,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### HistoryWindow { function HistoryWindow }
+#### HistoryWindow { #function-HistoryWindow }
 
 ```cpp
 inline explicit HistoryWindow(
@@ -163,14 +163,14 @@ inline explicit HistoryWindow(
 ```
 
 
-#### ~HistoryWindow { function ~HistoryWindow }
+#### ~HistoryWindow { #function-~HistoryWindow }
 
 ```cpp
 inline ~HistoryWindow()
 ```
 
 
-#### PopFrontData { function PopFrontData }
+#### PopFrontData { #function-PopFrontData }
 
 ```cpp
 inline virtual void PopFrontData()
@@ -183,14 +183,14 @@ inline virtual void PopFrontData()
 **Reimplemented by**: [hybridse::vm::CurrentHistoryWindow::PopFrontData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md#function-popfrontdata)
 
 
-#### PopEffectiveData { function PopEffectiveData }
+#### PopEffectiveData { #function-PopEffectiveData }
 
 ```cpp
 inline virtual void PopEffectiveData()
 ```
 
 
-#### BufferData { function BufferData }
+#### BufferData { #function-BufferData }
 
 ```cpp
 inline virtual bool BufferData(
@@ -259,4 +259,4 @@ MemTimeTable current_history_buffer_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

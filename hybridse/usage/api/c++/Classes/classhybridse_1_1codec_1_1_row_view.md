@@ -57,14 +57,14 @@ title: hybridse::codec::RowView
 
 ## Public Functions
 
-#### RowView { function RowView }
+#### RowView { #function-RowView }
 
 ```cpp
 RowView()
 ```
 
 
-#### RowView { function RowView }
+#### RowView { #function-RowView }
 
 ```cpp
 RowView(
@@ -75,7 +75,7 @@ RowView(
 ```
 
 
-#### RowView { function RowView }
+#### RowView { #function-RowView }
 
 ```cpp
 explicit RowView(
@@ -84,7 +84,7 @@ explicit RowView(
 ```
 
 
-#### RowView { function RowView }
+#### RowView { #function-RowView }
 
 ```cpp
 RowView(
@@ -93,14 +93,14 @@ RowView(
 ```
 
 
-#### ~RowView { function ~RowView }
+#### ~RowView { #function-~RowView }
 
 ```cpp
 ~RowView() =default
 ```
 
 
-#### Reset { function Reset }
+#### Reset { #function-Reset }
 
 ```cpp
 bool Reset(
@@ -110,7 +110,7 @@ bool Reset(
 ```
 
 
-#### Reset { function Reset }
+#### Reset { #function-Reset }
 
 ```cpp
 bool Reset(
@@ -119,7 +119,7 @@ bool Reset(
 ```
 
 
-#### Reset { function Reset }
+#### Reset { #function-Reset }
 
 ```cpp
 bool Reset(
@@ -128,7 +128,7 @@ bool Reset(
 ```
 
 
-#### GetBool { function GetBool }
+#### GetBool { #function-GetBool }
 
 ```cpp
 int32_t GetBool(
@@ -138,7 +138,7 @@ int32_t GetBool(
 ```
 
 
-#### GetInt32 { function GetInt32 }
+#### GetInt32 { #function-GetInt32 }
 
 ```cpp
 int32_t GetInt32(
@@ -148,7 +148,7 @@ int32_t GetInt32(
 ```
 
 
-#### GetInt64 { function GetInt64 }
+#### GetInt64 { #function-GetInt64 }
 
 ```cpp
 int32_t GetInt64(
@@ -158,7 +158,7 @@ int32_t GetInt64(
 ```
 
 
-#### GetTimestamp { function GetTimestamp }
+#### GetTimestamp { #function-GetTimestamp }
 
 ```cpp
 int32_t GetTimestamp(
@@ -168,7 +168,7 @@ int32_t GetTimestamp(
 ```
 
 
-#### GetInt16 { function GetInt16 }
+#### GetInt16 { #function-GetInt16 }
 
 ```cpp
 int32_t GetInt16(
@@ -178,7 +178,7 @@ int32_t GetInt16(
 ```
 
 
-#### GetFloat { function GetFloat }
+#### GetFloat { #function-GetFloat }
 
 ```cpp
 int32_t GetFloat(
@@ -188,7 +188,7 @@ int32_t GetFloat(
 ```
 
 
-#### GetDouble { function GetDouble }
+#### GetDouble { #function-GetDouble }
 
 ```cpp
 int32_t GetDouble(
@@ -198,7 +198,7 @@ int32_t GetDouble(
 ```
 
 
-#### GetString { function GetString }
+#### GetString { #function-GetString }
 
 ```cpp
 int32_t GetString(
@@ -209,7 +209,7 @@ int32_t GetString(
 ```
 
 
-#### GetDate { function GetDate }
+#### GetDate { #function-GetDate }
 
 ```cpp
 int32_t GetDate(
@@ -221,7 +221,7 @@ int32_t GetDate(
 ```
 
 
-#### GetDate { function GetDate }
+#### GetDate { #function-GetDate }
 
 ```cpp
 int32_t GetDate(
@@ -231,7 +231,7 @@ int32_t GetDate(
 ```
 
 
-#### GetBoolUnsafe { function GetBoolUnsafe }
+#### GetBoolUnsafe { #function-GetBoolUnsafe }
 
 ```cpp
 bool GetBoolUnsafe(
@@ -240,7 +240,7 @@ bool GetBoolUnsafe(
 ```
 
 
-#### GetInt32Unsafe { function GetInt32Unsafe }
+#### GetInt32Unsafe { #function-GetInt32Unsafe }
 
 ```cpp
 int32_t GetInt32Unsafe(
@@ -249,7 +249,7 @@ int32_t GetInt32Unsafe(
 ```
 
 
-#### GetInt64Unsafe { function GetInt64Unsafe }
+#### GetInt64Unsafe { #function-GetInt64Unsafe }
 
 ```cpp
 int64_t GetInt64Unsafe(
@@ -258,7 +258,7 @@ int64_t GetInt64Unsafe(
 ```
 
 
-#### GetTimestampUnsafe { function GetTimestampUnsafe }
+#### GetTimestampUnsafe { #function-GetTimestampUnsafe }
 
 ```cpp
 int64_t GetTimestampUnsafe(
@@ -267,7 +267,7 @@ int64_t GetTimestampUnsafe(
 ```
 
 
-#### GetDateUnsafe { function GetDateUnsafe }
+#### GetDateUnsafe { #function-GetDateUnsafe }
 
 ```cpp
 int32_t GetDateUnsafe(
@@ -276,7 +276,7 @@ int32_t GetDateUnsafe(
 ```
 
 
-#### GetYearUnsafe { function GetYearUnsafe }
+#### GetYearUnsafe { #function-GetYearUnsafe }
 
 ```cpp
 int32_t GetYearUnsafe(
@@ -285,7 +285,7 @@ int32_t GetYearUnsafe(
 ```
 
 
-#### GetMonthUnsafe { function GetMonthUnsafe }
+#### GetMonthUnsafe { #function-GetMonthUnsafe }
 
 ```cpp
 int32_t GetMonthUnsafe(
@@ -294,7 +294,7 @@ int32_t GetMonthUnsafe(
 ```
 
 
-#### GetDayUnsafe { function GetDayUnsafe }
+#### GetDayUnsafe { #function-GetDayUnsafe }
 
 ```cpp
 int32_t GetDayUnsafe(
@@ -303,7 +303,7 @@ int32_t GetDayUnsafe(
 ```
 
 
-#### GetInt16Unsafe { function GetInt16Unsafe }
+#### GetInt16Unsafe { #function-GetInt16Unsafe }
 
 ```cpp
 int16_t GetInt16Unsafe(
@@ -312,7 +312,7 @@ int16_t GetInt16Unsafe(
 ```
 
 
-#### GetFloatUnsafe { function GetFloatUnsafe }
+#### GetFloatUnsafe { #function-GetFloatUnsafe }
 
 ```cpp
 float GetFloatUnsafe(
@@ -321,7 +321,7 @@ float GetFloatUnsafe(
 ```
 
 
-#### GetDoubleUnsafe { function GetDoubleUnsafe }
+#### GetDoubleUnsafe { #function-GetDoubleUnsafe }
 
 ```cpp
 double GetDoubleUnsafe(
@@ -330,7 +330,7 @@ double GetDoubleUnsafe(
 ```
 
 
-#### GetStringUnsafe { function GetStringUnsafe }
+#### GetStringUnsafe { #function-GetStringUnsafe }
 
 ```cpp
 std::string GetStringUnsafe(
@@ -339,7 +339,7 @@ std::string GetStringUnsafe(
 ```
 
 
-#### IsNULL { function IsNULL }
+#### IsNULL { #function-IsNULL }
 
 ```cpp
 inline bool IsNULL(
@@ -348,14 +348,14 @@ inline bool IsNULL(
 ```
 
 
-#### GetSize { function GetSize }
+#### GetSize { #function-GetSize }
 
 ```cpp
 inline uint32_t GetSize()
 ```
 
 
-#### GetValue { function GetValue }
+#### GetValue { #function-GetValue }
 
 ```cpp
 int32_t GetValue(
@@ -367,7 +367,7 @@ int32_t GetValue(
 ```
 
 
-#### GetInteger { function GetInteger }
+#### GetInteger { #function-GetInteger }
 
 ```cpp
 int32_t GetInteger(
@@ -379,7 +379,7 @@ int32_t GetInteger(
 ```
 
 
-#### GetValue { function GetValue }
+#### GetValue { #function-GetValue }
 
 ```cpp
 int32_t GetValue(
@@ -391,7 +391,7 @@ int32_t GetValue(
 ```
 
 
-#### GetAsString { function GetAsString }
+#### GetAsString { #function-GetAsString }
 
 ```cpp
 std::string GetAsString(
@@ -400,14 +400,14 @@ std::string GetAsString(
 ```
 
 
-#### GetRowString { function GetRowString }
+#### GetRowString { #function-GetRowString }
 
 ```cpp
 std::string GetRowString()
 ```
 
 
-#### GetPrimaryFieldOffset { function GetPrimaryFieldOffset }
+#### GetPrimaryFieldOffset { #function-GetPrimaryFieldOffset }
 
 ```cpp
 int32_t GetPrimaryFieldOffset(
@@ -416,14 +416,14 @@ int32_t GetPrimaryFieldOffset(
 ```
 
 
-#### GetSchema { function GetSchema }
+#### GetSchema { #function-GetSchema }
 
 ```cpp
 inline const Schema * GetSchema() const
 ```
 
 
-#### IsNULL { function IsNULL }
+#### IsNULL { #function-IsNULL }
 
 ```cpp
 inline bool IsNULL(
@@ -433,7 +433,7 @@ inline bool IsNULL(
 ```
 
 
-#### GetSize { function GetSize }
+#### GetSize { #function-GetSize }
 
 ```cpp
 static inline uint32_t GetSize(
@@ -444,4 +444,4 @@ static inline uint32_t GetSize(
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

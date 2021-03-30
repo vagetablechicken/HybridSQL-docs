@@ -26,7 +26,7 @@ title: hybridse::vm::Engine
 
 ## Public Functions
 
-#### Engine { function Engine }
+#### Engine { #function-Engine }
 
 ```cpp
 Engine(
@@ -36,7 +36,7 @@ Engine(
 ```
 
 
-#### Engine { function Engine }
+#### Engine { #function-Engine }
 
 ```cpp
 explicit Engine(
@@ -45,14 +45,14 @@ explicit Engine(
 ```
 
 
-#### ~Engine { function ~Engine }
+#### ~Engine { #function-~Engine }
 
 ```cpp
 ~Engine()
 ```
 
 
-#### Get { function Get }
+#### Get { #function-Get }
 
 ```cpp
 bool Get(
@@ -64,7 +64,7 @@ bool Get(
 ```
 
 
-#### GetDependentTables { function GetDependentTables }
+#### GetDependentTables { #function-GetDependentTables }
 
 ```cpp
 bool GetDependentTables(
@@ -77,7 +77,7 @@ bool GetDependentTables(
 ```
 
 
-#### Explain { function Explain }
+#### Explain { #function-Explain }
 
 ```cpp
 bool Explain(
@@ -90,7 +90,7 @@ bool Explain(
 ```
 
 
-#### Explain { function Explain }
+#### Explain { #function-Explain }
 
 ```cpp
 bool Explain(
@@ -104,7 +104,7 @@ bool Explain(
 ```
 
 
-#### UpdateCatalog { function UpdateCatalog }
+#### UpdateCatalog { #function-UpdateCatalog }
 
 ```cpp
 inline void UpdateCatalog(
@@ -113,7 +113,7 @@ inline void UpdateCatalog(
 ```
 
 
-#### ClearCacheLocked { function ClearCacheLocked }
+#### ClearCacheLocked { #function-ClearCacheLocked }
 
 ```cpp
 void ClearCacheLocked(
@@ -122,7 +122,7 @@ void ClearCacheLocked(
 ```
 
 
-#### InitializeGlobalLLVM { function InitializeGlobalLLVM }
+#### InitializeGlobalLLVM { #function-InitializeGlobalLLVM }
 
 ```cpp
 static void InitializeGlobalLLVM()
@@ -131,4 +131,4 @@ static void InitializeGlobalLLVM()
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

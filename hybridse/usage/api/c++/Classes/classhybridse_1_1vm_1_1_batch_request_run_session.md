@@ -51,35 +51,35 @@ Inherited from [hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classh
 
 ## Public Functions
 
-#### BatchRequestRunSession { function BatchRequestRunSession }
+#### BatchRequestRunSession { #function-BatchRequestRunSession }
 
 ```cpp
 inline BatchRequestRunSession()
 ```
 
 
-#### ~BatchRequestRunSession { function ~BatchRequestRunSession }
+#### ~BatchRequestRunSession { #function-~BatchRequestRunSession }
 
 ```cpp
 inline ~BatchRequestRunSession()
 ```
 
 
-#### GetRequestSchema { function GetRequestSchema }
+#### GetRequestSchema { #function-GetRequestSchema }
 
 ```cpp
 inline const Schema & GetRequestSchema() const
 ```
 
 
-#### GetRequestName { function GetRequestName }
+#### GetRequestName { #function-GetRequestName }
 
 ```cpp
 inline const std::string & GetRequestName() const
 ```
 
 
-#### Run { function Run }
+#### Run { #function-Run }
 
 ```cpp
 int32_t Run(
@@ -90,7 +90,7 @@ int32_t Run(
 ```
 
 
-#### Run { function Run }
+#### Run { #function-Run }
 
 ```cpp
 int32_t Run(
@@ -100,7 +100,7 @@ int32_t Run(
 ```
 
 
-#### AddCommonColumnIdx { function AddCommonColumnIdx }
+#### AddCommonColumnIdx { #function-AddCommonColumnIdx }
 
 ```cpp
 inline void AddCommonColumnIdx(
@@ -109,7 +109,7 @@ inline void AddCommonColumnIdx(
 ```
 
 
-#### common_column_indices { function common_column_indices }
+#### common_column_indices { #function-common_column_indices }
 
 ```cpp
 inline const std::set< size_t > & common_column_indices() const
@@ -118,4 +118,4 @@ inline const std::set< size_t > & common_column_indices() const
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

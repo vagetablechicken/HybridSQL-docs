@@ -20,7 +20,7 @@ title: hybridse::vm::Router
 
 ## Public Functions
 
-#### SetMainTable { function SetMainTable }
+#### SetMainTable { #function-SetMainTable }
 
 ```cpp
 inline void SetMainTable(
@@ -29,14 +29,14 @@ inline void SetMainTable(
 ```
 
 
-#### GetMainTable { function GetMainTable }
+#### GetMainTable { #function-GetMainTable }
 
 ```cpp
 inline const std::string & GetMainTable() const
 ```
 
 
-#### Parse { function Parse }
+#### Parse { #function-Parse }
 
 ```cpp
 int Parse(
@@ -45,7 +45,7 @@ int Parse(
 ```
 
 
-#### GetRouterCol { function GetRouterCol }
+#### GetRouterCol { #function-GetRouterCol }
 
 ```cpp
 inline const std::string & GetRouterCol() const
@@ -54,4 +54,4 @@ inline const std::string & GetRouterCol() const
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:28 PDT

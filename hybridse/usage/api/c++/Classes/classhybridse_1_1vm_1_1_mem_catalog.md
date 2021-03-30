@@ -31,28 +31,28 @@ Inherited from [hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybr
 
 ## Public Functions
 
-#### MemCatalog { function MemCatalog }
+#### MemCatalog { #function-MemCatalog }
 
 ```cpp
 MemCatalog()
 ```
 
 
-#### ~MemCatalog { function ~MemCatalog }
+#### ~MemCatalog { #function-~MemCatalog }
 
 ```cpp
 ~MemCatalog()
 ```
 
 
-#### Init { function Init }
+#### Init { #function-Init }
 
 ```cpp
 bool Init()
 ```
 
 
-#### GetDatabase { function GetDatabase }
+#### GetDatabase { #function-GetDatabase }
 
 ```cpp
 inline virtual std::shared_ptr< type::Database > GetDatabase(
@@ -65,7 +65,7 @@ Return database information.
 **Reimplements**: [hybridse::vm::Catalog::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getdatabase)
 
 
-#### GetTable { function GetTable }
+#### GetTable { #function-GetTable }
 
 ```cpp
 inline virtual std::shared_ptr< TableHandler > GetTable(
@@ -81,7 +81,7 @@ inline virtual std::shared_ptr< TableHandler > GetTable(
 Return a table handler with given table name 
 
 
-#### IndexSupport { function IndexSupport }
+#### IndexSupport { #function-IndexSupport }
 
 ```cpp
 inline virtual bool IndexSupport() override
@@ -94,4 +94,4 @@ Return whether index is supported or not.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

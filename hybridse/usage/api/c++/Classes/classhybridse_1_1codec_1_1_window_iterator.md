@@ -52,21 +52,21 @@ Assuming the dataset is logically organized by segments, we can use Valid, Next 
 
 ## Public Functions
 
-#### WindowIterator { function WindowIterator }
+#### WindowIterator { #function-WindowIterator }
 
 ```cpp
 inline WindowIterator()
 ```
 
 
-#### ~WindowIterator { function ~WindowIterator }
+#### ~WindowIterator { #function-~WindowIterator }
 
 ```cpp
 inline virtual ~WindowIterator()
 ```
 
 
-#### Seek { function Seek }
+#### Seek { #function-Seek }
 
 ```cpp
 virtual void Seek(
@@ -81,7 +81,7 @@ virtual void Seek(
 Set the dataset's current position at the segment with key equals to `key`
 
 
-#### SeekToFirst { function SeekToFirst }
+#### SeekToFirst { #function-SeekToFirst }
 
 ```cpp
 virtual void SeekToFirst() =0
@@ -92,7 +92,7 @@ Move to the beginning of the dataset.
 **Reimplemented by**: [hybridse::vm::MemWindowIterator::SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seektofirst)
 
 
-#### Next { function Next }
+#### Next { #function-Next }
 
 ```cpp
 virtual void Next() =0
@@ -105,7 +105,7 @@ virtual void Next() =0
 Move to the next segment in the iteration if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
-#### Valid { function Valid }
+#### Valid { #function-Valid }
 
 ```cpp
 virtual bool Valid() =0
@@ -118,7 +118,7 @@ virtual bool Valid() =0
 Return `true` if the iteration has elements. 
 
 
-#### GetValue { function GetValue }
+#### GetValue { #function-GetValue }
 
 ```cpp
 virtual std::unique_ptr< RowIterator > GetValue() =0
@@ -131,7 +131,7 @@ virtual std::unique_ptr< RowIterator > GetValue() =0
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
-#### GetRawValue { function GetRawValue }
+#### GetRawValue { #function-GetRawValue }
 
 ```cpp
 virtual RowIterator * GetRawValue() =0
@@ -144,7 +144,7 @@ virtual RowIterator * GetRawValue() =0
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
-#### GetKey { function GetKey }
+#### GetKey { #function-GetKey }
 
 ```cpp
 virtual const Row GetKey() =0
@@ -159,4 +159,4 @@ Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c+
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

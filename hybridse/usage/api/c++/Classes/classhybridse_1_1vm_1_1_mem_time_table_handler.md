@@ -87,14 +87,14 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### MemTimeTableHandler { function MemTimeTableHandler }
+#### MemTimeTableHandler { #function-MemTimeTableHandler }
 
 ```cpp
 MemTimeTableHandler()
 ```
 
 
-#### MemTimeTableHandler { function MemTimeTableHandler }
+#### MemTimeTableHandler { #function-MemTimeTableHandler }
 
 ```cpp
 explicit MemTimeTableHandler(
@@ -103,7 +103,7 @@ explicit MemTimeTableHandler(
 ```
 
 
-#### MemTimeTableHandler { function MemTimeTableHandler }
+#### MemTimeTableHandler { #function-MemTimeTableHandler }
 
 ```cpp
 MemTimeTableHandler(
@@ -114,7 +114,7 @@ MemTimeTableHandler(
 ```
 
 
-#### GetTypes { function GetTypes }
+#### GetTypes { #function-GetTypes }
 
 ```cpp
 virtual const Types & GetTypes() override
@@ -125,14 +125,14 @@ Return table column Types information.
 **Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
-#### ~MemTimeTableHandler { function ~MemTimeTableHandler }
+#### ~MemTimeTableHandler { #function-~MemTimeTableHandler }
 
 ```cpp
 ~MemTimeTableHandler() override
 ```
 
 
-#### GetSchema { function GetSchema }
+#### GetSchema { #function-GetSchema }
 
 ```cpp
 inline virtual const Schema * GetSchema()
@@ -143,7 +143,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { function GetName }
+#### GetName { #function-GetName }
 
 ```cpp
 inline virtual const std::string & GetName()
@@ -154,7 +154,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetIndex { function GetIndex }
+#### GetIndex { #function-GetIndex }
 
 ```cpp
 inline virtual const IndexHint & GetIndex()
@@ -165,7 +165,7 @@ Return the index information.
 **Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
-#### GetIterator { function GetIterator }
+#### GetIterator { #function-GetIterator }
 
 ```cpp
 virtual std::unique_ptr< RowIterator > GetIterator()
@@ -179,7 +179,7 @@ Return the const iterator.
 **Reimplemented by**: [hybridse::vm::ConcatTableHandler::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md#function-getiterator), [hybridse::vm::Window::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-getiterator)
 
 
-#### GetRawIterator { function GetRawIterator }
+#### GetRawIterator { #function-GetRawIterator }
 
 ```cpp
 virtual RowIterator * GetRawIterator()
@@ -193,7 +193,7 @@ Return the const iterator raw pointer.
 **Reimplemented by**: [hybridse::vm::Window::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-getrawiterator), [hybridse::vm::ConcatTableHandler::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md#function-getrawiterator)
 
 
-#### GetDatabase { function GetDatabase }
+#### GetDatabase { #function-GetDatabase }
 
 ```cpp
 inline virtual const std::string & GetDatabase()
@@ -204,7 +204,7 @@ Return the name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetWindowIterator { function GetWindowIterator }
+#### GetWindowIterator { #function-GetWindowIterator }
 
 ```cpp
 virtual std::unique_ptr< WindowIterator > GetWindowIterator(
@@ -219,7 +219,7 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
 
-#### AddRow { function AddRow }
+#### AddRow { #function-AddRow }
 
 ```cpp
 void AddRow(
@@ -229,7 +229,7 @@ void AddRow(
 ```
 
 
-#### AddFrontRow { function AddFrontRow }
+#### AddFrontRow { #function-AddFrontRow }
 
 ```cpp
 void AddFrontRow(
@@ -239,35 +239,35 @@ void AddFrontRow(
 ```
 
 
-#### PopBackRow { function PopBackRow }
+#### PopBackRow { #function-PopBackRow }
 
 ```cpp
 void PopBackRow()
 ```
 
 
-#### PopFrontRow { function PopFrontRow }
+#### PopFrontRow { #function-PopFrontRow }
 
 ```cpp
 void PopFrontRow()
 ```
 
 
-#### GetFrontRow { function GetFrontRow }
+#### GetFrontRow { #function-GetFrontRow }
 
 ```cpp
 inline virtual const std::pair< uint64_t, Row > & GetFrontRow()
 ```
 
 
-#### GetBackRow { function GetBackRow }
+#### GetBackRow { #function-GetBackRow }
 
 ```cpp
 inline virtual const std::pair< uint64_t, Row > & GetBackRow()
 ```
 
 
-#### Sort { function Sort }
+#### Sort { #function-Sort }
 
 ```cpp
 void Sort(
@@ -276,14 +276,14 @@ void Sort(
 ```
 
 
-#### Reverse { function Reverse }
+#### Reverse { #function-Reverse }
 
 ```cpp
 void Reverse()
 ```
 
 
-#### GetCount { function GetCount }
+#### GetCount { #function-GetCount }
 
 ```cpp
 inline virtual const uint64_t GetCount()
@@ -300,7 +300,7 @@ Returns the number of elements in this list.
 It count element by traverse the list 
 
 
-#### At { function At }
+#### At { #function-At }
 
 ```cpp
 inline virtual Row At(
@@ -321,7 +321,7 @@ Return a the value of element by its position in the list.
 **Reimplemented by**: [hybridse::vm::Window::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#function-at), [hybridse::vm::ConcatTableHandler::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md#function-at)
 
 
-#### SetOrderType { function SetOrderType }
+#### SetOrderType { #function-SetOrderType }
 
 ```cpp
 inline void SetOrderType(
@@ -330,7 +330,7 @@ inline void SetOrderType(
 ```
 
 
-#### GetOrderType { function GetOrderType }
+#### GetOrderType { #function-GetOrderType }
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -343,7 +343,7 @@ inline virtual const OrderType GetOrderType() const
 Return the order type of the dataset, and return OrderType::kNoneOrder by default. 
 
 
-#### GetHandlerTypeName { function GetHandlerTypeName }
+#### GetHandlerTypeName { #function-GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -410,4 +410,4 @@ OrderType order_type_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

@@ -128,21 +128,21 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### Window { function Window }
+#### Window { #function-Window }
 
 ```cpp
 inline Window()
 ```
 
 
-#### ~Window { function ~Window }
+#### ~Window { #function-~Window }
 
 ```cpp
 inline virtual ~Window()
 ```
 
 
-#### GetIterator { function GetIterator }
+#### GetIterator { #function-GetIterator }
 
 ```cpp
 inline virtual std::unique_ptr< RowIterator > GetIterator() override
@@ -153,7 +153,7 @@ Return the const iterator.
 **Reimplements**: [hybridse::vm::MemTimeTableHandler::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-getiterator)
 
 
-#### GetRawIterator { function GetRawIterator }
+#### GetRawIterator { #function-GetRawIterator }
 
 ```cpp
 inline virtual RowIterator * GetRawIterator()
@@ -164,7 +164,7 @@ Return the const iterator raw pointer.
 **Reimplements**: [hybridse::vm::MemTimeTableHandler::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-getrawiterator)
 
 
-#### BufferData { function BufferData }
+#### BufferData { #function-BufferData }
 
 ```cpp
 virtual bool BufferData(
@@ -177,14 +177,14 @@ virtual bool BufferData(
 **Reimplemented by**: [hybridse::vm::HistoryWindow::BufferData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md#function-bufferdata), [hybridse::vm::CurrentHistoryWindow::BufferData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md#function-bufferdata)
 
 
-#### PopBackData { function PopBackData }
+#### PopBackData { #function-PopBackData }
 
 ```cpp
 inline virtual void PopBackData()
 ```
 
 
-#### PopFrontData { function PopFrontData }
+#### PopFrontData { #function-PopFrontData }
 
 ```cpp
 virtual void PopFrontData() =0
@@ -194,7 +194,7 @@ virtual void PopFrontData() =0
 **Reimplemented by**: [hybridse::vm::HistoryWindow::PopFrontData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md#function-popfrontdata), [hybridse::vm::CurrentHistoryWindow::PopFrontData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md#function-popfrontdata)
 
 
-#### GetCount { function GetCount }
+#### GetCount { #function-GetCount }
 
 ```cpp
 inline virtual const uint64_t GetCount()
@@ -208,7 +208,7 @@ Returns the number of elements in this list.
 It count element by traverse the list 
 
 
-#### At { function At }
+#### At { #function-At }
 
 ```cpp
 inline virtual Row At(
@@ -226,7 +226,7 @@ Return a the value of element by its position in the list.
 **Reimplements**: [hybridse::vm::MemTimeTableHandler::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-at)
 
 
-#### GetHandlerTypeName { function GetHandlerTypeName }
+#### GetHandlerTypeName { #function-GetHandlerTypeName }
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -237,14 +237,14 @@ Return the name of handler and return "TableHandler" by default.
 **Reimplements**: [hybridse::vm::MemTimeTableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-gethandlertypename)
 
 
-#### instance_not_in_window { function instance_not_in_window }
+#### instance_not_in_window { #function-instance_not_in_window }
 
 ```cpp
 inline const bool instance_not_in_window() const
 ```
 
 
-#### set_instance_not_in_window { function set_instance_not_in_window }
+#### set_instance_not_in_window { #function-set_instance_not_in_window }
 
 ```cpp
 inline void set_instance_not_in_window(
@@ -253,14 +253,14 @@ inline void set_instance_not_in_window(
 ```
 
 
-#### exclude_current_time { function exclude_current_time }
+#### exclude_current_time { #function-exclude_current_time }
 
 ```cpp
 inline const bool exclude_current_time() const
 ```
 
 
-#### set_exclude_current_time { function set_exclude_current_time }
+#### set_exclude_current_time { #function-set_exclude_current_time }
 
 ```cpp
 inline void set_exclude_current_time(
@@ -287,4 +287,4 @@ bool instance_not_in_window_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:51 PDT
+Updated on 29 March 2021 at 18:02:28 PDT

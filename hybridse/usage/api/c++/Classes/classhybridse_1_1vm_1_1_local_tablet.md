@@ -29,7 +29,7 @@ Inherited from [hybridse::vm::Tablet](/hybridse/usage/api/c++/Classes/classhybri
 
 ## Public Functions
 
-#### LocalTablet { function LocalTablet }
+#### LocalTablet { #function-LocalTablet }
 
 ```cpp
 inline explicit LocalTablet(
@@ -39,14 +39,14 @@ inline explicit LocalTablet(
 ```
 
 
-#### ~LocalTablet { function ~LocalTablet }
+#### ~LocalTablet { #function-~LocalTablet }
 
 ```cpp
 inline ~LocalTablet()
 ```
 
 
-#### SubQuery { function SubQuery }
+#### SubQuery { #function-SubQuery }
 
 ```cpp
 virtual std::shared_ptr< RowHandler > SubQuery(
@@ -66,7 +66,7 @@ virtual std::shared_ptr< RowHandler > SubQuery(
 Return [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
 
 
-#### SubQuery { function SubQuery }
+#### SubQuery { #function-SubQuery }
 
 ```cpp
 virtual std::shared_ptr< TableHandler > SubQuery(
@@ -88,7 +88,7 @@ virtual std::shared_ptr< TableHandler > SubQuery(
 Return [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) by calling batch-request-mode query on subtask which is specified by task_id and sql 
 
 
-#### GetName { function GetName }
+#### GetName { #function-GetName }
 
 ```cpp
 inline virtual const std::string & GetName() const
@@ -101,4 +101,4 @@ Return the name of tablet.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

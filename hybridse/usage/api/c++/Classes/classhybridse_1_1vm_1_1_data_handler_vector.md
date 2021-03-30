@@ -31,21 +31,21 @@ Inherited from [hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### DataHandlerVector { function DataHandlerVector }
+#### DataHandlerVector { #function-DataHandlerVector }
 
 ```cpp
 inline DataHandlerVector()
 ```
 
 
-#### ~DataHandlerVector { function ~DataHandlerVector }
+#### ~DataHandlerVector { #function-~DataHandlerVector }
 
 ```cpp
 inline ~DataHandlerVector()
 ```
 
 
-#### Add { function Add }
+#### Add { #function-Add }
 
 ```cpp
 inline void Add(
@@ -54,7 +54,7 @@ inline void Add(
 ```
 
 
-#### GetSize { function GetSize }
+#### GetSize { #function-GetSize }
 
 ```cpp
 inline virtual size_t GetSize()
@@ -65,7 +65,7 @@ Return the number of elements.
 **Reimplements**: [hybridse::vm::DataHandlerList::GetSize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-getsize)
 
 
-#### Get { function Get }
+#### Get { #function-Get }
 
 ```cpp
 inline virtual std::shared_ptr< DataHandler > Get(
@@ -80,4 +80,4 @@ Return the idx-th element. Return `null` when position is out of range.
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:50 PDT
+Updated on 29 March 2021 at 18:02:27 PDT

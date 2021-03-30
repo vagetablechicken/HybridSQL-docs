@@ -53,14 +53,14 @@ title: hybridse::vm::WindowRange
 
 ## Public Functions
 
-#### WindowRange { function WindowRange }
+#### WindowRange { #function-WindowRange }
 
 ```cpp
 inline WindowRange()
 ```
 
 
-#### WindowRange { function WindowRange }
+#### WindowRange { #function-WindowRange }
 
 ```cpp
 inline WindowRange(
@@ -73,14 +73,14 @@ inline WindowRange(
 ```
 
 
-#### ~WindowRange { function ~WindowRange }
+#### ~WindowRange { #function-~WindowRange }
 
 ```cpp
 inline virtual ~WindowRange()
 ```
 
 
-#### GetWindowPositionStatus { function GetWindowPositionStatus }
+#### GetWindowPositionStatus { #function-GetWindowPositionStatus }
 
 ```cpp
 inline const WindowPositionStatus GetWindowPositionStatus(
@@ -91,7 +91,7 @@ inline const WindowPositionStatus GetWindowPositionStatus(
 ```
 
 
-#### CreateRowsWindow { function CreateRowsWindow }
+#### CreateRowsWindow { #function-CreateRowsWindow }
 
 ```cpp
 static inline WindowRange CreateRowsWindow(
@@ -100,7 +100,7 @@ static inline WindowRange CreateRowsWindow(
 ```
 
 
-#### CreateRowsRangeWindow { function CreateRowsRangeWindow }
+#### CreateRowsRangeWindow { #function-CreateRowsRangeWindow }
 
 ```cpp
 static inline WindowRange CreateRowsRangeWindow(
@@ -111,7 +111,7 @@ static inline WindowRange CreateRowsRangeWindow(
 ```
 
 
-#### CreateRowsMergeRowsRangeWindow { function CreateRowsMergeRowsRangeWindow }
+#### CreateRowsMergeRowsRangeWindow { #function-CreateRowsMergeRowsRangeWindow }
 
 ```cpp
 static inline WindowRange CreateRowsMergeRowsRangeWindow(
@@ -168,4 +168,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 17:58:51 PDT
+Updated on 29 March 2021 at 18:02:28 PDT
