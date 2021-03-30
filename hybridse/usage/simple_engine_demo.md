@@ -8,7 +8,7 @@ Before deeply insight the details, let's  briefly outline how to design simple S
 2. Implement Catalog and TableHandler, e.g, `SimpleCatalog`, `SimpleTableHandler`.
 3. Build and execute engine
 
-Detail : [simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
+More detail  : [simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
 
 ## 1. Memory table storage
 
@@ -19,7 +19,7 @@ typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
 typedef std::map<std::string, MemTimeTable> MemSegmentMap;
 ```
 
-- Our memory table support multi-indexes. And each index binds to a SegmentMemMap`. 
+- Our memory table support multi-indexes. And each index binds to a `SegmentMemMap`. 
 - `SegmentMemMap` is a `map<Key,MemTimeTable>` where `key` is index key string。Rows with same keys will be collected together, ordered by time and added into the same `MemTimeTable` .
 
 ## 2. Catalog Implementation 
@@ -30,11 +30,11 @@ In order to create a HybridSE Engine for our own purpose, we have to implement a
 
 #### Fields
 
-We use `database_` and `table_handler to maintain and manage database and table。`type::Database is our Database prototype and `SimpleCatalogTableHandler will be discussed later.
+We use `database_` and `table_handler to maintain and manage database and table。`type::Database is our Database prototype and `SimpleCatalogTableHandler` will be discussed later.
 
 #### Functions
 
-Here, we list some implementations (more detail can be found [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h) and [simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc)）
+Here, we list some implementations (More detail can be found from [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h) and [simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc)）
 
 - Constructor
 
@@ -95,7 +95,7 @@ std::shared_ptr<MemTableHandler> full_table_storage_;
 
 #### Functions
 
-Here, we list some implementations (more detail can be found here: [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc))
+Here, we list some implementations (More detail can be found here: [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc))
 
 - Constructor
 
@@ -180,7 +180,7 @@ hybridse::codec::Row SimpleCatalogTableHandler::At(uint64_t pos) {
 
 ### Build engine
 
-- Build `SimpleCatalog`
+- Prepare Catalog
 
 ```c++
 // build Simple Catalog
@@ -214,7 +214,7 @@ hybridse::codec::Row SimpleCatalogTableHandler::At(uint64_t pos) {
     catalog->AddDatabase(db);
 ```
 
-- Prepare database and data
+- Prepare data
 
 ```c++
 		// insert data into simple_db
