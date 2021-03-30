@@ -22,21 +22,21 @@ A sequence of [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_
 
 ## Public Functions
 
-#### DataHandlerList { #function-DataHandlerList }
+#### function DataHandlerList
 
 ```cpp
 inline DataHandlerList()
 ```
 
 
-#### ~DataHandlerList { #function-~DataHandlerList }
+#### function ~DataHandlerList
 
 ```cpp
 inline virtual ~DataHandlerList()
 ```
 
 
-#### GetSize { #function-GetSize }
+#### function GetSize
 
 ```cpp
 virtual size_t GetSize() =0
@@ -47,7 +47,7 @@ Return the number of elements.
 **Reimplemented by**: [hybridse::vm::DataHandlerVector::GetSize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-getsize), [hybridse::vm::DataHandlerRepeater::GetSize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md#function-getsize)
 
 
-#### Get { #function-Get }
+#### function Get
 
 ```cpp
 virtual std::shared_ptr< DataHandler > Get(
@@ -62,4 +62,4 @@ Return the idx-th element.
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

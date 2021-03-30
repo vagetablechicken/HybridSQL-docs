@@ -26,7 +26,7 @@ title: hybridse::vm::MemTimeTableIterator
 
 ## Public Functions
 
-#### MemTimeTableIterator { #function-MemTimeTableIterator }
+#### function MemTimeTableIterator
 
 ```cpp
 MemTimeTableIterator(
@@ -36,7 +36,7 @@ MemTimeTableIterator(
 ```
 
 
-#### MemTimeTableIterator { #function-MemTimeTableIterator }
+#### function MemTimeTableIterator
 
 ```cpp
 MemTimeTableIterator(
@@ -48,14 +48,14 @@ MemTimeTableIterator(
 ```
 
 
-#### ~MemTimeTableIterator { #function-~MemTimeTableIterator }
+#### function ~MemTimeTableIterator
 
 ```cpp
 ~MemTimeTableIterator()
 ```
 
 
-#### Seek { #function-Seek }
+#### function Seek
 
 ```cpp
 void Seek(
@@ -64,42 +64,42 @@ void Seek(
 ```
 
 
-#### SeekToFirst { #function-SeekToFirst }
+#### function SeekToFirst
 
 ```cpp
 void SeekToFirst()
 ```
 
 
-#### GetKey { #function-GetKey }
+#### function GetKey
 
 ```cpp
 const uint64_t & GetKey() const
 ```
 
 
-#### Next { #function-Next }
+#### function Next
 
 ```cpp
 void Next()
 ```
 
 
-#### Valid { #function-Valid }
+#### function Valid
 
 ```cpp
 bool Valid() const
 ```
 
 
-#### GetValue { #function-GetValue }
+#### function GetValue
 
 ```cpp
 const Row & GetValue() override
 ```
 
 
-#### IsSeekable { #function-IsSeekable }
+#### function IsSeekable
 
 ```cpp
 bool IsSeekable() const override
@@ -108,4 +108,4 @@ bool IsSeekable() const override
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

@@ -49,21 +49,21 @@ Inherited from [hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classh
 
 ## Public Functions
 
-#### RequestRunSession { #function-RequestRunSession }
+#### function RequestRunSession
 
 ```cpp
 inline RequestRunSession()
 ```
 
 
-#### ~RequestRunSession { #function-~RequestRunSession }
+#### function ~RequestRunSession
 
 ```cpp
 inline ~RequestRunSession()
 ```
 
 
-#### Run { #function-Run }
+#### function Run
 
 ```cpp
 int32_t Run(
@@ -73,7 +73,7 @@ int32_t Run(
 ```
 
 
-#### Run { #function-Run }
+#### function Run
 
 ```cpp
 int32_t Run(
@@ -84,14 +84,14 @@ int32_t Run(
 ```
 
 
-#### GetRequestSchema { #function-GetRequestSchema }
+#### function GetRequestSchema
 
 ```cpp
 inline virtual const Schema & GetRequestSchema() const
 ```
 
 
-#### GetRequestName { #function-GetRequestName }
+#### function GetRequestName
 
 ```cpp
 inline virtual const std::string & GetRequestName() const
@@ -100,4 +100,4 @@ inline virtual const std::string & GetRequestName() const
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

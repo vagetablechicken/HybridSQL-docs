@@ -27,14 +27,14 @@ title: hybridse::codec::ColInfo
 
 ## Public Functions
 
-#### ColInfo { #function-ColInfo }
+#### function ColInfo
 
 ```cpp
 inline ColInfo()
 ```
 
 
-#### ColInfo { #function-ColInfo }
+#### function ColInfo
 
 ```cpp
 inline ColInfo(
@@ -48,28 +48,28 @@ inline ColInfo(
 
 ## Public Attributes
 
-### type
+### variable type
 
 ```cpp
 ::hybridse::type::Type type;
 ```
 
 
-### idx
+### variable idx
 
 ```cpp
 uint32_t idx;
 ```
 
 
-### offset
+### variable offset
 
 ```cpp
 uint32_t offset;
 ```
 
 
-### name
+### variable name
 
 ```cpp
 std::string name;
@@ -78,4 +78,4 @@ std::string name;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

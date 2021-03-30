@@ -18,7 +18,7 @@ title: hybridse::vm::CompileInfoCache
 
 ## Public Functions
 
-#### GetRequestInfo { #function-GetRequestInfo }
+#### function GetRequestInfo
 
 ```cpp
 virtual std::shared_ptr< hybridse::vm::CompileInfo > GetRequestInfo(
@@ -29,7 +29,7 @@ virtual std::shared_ptr< hybridse::vm::CompileInfo > GetRequestInfo(
 ```
 
 
-#### GetBatchRequestInfo { #function-GetBatchRequestInfo }
+#### function GetBatchRequestInfo
 
 ```cpp
 virtual std::shared_ptr< hybridse::vm::CompileInfo > GetBatchRequestInfo(
@@ -42,4 +42,4 @@ virtual std::shared_ptr< hybridse::vm::CompileInfo > GetBatchRequestInfo(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

@@ -23,49 +23,49 @@ title: hybridse::vm::ExplainOutput
 
 ## Public Attributes
 
-### input_schema
+### variable input_schema
 
 ```cpp
 vm::Schema input_schema;
 ```
 
 
-### logical_plan
+### variable logical_plan
 
 ```cpp
 std::string logical_plan;
 ```
 
 
-### physical_plan
+### variable physical_plan
 
 ```cpp
 std::string physical_plan;
 ```
 
 
-### ir
+### variable ir
 
 ```cpp
 std::string ir;
 ```
 
 
-### output_schema
+### variable output_schema
 
 ```cpp
 vm::Schema output_schema;
 ```
 
 
-### request_name
+### variable request_name
 
 ```cpp
 std::string request_name;
 ```
 
 
-### router
+### variable router
 
 ```cpp
 vm::Router router;
@@ -74,4 +74,4 @@ vm::Router router;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

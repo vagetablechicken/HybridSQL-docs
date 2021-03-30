@@ -64,7 +64,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### RequestUnionTableHandler { #function-RequestUnionTableHandler }
+#### function RequestUnionTableHandler
 
 ```cpp
 inline RequestUnionTableHandler(
@@ -75,14 +75,14 @@ inline RequestUnionTableHandler(
 ```
 
 
-#### ~RequestUnionTableHandler { #function-~RequestUnionTableHandler }
+#### function ~RequestUnionTableHandler
 
 ```cpp
 inline ~RequestUnionTableHandler()
 ```
 
 
-#### GetIterator { #function-GetIterator }
+#### function GetIterator
 
 ```cpp
 inline virtual std::unique_ptr< RowIterator > GetIterator() override
@@ -93,7 +93,7 @@ Return the const iterator.
 **Reimplements**: [hybridse::codec::ListV::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getiterator)
 
 
-#### GetRawIterator { #function-GetRawIterator }
+#### function GetRawIterator
 
 ```cpp
 virtual RowIterator * GetRawIterator() override
@@ -104,7 +104,7 @@ Return the const iterator raw pointer.
 **Reimplements**: [hybridse::codec::ListV::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getrawiterator)
 
 
-#### GetTypes { #function-GetTypes }
+#### function GetTypes
 
 ```cpp
 inline virtual const Types & GetTypes() override
@@ -115,7 +115,7 @@ Return table column Types information.
 **Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
-#### GetIndex { #function-GetIndex }
+#### function GetIndex
 
 ```cpp
 inline virtual const IndexHint & GetIndex() override
@@ -126,7 +126,7 @@ Return the index information.
 **Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
-#### GetWindowIterator { #function-GetWindowIterator }
+#### function GetWindowIterator
 
 ```cpp
 inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
@@ -141,7 +141,7 @@ inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
 
-#### GetOrderType { #function-GetOrderType }
+#### function GetOrderType
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -154,7 +154,7 @@ inline virtual const OrderType GetOrderType() const
 Return the order type of the dataset, and return OrderType::kNoneOrder by default. 
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline virtual const Schema * GetSchema() override
@@ -165,7 +165,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { #function-GetName }
+#### function GetName
 
 ```cpp
 inline virtual const std::string & GetName() override
@@ -176,7 +176,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase { #function-GetDatabase }
+#### function GetDatabase
 
 ```cpp
 inline virtual const std::string & GetDatabase() override
@@ -189,4 +189,4 @@ Return the name of database.
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

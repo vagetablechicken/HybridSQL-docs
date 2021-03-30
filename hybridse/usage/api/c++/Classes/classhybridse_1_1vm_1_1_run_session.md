@@ -42,7 +42,7 @@ title: hybridse::vm::RunSession
 
 ## Public Functions
 
-#### RunSession { #function-RunSession }
+#### function RunSession
 
 ```cpp
 explicit RunSession(
@@ -51,35 +51,35 @@ explicit RunSession(
 ```
 
 
-#### ~RunSession { #function-~RunSession }
+#### function ~RunSession
 
 ```cpp
 virtual ~RunSession()
 ```
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline virtual const Schema & GetSchema() const
 ```
 
 
-#### GetEncodedSchema { #function-GetEncodedSchema }
+#### function GetEncodedSchema
 
 ```cpp
 inline virtual const std::string & GetEncodedSchema() const
 ```
 
 
-#### GetCompileInfo { #function-GetCompileInfo }
+#### function GetCompileInfo
 
 ```cpp
 inline virtual std::shared_ptr< hybridse::vm::CompileInfo > GetCompileInfo()
 ```
 
 
-#### SetCompileInfo { #function-SetCompileInfo }
+#### function SetCompileInfo
 
 ```cpp
 bool SetCompileInfo(
@@ -88,28 +88,28 @@ bool SetCompileInfo(
 ```
 
 
-#### EnableDebug { #function-EnableDebug }
+#### function EnableDebug
 
 ```cpp
 inline void EnableDebug()
 ```
 
 
-#### DisableDebug { #function-DisableDebug }
+#### function DisableDebug
 
 ```cpp
 inline void DisableDebug()
 ```
 
 
-#### IsDebug { #function-IsDebug }
+#### function IsDebug
 
 ```cpp
 inline bool IsDebug()
 ```
 
 
-#### SetSpName { #function-SetSpName }
+#### function SetSpName
 
 ```cpp
 inline void SetSpName(
@@ -118,7 +118,7 @@ inline void SetSpName(
 ```
 
 
-#### engine_mode { #function-engine_mode }
+#### function engine_mode
 
 ```cpp
 inline EngineMode engine_mode() const
@@ -127,35 +127,35 @@ inline EngineMode engine_mode() const
 
 ## Protected Attributes
 
-### compile_info_
+### variable compile_info_
 
 ```cpp
 std::shared_ptr< hybridse::vm::CompileInfo > compile_info_;
 ```
 
 
-### engine_mode_
+### variable engine_mode_
 
 ```cpp
 hybridse::vm::EngineMode engine_mode_;
 ```
 
 
-### is_debug_
+### variable is_debug_
 
 ```cpp
 bool is_debug_;
 ```
 
 
-### sp_name_
+### variable sp_name_
 
 ```cpp
 std::string sp_name_;
 ```
 
 
-### Engine
+### variable Engine
 
 ```cpp
 friend Engine;
@@ -164,4 +164,4 @@ friend Engine;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

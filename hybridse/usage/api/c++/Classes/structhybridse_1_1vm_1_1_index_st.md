@@ -20,7 +20,7 @@ title: hybridse::vm::IndexSt
 
 ## Public Attributes
 
-### name
+### variable name
 
 ```cpp
 std::string name;
@@ -28,7 +28,7 @@ std::string name;
 
 index name 
 
-### index
+### variable index
 
 ```cpp
 uint32_t index;
@@ -36,7 +36,7 @@ uint32_t index;
 
 position of index 
 
-### ts_pos
+### variable ts_pos
 
 ```cpp
 uint32_t ts_pos;
@@ -44,7 +44,7 @@ uint32_t ts_pos;
 
 second key column position 
 
-### keys
+### variable keys
 
 ```cpp
 std::vector< ColInfo > keys;
@@ -54,4 +54,4 @@ first keys set
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

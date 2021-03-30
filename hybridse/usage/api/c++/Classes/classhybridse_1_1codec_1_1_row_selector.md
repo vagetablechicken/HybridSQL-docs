@@ -20,7 +20,7 @@ title: hybridse::codec::RowSelector
 
 ## Public Functions
 
-#### RowSelector { #function-RowSelector }
+#### function RowSelector
 
 ```cpp
 RowSelector(
@@ -30,7 +30,7 @@ RowSelector(
 ```
 
 
-#### RowSelector { #function-RowSelector }
+#### function RowSelector
 
 ```cpp
 RowSelector(
@@ -40,7 +40,7 @@ RowSelector(
 ```
 
 
-#### Select { #function-Select }
+#### function Select
 
 ```cpp
 bool Select(
@@ -52,7 +52,7 @@ bool Select(
 ```
 
 
-#### Select { #function-Select }
+#### function Select
 
 ```cpp
 bool Select(
@@ -65,4 +65,4 @@ bool Select(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

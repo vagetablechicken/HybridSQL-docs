@@ -55,7 +55,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### MemRowHandler { #function-MemRowHandler }
+#### function MemRowHandler
 
 ```cpp
 inline explicit MemRowHandler(
@@ -64,7 +64,7 @@ inline explicit MemRowHandler(
 ```
 
 
-#### MemRowHandler { #function-MemRowHandler }
+#### function MemRowHandler
 
 ```cpp
 inline MemRowHandler(
@@ -74,14 +74,14 @@ inline MemRowHandler(
 ```
 
 
-#### ~MemRowHandler { #function-~MemRowHandler }
+#### function ~MemRowHandler
 
 ```cpp
 inline ~MemRowHandler()
 ```
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline virtual const Schema * GetSchema() override
@@ -92,7 +92,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { #function-GetName }
+#### function GetName
 
 ```cpp
 inline virtual const std::string & GetName() override
@@ -103,7 +103,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase { #function-GetDatabase }
+#### function GetDatabase
 
 ```cpp
 inline virtual const std::string & GetDatabase() override
@@ -114,7 +114,7 @@ Return the name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetValue { #function-GetValue }
+#### function GetValue
 
 ```cpp
 inline virtual const Row & GetValue() override
@@ -125,7 +125,7 @@ Return value of row.
 **Reimplements**: [hybridse::vm::RowHandler::GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-getvalue)
 
 
-#### GetHandlerTypeName { #function-GetHandlerTypeName }
+#### function GetHandlerTypeName
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -140,4 +140,4 @@ Return the name of handler type. Return `"RowHandler"` by default.
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

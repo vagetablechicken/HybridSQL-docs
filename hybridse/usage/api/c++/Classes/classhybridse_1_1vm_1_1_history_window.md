@@ -154,7 +154,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### HistoryWindow { #function-HistoryWindow }
+#### function HistoryWindow
 
 ```cpp
 inline explicit HistoryWindow(
@@ -163,14 +163,14 @@ inline explicit HistoryWindow(
 ```
 
 
-#### ~HistoryWindow { #function-~HistoryWindow }
+#### function ~HistoryWindow
 
 ```cpp
 inline ~HistoryWindow()
 ```
 
 
-#### PopFrontData { #function-PopFrontData }
+#### function PopFrontData
 
 ```cpp
 inline virtual void PopFrontData()
@@ -183,14 +183,14 @@ inline virtual void PopFrontData()
 **Reimplemented by**: [hybridse::vm::CurrentHistoryWindow::PopFrontData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md#function-popfrontdata)
 
 
-#### PopEffectiveData { #function-PopEffectiveData }
+#### function PopEffectiveData
 
 ```cpp
 inline virtual void PopEffectiveData()
 ```
 
 
-#### BufferData { #function-BufferData }
+#### function BufferData
 
 ```cpp
 inline virtual bool BufferData(
@@ -208,7 +208,7 @@ inline virtual bool BufferData(
 
 ## Protected Functions
 
-### BufferCurrentHistoryBuffer
+### function BufferCurrentHistoryBuffer
 
 ```cpp
 inline bool BufferCurrentHistoryBuffer(
@@ -219,7 +219,7 @@ inline bool BufferCurrentHistoryBuffer(
 ```
 
 
-### BufferEffectiveWindow
+### function BufferEffectiveWindow
 
 ```cpp
 inline bool BufferEffectiveWindow(
@@ -230,7 +230,7 @@ inline bool BufferEffectiveWindow(
 ```
 
 
-### BufferCurrentTimeBuffer
+### function BufferCurrentTimeBuffer
 
 ```cpp
 inline bool BufferCurrentTimeBuffer(
@@ -243,14 +243,14 @@ inline bool BufferCurrentTimeBuffer(
 
 ## Protected Attributes
 
-### window_range_
+### variable window_range_
 
 ```cpp
 WindowRange window_range_;
 ```
 
 
-### current_history_buffer_
+### variable current_history_buffer_
 
 ```cpp
 MemTimeTable current_history_buffer_;
@@ -259,4 +259,4 @@ MemTimeTable current_history_buffer_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

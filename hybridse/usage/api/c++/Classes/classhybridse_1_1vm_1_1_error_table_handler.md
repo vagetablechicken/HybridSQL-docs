@@ -78,7 +78,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### ErrorTableHandler { #function-ErrorTableHandler }
+#### function ErrorTableHandler
 
 ```cpp
 inline ErrorTableHandler()
@@ -88,7 +88,7 @@ inline ErrorTableHandler()
 Create ErrorTableTable with initializing status_ with common::kCallMethodError 
 
 
-#### ErrorTableHandler { #function-ErrorTableHandler }
+#### function ErrorTableHandler
 
 ```cpp
 inline ErrorTableHandler(
@@ -99,14 +99,14 @@ inline ErrorTableHandler(
 
 Create [ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md) with specific status code and message. 
 
-#### ~ErrorTableHandler { #function-~ErrorTableHandler }
+#### function ~ErrorTableHandler
 
 ```cpp
 inline ~ErrorTableHandler()
 ```
 
 
-#### GetTypes { #function-GetTypes }
+#### function GetTypes
 
 ```cpp
 inline virtual const Types & GetTypes() override
@@ -117,7 +117,7 @@ Return empty column Types.
 **Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline virtual const Schema * GetSchema() override
@@ -128,7 +128,7 @@ Return empty table Schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { #function-GetName }
+#### function GetName
 
 ```cpp
 inline virtual const std::string & GetName() override
@@ -139,7 +139,7 @@ Return empty table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetIndex { #function-GetIndex }
+#### function GetIndex
 
 ```cpp
 inline virtual const IndexHint & GetIndex() override
@@ -150,7 +150,7 @@ Return empty indexn information.
 **Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
-#### GetDatabase { #function-GetDatabase }
+#### function GetDatabase
 
 ```cpp
 inline virtual const std::string & GetDatabase() override
@@ -161,7 +161,7 @@ Return name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetIterator { #function-GetIterator }
+#### function GetIterator
 
 ```cpp
 inline virtual std::unique_ptr< RowIterator > GetIterator()
@@ -172,7 +172,7 @@ Return null iterator.
 **Reimplements**: [hybridse::codec::ListV::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getiterator)
 
 
-#### GetRawIterator { #function-GetRawIterator }
+#### function GetRawIterator
 
 ```cpp
 inline virtual RowIterator * GetRawIterator()
@@ -183,7 +183,7 @@ Return null iterator.
 **Reimplements**: [hybridse::codec::ListV::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getrawiterator)
 
 
-#### GetWindowIterator { #function-GetWindowIterator }
+#### function GetWindowIterator
 
 ```cpp
 inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
@@ -196,7 +196,7 @@ Return null window iterator.
 **Reimplements**: [hybridse::vm::TableHandler::GetWindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getwindowiterator)
 
 
-#### At { #function-At }
+#### function At
 
 ```cpp
 inline virtual Row At(
@@ -209,7 +209,7 @@ Return empty row.
 **Reimplements**: [hybridse::codec::ListV::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-at)
 
 
-#### GetCount { #function-GetCount }
+#### function GetCount
 
 ```cpp
 inline virtual const uint64_t GetCount() override
@@ -220,7 +220,7 @@ Return 0.
 **Reimplements**: [hybridse::codec::ListV::GetCount](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getcount)
 
 
-#### GetHandlerTypeName { #function-GetHandlerTypeName }
+#### function GetHandlerTypeName
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -231,7 +231,7 @@ Return handler type name, and return "ErrorTableHandler" by default.
 **Reimplements**: [hybridse::vm::TableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethandlertypename)
 
 
-#### GetStatus { #function-GetStatus }
+#### function GetStatus
 
 ```cpp
 inline virtual base::Status GetStatus()
@@ -244,49 +244,49 @@ Return status.
 
 ## Protected Attributes
 
-### status_
+### variable status_
 
 ```cpp
 base::Status status_;
 ```
 
 
-### table_name_
+### variable table_name_
 
 ```cpp
 const std::string table_name_;
 ```
 
 
-### db_
+### variable db_
 
 ```cpp
 const std::string db_;
 ```
 
 
-### schema_
+### variable schema_
 
 ```cpp
 const Schema * schema_;
 ```
 
 
-### types_
+### variable types_
 
 ```cpp
 Types types_;
 ```
 
 
-### index_hint_
+### variable index_hint_
 
 ```cpp
 IndexHint index_hint_;
 ```
 
 
-### order_type_
+### variable order_type_
 
 ```cpp
 OrderType order_type_;
@@ -295,4 +295,4 @@ OrderType order_type_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

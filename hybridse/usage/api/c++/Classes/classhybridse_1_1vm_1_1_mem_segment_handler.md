@@ -56,7 +56,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### MemSegmentHandler { #function-MemSegmentHandler }
+#### function MemSegmentHandler
 
 ```cpp
 inline MemSegmentHandler(
@@ -66,14 +66,14 @@ inline MemSegmentHandler(
 ```
 
 
-#### ~MemSegmentHandler { #function-~MemSegmentHandler }
+#### function ~MemSegmentHandler
 
 ```cpp
 inline virtual ~MemSegmentHandler()
 ```
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline virtual const vm::Schema * GetSchema()
@@ -84,7 +84,7 @@ Return table schema.
 **Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
-#### GetName { #function-GetName }
+#### function GetName
 
 ```cpp
 inline virtual const std::string & GetName()
@@ -95,7 +95,7 @@ Return table name.
 **Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
-#### GetDatabase { #function-GetDatabase }
+#### function GetDatabase
 
 ```cpp
 inline virtual const std::string & GetDatabase()
@@ -106,7 +106,7 @@ Return the name of database.
 **Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
-#### GetTypes { #function-GetTypes }
+#### function GetTypes
 
 ```cpp
 inline virtual const vm::Types & GetTypes()
@@ -117,7 +117,7 @@ Return table column Types information.
 **Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
-#### GetIndex { #function-GetIndex }
+#### function GetIndex
 
 ```cpp
 inline virtual const vm::IndexHint & GetIndex()
@@ -128,7 +128,7 @@ Return the index information.
 **Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
-#### GetOrderType { #function-GetOrderType }
+#### function GetOrderType
 
 ```cpp
 inline virtual const OrderType GetOrderType() const
@@ -141,7 +141,7 @@ inline virtual const OrderType GetOrderType() const
 Return the order type of the dataset, and return OrderType::kNoneOrder by default. 
 
 
-#### GetIterator { #function-GetIterator }
+#### function GetIterator
 
 ```cpp
 inline virtual std::unique_ptr< vm::RowIterator > GetIterator()
@@ -152,7 +152,7 @@ Return the const iterator.
 **Reimplements**: [hybridse::codec::ListV::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getiterator)
 
 
-#### GetRawIterator { #function-GetRawIterator }
+#### function GetRawIterator
 
 ```cpp
 inline virtual RowIterator * GetRawIterator() override
@@ -163,7 +163,7 @@ Return the const iterator raw pointer.
 **Reimplements**: [hybridse::codec::ListV::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getrawiterator)
 
 
-#### GetWindowIterator { #function-GetWindowIterator }
+#### function GetWindowIterator
 
 ```cpp
 inline virtual std::unique_ptr< vm::WindowIterator > GetWindowIterator(
@@ -178,7 +178,7 @@ inline virtual std::unique_ptr< vm::WindowIterator > GetWindowIterator(
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
 
-#### GetCount { #function-GetCount }
+#### function GetCount
 
 ```cpp
 inline virtual const uint64_t GetCount()
@@ -192,7 +192,7 @@ Returns the number of elements in this list.
 It count element by traverse the list 
 
 
-#### At { #function-At }
+#### function At
 
 ```cpp
 inline virtual Row At(
@@ -210,7 +210,7 @@ Return a the value of element by its position in the list.
 **Reimplements**: [hybridse::codec::ListV::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-at)
 
 
-#### GetHandlerTypeName { #function-GetHandlerTypeName }
+#### function GetHandlerTypeName
 
 ```cpp
 inline virtual const std::string GetHandlerTypeName() override
@@ -223,4 +223,4 @@ Return the name of handler and return "TableHandler" by default.
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

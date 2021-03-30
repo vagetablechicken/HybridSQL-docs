@@ -33,7 +33,7 @@ Inherited from [hybridse::codec::WindowIterator](/hybridse/usage/api/c++/Classes
 
 ## Public Functions
 
-#### MemWindowIterator { #function-MemWindowIterator }
+#### function MemWindowIterator
 
 ```cpp
 MemWindowIterator(
@@ -43,14 +43,14 @@ MemWindowIterator(
 ```
 
 
-#### ~MemWindowIterator { #function-~MemWindowIterator }
+#### function ~MemWindowIterator
 
 ```cpp
 ~MemWindowIterator()
 ```
 
 
-#### Seek { #function-Seek }
+#### function Seek
 
 ```cpp
 virtual void Seek(
@@ -65,7 +65,7 @@ virtual void Seek(
 Set the dataset's current position at the segment with key equals to `key`
 
 
-#### SeekToFirst { #function-SeekToFirst }
+#### function SeekToFirst
 
 ```cpp
 virtual void SeekToFirst()
@@ -76,7 +76,7 @@ Move to the beginning of the dataset.
 **Reimplements**: [hybridse::codec::WindowIterator::SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-seektofirst)
 
 
-#### Next { #function-Next }
+#### function Next
 
 ```cpp
 virtual void Next()
@@ -89,7 +89,7 @@ virtual void Next()
 Move to the next segment in the iteration if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
 
 
-#### Valid { #function-Valid }
+#### function Valid
 
 ```cpp
 virtual bool Valid()
@@ -102,7 +102,7 @@ virtual bool Valid()
 Return `true` if the iteration has elements. 
 
 
-#### GetValue { #function-GetValue }
+#### function GetValue
 
 ```cpp
 virtual std::unique_ptr< RowIterator > GetValue()
@@ -115,7 +115,7 @@ virtual std::unique_ptr< RowIterator > GetValue()
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
 
 
-#### GetRawValue { #function-GetRawValue }
+#### function GetRawValue
 
 ```cpp
 virtual RowIterator * GetRawValue()
@@ -128,7 +128,7 @@ virtual RowIterator * GetRawValue()
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
 
 
-#### GetKey { #function-GetKey }
+#### function GetKey
 
 ```cpp
 virtual const Row GetKey()
@@ -143,4 +143,4 @@ Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c+
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

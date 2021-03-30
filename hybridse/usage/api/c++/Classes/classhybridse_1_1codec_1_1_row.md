@@ -36,14 +36,14 @@ title: hybridse::codec::Row
 
 ## Public Functions
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 Row()
 ```
 
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 explicit Row(
@@ -52,7 +52,7 @@ explicit Row(
 ```
 
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 Row(
@@ -61,7 +61,7 @@ Row(
 ```
 
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 Row(
@@ -73,7 +73,7 @@ Row(
 ```
 
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 Row(
@@ -84,7 +84,7 @@ Row(
 ```
 
 
-#### Row { #function-Row }
+#### function Row
 
 ```cpp
 explicit Row(
@@ -93,21 +93,21 @@ explicit Row(
 ```
 
 
-#### ~Row { #function-~Row }
+#### function ~Row
 
 ```cpp
 virtual ~Row()
 ```
 
 
-#### buf { #function-buf }
+#### function buf
 
 ```cpp
 inline int8_t * buf() const
 ```
 
 
-#### buf { #function-buf }
+#### function buf
 
 ```cpp
 inline int8_t * buf(
@@ -116,14 +116,14 @@ inline int8_t * buf(
 ```
 
 
-#### size { #function-size }
+#### function size
 
 ```cpp
 inline int32_t size() const
 ```
 
 
-#### size { #function-size }
+#### function size
 
 ```cpp
 inline int32_t size(
@@ -132,14 +132,14 @@ inline int32_t size(
 ```
 
 
-#### empty { #function-empty }
+#### function empty
 
 ```cpp
 inline bool empty() const
 ```
 
 
-#### compare { #function-compare }
+#### function compare
 
 ```cpp
 int compare(
@@ -148,28 +148,28 @@ int compare(
 ```
 
 
-#### GetRowPtrs { #function-GetRowPtrs }
+#### function GetRowPtrs
 
 ```cpp
 int8_t ** GetRowPtrs() const
 ```
 
 
-#### GetRowPtrCnt { #function-GetRowPtrCnt }
+#### function GetRowPtrCnt
 
 ```cpp
 int32_t GetRowPtrCnt() const
 ```
 
 
-#### GetRowSizes { #function-GetRowSizes }
+#### function GetRowSizes
 
 ```cpp
 int32_t * GetRowSizes() const
 ```
 
 
-#### GetSlice { #function-GetSlice }
+#### function GetSlice
 
 ```cpp
 inline hybridse::base::RefCountedSlice GetSlice(
@@ -178,7 +178,7 @@ inline hybridse::base::RefCountedSlice GetSlice(
 ```
 
 
-#### Append { #function-Append }
+#### function Append
 
 ```cpp
 inline void Append(
@@ -187,14 +187,14 @@ inline void Append(
 ```
 
 
-#### ToString { #function-ToString }
+#### function ToString
 
 ```cpp
 std::string ToString() const
 ```
 
 
-#### Reset { #function-Reset }
+#### function Reset
 
 ```cpp
 inline void Reset(
@@ -206,4 +206,4 @@ inline void Reset(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

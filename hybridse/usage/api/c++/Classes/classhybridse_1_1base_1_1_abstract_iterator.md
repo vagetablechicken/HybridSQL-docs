@@ -61,14 +61,14 @@ while (iterator->Valid()) {
 
 ## Public Functions
 
-#### AbstractIterator { #function-AbstractIterator }
+#### function AbstractIterator
 
 ```cpp
 inline AbstractIterator()
 ```
 
 
-#### AbstractIterator { #function-AbstractIterator }
+#### function AbstractIterator
 
 ```cpp
 AbstractIterator(
@@ -77,7 +77,7 @@ AbstractIterator(
 ```
 
 
-#### operator= { #function-operator= }
+#### function operator=
 
 ```cpp
 AbstractIterator & operator=(
@@ -86,14 +86,14 @@ AbstractIterator & operator=(
 ```
 
 
-#### ~AbstractIterator { #function-~AbstractIterator }
+#### function ~AbstractIterator
 
 ```cpp
 inline virtual ~AbstractIterator()
 ```
 
 
-#### Valid { #function-Valid }
+#### function Valid
 
 ```cpp
 virtual bool Valid() const =0
@@ -103,7 +103,7 @@ virtual bool Valid() const =0
 Return whether the iteration has elements or not. 
 
 
-#### Next { #function-Next }
+#### function Next
 
 ```cpp
 virtual void Next() =0
@@ -113,7 +113,7 @@ virtual void Next() =0
 Implemented by subclasses to move to the next element in the iteration when [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid) return `true`. 
 
 
-#### GetKey { #function-GetKey }
+#### function GetKey
 
 ```cpp
 virtual const K & GetKey() const =0
@@ -121,7 +121,7 @@ virtual const K & GetKey() const =0
 
 Return the key of current element pair. 
 
-#### GetValue { #function-GetValue }
+#### function GetValue
 
 ```cpp
 virtual Ref GetValue() =0
@@ -131,7 +131,7 @@ virtual Ref GetValue() =0
 Return the value of current element pari when [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid) return `true`. 
 
 
-#### IsSeekable { #function-IsSeekable }
+#### function IsSeekable
 
 ```cpp
 virtual bool IsSeekable() const =0
@@ -141,7 +141,7 @@ virtual bool IsSeekable() const =0
 Return whether the dataset is seekable or not. A dataset is seekable if it allows access to data with [Seek()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seek) method 
 
 
-#### Seek { #function-Seek }
+#### function Seek
 
 ```cpp
 virtual void Seek(
@@ -153,7 +153,7 @@ virtual void Seek(
 Set the dataset's current position move to the first element whose key equals to `k` offset. 
 
 
-#### SeekToFirst { #function-SeekToFirst }
+#### function SeekToFirst
 
 ```cpp
 virtual void SeekToFirst() =0
@@ -163,4 +163,4 @@ Move to the beginning of the dataset.
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

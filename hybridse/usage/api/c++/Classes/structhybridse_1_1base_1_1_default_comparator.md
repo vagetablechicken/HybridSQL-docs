@@ -17,7 +17,7 @@ title: hybridse::base::DefaultComparator
 
 ## Public Functions
 
-#### operator() { #function-operator() }
+#### function operator()
 
 ```cpp
 inline int operator()(
@@ -29,4 +29,4 @@ inline int operator()(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

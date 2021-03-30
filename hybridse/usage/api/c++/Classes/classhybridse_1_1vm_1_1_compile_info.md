@@ -31,21 +31,21 @@ title: hybridse::vm::CompileInfo
 
 ## Public Functions
 
-#### CompileInfo { #function-CompileInfo }
+#### function CompileInfo
 
 ```cpp
 inline CompileInfo()
 ```
 
 
-#### ~CompileInfo { #function-~CompileInfo }
+#### function ~CompileInfo
 
 ```cpp
 inline virtual ~CompileInfo()
 ```
 
 
-#### GetIRBuffer { #function-GetIRBuffer }
+#### function GetIRBuffer
 
 ```cpp
 virtual bool GetIRBuffer(
@@ -54,77 +54,77 @@ virtual bool GetIRBuffer(
 ```
 
 
-#### GetIRSize { #function-GetIRSize }
+#### function GetIRSize
 
 ```cpp
 virtual size_t GetIRSize() =0
 ```
 
 
-#### GetEngineMode { #function-GetEngineMode }
+#### function GetEngineMode
 
 ```cpp
 virtual const EngineMode GetEngineMode() const =0
 ```
 
 
-#### GetSQL { #function-GetSQL }
+#### function GetSQL
 
 ```cpp
 virtual const std::string & GetSQL() const =0
 ```
 
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 virtual const Schema & GetSchema() const =0
 ```
 
 
-#### GetCompileType { #function-GetCompileType }
+#### function GetCompileType
 
 ```cpp
 virtual const ComileType GetCompileType() const =0
 ```
 
 
-#### GetEncodedSchema { #function-GetEncodedSchema }
+#### function GetEncodedSchema
 
 ```cpp
 virtual const std::string & GetEncodedSchema() const =0
 ```
 
 
-#### GetRequestSchema { #function-GetRequestSchema }
+#### function GetRequestSchema
 
 ```cpp
 virtual const Schema & GetRequestSchema() const =0
 ```
 
 
-#### GetRequestName { #function-GetRequestName }
+#### function GetRequestName
 
 ```cpp
 virtual const std::string & GetRequestName() const =0
 ```
 
 
-#### GetBatchRequestInfo { #function-GetBatchRequestInfo }
+#### function GetBatchRequestInfo
 
 ```cpp
 virtual const hybridse::vm::BatchRequestInfo & GetBatchRequestInfo() const =0
 ```
 
 
-#### GetPhysicalPlan { #function-GetPhysicalPlan }
+#### function GetPhysicalPlan
 
 ```cpp
 virtual const hybridse::vm::PhysicalOpNode * GetPhysicalPlan() const =0
 ```
 
 
-#### DumpPhysicalPlan { #function-DumpPhysicalPlan }
+#### function DumpPhysicalPlan
 
 ```cpp
 virtual void DumpPhysicalPlan(
@@ -134,7 +134,7 @@ virtual void DumpPhysicalPlan(
 ```
 
 
-#### DumpClusterJob { #function-DumpClusterJob }
+#### function DumpClusterJob
 
 ```cpp
 virtual void DumpClusterJob(
@@ -146,4 +146,4 @@ virtual void DumpClusterJob(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

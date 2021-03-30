@@ -157,7 +157,7 @@ Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/c
 
 ## Public Functions
 
-#### CurrentHistoryWindow { #function-CurrentHistoryWindow }
+#### function CurrentHistoryWindow
 
 ```cpp
 inline explicit CurrentHistoryWindow(
@@ -166,7 +166,7 @@ inline explicit CurrentHistoryWindow(
 ```
 
 
-#### CurrentHistoryWindow { #function-CurrentHistoryWindow }
+#### function CurrentHistoryWindow
 
 ```cpp
 inline explicit CurrentHistoryWindow(
@@ -177,7 +177,7 @@ inline explicit CurrentHistoryWindow(
 ```
 
 
-#### CurrentHistoryWindow { #function-CurrentHistoryWindow }
+#### function CurrentHistoryWindow
 
 ```cpp
 inline explicit CurrentHistoryWindow(
@@ -189,14 +189,14 @@ inline explicit CurrentHistoryWindow(
 ```
 
 
-#### ~CurrentHistoryWindow { #function-~CurrentHistoryWindow }
+#### function ~CurrentHistoryWindow
 
 ```cpp
 inline ~CurrentHistoryWindow()
 ```
 
 
-#### PopFrontData { #function-PopFrontData }
+#### function PopFrontData
 
 ```cpp
 inline virtual void PopFrontData()
@@ -206,7 +206,7 @@ inline virtual void PopFrontData()
 **Reimplements**: [hybridse::vm::HistoryWindow::PopFrontData](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md#function-popfrontdata)
 
 
-#### BufferData { #function-BufferData }
+#### function BufferData
 
 ```cpp
 inline virtual bool BufferData(
@@ -221,4 +221,4 @@ inline virtual bool BufferData(
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

@@ -23,21 +23,21 @@ A component responsible to Query subtask.
 
 ## Public Functions
 
-#### Tablet { #function-Tablet }
+#### function Tablet
 
 ```cpp
 inline Tablet()
 ```
 
 
-#### ~Tablet { #function-~Tablet }
+#### function ~Tablet
 
 ```cpp
 inline virtual ~Tablet()
 ```
 
 
-#### GetName { #function-GetName }
+#### function GetName
 
 ```cpp
 virtual const std::string & GetName() const =0
@@ -48,7 +48,7 @@ Return the name of tablet.
 **Reimplemented by**: [hybridse::vm::LocalTablet::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-getname)
 
 
-#### SubQuery { #function-SubQuery }
+#### function SubQuery
 
 ```cpp
 virtual std::shared_ptr< RowHandler > SubQuery(
@@ -68,7 +68,7 @@ virtual std::shared_ptr< RowHandler > SubQuery(
 Return [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
 
 
-#### SubQuery { #function-SubQuery }
+#### function SubQuery
 
 ```cpp
 virtual std::shared_ptr< TableHandler > SubQuery(
@@ -92,4 +92,4 @@ Return [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_ta
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

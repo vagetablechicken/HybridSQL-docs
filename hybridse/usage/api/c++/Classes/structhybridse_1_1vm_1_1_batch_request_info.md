@@ -19,21 +19,21 @@ title: hybridse::vm::BatchRequestInfo
 
 ## Public Attributes
 
-### common_column_indices
+### variable common_column_indices
 
 ```cpp
 std::set< size_t > common_column_indices;
 ```
 
 
-### common_node_set
+### variable common_node_set
 
 ```cpp
 std::set< size_t > common_node_set;
 ```
 
 
-### output_common_column_indices
+### variable output_common_column_indices
 
 ```cpp
 std::set< size_t > output_common_column_indices;
@@ -42,4 +42,4 @@ std::set< size_t > output_common_column_indices;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:27 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

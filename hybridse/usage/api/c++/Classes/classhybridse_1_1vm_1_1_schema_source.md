@@ -33,14 +33,14 @@ title: hybridse::vm::SchemaSource
 
 ## Public Functions
 
-#### GetSchema { #function-GetSchema }
+#### function GetSchema
 
 ```cpp
 inline const hybridse::codec::Schema * GetSchema() const
 ```
 
 
-#### GetColumnID { #function-GetColumnID }
+#### function GetColumnID
 
 ```cpp
 size_t GetColumnID(
@@ -49,7 +49,7 @@ size_t GetColumnID(
 ```
 
 
-#### GetColumnName { #function-GetColumnName }
+#### function GetColumnName
 
 ```cpp
 const std::string & GetColumnName(
@@ -58,7 +58,7 @@ const std::string & GetColumnName(
 ```
 
 
-#### GetColumnType { #function-GetColumnType }
+#### function GetColumnType
 
 ```cpp
 const hybridse::type::Type GetColumnType(
@@ -67,14 +67,14 @@ const hybridse::type::Type GetColumnType(
 ```
 
 
-#### GetSourceName { #function-GetSourceName }
+#### function GetSourceName
 
 ```cpp
 const std::string & GetSourceName() const
 ```
 
 
-#### SetSchema { #function-SetSchema }
+#### function SetSchema
 
 ```cpp
 void SetSchema(
@@ -83,7 +83,7 @@ void SetSchema(
 ```
 
 
-#### SetSourceName { #function-SetSourceName }
+#### function SetSourceName
 
 ```cpp
 void SetSourceName(
@@ -92,7 +92,7 @@ void SetSourceName(
 ```
 
 
-#### SetColumnID { #function-SetColumnID }
+#### function SetColumnID
 
 ```cpp
 void SetColumnID(
@@ -102,7 +102,7 @@ void SetColumnID(
 ```
 
 
-#### SetSource { #function-SetSource }
+#### function SetSource
 
 ```cpp
 void SetSource(
@@ -113,7 +113,7 @@ void SetSource(
 ```
 
 
-#### SetNonSource { #function-SetNonSource }
+#### function SetNonSource
 
 ```cpp
 void SetNonSource(
@@ -122,7 +122,7 @@ void SetNonSource(
 ```
 
 
-#### GetSourceColumnID { #function-GetSourceColumnID }
+#### function GetSourceColumnID
 
 ```cpp
 int GetSourceColumnID(
@@ -131,7 +131,7 @@ int GetSourceColumnID(
 ```
 
 
-#### GetSourceChildIdx { #function-GetSourceChildIdx }
+#### function GetSourceChildIdx
 
 ```cpp
 int GetSourceChildIdx(
@@ -140,7 +140,7 @@ int GetSourceChildIdx(
 ```
 
 
-#### IsSourceColumn { #function-IsSourceColumn }
+#### function IsSourceColumn
 
 ```cpp
 bool IsSourceColumn(
@@ -149,7 +149,7 @@ bool IsSourceColumn(
 ```
 
 
-#### IsStrictSourceColumn { #function-IsStrictSourceColumn }
+#### function IsStrictSourceColumn
 
 ```cpp
 bool IsStrictSourceColumn(
@@ -158,21 +158,21 @@ bool IsStrictSourceColumn(
 ```
 
 
-#### size { #function-size }
+#### function size
 
 ```cpp
 size_t size() const
 ```
 
 
-#### Clear { #function-Clear }
+#### function Clear
 
 ```cpp
 void Clear()
 ```
 
 
-#### ToString { #function-ToString }
+#### function ToString
 
 ```cpp
 std::string ToString() const
@@ -181,4 +181,4 @@ std::string ToString() const
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT

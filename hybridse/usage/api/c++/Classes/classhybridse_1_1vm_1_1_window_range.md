@@ -40,7 +40,7 @@ title: hybridse::vm::WindowRange
 
 ## Public Types
 
-### WindowPositionStatus
+### enum WindowPositionStatus
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
@@ -53,14 +53,14 @@ title: hybridse::vm::WindowRange
 
 ## Public Functions
 
-#### WindowRange { #function-WindowRange }
+#### function WindowRange
 
 ```cpp
 inline WindowRange()
 ```
 
 
-#### WindowRange { #function-WindowRange }
+#### function WindowRange
 
 ```cpp
 inline WindowRange(
@@ -73,14 +73,14 @@ inline WindowRange(
 ```
 
 
-#### ~WindowRange { #function-~WindowRange }
+#### function ~WindowRange
 
 ```cpp
 inline virtual ~WindowRange()
 ```
 
 
-#### GetWindowPositionStatus { #function-GetWindowPositionStatus }
+#### function GetWindowPositionStatus
 
 ```cpp
 inline const WindowPositionStatus GetWindowPositionStatus(
@@ -91,7 +91,7 @@ inline const WindowPositionStatus GetWindowPositionStatus(
 ```
 
 
-#### CreateRowsWindow { #function-CreateRowsWindow }
+#### function CreateRowsWindow
 
 ```cpp
 static inline WindowRange CreateRowsWindow(
@@ -100,7 +100,7 @@ static inline WindowRange CreateRowsWindow(
 ```
 
 
-#### CreateRowsRangeWindow { #function-CreateRowsRangeWindow }
+#### function CreateRowsRangeWindow
 
 ```cpp
 static inline WindowRange CreateRowsRangeWindow(
@@ -111,7 +111,7 @@ static inline WindowRange CreateRowsRangeWindow(
 ```
 
 
-#### CreateRowsMergeRowsRangeWindow { #function-CreateRowsMergeRowsRangeWindow }
+#### function CreateRowsMergeRowsRangeWindow
 
 ```cpp
 static inline WindowRange CreateRowsMergeRowsRangeWindow(
@@ -124,42 +124,42 @@ static inline WindowRange CreateRowsMergeRowsRangeWindow(
 
 ## Public Attributes
 
-### frame_type_
+### variable frame_type_
 
 ```cpp
 Window::WindowFrameType frame_type_;
 ```
 
 
-### start_offset_
+### variable start_offset_
 
 ```cpp
 int64_t start_offset_;
 ```
 
 
-### end_offset_
+### variable end_offset_
 
 ```cpp
 int64_t end_offset_;
 ```
 
 
-### start_row_
+### variable start_row_
 
 ```cpp
 uint64_t start_row_;
 ```
 
 
-### end_row_
+### variable end_row_
 
 ```cpp
 uint64_t end_row_;
 ```
 
 
-### max_size_
+### variable max_size_
 
 ```cpp
 uint64_t max_size_;
@@ -168,4 +168,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:02:28 PDT
+Updated on 29 March 2021 at 18:05:16 PDT
