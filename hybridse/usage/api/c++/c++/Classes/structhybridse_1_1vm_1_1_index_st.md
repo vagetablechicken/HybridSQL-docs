@@ -13,10 +13,10 @@ title: hybridse::vm::IndexSt
 
 | Public attributes|    |
 | -------------- | -------------- |
-| std::string | **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-name)** <br>index name  |
-| uint32_t | **[index](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-index)** <br>position of index  |
-| uint32_t | **[ts_pos](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-ts_pos)** <br>second key column position  |
-| std::vector< [ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md) > | **[keys](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-keys)** <br>first keys set  |
+| **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-name)**| std::string <br>index name  |
+| **[index](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-index)**| uint32_t <br>position of index  |
+| **[ts_pos](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-ts_pos)**| uint32_t <br>second key column position  |
+| **[keys](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-keys)**| std::vector< [ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md) > <br>first keys set  |
 
 ## Public Attributes
 
@@ -54,4 +54,4 @@ first keys set
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:27:02 PDT
+Updated on 29 March 2021 at 19:04:07 PDT

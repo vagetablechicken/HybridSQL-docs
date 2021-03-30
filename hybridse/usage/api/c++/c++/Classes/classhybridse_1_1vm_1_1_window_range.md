@@ -13,7 +13,7 @@ title: hybridse::vm::WindowRange
 
 |                | Name           |
 | -------------- | -------------- |
-| enum| **[WindowPositionStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow} |
+|**[WindowPositionStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow}|  enum |
 
 
 
@@ -31,12 +31,12 @@ title: hybridse::vm::WindowRange
 
 | Public attributes|    |
 | -------------- | -------------- |
-| [Window::WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) | **[frame_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**  |
-| int64_t | **[start_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**  |
-| int64_t | **[end_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**  |
-| uint64_t | **[start_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**  |
-| uint64_t | **[end_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**  |
-| uint64_t | **[max_size_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**  |
+| **[frame_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**| [Window::WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)  |
+| **[start_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**| int64_t  |
+| **[end_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**| int64_t  |
+| **[start_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**| uint64_t  |
+| **[end_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**| uint64_t  |
+| **[max_size_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**| uint64_t  |
 
 ## Public Types
 
@@ -168,4 +168,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on 29 March 2021 at 18:27:02 PDT
+Updated on 29 March 2021 at 19:04:07 PDT
