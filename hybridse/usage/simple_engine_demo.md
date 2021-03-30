@@ -1,47 +1,59 @@
-# Design a simple Engine based on HybridSE
+# Design a simple SQL engine 
 
-HybridSE提供C++编程接口，用户可以在C/C++项目中使用[HybridSE的C++SDK](../usage/api/c++/reference.md)实现自己的引擎。
+In this article, we try to help developers to build their own SQL engine. We just simply our storage system by using a memory table so that we can pay more attention on implementation of engine.
 
-## First step: Implement SimpleCatalog and SimpleTableHandler
+Before deeply insight the details, let's  briefly outline how to design simple SQL engine with HybridSE:
 
-In order to create a HybridSE Engine for our own purpose, we have to implement a  `Catalog` class specifically adapt to our Strorage system. That means it will contain  the infomation of the dataset and will define a set of operations to access data efficiently. 
+1. Design memory table storage
+2. Implement Catalog and TableHandler, e.g, `SimpleCatalog`, `SimpleTableHandler`.
+3. Build and execute engine
 
-### SimpleCatalog
+Detail : [simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
 
-In this case, we just simplily implement a `SimpleCatalog`, where two maps( `table_handlers_` and `databases_` ) are adopted to manage the database and table information and data.
+## 1. Memory table storage
+
+<img src="images/image-simple-storage.png" alt="image-20210326122554032" align="left" style="zoom:50%;" />
 
 ```c++
-/**
- * Simple Catalog without actual data bindings.
- */
-class SimpleCatalog : public Catalog {
- public:
-    explicit SimpleCatalog(const bool enable_index = false);
-    SimpleCatalog(const SimpleCatalog &) = delete;
-    ~SimpleCatalog();
-    std::shared_ptr<type::Database> GetDatabase(const std::string &db) override;
-    std::shared_ptr<TableHandler> GetTable(
-        const std::string &db, const std::string &table_name) override;
-    bool IndexSupport() override;
-
-  	void AddDatabase(const hybridse::type::Database &db);
-    bool InsertRows(const std::string &db, const std::string &table,
-                    const std::vector<Row> &row);
- private:
-    bool enable_index_;
-    std::map<std::string,
-             std::map<std::string, std::shared_ptr<SimpleCatalogTableHandler>>>
-        table_handlers_;
-    std::map<std::string, std::shared_ptr<type::Database>> databases_;
-};
-
+typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
+typedef std::map<std::string, MemTimeTable> MemSegmentMap;
 ```
+
+- Our memory table support multi-indexes. And each index binds to a SegmentMemMap`. 
+- `SegmentMemMap` is a `map<Key,MemTimeTable>` where `key` is index key string。Rows with same keys will be collected together, ordered by time and added into the same `MemTimeTable` .
+
+## 2. Catalog Implementation 
+
+### [SimpleCatalog](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)
+
+In order to create a HybridSE Engine for our own purpose, we have to implement a  `Catalog` class specifically adapt to our Strorage system. That means it will contain  the infomation of the dataset and will define a set of operations to access the memory table  efficiently. 
+
+#### Fields
+
+We use `database_` and `table_handler to maintain and manage database and table。`type::Database is our Database prototype and `SimpleCatalogTableHandler will be discussed later.
+
+#### Functions
+
+Here, we list some implementations (more detail can be found [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h) and [simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc)）
+
+- Constructor
+
+The constructor initialize the `enable_index` to enable or disable index-based-optimization.  And the database and table meta and data are empty.
 
 ```c++
 SimpleCatalog::SimpleCatalog(const bool enable_index)
     : enable_index_(enable_index) {}
 SimpleCatalog::~SimpleCatalog() {}
 bool SimpleCatalog::IndexSupport() { return enable_index_; }
+```
+
+- GetDatabases and GetTable
+
+```c++
+std::map<std::string, std::shared_ptr<type::Database>> databases_;
+std::map<std::string,
+             std::map<std::string, std::shared_ptr<SimpleCatalogTableHandler>>>
+        table_handlers_;
 ```
 
 ```c++
@@ -59,130 +71,39 @@ std::shared_ptr<TableHandler> SimpleCatalog::GetTable(
 }
 ```
 
-#### Additinal functions
+- AddDatabases and InsertRows
 
-`AddDatabase` and `InsertRows`  aren't  necessary for a  `Catalog` class, but here we truely need them to help us to initialize  database and prepare data.
+Actually, `AddDatabase` and `InsertRows`  aren't  necessity for a  `Catalog` class, but here we truely need them to help us to initialize  database and to prepare data.
 
-```c++
-void SimpleCatalog::AddDatabase(const hybridse::type::Database &db) {
-    auto &dict = table_handlers_[db.name()];
-    for (int k = 0; k < db.tables_size(); ++k) {
-        auto tbl = db.tables(k);
-        dict[tbl.name()] =
-            std::make_shared<SimpleCatalogTableHandler>(db.name(), tbl);
-    }
-    databases_[db.name()] = std::make_shared<hybridse::type::Database>(db);
-}
-bool SimpleCatalog::InsertRows(const std::string &db_name,
-                               const std::string &table_name,
-                               const std::vector<Row> &rows) {
-    auto table = GetTable(db_name, table_name);
-    if (!table) {
-        LOG(WARNING) << "table:" << table_name
-                     << " isn't exist in db:" << db_name;
-    }
-    for (auto &row : rows) {
-        if (!std::dynamic_pointer_cast<SimpleCatalogTableHandler>(table)
-                 ->AddRow(row)) {
-            return false;
-        }
-    }
-    return true;
-}
+### [SimpleCatalogTableHandler](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)
+
+#### Fields
+
+Internally, we maintain `table_storage` to maintain and manage the [memory table storage](#1. memory table storage)：
+
+``` c++
+std::map<std::string, std::shared_ptr<MemPartitionHandler>> table_storage;
 ```
 
+`MemPartitionHandler` is a  `TableHandler` implementation. It makes it very convenient to`GetWindowIterator`.
 
-
-### SimpleTableHandler
-
-
-
- `MemPartitionHandler` and `MemTableHandler`  make it easy to implement a memory table storage.
+At the same time, we also use `full_table_storage_` to store full table data. Although, it is kind of memory costly, it simply  implement `GetIterator`.
 
 ```c++
-
-class SimpleCatalogTableHandler : public TableHandler {
- public:
-    explicit SimpleCatalogTableHandler(const std::string &db_name,
-                                       const hybridse::type::TableDef &);
-  	// decalre TableHandler funtions
-    const Schema *GetSchema() override;
-  	// ... 
-
-  	// functions for data preparation
-    bool AddRow(const Row row);
-    bool DecodeKeysAndTs(const IndexSt &index, const int8_t *buf, uint32_t size,
-                         std::string &key, int64_t *time_ptr);  // NOLINT
-
- private:
-    std::string db_name_;
-    hybridse::type::TableDef table_def_;
-    Types types_dict_;
-    IndexHint index_hint_;
-    codec::RowView row_view_;
-    std::map<std::string, std::shared_ptr<MemPartitionHandler>> table_storage;
-    std::shared_ptr<MemTableHandler> full_table_storage_;
-};
+std::shared_ptr<MemTableHandler> full_table_storage_;
 ```
 
-At the very beginning, we have to initialize tablehandler with `TableDef`
+#### Functions
+
+Here, we list some implementations (more detail can be found here: [simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc))
+
+- Constructor
+
+At the very beginning, we have to initialize the table infomations, e.g.,  `TableDef`, `IndexHint` and `Types`
+
+- Get table  infomation 
 
 ```c++
-SimpleCatalogTableHandler::SimpleCatalogTableHandler(
-    const std::string &db_name, const hybridse::type::TableDef &table_def)
-    : db_name_(db_name),
-      table_def_(table_def),
-      row_view_(table_def_.columns()) {
-    // build col info and index info
-    // init types var
-    for (int32_t i = 0; i < table_def.columns_size(); i++) {
-        const type::ColumnDef &column = table_def.columns(i);
-        codec::ColInfo col_info(column.name(), column.type(), i, 0);
-        types_dict_.insert(std::make_pair(column.name(), col_info));
-    }
-
-    // init index hint
-    for (int32_t i = 0; i < table_def.indexes().size(); i++) {
-        const type::IndexDef &index_def = table_def.indexes().Get(i);
-        vm::IndexSt index_st;
-        index_st.index = i;
-        index_st.ts_pos = ::hybridse::vm::INVALID_POS;
-        if (!index_def.second_key().empty()) {
-            int32_t pos = GetColumnIndex(index_def.second_key());
-            if (pos < 0) {
-                LOG(WARNING)
-                    << "fail to get second key " << index_def.second_key();
-                return;
-            }
-            index_st.ts_pos = pos;
-        } else {
-            DLOG(INFO) << "init table with empty second key";
-        }
-        index_st.name = index_def.name();
-        for (int32_t j = 0; j < index_def.first_keys_size(); j++) {
-            const std::string &key = index_def.first_keys(j);
-            auto it = types_dict_.find(key);
-            if (it == types_dict_.end()) {
-                LOG(WARNING) << "column " << key << " does not exist in table "
-                             << table_def.name();
-                return;
-            }
-            index_st.keys.push_back(it->second);
-        }
-        index_hint_.insert(std::make_pair(index_st.name, index_st));
-        table_storage.insert(std::make_pair(
-            index_st.name, std::make_shared<MemPartitionHandler>()));
-    }
-    full_table_storage_ = std::make_shared<MemTableHandler>();
-}
-```
-
-
-
-Getting basic information, e.g, schem, index, table name, are implemented as follow:
-
-```c++
-
 const Types &SimpleCatalogTableHandler::GetTypes() { return this->types_dict_; }
 
 const IndexHint &SimpleCatalogTableHandler::GetIndex() {
@@ -202,9 +123,20 @@ const std::string &SimpleCatalogTableHandler::GetDatabase() {
 }
 ```
 
-Then we can simplity implement `GetIterator` by returning the `full_table_storage_->GetIterator()`
+- GetPartition and GetWindowIterator
+
+`MemPartitionHandler makes it easy to implement   `GetPartition() ` and   `GetWindowIterator()
 
 ```c++
+std::shared_ptr<PartitionHandler> SimpleCatalogTableHandler::GetPartition(
+  const std::string &index_name) {    
+  	if (table_storage.find(index_name) == table_storage.end()) {        
+      return nullptr;    
+    } else {        
+      return table_storage[index_name];    
+    }
+}
+
 std::unique_ptr<WindowIterator> SimpleCatalogTableHandler::GetWindowIterator(
     const std::string &index_name) {
     if (table_storage.find(index_name) == table_storage.end()) {
@@ -213,23 +145,25 @@ std::unique_ptr<WindowIterator> SimpleCatalogTableHandler::GetWindowIterator(
         return table_storage[index_name]->GetWindowIterator();
     }
 }
-std::shared_ptr<PartitionHandler> SimpleCatalogTableHandler::GetPartition(
-    const std::string &index_name) {
-    if (table_storage.find(index_name) == table_storage.end()) {
-        return nullptr;
-    } else {
-        return table_storage[index_name];
-    }
-}
+```
+
+More details: [MemPartitionHandler::GetWindowIterator()](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc)
+
+- GetIterator
+
+Then we can simplity implement `GetIterator` by returning the `full_table_storage_->GetIterator()`
+
+```c++
 std::unique_ptr<RowIterator> SimpleCatalogTableHandler::GetIterator() {
     return full_table_storage_->GetIterator();
 }
-RowIterator *SimpleCatalogTableHandler::GetRawIterator() {
-    return full_table_storage_->GetRawIterator();
-}
 ```
 
-If we are not ready for some operation, we can just ignore it.
+More details: [MemTableHandler::GetIterator()](https://github.com/4paradigm/HybridSE/blob/main/src/vm/mem_catalog.cc)
+
+- GetCount and At
+
+If we are not ready for some operation, we can just return `0` or `null`. Sorry do not support error system currently.
 
 ```c++
 const uint64_t SimpleCatalogTableHandler::GetCount() { 
@@ -242,16 +176,14 @@ hybridse::codec::Row SimpleCatalogTableHandler::At(uint64_t pos) {
 }
 ```
 
+## 3. Build and execute engine
 
+### Build engine
+
+- Build `SimpleCatalog`
 
 ```c++
-using namespace llvm;       // NOLINT (build/namespaces)
-using namespace llvm::orc;  // NOLINT (build/namespaces)
-namespace fesql {
-namespace cmd {
-// ...
-int run() {
-    // build Simple Catalog
+// build Simple Catalog
     auto catalog = std::make_shared<SimpleCatalog>(true);
     // database simple_db
     fesql::type::Database db;
@@ -280,8 +212,12 @@ int run() {
     }
     *(db.add_tables()) = table_def;
     catalog->AddDatabase(db);
+```
 
-    // insert data into simple_db
+- Prepare database and data
+
+```c++
+		// insert data into simple_db
     std::vector<Row> t1_rows;
     for (int i = 0; i < 10; ++i) {
         std::string str1 = "hello";
@@ -297,41 +233,50 @@ int run() {
     if (!catalog->InsertRows("simple_db", "t1", t1_rows)) {
         return SIMPLE_ENGINE_DATA_ERROR;
     }
-
-    // build simple engine
-    EngineOptions options;
-    Engine engine(catalog, options);
-    std::string sql = "select col0, col1, col2, col1+col2 as col12 from t1;";
-    {
-        base::Status get_status;
-        BatchRunSession session;
-        // compile sql
-        if (!engine.Get(sql, "simple_db", session, get_status) ||
-            get_status.code != common::kOk) {
-            return SIMPLE_ENGINE_COMPILE_ERROR;
-        }
-        std::vector<Row> outputs;
-        // run sql query
-        if (0 != session.Run(outputs)) {
-            return SIMPLE_ENGINE_RUN_ERROR;
-        }
-        PrintRows(session.GetSchema(), outputs);
-    }
-    return SIMPLE_ENGINE_RET_SUCCESS;
-}
-
-}  // namespace cmd
-}  // namespace fesql
-
-int main(int argc, char** argv) {
-    InitializeNativeTarget();
-    InitializeNativeTargetAsmPrinter();
-    return fesql::cmd::run();
-}
-
 ```
 
-#### 编译和运行SimpleEngineDemo
+- Config `EngineOption`
+
+We simply use default `EngineOptions`
+
+```c++
+EngineOptions options;
+```
+
+- Build `Engine`
+
+```c++
+Engine engine(catalog, options);
+```
+
+### Compile and execute SQL
+
+- Compile SQL
+
+```c++
+std::string sql = "select col0, col1, col2, col1+col2 as col12 from t1;";
+base::Status get_status;
+BatchRunSession session;
+// compile sql
+if (!engine.Get(sql, "simple_db", session, get_status) ||
+    get_status.code != common::kOk) {
+  return SIMPLE_ENGINE_COMPILE_ERROR;
+}
+```
+
+- Execute SQL
+
+```c++
+std::vector<Row> outputs;
+// run sql query
+if (0 != session.Run(outputs)) {
+  return SIMPLE_ENGINE_RUN_ERROR;
+}
+// print result
+PrintRows(session.GetSchema(), outputs);
+```
+
+## 4. Run SimpleEngineDemo
 
 ```shell
 cd hybridse/build
@@ -339,4 +284,3 @@ cmake ..
 make simple_engine_demo
 ./src/simple_engine_demo
 ```
-
