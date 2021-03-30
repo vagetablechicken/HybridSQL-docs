@@ -13,14 +13,9 @@
             * [数据查询语句(DQL)](hybridse/language_guide/query.md)
             * [数据操作语句(DML)](hybridse/language_guide/dml.md)
             * [数据定义语句(DDL)](hybridse/language_guide/ddl.md)
-        * [C++ API文档](hybridse/usage/api/markdown/Classes/README.md)
-            * [Catalog](hybridse/usage/api/c++/SUMMARY.md#Catalog)
-                * [Catalog](hybridse/usage/api/c++/catalog/catalog.md)
-                * [DataHandler](hybridse/usage/api/c++/catalog/data_handler.md)
-            * [Engine](hybridse/usage/api/c++/engine/compile_info.md)
-                * [CompileType](hybridse/usage/api/c++/engine/compile_info.md#CompileType)
-                * [CompileInfo](hybridse/usage/api/c++/engine/compile_info.md#CompileInfo)
-                * [EngineMode](hybridse/usage/api/c++/engine/engine_mode.md#EngineMode)
+        * [C++ API文档](./hybridse/usage/api/c++/Classes/README.md)
+            * [Classes](./hybridse/usage/api/c++/Classes/README.md)
+            * [Namespaces](./hybridse/usage/api/c++/Namespaces/README.md)
 * FEDB
     * [介绍](fedb/README.md)
     * 使用文档
