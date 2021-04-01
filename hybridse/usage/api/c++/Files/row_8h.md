@@ -39,8 +39,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/row.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_CODEC_ROW_H_
-#define SRC_INCLUDE_CODEC_ROW_H_
+#ifndef INCLUDE_CODEC_ROW_H_
+#define INCLUDE_CODEC_ROW_H_
 
 #include <cstdint>
 #include <map>
@@ -122,10 +122,10 @@ class Row {
 
 }  // namespace codec
 }  // namespace hybridse
-#endif  // SRC_INCLUDE_CODEC_ROW_H_
+#endif  // INCLUDE_CODEC_ROW_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

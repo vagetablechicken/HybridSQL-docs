@@ -56,8 +56,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/mem_catalog.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_VM_MEM_CATALOG_H_
-#define SRC_INCLUDE_VM_MEM_CATALOG_H_
+#ifndef INCLUDE_VM_MEM_CATALOG_H_
+#define INCLUDE_VM_MEM_CATALOG_H_
 
 #include <deque>
 #include <functional>
@@ -801,10 +801,10 @@ int8_t* RowGetSlice(int8_t* row_ptr, size_t idx);
 size_t RowGetSliceSize(int8_t* row_ptr, size_t idx);
 }  // namespace vm
 }  // namespace hybridse
-#endif  // SRC_INCLUDE_VM_MEM_CATALOG_H_
+#endif  // INCLUDE_VM_MEM_CATALOG_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

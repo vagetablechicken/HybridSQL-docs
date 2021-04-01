@@ -1,8 +1,8 @@
 ---
-title: hybridse::vm::JITOptions
+title: hybridse::vm::JitOptions
 
 ---
-# hybridse::vm::JITOptions
+# hybridse::vm::JitOptions
 
 
 
@@ -90,4 +90,4 @@ inline void set_enable_perf(
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on 30 March 2021 at 14:14:49 PDT

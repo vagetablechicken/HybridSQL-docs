@@ -39,8 +39,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/fe_row_selector.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_CODEC_FE_ROW_SELECTOR_H_
-#define SRC_INCLUDE_CODEC_FE_ROW_SELECTOR_H_
+#ifndef INCLUDE_CODEC_FE_ROW_SELECTOR_H_
+#define INCLUDE_CODEC_FE_ROW_SELECTOR_H_
 
 #include <utility>
 #include <vector>
@@ -74,10 +74,10 @@ class RowSelector {
 
 }  // namespace codec
 }  // namespace hybridse
-#endif  // SRC_INCLUDE_CODEC_FE_ROW_SELECTOR_H_
+#endif  // INCLUDE_CODEC_FE_ROW_SELECTOR_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT

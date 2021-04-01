@@ -38,8 +38,10 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/row_iterator.h
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef HYBRIDSE_ROW_ITERATOR_H
-#define HYBRIDSE_ROW_ITERATOR_H
+#ifndef INCLUDE_CODEC_ROW_ITERATOR_H_
+#define INCLUDE_CODEC_ROW_ITERATOR_H_
+#include <memory>
+#include <string>
 #include "codec/row.h"
 namespace hybridse {
 namespace codec {
@@ -63,10 +65,10 @@ class WindowIterator {
 }  // namespace codec
 }  // namespace hybridse
 
-#endif  // HYBRIDSE_ROW_ITERATOR_H
+#endif  // INCLUDE_CODEC_ROW_ITERATOR_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

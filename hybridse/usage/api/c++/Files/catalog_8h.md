@@ -51,8 +51,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/catalog.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_VM_CATALOG_H_
-#define SRC_INCLUDE_VM_CATALOG_H_
+#ifndef INCLUDE_VM_CATALOG_H_
+#define INCLUDE_VM_CATALOG_H_
 #include <map>
 #include <memory>
 #include <set>
@@ -77,7 +77,7 @@ using hybridse::codec::RowIterator;
 using hybridse::codec::Schema;
 using hybridse::codec::WindowIterator;
 
-constexpr uint32_t INVALID_POS = UINT32_MAX;
+constexpr uint32_t INVALID_POS = UINT32_MAX;  
 
 struct IndexSt {
     std::string name;           
@@ -185,7 +185,7 @@ class ErrorRowHandler : public RowHandler {
           row_() {}
     ~ErrorRowHandler() {}
 
-    virtual const Row& GetValue() final { return row_; }
+    const Row& GetValue() final { return row_; }
 
     const std::string GetHandlerTypeName() override {
         return "ErrorRowHandler";
@@ -386,7 +386,6 @@ class Tablet {
         const bool is_procedure, const bool is_debug) = 0;
 };
 
-
 class Catalog {
  public:
     Catalog() {}
@@ -410,10 +409,10 @@ class Catalog {
 }  // namespace vm
 }  // namespace hybridse
 
-#endif  // SRC_INCLUDE_VM_CATALOG_H_
+#endif  // INCLUDE_VM_CATALOG_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

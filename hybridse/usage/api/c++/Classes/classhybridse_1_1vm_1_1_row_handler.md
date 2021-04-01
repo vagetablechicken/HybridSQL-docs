@@ -137,15 +137,17 @@ inline virtual const std::string GetHandlerTypeName() override
 ```
 
 
+**Return**: name of handler type, default is `"RowHandler"`
+
 **Reimplements**: [hybridse::vm::DataHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethandlertypename)
 
 
 **Reimplemented by**: [hybridse::vm::ErrorRowHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md#function-gethandlertypename), [hybridse::vm::MemRowHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_row_handler.md#function-gethandlertypename)
 
 
-Return the name of handler type. Return `"RowHandler"` by default. 
+Get the name of handler type. 
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT
