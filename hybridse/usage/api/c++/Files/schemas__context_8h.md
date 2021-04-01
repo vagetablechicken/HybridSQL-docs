@@ -40,8 +40,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/schemas_context.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_VM_SCHEMAS_CONTEXT_H_
-#define SRC_INCLUDE_VM_SCHEMAS_CONTEXT_H_
+#ifndef INCLUDE_VM_SCHEMAS_CONTEXT_H_
+#define INCLUDE_VM_SCHEMAS_CONTEXT_H_
 #include <map>
 #include <set>
 #include <string>
@@ -202,10 +202,10 @@ class SchemasContext {
 }  // namespace vm
 }  // namespace hybridse
 
-#endif  // SRC_INCLUDE_VM_SCHEMAS_CONTEXT_H_
+#endif  // INCLUDE_VM_SCHEMAS_CONTEXT_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

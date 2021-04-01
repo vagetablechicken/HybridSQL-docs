@@ -38,18 +38,21 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/row_list.h
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef HYBRIDSE_ROW_LIST_H
-#define HYBRIDSE_ROW_LIST_H
+#ifndef INCLUDE_CODEC_ROW_LIST_H_
+#define INCLUDE_CODEC_ROW_LIST_H_
+#include <memory>
 #include "codec/row_iterator.h"
-namespace hybridse{
-namespace codec{
+namespace hybridse {
+namespace codec {
 template <class V>
 class ListV {
  public:
     ListV() {}
     virtual ~ListV() {}
     virtual std::unique_ptr<ConstIterator<uint64_t, V>> GetIterator() = 0;
+
     virtual ConstIterator<uint64_t, V> *GetRawIterator() = 0;
+
     virtual const uint64_t GetCount() {
         auto iter = GetIterator();
         uint64_t cnt = 0;
@@ -71,12 +74,12 @@ class ListV {
         return iter->Valid() ? iter->GetValue() : V();
     }
 };
-}
-}
-#endif  // HYBRIDSE_ROW_LIST_H
+}  // namespace codec
+}  // namespace hybridse
+#endif  // INCLUDE_CODEC_ROW_LIST_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

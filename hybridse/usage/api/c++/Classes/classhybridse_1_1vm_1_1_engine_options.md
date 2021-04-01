@@ -34,7 +34,7 @@ title: hybridse::vm::EngineOptions
 |**[is_enable_batch_window_parallelization](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_batch_window_parallelization)**() const| bool  |
 |**[set_enable_spark_unsaferow_format](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_spark_unsaferow_format)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
 |**[is_enable_spark_unsaferow_format](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_spark_unsaferow_format)**() const| bool  |
-|**[jit_options](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-jit_options)**()| [hybridse::vm::JITOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md) &  |
+|**[jit_options](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-jit_options)**()| [hybridse::vm::JitOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md) &  |
 |**[NewEngineOptionWithClusterEnable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-newengineoptionwithclusterenable)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)  |
 
 ## Public Functions
@@ -209,7 +209,7 @@ inline bool is_enable_spark_unsaferow_format() const
 #### function jit_options
 
 ```cpp
-inline hybridse::vm::JITOptions & jit_options()
+inline hybridse::vm::JitOptions & jit_options()
 ```
 
 
@@ -224,4 +224,4 @@ static inline EngineOptions NewEngineOptionWithClusterEnable(
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT

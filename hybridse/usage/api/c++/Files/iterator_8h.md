@@ -42,7 +42,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/base/iterator.h
  * limitations under the License.
  */
 
-#pragma once
+#ifndef INCLUDE_BASE_ITERATOR_H_
+#define INCLUDE_BASE_ITERATOR_H_
 #include <stdint.h>
 
 namespace hybridse {
@@ -84,9 +85,10 @@ class ConstIterator : public hybridse::base::AbstractIterator<K, V, const V&> {
 };
 }  // namespace base
 }  // namespace hybridse
+#endif  // INCLUDE_BASE_ITERATOR_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT

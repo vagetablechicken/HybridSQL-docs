@@ -46,8 +46,8 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/engine.h
  * limitations under the License.
  */
 
-#ifndef SRC_INCLUDE_VM_ENGINE_H_
-#define SRC_INCLUDE_VM_ENGINE_H_
+#ifndef INCLUDE_VM_ENGINE_H_
+#define INCLUDE_VM_ENGINE_H_
 
 #include <map>
 #include <memory>
@@ -131,7 +131,7 @@ class EngineOptions {
         return enable_spark_unsaferow_format_;
     }
 
-    hybridse::vm::JITOptions& jit_options() { return jit_options_; }
+    hybridse::vm::JitOptions& jit_options() { return jit_options_; }
 
  private:
     bool keep_ir_;
@@ -144,7 +144,7 @@ class EngineOptions {
     bool enable_batch_window_parallelization_;
     uint32_t max_sql_cache_size_;
     bool enable_spark_unsaferow_format_;
-    JITOptions jit_options_;
+    JitOptions jit_options_;
 };
 
 class RunSession {
@@ -328,10 +328,10 @@ class LocalTablet : public Tablet {
 
 }  // namespace vm
 }  // namespace hybridse
-#endif  // SRC_INCLUDE_VM_ENGINE_H_
+#endif  // INCLUDE_VM_ENGINE_H_
 ```
 
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:24 PDT

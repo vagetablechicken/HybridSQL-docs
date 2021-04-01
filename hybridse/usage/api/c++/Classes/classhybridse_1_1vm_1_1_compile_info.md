@@ -18,7 +18,7 @@ title: hybridse::vm::CompileInfo
 |**[GetIRBuffer](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getirbuffer)**(const base::RawBuffer & buf) =0| bool  |
 |**[GetIRSize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getirsize)**() =0| size_t  |
 |**[GetEngineMode](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getenginemode)**() const =0| const [EngineMode](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode)  |
-|**[GetSQL](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getsql)**() const =0| const std::string &  |
+|**[GetSql](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getsql)**() const =0| const std::string &  |
 |**[GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getschema)**() const =0| const Schema &  |
 |**[GetCompileType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getcompiletype)**() const =0| const [ComileType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-comiletype)  |
 |**[GetEncodedSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md#function-getencodedschema)**() const =0| const std::string &  |
@@ -68,10 +68,10 @@ virtual const EngineMode GetEngineMode() const =0
 ```
 
 
-#### function GetSQL
+#### function GetSql
 
 ```cpp
-virtual const std::string & GetSQL() const =0
+virtual const std::string & GetSql() const =0
 ```
 
 
@@ -146,4 +146,4 @@ virtual void DumpClusterJob(
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT

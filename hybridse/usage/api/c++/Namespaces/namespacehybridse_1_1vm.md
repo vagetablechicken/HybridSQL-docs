@@ -31,7 +31,7 @@ title: hybridse::vm
 | struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md)**  |
 | class | **[hybridse::vm::HistoryWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md)**  |
 | struct | **[hybridse::vm::IndexSt](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
-| class | **[hybridse::vm::JITOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_j_i_t_options.md)**  |
+| class | **[hybridse::vm::JitOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md)**  |
 | class | **[hybridse::vm::LocalTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md)**  |
 | class | **[hybridse::vm::MemCatalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md)**  |
 | class | **[hybridse::vm::MemPartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md)**  |
@@ -62,7 +62,7 @@ title: hybridse::vm
 | enum| **[HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype)** { kRowHandler, kTableHandler, kPartitionHandler} |
 | enum| **[OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype)** { kDescOrder, kAscOrder, kNoneOrder} |
 | enum| **[EngineMode](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode)** { kBatchMode, kRequestMode, kBatchRequestMode} |
-| enum| **[ComileType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-comiletype)** { kCompileSQL} |
+| enum| **[ComileType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-comiletype)** { kCompileSql} |
 | typedef ::google::protobuf::RepeatedPtrField<::hybridse::type::IndexDef > | **[IndexList](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexlist)**  |
 | typedef std::map< std::string, [ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md) > | **[Types](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types)**  |
 | typedef std::map< std::string, [IndexSt](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md) > | **[IndexHint](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint)**  |
@@ -132,7 +132,7 @@ title: hybridse::vm
 
 | Enumerator | Value | Description |
 | ---------- | ----- | ----------- |
-| kCompileSQL | |   |
+| kCompileSql | |   |
 
 
 
@@ -304,4 +304,4 @@ constexpr uint32_t INVALID_POS = UINT32_MAX;
 
 -------------------------------
 
-Updated on 29 March 2021 at 19:04:07 PDT
+Updated on  1 April 2021 at 16:11:23 PDT
