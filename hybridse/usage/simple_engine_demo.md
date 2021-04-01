@@ -1,8 +1,8 @@
 # Design a simple SQL engine 
 
-In this article, we try to help developers to build their own SQL engine. We just simply our storage system by using a memory table so that we can pay more attention on implementation of engine.
+In this article, we try to help developers to build their own SQL engine. We just simplify our storage system by using a memory table so that we can pay more attention on implementation of engine.
 
-Before deeply insight the details, let's  briefly outline how to design simple SQL engine with HybridSE:
+Before gain a deeper insight into the implementation, let's  briefly outline how to design simple SQL engine using HybridSE:
 
 1. Design memory table storage
 2. Implement Catalog and TableHandler, e.g, `SimpleCatalog`, `SimpleTableHandler`.
