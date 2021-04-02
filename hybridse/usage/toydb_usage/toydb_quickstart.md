@@ -24,6 +24,8 @@ BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
 sleep 5
 ```
 
+
+
 #### 启动tablet
 
 ```shell script
@@ -31,7 +33,10 @@ BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
 "$BUILD_DIR/src/toydb" --role=tablet --toydb_endpoint=127.0.0.1:9212 --toydb_port=9212 --dbms_endpoint=127.0.0.1:9211 > tablet.log 2>&1 &
 sleep 5
 ```
+
+
 #### 启动控制台客户端
+
 ```shell
 BUILD_DIR=$PROJECT_ROOT/build/examples/toydb
 "${BUILD_DIR}/src/toydb" --role=client --tablet_endpoint=127.0.0.1:9212 --toydb_endpoint=127.0.0.1:9211
