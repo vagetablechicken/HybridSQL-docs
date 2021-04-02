@@ -1,4 +1,4 @@
-# 实现一个简单内存表SQL引擎
+# 实现一个简单SQL引擎
 
 ​		本文旨在帮助开发者在C/C++项目中，使用C++编程接口用[HybridSE的C++SDK](./api/c++/SUMMARY.md)打造自己的SQL引擎。考虑到存储系统并非本文关注的重点，我们将简化存储层——使用内存表作为底层存储，这可以让我们更好关注引擎实现以及存储系统适配这些细节。
 
@@ -8,7 +8,7 @@
 2. 实现数据接口(`Catalog`, `TableHandler`)子类: `SimpleCatalog`,`SimpleTableHandler`
 3. 构造和执行引擎
 
-完整的示例可参考[simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
+完整的代码可参考[simple_engine_demo](https://github.com/4paradigm/HybridSE/blob/main/src/cmd/simple_engine_demo.cc)
 
 ## 1. 内存表存储
 
@@ -19,22 +19,24 @@ typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
 typedef std::map<std::string, MemTimeTable> MemSegmentMap;
 ```
 
-- 内存表支持多个索引，并为每个索引维护一个`SegmentMemMap`。换言之，每个SegmentMemMap都有可以进行全表遍历。
-- `SegmentMemMap`是`key`到时序表`MemTimeTable`的映射。`key`是根据数据的索引表达式值。`key`相同的数据按时间排序后组织成`MemTimeTable`，最终关联到`key`上。
+上图描述了内存表的存储结构: 
 
-## 2. 实现数据接口
+- 内存表每个索引维护一个`SegmentMemMap`
+- `SegmentMemMap`是`key`到时序表`MemTimeTable`的映射。`key`是根据数据的索引表达式值。`key`相同的数据按时间排序后组织成内存时序表`MemTimeTable`，最终绑定到`key`上。
+
+## 2. 实现数据接口子类
 
 ### [SimpleCatalog](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)
 
-想要开发HybridSE引擎，首先要实现与所在存储系统相适应`Catalog`。这意味着，需要实现数据集元信息的查询接口以及数据访问接口。
+以及`TableHandler`访问接口。
 
-#### 内部接口
+#### 内部结构
 
-使用`database_`和`table_handler`来维护和管理数据库和表信息。其中, `type::Database`HybridSE标准的数据库类型，`SimpleCatalogTableHandler`的实现则会在下一小节会阐述。
+我们在`SimpleCatalog`内部维护`hybridse::type::Database database_`和`std::map<std::string, std::shared_ptr<SimpleCatalogTableHandler>>> table_handlers_`来维护和管理数据库和表信息。其中, `table_handler_`是表名到`SimpleCatalogTableHandler`的映射。`SimpleCatalogTableHandler`的实现细节后面将会阐述。
 
 #### 接口实现
 
-我们列出几处关键的函数和接口实现（更多细节可查阅[simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc)）
+这里列出几处关键的函数和接口实现（更多细节可查阅[simple_catalog.h](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.h)和[simple_catalog.cc](https://github.com/4paradigm/HybridSE/blob/main/src/vm/simple_catalog.cc)）
 
 - 构造函数
 

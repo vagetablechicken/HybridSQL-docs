@@ -4,18 +4,19 @@
 * HybridSE
     * [介绍](hybridse/introduction/README.md)
     * 使用文档
-        * [快速开始](./hybridse/usage/quick_start.md)
+        * [快速开始](hybridse/usage/quick_start.md)
         * [ToyDB使用手册](hybridse/usage/toydb_usage/toydb_quickstart.md)
-        * [SQL语法手册](hybridse/language_guide/reference.md)
+        * [实现一个简单SQL引擎](hybridse/usage/simple_engine_demo.md)
+        * SQL语法手册
             * [语言结构](hybridse/language_guide/lexical.md)
             * [表达式，函数和运算](hybridse/language_guide/expressions_functions_and_operators.md)
             * [数据类型](hybridse/language_guide//data_types.md)
             * [数据查询语句(DQL)](hybridse/language_guide/query.md)
             * [数据操作语句(DML)](hybridse/language_guide/dml.md)
             * [数据定义语句(DDL)](hybridse/language_guide/ddl.md)
-        * [C++ API文档](./hybridse/usage/api/c++/Classes/README.md)
-            * [Classes](./hybridse/usage/api/c++/Classes/README.md)
-            * [Namespaces](./hybridse/usage/api/c++/Namespaces/README.md)
+        * C++ API文档
+            * [Classes](hybridse/usage/api/c++/Classes/README.md)
+            * [Namespaces](hybridse/usage/api/c++/Namespaces/README.md)
 * FEDB
     * [介绍](fedb/README.md)
     * 使用文档
