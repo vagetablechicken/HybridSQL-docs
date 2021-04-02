@@ -18,7 +18,7 @@ source tools/init_env.profile.sh
 ### Configure and build
 
 ```shell
-cd /Hybridse
+cd /HybridSE
 mkdir -p build && cd build
 cmake ..
 # just compile the core library
@@ -28,7 +28,7 @@ make -j4
 ### Install
 
 ```shell
-cd /Hybridse
+cd /HybridSE
 mkdir -p build && cd build
 cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_DIRECTORY"
 make -j4 install

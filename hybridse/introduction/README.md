@@ -44,7 +44,7 @@ source tools/init_env.profile.sh
 ## Build
 
 ```shell
-cd /Hybridse
+cd /HybridSE
 mkdir -p build && cd build
 cmake ..
 # just compile the core library
@@ -54,7 +54,7 @@ make -j4 hybridse_core
 ## Install
 
 ```shell
-cd /Hybridse
+cd /HybridSE
 mkdir -p build && cd build
 cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_INSTALL_DIR"
 make -j4 install
@@ -65,7 +65,7 @@ make -j4 install
 ## Run tests
 
 ```shell
-cd /Hybridse
+cd /HybridSE
 mkdir -p build & cd buid
 cmake .. -DTESTING_ENABLE=ON
 export SQL_CASE_BASE_DIR=/HybridSE 

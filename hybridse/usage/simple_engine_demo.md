@@ -12,7 +12,7 @@
 
 ## 1. 内存表存储
 
-<img src="images/image-simple-storage.png" alt="image-20210326122554032" align="left" style="zoom:50%;" />
+<img src="images/image-simple-storage.png" alt="Figure1-Memory Table Strong Structure" align="left" style="zoom:50%;" />
 
 ```c++
 typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;
