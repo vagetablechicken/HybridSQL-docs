@@ -15,58 +15,64 @@ A table dataset's error handler, representing a error table.
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-errortablehandler)**()|  |
-|**[ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-errortablehandler)**(common::StatusCode status_code, const std::string & msg_str)| <br>Create [ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md) with specific status code and message.  |
-|**[~ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-~errortablehandler)**()|  |
-|**[GetTypes](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gettypes)**() override| const [Types](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types) & <br>Return empty column Types.  |
-|**[GetSchema](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getschema)**() override| const Schema * <br>Return empty table Schema.  |
-|**[GetName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getname)**() override| const std::string & <br>Return empty table name.  |
-|**[GetIndex](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getindex)**() override| const [IndexHint](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) & <br>Return empty indexn information.  |
-|**[GetDatabase](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getdatabase)**() override| const std::string & <br>Return name of database.  |
-|**[GetIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getiterator)**()| std::unique_ptr< RowIterator > <br>Return null iterator.  |
-|**[GetRawIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getrawiterator)**()| RowIterator * <br>Return null iterator.  |
-|**[GetWindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getwindowiterator)**(const std::string & idx_name)| std::unique_ptr< [WindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md) > <br>Return null window iterator.  |
-|**[At](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-at)**(uint64_t pos)| [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) <br>Return empty row.  |
-|**[GetCount](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getcount)**() override| const uint64_t <br>Return 0.  |
-|**[GetHandlerTypeName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gethandlertypename)**() override| const std::string <br>Return handler type name, and return "ErrorTableHandler" by default.  |
-|**[GetStatus](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getstatus)**()| base::Status <br>Return status.  |
+|**[ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-errortablehandler)**()|  |
+|**[ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-errortablehandler)**(common::StatusCode status_code, const std::string & msg_str)| <br>Create [ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md) with specific status code and message.  |
+|**[~ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-~errortablehandler)**()|  |
+|**[GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gettypes)**() override| const [Types](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types) & <br>Return empty column Types.  |
+|**[GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getschema)**() override| const Schema * <br>Return empty table Schema.  |
+|**[GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getname)**() override| const std::string & <br>Return empty table name.  |
+|**[GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getindex)**() override| const [IndexHint](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) & <br>Return empty indexn information.  |
+|**[GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getdatabase)**() override| const std::string & <br>Return name of database.  |
+|**[GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getiterator)**()| std::unique_ptr< RowIterator > <br>Return null iterator.  |
+|**[GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getrawiterator)**()| RowIterator * <br>Return null iterator.  |
+|**[GetWindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getwindowiterator)**(const std::string & idx_name)| std::unique_ptr< [WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md) > <br>Return null window iterator.  |
+|**[At](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-at)**(uint64_t pos)| [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) <br>Return empty row.  |
+|**[GetCount](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getcount)**() override| const uint64_t <br>Return 0.  |
+|**[GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-gethandlertypename)**() override| const std::string <br>Return handler type name, and return "ErrorTableHandler" by default.  |
+|**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getstatus)**()| base::Status <br>Return status.  |
 
 
 
 | **Protected attributes** | |
 | -------------- | -------------- |
-| **[status_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-status_)** | base::Status |
-| **[table_name_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-table_name_)** | const std::string |
-| **[db_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-db_)** | const std::string |
-| **[schema_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-schema_)** | const Schema * |
-| **[types_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-types_)** | [Types](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types) |
-| **[index_hint_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-index_hint_)** | [IndexHint](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) |
-| **[order_type_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-order_type_)** | [OrderType](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) |
+| **[status_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-status_)** | base::Status |
+| **[table_name_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-table_name_)** | const std::string |
+| **[db_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-db_)** | const std::string |
+| **[schema_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-schema_)** | const Schema * |
+| **[types_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-types_)** | [Types](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-types) |
+| **[index_hint_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-index_hint_)** | [IndexHint](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-indexhint) |
+| **[order_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#variable-order_type_)** | [OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) |
 
 ## Inherited members
-Inherited from [hybridse::vm::TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
-| **Inherited public functions** |            |
-| -------------- | -------------- |
-|**[TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**()| |
-|**[~TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-~tablehandler)**()| virtual |
-|**[GetHanlderType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethanldertype)**() override| virtual const [HandlerType](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) |
-|**[GetPartition](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getpartition)**(const std::string & index_name)| virtual std::shared_ptr< [PartitionHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md) > |
-|**[GetOrderType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getordertype)**() const| virtual const [OrderType](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype) |
-|**[GetTablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::string & pk)| virtual std::shared_ptr< [Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) > |
-|**[GetTablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks)| virtual std::shared_ptr< [Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) > |
+Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
+}
 
-Inherited from [hybridse::vm::DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-| **Inherited public functions** |            |
+|  Inherited Public functions|            |
 | -------------- | -------------- |
-|**[DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()| |
-|**[~DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-~datahandler)**()| virtual |
-|**[GetHanlderType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0| virtual const [HandlerType](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) <br>Return the type of [DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md). |
+|**[TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**()|  |
+|**[~TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-~tablehandler)**()|  |
+|**[GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethanldertype)**() override| const [HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype)  |
+|**[GetPartition](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getpartition)**(const std::string & index_name)| std::shared_ptr< [PartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md) >  |
+|**[GetOrderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getordertype)**() const| const [OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype)  |
+|**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::string & pk)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
+|**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
 
-Inherited from [hybridse::codec::ListV< Row >](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-| **Inherited public functions** |            |
+Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
-|**[ListV](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-listv)**()| |
-|**[~ListV](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-~listv)**()| virtual |
+|**[DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()|  |
+|**[~DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-~datahandler)**()|  |
+|**[GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0| const [HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) <br>Return the type of [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
+
+Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
+}
+
+|  Inherited Public functions|            |
+| -------------- | -------------- |
+|**[ListV](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-listv)**()|  |
+|**[~ListV](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-~listv)**()|  |
 
 
 ## Public Functions
@@ -90,7 +96,7 @@ inline ErrorTableHandler(
 )
 ```
 
-Create [ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md) with specific status code and message. 
+Create [ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md) with specific status code and message. 
 
 #### function ~ErrorTableHandler
 
@@ -107,7 +113,7 @@ inline virtual const Types & GetTypes() override
 
 Return empty column Types. 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetTypes](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
+**Reimplements**: [hybridse::vm::TableHandler::GetTypes](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettypes)
 
 
 #### function GetSchema
@@ -118,7 +124,7 @@ inline virtual const Schema * GetSchema() override
 
 Return empty table Schema. 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetSchema](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
+**Reimplements**: [hybridse::vm::DataHandler::GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getschema)
 
 
 #### function GetName
@@ -129,7 +135,7 @@ inline virtual const std::string & GetName() override
 
 Return empty table name. 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
+**Reimplements**: [hybridse::vm::DataHandler::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getname)
 
 
 #### function GetIndex
@@ -140,7 +146,7 @@ inline virtual const IndexHint & GetIndex() override
 
 Return empty indexn information. 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetIndex](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
+**Reimplements**: [hybridse::vm::TableHandler::GetIndex](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getindex)
 
 
 #### function GetDatabase
@@ -151,7 +157,7 @@ inline virtual const std::string & GetDatabase() override
 
 Return name of database. 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetDatabase](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
+**Reimplements**: [hybridse::vm::DataHandler::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)
 
 
 #### function GetIterator
@@ -162,7 +168,7 @@ inline virtual std::unique_ptr< RowIterator > GetIterator()
 
 Return null iterator. 
 
-**Reimplements**: [hybridse::codec::ListV::GetIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getiterator)
+**Reimplements**: [hybridse::codec::ListV::GetIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getiterator)
 
 
 #### function GetRawIterator
@@ -173,7 +179,7 @@ inline virtual RowIterator * GetRawIterator()
 
 Return null iterator. 
 
-**Reimplements**: [hybridse::codec::ListV::GetRawIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getrawiterator)
+**Reimplements**: [hybridse::codec::ListV::GetRawIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getrawiterator)
 
 
 #### function GetWindowIterator
@@ -186,7 +192,7 @@ inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 
 Return null window iterator. 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetWindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getwindowiterator)
+**Reimplements**: [hybridse::vm::TableHandler::GetWindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-getwindowiterator)
 
 
 #### function At
@@ -199,7 +205,7 @@ inline virtual Row At(
 
 Return empty row. 
 
-**Reimplements**: [hybridse::codec::ListV::At](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-at)
+**Reimplements**: [hybridse::codec::ListV::At](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-at)
 
 
 #### function GetCount
@@ -210,7 +216,7 @@ inline virtual const uint64_t GetCount() override
 
 Return 0. 
 
-**Reimplements**: [hybridse::codec::ListV::GetCount](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getcount)
+**Reimplements**: [hybridse::codec::ListV::GetCount](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-getcount)
 
 
 #### function GetHandlerTypeName
@@ -221,7 +227,7 @@ inline virtual const std::string GetHandlerTypeName() override
 
 Return handler type name, and return "ErrorTableHandler" by default. 
 
-**Reimplements**: [hybridse::vm::TableHandler::GetHandlerTypeName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethandlertypename)
+**Reimplements**: [hybridse::vm::TableHandler::GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gethandlertypename)
 
 
 #### function GetStatus
@@ -232,7 +238,7 @@ inline virtual base::Status GetStatus()
 
 Return status. 
 
-**Reimplements**: [hybridse::vm::DataHandler::GetStatus](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)
+**Reimplements**: [hybridse::vm::DataHandler::GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)
 
 
 ## Protected Attributes
@@ -288,4 +294,4 @@ OrderType order_type_;
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

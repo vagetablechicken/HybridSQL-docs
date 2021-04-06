@@ -13,10 +13,10 @@ title: hybridse::codec::RowFormat
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[RowFormat](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-rowformat)**(const [hybridse::codec::Schema](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema)|  |
-|**[~RowFormat](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-~rowformat)**()|  |
-|**[GetStringColumnInfo](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-getstringcolumninfo)**(size_t idx, [StringColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md) * res) const| bool  |
-|**[GetColumnInfo](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-getcolumninfo)**(size_t idx) const| const [ColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md) *  |
+|**[RowFormat](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-rowformat)**(const [hybridse::codec::Schema](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema)|  |
+|**[~RowFormat](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-~rowformat)**()|  |
+|**[GetStringColumnInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-getstringcolumninfo)**(size_t idx, [StringColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md) * res) const| bool  |
+|**[GetColumnInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md#function-getcolumninfo)**(size_t idx) const| const [ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md) *  |
 
 ## Public Functions
 
@@ -57,4 +57,4 @@ const ColInfo * GetColumnInfo(
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

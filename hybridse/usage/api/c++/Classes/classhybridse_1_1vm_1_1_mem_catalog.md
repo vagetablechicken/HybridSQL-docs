@@ -13,20 +13,22 @@ title: hybridse::vm::MemCatalog
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[MemCatalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-memcatalog)**()|  |
-|**[~MemCatalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-~memcatalog)**()|  |
-|**[Init](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-init)**()| bool  |
-|**[GetDatabase](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-getdatabase)**(const std::string & db)| std::shared_ptr< type::Database > <br>Return database information.  |
-|**[GetTable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name)| std::shared_ptr< [TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) >  |
-|**[IndexSupport](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-indexsupport)**() override| bool <br>Return whether index is supported or not.  |
+|**[MemCatalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-memcatalog)**()|  |
+|**[~MemCatalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-~memcatalog)**()|  |
+|**[Init](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-init)**()| bool  |
+|**[GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-getdatabase)**(const std::string & db)| std::shared_ptr< type::Database > <br>Return database information.  |
+|**[GetTable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-gettable)**(const std::string & db, const std::string & table_name)| std::shared_ptr< [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) >  |
+|**[IndexSupport](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-indexsupport)**() override| bool <br>Return whether index is supported or not.  |
 
 ## Inherited members
-Inherited from [hybridse::vm::Catalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)
-| **Inherited public functions** |            |
+Inherited from [hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
-|**[Catalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()| |
-|**[~Catalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**()| virtual |
-|**[GetProcedureInfo](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > |
+|**[Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()|  |
+|**[~Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**()|  |
+|**[GetProcedureInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)| std::shared_ptr< hybridse::sdk::ProcedureInfo >  |
 
 
 ## Public Functions
@@ -62,7 +64,7 @@ inline virtual std::shared_ptr< type::Database > GetDatabase(
 
 Return database information. 
 
-**Reimplements**: [hybridse::vm::Catalog::GetDatabase](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getdatabase)
+**Reimplements**: [hybridse::vm::Catalog::GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getdatabase)
 
 
 #### function GetTable
@@ -75,7 +77,7 @@ inline virtual std::shared_ptr< TableHandler > GetTable(
 ```
 
 
-**Reimplements**: [hybridse::vm::Catalog::GetTable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-gettable)
+**Reimplements**: [hybridse::vm::Catalog::GetTable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-gettable)
 
 
 Return a table handler with given table name 
@@ -89,9 +91,9 @@ inline virtual bool IndexSupport() override
 
 Return whether index is supported or not. 
 
-**Reimplements**: [hybridse::vm::Catalog::IndexSupport](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-indexsupport)
+**Reimplements**: [hybridse::vm::Catalog::IndexSupport](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-indexsupport)
 
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

@@ -25,22 +25,24 @@ An iterator over a key-value pairs dataset.
   * **V** value type of elements 
 
 ## Inherited members
-Inherited from [hybridse::base::AbstractIterator< K, V, V & >](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)
-| **Inherited public functions** |            |
+Inherited from [hybridse::base::AbstractIterator< K, V, V & >](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
-|**[AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**()| |
-|**[AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**(const [AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) & )| |
-|**[operator=](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-operator=)**(const [AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) & )| [AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) & |
-|**[~AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-~abstractiterator)**()| virtual |
-|**[Valid](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid)**() const =0| virtual bool |
-|**[Next](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-next)**() =0| virtual void |
-|**[GetKey](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-getkey)**() const =0| virtual const K & <br>Return the key of current element pair. |
-|**[GetValue](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-getvalue)**() =0| virtual Ref |
-|**[IsSeekable](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-isseekable)**() const =0| virtual bool |
-|**[Seek](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seek)**(const K & k) =0| virtual void |
-|**[SeekToFirst](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seektofirst)**() =0| virtual void <br>Move to the beginning of the dataset. |
+|**[AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**()|  |
+|**[AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**(const [AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) & )|  |
+|**[operator=](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-operator=)**(const [AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) & )| [AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md) &  |
+|**[~AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-~abstractiterator)**()|  |
+|**[Valid](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid)**() const =0| bool  |
+|**[Next](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-next)**() =0| void  |
+|**[GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-getkey)**() const =0| const K & <br>Return the key of current element pair.  |
+|**[GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-getvalue)**() =0| Ref  |
+|**[IsSeekable](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-isseekable)**() const =0| bool  |
+|**[Seek](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seek)**(const K & k) =0| void  |
+|**[SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seektofirst)**() =0| void <br>Move to the beginning of the dataset.  |
 
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

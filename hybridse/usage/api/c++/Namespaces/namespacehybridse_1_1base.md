@@ -8,10 +8,10 @@ title: hybridse::base
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[hybridse::base::AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)** <br>An iterator over a key-value pairs dataset.  |
-| class | **[hybridse::base::ConstIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_const_iterator.md)** <br>An const iterator over a key-value pairs dataset.  |
-| struct | **[hybridse::base::DefaultComparator](hybridse/usage/api/c++/Classes/structhybridse_1_1base_1_1_default_comparator.md)**  |
-| class | **[hybridse::base::Iterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_iterator.md)** <br>An iterator over a key-value pairs dataset.  |
+| class | **[hybridse::base::AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)** <br>An iterator over a key-value pairs dataset.  |
+| class | **[hybridse::base::ConstIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_const_iterator.md)** <br>An const iterator over a key-value pairs dataset.  |
+| struct | **[hybridse::base::DefaultComparator](/hybridse/usage/api/c++/Classes/structhybridse_1_1base_1_1_default_comparator.md)**  |
+| class | **[hybridse::base::Iterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_iterator.md)** <br>An iterator over a key-value pairs dataset.  |
 
 
 
@@ -20,4 +20,4 @@ title: hybridse::base
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

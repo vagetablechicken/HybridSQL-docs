@@ -13,10 +13,10 @@ title: hybridse::vm::Router
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[SetMainTable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-setmaintable)**(const std::string & main_table)| void  |
-|**[GetMainTable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-getmaintable)**() const| const std::string &  |
-|**[Parse](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-parse)**(const PhysicalOpNode * physical_plan)| int  |
-|**[GetRouterCol](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-getroutercol)**() const| const std::string &  |
+|**[SetMainTable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-setmaintable)**(const std::string & main_table)| void  |
+|**[GetMainTable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-getmaintable)**() const| const std::string &  |
+|**[Parse](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-parse)**(const PhysicalOpNode * physical_plan)| int  |
+|**[GetRouterCol](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md#function-getroutercol)**() const| const std::string &  |
 
 ## Public Functions
 
@@ -54,4 +54,4 @@ inline const std::string & GetRouterCol() const
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

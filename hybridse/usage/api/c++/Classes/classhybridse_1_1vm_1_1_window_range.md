@@ -13,30 +13,30 @@ title: hybridse::vm::WindowRange
 
 |                | Name           |
 | -------------- | -------------- |
-|**[WindowPositionStatus](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow}|  enum |
+|**[WindowPositionStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)** { kInWindow, kExceedWindow, kBeforeWindow}|  enum |
 
 
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**()|  |
-|**[WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**([Window::WindowFrameType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) frame_type, int64_t start_offset, int64_t end_offset, uint64_t rows_preceding, uint64_t max_size)|  |
-|**[~WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-~windowrange)**()|  |
-|**[GetWindowPositionStatus](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-getwindowpositionstatus)**(bool out_of_rows, bool before_window, bool exceed_window) const| const [WindowPositionStatus](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)  |
-|**[CreateRowsWindow](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowswindow)**(uint64_t rows_preceding)| [WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
-|**[CreateRowsRangeWindow](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsrangewindow)**(int64_t start_offset, int64_t end_offset, uint64_t max_size =0)| [WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
-|**[CreateRowsMergeRowsRangeWindow](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsmergerowsrangewindow)**(int64_t start_offset, uint64_t rows_preceding, uint64_t max_size =0)| [WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
+|**[WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**()|  |
+|**[WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-windowrange)**([Window::WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype) frame_type, int64_t start_offset, int64_t end_offset, uint64_t rows_preceding, uint64_t max_size)|  |
+|**[~WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-~windowrange)**()|  |
+|**[GetWindowPositionStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-getwindowpositionstatus)**(bool out_of_rows, bool before_window, bool exceed_window) const| const [WindowPositionStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#enum-windowpositionstatus)  |
+|**[CreateRowsWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowswindow)**(uint64_t rows_preceding)| [WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
+|**[CreateRowsRangeWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsrangewindow)**(int64_t start_offset, int64_t end_offset, uint64_t max_size =0)| [WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
+|**[CreateRowsMergeRowsRangeWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#function-createrowsmergerowsrangewindow)**(int64_t start_offset, uint64_t rows_preceding, uint64_t max_size =0)| [WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)  |
 
 
 
 | **Public attributes**|    |
 | -------------- | -------------- |
-| **[frame_type_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**| [Window::WindowFrameType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)  |
-| **[start_offset_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**| int64_t  |
-| **[end_offset_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**| int64_t  |
-| **[start_row_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**| uint64_t  |
-| **[end_row_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**| uint64_t  |
-| **[max_size_](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**| uint64_t  |
+| **[frame_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**| [Window::WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)  |
+| **[start_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**| int64_t  |
+| **[end_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_offset_)**| int64_t  |
+| **[start_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_row_)**| uint64_t  |
+| **[end_row_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-end_row_)**| uint64_t  |
+| **[max_size_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-max_size_)**| uint64_t  |
 
 ## Public Types
 
@@ -168,4 +168,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

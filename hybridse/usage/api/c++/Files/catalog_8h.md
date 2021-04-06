@@ -8,26 +8,26 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/catalog.h
 
 | Name           |
 | -------------- |
-| **[hybridse](hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
-| **[hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)**  |
+| **[hybridse](/hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
+| **[hybridse::vm](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[hybridse::vm::IndexSt](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
-| class | **[hybridse::vm::DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>The basic dataset operation abstraction.  |
-| class | **[hybridse::vm::DataHandlerList](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)** <br>A sequence of [DataHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
-| class | **[hybridse::vm::DataHandlerVector](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)** <br>A implementation of [DataHandlerList](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
-| class | **[hybridse::vm::DataHandlerRepeater](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)** <br>A implementation of [DataHandlerList](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
-| class | **[hybridse::vm::RowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md)** <br>A row operation abstraction.  |
-| class | **[hybridse::vm::ErrorRowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)** <br>A row's error handler, representing a error row.  |
-| class | **[hybridse::vm::TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)** <br>A table dataset operation abstraction.  |
-| class | **[hybridse::vm::ErrorTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)** <br>A table dataset's error handler, representing a error table.  |
-| class | **[hybridse::vm::PartitionHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md)** <br>The abstraction of partition dataset operation.  |
-| class | **[hybridse::vm::AysncRowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)** <br>A wrapper of table handler which is used as a asynchronous row handler.  |
-| class | **[hybridse::vm::Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md)** <br>A component responsible to Query subtask.  |
-| class | **[hybridse::vm::Catalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)** <br>A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  |
+| struct | **[hybridse::vm::IndexSt](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
+| class | **[hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)** <br>The basic dataset operation abstraction.  |
+| class | **[hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)** <br>A sequence of [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
+| class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
+| class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
+| class | **[hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md)** <br>A row operation abstraction.  |
+| class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)** <br>A row's error handler, representing a error row.  |
+| class | **[hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)** <br>A table dataset operation abstraction.  |
+| class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)** <br>A table dataset's error handler, representing a error table.  |
+| class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md)** <br>The abstraction of partition dataset operation.  |
+| class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)** <br>A wrapper of table handler which is used as a asynchronous row handler.  |
+| class | **[hybridse::vm::Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md)** <br>A component responsible to Query subtask.  |
+| class | **[hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)** <br>A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  |
 
 
 
@@ -415,4 +415,4 @@ class Catalog {
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

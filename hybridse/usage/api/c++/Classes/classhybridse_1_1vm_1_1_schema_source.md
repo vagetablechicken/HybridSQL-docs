@@ -13,23 +13,23 @@ title: hybridse::vm::SchemaSource
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[GetSchema](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const| const [hybridse::codec::Schema](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) *  |
-|**[GetColumnID](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnid)**(size_t idx) const| size_t  |
-|**[GetColumnName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnname)**(size_t idx) const| const std::string &  |
-|**[GetColumnType](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumntype)**(size_t idx) const| const hybridse::type::Type  |
-|**[GetSourceName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcename)**() const| const std::string &  |
-|**[SetSchema](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const [codec::Schema](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema)| void  |
-|**[SetSourceName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsourcename)**(const std::string & name)| void  |
-|**[SetColumnID](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setcolumnid)**(size_t idx, size_t column_id)| void  |
-|**[SetSource](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsource)**(size_t idx, size_t child_idx, size_t child_column_id)| void  |
-|**[SetNonSource](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setnonsource)**(size_t idx)| void  |
-|**[GetSourceColumnID](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcecolumnid)**(size_t idx) const| int  |
-|**[GetSourceChildIdx](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcechildidx)**(size_t idx) const| int  |
-|**[IsSourceColumn](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-issourcecolumn)**(size_t idx) const| bool  |
-|**[IsStrictSourceColumn](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-isstrictsourcecolumn)**(size_t idx) const| bool  |
-|**[size](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-size)**() const| size_t  |
-|**[Clear](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-clear)**()| void  |
-|**[ToString](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-tostring)**() const| std::string  |
+|**[GetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getschema)**() const| const [hybridse::codec::Schema](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) *  |
+|**[GetColumnID](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnid)**(size_t idx) const| size_t  |
+|**[GetColumnName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumnname)**(size_t idx) const| const std::string &  |
+|**[GetColumnType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getcolumntype)**(size_t idx) const| const hybridse::type::Type  |
+|**[GetSourceName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcename)**() const| const std::string &  |
+|**[SetSchema](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setschema)**(const [codec::Schema](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema)| void  |
+|**[SetSourceName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsourcename)**(const std::string & name)| void  |
+|**[SetColumnID](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setcolumnid)**(size_t idx, size_t column_id)| void  |
+|**[SetSource](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setsource)**(size_t idx, size_t child_idx, size_t child_column_id)| void  |
+|**[SetNonSource](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-setnonsource)**(size_t idx)| void  |
+|**[GetSourceColumnID](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcecolumnid)**(size_t idx) const| int  |
+|**[GetSourceChildIdx](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-getsourcechildidx)**(size_t idx) const| int  |
+|**[IsSourceColumn](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-issourcecolumn)**(size_t idx) const| bool  |
+|**[IsStrictSourceColumn](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-isstrictsourcecolumn)**(size_t idx) const| bool  |
+|**[size](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-size)**() const| size_t  |
+|**[Clear](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-clear)**()| void  |
+|**[ToString](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md#function-tostring)**() const| std::string  |
 
 ## Public Functions
 
@@ -181,4 +181,4 @@ std::string ToString() const
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

@@ -13,7 +13,7 @@ title: hybridse::vm::DescComparor
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[operator()](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_desc_comparor.md#function-operator())**(std::pair< uint64_t, [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > i, std::pair< uint64_t, [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > j)| bool  |
+|**[operator()](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_desc_comparor.md#function-operator())**(std::pair< uint64_t, [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > i, std::pair< uint64_t, [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > j)| bool  |
 
 ## Public Functions
 
@@ -29,4 +29,4 @@ inline bool operator()(
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

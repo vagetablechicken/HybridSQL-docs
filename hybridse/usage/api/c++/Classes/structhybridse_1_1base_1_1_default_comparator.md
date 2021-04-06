@@ -13,7 +13,7 @@ title: hybridse::base::DefaultComparator
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[operator()](hybridse/usage/api/c++/Classes/structhybridse_1_1base_1_1_default_comparator.md#function-operator())**(const uint64_t a, const uint64_t b) const| int  |
+|**[operator()](/hybridse/usage/api/c++/Classes/structhybridse_1_1base_1_1_default_comparator.md#function-operator())**(const uint64_t a, const uint64_t b) const| int  |
 
 ## Public Functions
 
@@ -29,4 +29,4 @@ inline int operator()(
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

@@ -8,18 +8,18 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/fe_row_codec.h
 
 | Name           |
 | -------------- |
-| **[hybridse](hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
-| **[hybridse::codec](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)**  |
+| **[hybridse](/hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
+| **[hybridse::codec](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[hybridse::codec::RowBuilder](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_builder.md)**  |
-| class | **[hybridse::codec::RowView](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_view.md)**  |
-| struct | **[hybridse::codec::ColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)**  |
-| struct | **[hybridse::codec::StringColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md)**  |
-| class | **[hybridse::codec::RowFormat](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md)**  |
+| class | **[hybridse::codec::RowBuilder](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_builder.md)**  |
+| class | **[hybridse::codec::RowView](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_view.md)**  |
+| struct | **[hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)**  |
+| struct | **[hybridse::codec::StringColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md)**  |
+| class | **[hybridse::codec::RowFormat](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_format.md)**  |
 
 
 
@@ -254,4 +254,4 @@ class RowFormat {
 
 -------------------------------
 
-Updated on  6 April 2021 at 08:47:46 PDT
+Updated on  6 April 2021 at 09:17:26 PDT
