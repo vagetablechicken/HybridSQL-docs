@@ -8,14 +8,14 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/codec/row_iterator.h
 
 | Name           |
 | -------------- |
-| **[hybridse](/hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
-| **[hybridse::codec](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)**  |
+| **[hybridse](hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
+| **[hybridse::codec](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[hybridse::codec::WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md)** <br>A iterator over a Row-Iterator<[codec::Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset.  |
+| class | **[hybridse::codec::WindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md)** <br>A iterator over a Row-Iterator<[codec::Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset.  |
 
 
 
@@ -71,4 +71,4 @@ class WindowIterator {
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:24 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

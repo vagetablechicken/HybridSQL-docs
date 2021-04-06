@@ -13,17 +13,17 @@ title: hybridse::codec::ColInfo
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**()|  |
-|**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**(const std::string & name, ::hybridse::type::Type type, uint32_t idx, uint32_t offset)|  |
+|**[ColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**()|  |
+|**[ColInfo](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**(const std::string & name, ::hybridse::type::Type type, uint32_t idx, uint32_t offset)|  |
 
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
-| **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**| ::hybridse::type::Type  |
-| **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**| uint32_t  |
-| **[offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**| uint32_t  |
-| **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**| std::string  |
+| **[type](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**| ::hybridse::type::Type  |
+| **[idx](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**| uint32_t  |
+| **[offset](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-offset)**| uint32_t  |
+| **[name](hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-name)**| std::string  |
 
 ## Public Functions
 
@@ -78,4 +78,4 @@ std::string name;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

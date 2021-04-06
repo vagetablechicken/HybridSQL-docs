@@ -13,26 +13,26 @@ title: hybridse::codec::Row
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**()|  |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const std::string & str)|  |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & s)|  |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(size_t major_slices, const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & major, size_t secondary_slices, const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & secondary)|  |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const hybridse::base::RefCountedSlice & s, size_t secondary_slices, const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & secondary)|  |
-|**[Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const hybridse::base::RefCountedSlice & s)|  |
-|**[~Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-~row)**()|  |
-|**[buf](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-buf)**() const| int8_t *  |
-|**[buf](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-buf)**(int32_t pos) const| int8_t *  |
-|**[size](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-size)**() const| int32_t  |
-|**[size](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-size)**(int32_t pos) const| int32_t  |
-|**[empty](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-empty)**() const| bool  |
-|**[compare](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-compare)**(const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & b) const| int  |
-|**[GetRowPtrs](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowptrs)**() const| int8_t **  |
-|**[GetRowPtrCnt](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowptrcnt)**() const| int32_t  |
-|**[GetRowSizes](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowsizes)**() const| int32_t *  |
-|**[GetSlice](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getslice)**(uint32_t slice_index) const| hybridse::base::RefCountedSlice  |
-|**[Append](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-append)**(const hybridse::base::RefCountedSlice & slice)| void  |
-|**[ToString](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-tostring)**() const| std::string  |
-|**[Reset](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-reset)**(const int8_t * buf, size_t size)| void  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**()|  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const std::string & str)|  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & s)|  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(size_t major_slices, const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & major, size_t secondary_slices, const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & secondary)|  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const hybridse::base::RefCountedSlice & s, size_t secondary_slices, const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & secondary)|  |
+|**[Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-row)**(const hybridse::base::RefCountedSlice & s)|  |
+|**[~Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-~row)**()|  |
+|**[buf](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-buf)**() const| int8_t *  |
+|**[buf](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-buf)**(int32_t pos) const| int8_t *  |
+|**[size](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-size)**() const| int32_t  |
+|**[size](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-size)**(int32_t pos) const| int32_t  |
+|**[empty](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-empty)**() const| bool  |
+|**[compare](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-compare)**(const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & b) const| int  |
+|**[GetRowPtrs](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowptrs)**() const| int8_t **  |
+|**[GetRowPtrCnt](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowptrcnt)**() const| int32_t  |
+|**[GetRowSizes](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getrowsizes)**() const| int32_t *  |
+|**[GetSlice](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-getslice)**(uint32_t slice_index) const| hybridse::base::RefCountedSlice  |
+|**[Append](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-append)**(const hybridse::base::RefCountedSlice & slice)| void  |
+|**[ToString](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-tostring)**() const| std::string  |
+|**[Reset](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md#function-reset)**(const int8_t * buf, size_t size)| void  |
 
 ## Public Functions
 
@@ -206,4 +206,4 @@ inline void Reset(
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

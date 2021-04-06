@@ -9,13 +9,13 @@ summary: A iterator over a Row-Iterator<codec::Row> pairs dataset.
 
 `#include <row_iterator.h>`
 
-A iterator over a Row-Iterator<[codec::Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset. 
+A iterator over a Row-Iterator<[codec::Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset. 
 ## Summary
 
 ```cpp
 class hybridse::codec::WindowIterator;
 ```
-A iterator over a Row-Iterator<[codec::Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset. 
+A iterator over a Row-Iterator<[codec::Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)> pairs dataset. 
 
 **Example**
 
@@ -40,15 +40,15 @@ Assuming the dataset is logically organized by segments, we can use Valid, Next 
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-windowiterator)**()|  |
-|**[~WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-~windowiterator)**()|  |
-|**[Seek](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-seek)**(const std::string & key) =0| void  |
-|**[SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-seektofirst)**() =0| void <br>Move to the beginning of the dataset.  |
-|**[Next](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-next)**() =0| void  |
-|**[Valid](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid)**() =0| bool  |
-|**[GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getvalue)**() =0| std::unique_ptr< [RowIterator](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-rowiterator) >  |
-|**[GetRawValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getrawvalue)**() =0| [RowIterator](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-rowiterator) *  |
-|**[GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getkey)**() =0| const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)  |
+|**[WindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-windowiterator)**()|  |
+|**[~WindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-~windowiterator)**()|  |
+|**[Seek](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-seek)**(const std::string & key) =0| void  |
+|**[SeekToFirst](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-seektofirst)**() =0| void <br>Move to the beginning of the dataset.  |
+|**[Next](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-next)**() =0| void  |
+|**[Valid](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid)**() =0| bool  |
+|**[GetValue](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getvalue)**() =0| std::unique_ptr< [RowIterator](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-rowiterator) >  |
+|**[GetRawValue](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getrawvalue)**() =0| [RowIterator](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-rowiterator) *  |
+|**[GetKey](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-getkey)**() =0| const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)  |
 
 ## Public Functions
 
@@ -75,7 +75,7 @@ virtual void Seek(
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::Seek](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seek)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::Seek](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seek)
 
 
 Set the dataset's current position at the segment with key equals to `key`
@@ -89,7 +89,7 @@ virtual void SeekToFirst() =0
 
 Move to the beginning of the dataset. 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seektofirst)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::SeekToFirst](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-seektofirst)
 
 
 #### function Next
@@ -99,10 +99,10 @@ virtual void Next() =0
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::Next](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-next)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::Next](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-next)
 
 
-Move to the next segment in the iteration if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
+Move to the next segment in the iteration if [Valid()](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
 #### function Valid
@@ -112,7 +112,7 @@ virtual bool Valid() =0
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::Valid](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::Valid](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid)
 
 
 Return `true` if the iteration has elements. 
@@ -125,10 +125,10 @@ virtual std::unique_ptr< RowIterator > GetValue() =0
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getvalue)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetValue](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getvalue)
 
 
-Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
+Return the RowIterator of current segment of dataset if [Valid()](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
 #### function GetRawValue
@@ -138,10 +138,10 @@ virtual RowIterator * GetRawValue() =0
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetRawValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getrawvalue)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetRawValue](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getrawvalue)
 
 
-Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
+Return the RowIterator of current segment of dataset if [Valid()](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
 
 #### function GetKey
@@ -151,12 +151,12 @@ virtual const Row GetKey() =0
 ```
 
 
-**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)
+**Reimplemented by**: [hybridse::vm::MemWindowIterator::GetKey](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)
 
 
-Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) is `true`
+Return the key of current segment of dataset if [Valid()](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) is `true`
 
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

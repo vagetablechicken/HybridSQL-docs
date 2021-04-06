@@ -15,11 +15,11 @@ A component responsible to Query subtask.
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-tablet)**()|  |
-|**[~Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-~tablet)**()|  |
-|**[GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-getname)**() const =0| const std::string & <br>Return the name of tablet.  |
-|**[SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)**(uint32_t task_id, const std::string & db, const std::string & sql, const [hybridse::codec::Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & row, const bool is_procedure, const bool is_debug) =0| std::shared_ptr< [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) >  |
-|**[SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)**(uint32_t task_id, const std::string & db, const std::string & sql, const std::set< size_t > & common_column_indices, const std::vector< [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > & in_rows, const bool request_is_common, const bool is_procedure, const bool is_debug) =0| std::shared_ptr< [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) >  |
+|**[Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-tablet)**()|  |
+|**[~Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-~tablet)**()|  |
+|**[GetName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-getname)**() const =0| const std::string & <br>Return the name of tablet.  |
+|**[SubQuery](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)**(uint32_t task_id, const std::string & db, const std::string & sql, const [hybridse::codec::Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & row, const bool is_procedure, const bool is_debug) =0| std::shared_ptr< [RowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) >  |
+|**[SubQuery](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)**(uint32_t task_id, const std::string & db, const std::string & sql, const std::set< size_t > & common_column_indices, const std::vector< [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) > & in_rows, const bool request_is_common, const bool is_procedure, const bool is_debug) =0| std::shared_ptr< [TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) >  |
 
 ## Public Functions
 
@@ -45,7 +45,7 @@ virtual const std::string & GetName() const =0
 
 Return the name of tablet. 
 
-**Reimplemented by**: [hybridse::vm::LocalTablet::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-getname)
+**Reimplemented by**: [hybridse::vm::LocalTablet::GetName](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-getname)
 
 
 #### function SubQuery
@@ -62,10 +62,10 @@ virtual std::shared_ptr< RowHandler > SubQuery(
 ```
 
 
-**Reimplemented by**: [hybridse::vm::LocalTablet::SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-subquery)
+**Reimplemented by**: [hybridse::vm::LocalTablet::SubQuery](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-subquery)
 
 
-Return [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
+Return [RowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
 
 
 #### function SubQuery
@@ -84,12 +84,12 @@ virtual std::shared_ptr< TableHandler > SubQuery(
 ```
 
 
-**Reimplemented by**: [hybridse::vm::LocalTablet::SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-subquery)
+**Reimplemented by**: [hybridse::vm::LocalTablet::SubQuery](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-subquery)
 
 
-Return [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) by calling batch-request-mode query on subtask which is specified by task_id and sql 
+Return [TableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) by calling batch-request-mode query on subtask which is specified by task_id and sql 
 
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

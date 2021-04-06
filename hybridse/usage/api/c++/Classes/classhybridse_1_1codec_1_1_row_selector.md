@@ -13,10 +13,10 @@ title: hybridse::codec::RowSelector
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[RowSelector](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-rowselector)**(const [hybridse::codec::Schema](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema, const std::vector< size_t > & indices)|  |
-|**[RowSelector](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-rowselector)**(const std::vector< const [hybridse::codec::Schema](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * > & schemas, const std::vector< std::pair< size_t, size_t >> & indices)|  |
-|**[Select](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-select)**(const int8_t * slice, size_t size, int8_t ** out_slice, size_t * out_size)| bool  |
-|**[Select](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-select)**(const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & row, int8_t ** out_slice, size_t * out_size)| bool  |
+|**[RowSelector](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-rowselector)**(const [hybridse::codec::Schema](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * schema, const std::vector< size_t > & indices)|  |
+|**[RowSelector](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-rowselector)**(const std::vector< const [hybridse::codec::Schema](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md#typedef-schema) * > & schemas, const std::vector< std::pair< size_t, size_t >> & indices)|  |
+|**[Select](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-select)**(const int8_t * slice, size_t size, int8_t ** out_slice, size_t * out_size)| bool  |
+|**[Select](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row_selector.md#function-select)**(const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) & row, int8_t ** out_slice, size_t * out_size)| bool  |
 
 ## Public Functions
 
@@ -65,4 +65,4 @@ bool Select(
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

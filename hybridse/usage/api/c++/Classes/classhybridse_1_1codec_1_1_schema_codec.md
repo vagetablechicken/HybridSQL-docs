@@ -13,8 +13,8 @@ title: hybridse::codec::SchemaCodec
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[Encode](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_schema_codec.md#function-encode)**(const vm::Schema & schema, std::string * buffer)| bool  |
-|**[Decode](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_schema_codec.md#function-decode)**(const std::string & buf, vm::Schema * schema)| bool  |
+|**[Encode](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_schema_codec.md#function-encode)**(const vm::Schema & schema, std::string * buffer)| bool  |
+|**[Decode](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_schema_codec.md#function-decode)**(const std::string & buf, vm::Schema * schema)| bool  |
 
 ## Public Functions
 
@@ -40,4 +40,4 @@ static inline bool Decode(
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

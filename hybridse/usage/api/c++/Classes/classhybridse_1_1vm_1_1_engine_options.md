@@ -13,29 +13,29 @@ title: hybridse::vm::EngineOptions
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-engineoptions)**()|  |
-|**[set_keep_ir](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_keep_ir)**(bool flag)| void  |
-|**[is_keep_ir](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_keep_ir)**() const| bool  |
-|**[set_compile_only](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_compile_only)**(bool flag)| void  |
-|**[is_compile_only](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_compile_only)**() const| bool  |
-|**[is_plan_only](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_plan_only)**() const| bool  |
-|**[set_plan_only](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_plan_only)**(bool flag)| void  |
-|**[is_performance_sensitive](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_performance_sensitive)**() const| bool  |
-|**[max_sql_cache_size](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-max_sql_cache_size)**() const| uint32_t  |
-|**[set_performance_sensitive](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_performance_sensitive)**(bool flag)| void  |
-|**[is_cluster_optimzied](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_cluster_optimzied)**() const| bool  |
-|**[set_cluster_optimized](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_cluster_optimized)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
-|**[is_batch_request_optimized](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_batch_request_optimized)**() const| bool  |
-|**[set_batch_request_optimized](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_batch_request_optimized)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
-|**[set_max_sql_cache_size](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_max_sql_cache_size)**(uint32_t size)| void  |
-|**[is_enable_expr_optimize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_expr_optimize)**() const| bool  |
-|**[set_enable_expr_optimize](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_expr_optimize)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
-|**[set_enable_batch_window_parallelization](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_batch_window_parallelization)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
-|**[is_enable_batch_window_parallelization](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_batch_window_parallelization)**() const| bool  |
-|**[set_enable_spark_unsaferow_format](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_spark_unsaferow_format)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
-|**[is_enable_spark_unsaferow_format](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_spark_unsaferow_format)**() const| bool  |
-|**[jit_options](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-jit_options)**()| [hybridse::vm::JitOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md) &  |
-|**[NewEngineOptionWithClusterEnable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-newengineoptionwithclusterenable)**(bool flag)| [EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)  |
+|**[EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-engineoptions)**()|  |
+|**[set_keep_ir](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_keep_ir)**(bool flag)| void  |
+|**[is_keep_ir](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_keep_ir)**() const| bool  |
+|**[set_compile_only](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_compile_only)**(bool flag)| void  |
+|**[is_compile_only](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_compile_only)**() const| bool  |
+|**[is_plan_only](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_plan_only)**() const| bool  |
+|**[set_plan_only](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_plan_only)**(bool flag)| void  |
+|**[is_performance_sensitive](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_performance_sensitive)**() const| bool  |
+|**[max_sql_cache_size](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-max_sql_cache_size)**() const| uint32_t  |
+|**[set_performance_sensitive](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_performance_sensitive)**(bool flag)| void  |
+|**[is_cluster_optimzied](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_cluster_optimzied)**() const| bool  |
+|**[set_cluster_optimized](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_cluster_optimized)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
+|**[is_batch_request_optimized](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_batch_request_optimized)**() const| bool  |
+|**[set_batch_request_optimized](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_batch_request_optimized)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
+|**[set_max_sql_cache_size](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_max_sql_cache_size)**(uint32_t size)| void  |
+|**[is_enable_expr_optimize](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_expr_optimize)**() const| bool  |
+|**[set_enable_expr_optimize](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_expr_optimize)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
+|**[set_enable_batch_window_parallelization](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_batch_window_parallelization)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
+|**[is_enable_batch_window_parallelization](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_batch_window_parallelization)**() const| bool  |
+|**[set_enable_spark_unsaferow_format](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-set_enable_spark_unsaferow_format)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md) *  |
+|**[is_enable_spark_unsaferow_format](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-is_enable_spark_unsaferow_format)**() const| bool  |
+|**[jit_options](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-jit_options)**()| [hybridse::vm::JitOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md) &  |
+|**[NewEngineOptionWithClusterEnable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md#function-newengineoptionwithclusterenable)**(bool flag)| [EngineOptions](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)  |
 
 ## Public Functions
 
@@ -224,4 +224,4 @@ static inline EngineOptions NewEngineOptionWithClusterEnable(
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

@@ -13,14 +13,14 @@ title: hybridse::vm::JitOptions
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[is_enable_mcjit](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_mcjit)**() const| bool  |
-|**[set_enable_mcjit](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_mcjit)**(bool flag)| void  |
-|**[is_enable_vtune](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_vtune)**() const| bool  |
-|**[set_enable_vtune](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_vtune)**(bool flag)| void  |
-|**[is_enable_gdb](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_gdb)**() const| bool  |
-|**[set_enable_gdb](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_gdb)**(bool flag)| void  |
-|**[is_enable_perf](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_perf)**() const| bool  |
-|**[set_enable_perf](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_perf)**(bool flag)| void  |
+|**[is_enable_mcjit](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_mcjit)**() const| bool  |
+|**[set_enable_mcjit](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_mcjit)**(bool flag)| void  |
+|**[is_enable_vtune](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_vtune)**() const| bool  |
+|**[set_enable_vtune](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_vtune)**(bool flag)| void  |
+|**[is_enable_gdb](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_gdb)**() const| bool  |
+|**[set_enable_gdb](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_gdb)**(bool flag)| void  |
+|**[is_enable_perf](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-is_enable_perf)**() const| bool  |
+|**[set_enable_perf](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md#function-set_enable_perf)**(bool flag)| void  |
 
 ## Public Functions
 
@@ -90,4 +90,4 @@ inline void set_enable_perf(
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

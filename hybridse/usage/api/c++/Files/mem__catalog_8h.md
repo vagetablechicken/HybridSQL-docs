@@ -8,31 +8,31 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/mem_catalog.h
 
 | Name           |
 | -------------- |
-| **[hybridse](/hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
-| **[hybridse::vm](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)**  |
+| **[hybridse](hybridse/usage/api/c++/Namespaces/namespacehybridse.md)**  |
+| **[hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[hybridse::vm::AscKeyComparor](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_asc_key_comparor.md)**  |
-| struct | **[hybridse::vm::AscComparor](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_asc_comparor.md)**  |
-| struct | **[hybridse::vm::DescComparor](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_desc_comparor.md)**  |
-| class | **[hybridse::vm::MemTimeTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md)**  |
-| class | **[hybridse::vm::MemTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_iterator.md)**  |
-| class | **[hybridse::vm::MemWindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md)**  |
-| class | **[hybridse::vm::MemRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_row_handler.md)**  |
-| class | **[hybridse::vm::MemTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md)**  |
-| class | **[hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)**  |
-| class | **[hybridse::vm::Window](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md)**  |
-| class | **[hybridse::vm::WindowRange](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)**  |
-| class | **[hybridse::vm::HistoryWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md)**  |
-| class | **[hybridse::vm::CurrentHistoryWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md)**  |
-| class | **[hybridse::vm::MemSegmentHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_segment_handler.md)**  |
-| class | **[hybridse::vm::MemPartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md)**  |
-| class | **[hybridse::vm::ConcatTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md)**  |
-| class | **[hybridse::vm::MemCatalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md)**  |
-| class | **[hybridse::vm::RequestUnionTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md)**  |
+| struct | **[hybridse::vm::AscKeyComparor](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_asc_key_comparor.md)**  |
+| struct | **[hybridse::vm::AscComparor](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_asc_comparor.md)**  |
+| struct | **[hybridse::vm::DescComparor](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_desc_comparor.md)**  |
+| class | **[hybridse::vm::MemTimeTableIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md)**  |
+| class | **[hybridse::vm::MemTableIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_iterator.md)**  |
+| class | **[hybridse::vm::MemWindowIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md)**  |
+| class | **[hybridse::vm::MemRowHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_row_handler.md)**  |
+| class | **[hybridse::vm::MemTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_table_handler.md)**  |
+| class | **[hybridse::vm::MemTimeTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)**  |
+| class | **[hybridse::vm::Window](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md)**  |
+| class | **[hybridse::vm::WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)**  |
+| class | **[hybridse::vm::HistoryWindow](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md)**  |
+| class | **[hybridse::vm::CurrentHistoryWindow](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_current_history_window.md)**  |
+| class | **[hybridse::vm::MemSegmentHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_segment_handler.md)**  |
+| class | **[hybridse::vm::MemPartitionHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md)**  |
+| class | **[hybridse::vm::ConcatTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_concat_table_handler.md)**  |
+| class | **[hybridse::vm::MemCatalog](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md)**  |
+| class | **[hybridse::vm::RequestUnionTableHandler](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md)**  |
 
 
 
@@ -807,4 +807,4 @@ size_t RowGetSliceSize(int8_t* row_ptr, size_t idx);
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:24 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

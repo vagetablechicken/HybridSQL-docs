@@ -11,15 +11,15 @@ title: hybridse::vm::ExplainOutput
 ## Summary
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
-| **[input_schema](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-input_schema)**| vm::Schema  |
-| **[logical_plan](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-logical_plan)**| std::string  |
-| **[physical_plan](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-physical_plan)**| std::string  |
-| **[ir](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-ir)**| std::string  |
-| **[output_schema](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-output_schema)**| vm::Schema  |
-| **[request_name](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-request_name)**| std::string  |
-| **[router](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-router)**| [vm::Router](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md)  |
+| **[input_schema](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-input_schema)**| vm::Schema  |
+| **[logical_plan](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-logical_plan)**| std::string  |
+| **[physical_plan](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-physical_plan)**| std::string  |
+| **[ir](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-ir)**| std::string  |
+| **[output_schema](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-output_schema)**| vm::Schema  |
+| **[request_name](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-request_name)**| std::string  |
+| **[router](hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-router)**| [vm::Router](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md)  |
 
 ## Public Attributes
 
@@ -74,4 +74,4 @@ vm::Router router;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT

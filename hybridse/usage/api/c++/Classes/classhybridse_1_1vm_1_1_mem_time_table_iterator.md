@@ -13,16 +13,16 @@ title: hybridse::vm::MemTimeTableIterator
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[MemTimeTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-memtimetableiterator)**(const [MemTimeTable](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable) * table, const vm::Schema * schema)|  |
-|**[MemTimeTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-memtimetableiterator)**(const [MemTimeTable](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable) * table, const vm::Schema * schema, int32_t start, int32_t end)|  |
-|**[~MemTimeTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-~memtimetableiterator)**()|  |
-|**[Seek](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-seek)**(const uint64_t & ts)| void  |
-|**[SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-seektofirst)**()| void  |
-|**[GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getkey)**() const| const uint64_t &  |
-|**[Next](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-next)**()| void  |
-|**[Valid](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-valid)**() const| bool  |
-|**[GetValue](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getvalue)**() override| const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) &  |
-|**[IsSeekable](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-isseekable)**() const override| bool  |
+|**[MemTimeTableIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-memtimetableiterator)**(const [MemTimeTable](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable) * table, const vm::Schema * schema)|  |
+|**[MemTimeTableIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-memtimetableiterator)**(const [MemTimeTable](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#typedef-memtimetable) * table, const vm::Schema * schema, int32_t start, int32_t end)|  |
+|**[~MemTimeTableIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-~memtimetableiterator)**()|  |
+|**[Seek](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-seek)**(const uint64_t & ts)| void  |
+|**[SeekToFirst](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-seektofirst)**()| void  |
+|**[GetKey](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getkey)**() const| const uint64_t &  |
+|**[Next](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-next)**()| void  |
+|**[Valid](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-valid)**() const| bool  |
+|**[GetValue](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-getvalue)**() override| const [Row](hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) &  |
+|**[IsSeekable](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md#function-isseekable)**() const override| bool  |
 
 ## Public Functions
 
@@ -108,4 +108,4 @@ bool IsSeekable() const override
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 08:47:46 PDT
