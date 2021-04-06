@@ -22,11 +22,13 @@ title: hybridse::vm::MemCatalog
 
 ## Inherited members
 Inherited from [hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)
-| **Inherited public functions** | Name           |
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()|  |
-|**[~Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**()| virtual  |
-|**[GetProcedureInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)| virtual std::shared_ptr< hybridse::sdk::ProcedureInfo >  |
+|**[~Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-~catalog)**()|  |
+|**[GetProcedureInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-getprocedureinfo)**(const std::string & db, const std::string & sp_name)| std::shared_ptr< hybridse::sdk::ProcedureInfo >  |
 
 
 ## Public Functions
@@ -94,4 +96,4 @@ Return whether index is supported or not.
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

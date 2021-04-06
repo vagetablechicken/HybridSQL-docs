@@ -25,10 +25,12 @@ title: hybridse::vm::MemWindowIterator
 
 ## Inherited members
 Inherited from [hybridse::codec::WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md)
-| **Inherited public functions** | Name           |
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-windowiterator)**()|  |
-|**[~WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-~windowiterator)**()| virtual  |
+|**[~WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-~windowiterator)**()|  |
 
 
 ## Public Functions
@@ -143,4 +145,4 @@ Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c+
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

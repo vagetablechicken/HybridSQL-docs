@@ -29,7 +29,7 @@ title: hybridse::vm::WindowRange
 
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[frame_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-frame_type_)**| [Window::WindowFrameType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md#enum-windowframetype)  |
 | **[start_offset_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md#variable-start_offset_)**| int64_t  |
@@ -168,4 +168,4 @@ uint64_t max_size_;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

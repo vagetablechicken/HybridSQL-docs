@@ -18,7 +18,7 @@ title: hybridse::codec::ColInfo
 
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[type](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-type)**| ::hybridse::type::Type  |
 | **[idx](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#variable-idx)**| uint32_t  |
@@ -78,4 +78,4 @@ std::string name;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

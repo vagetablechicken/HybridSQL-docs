@@ -30,10 +30,12 @@ Actually, we just keep one data_handler_ in container where elements are repeate
 
 ## Inherited members
 Inherited from [hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)
-| **Inherited public functions** | Name           |
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-datahandlerlist)**()|  |
-|**[~DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-~datahandlerlist)**()| virtual  |
+|**[~DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-~datahandlerlist)**()|  |
 
 
 ## Public Functions
@@ -82,4 +84,4 @@ Return the idx-th element. Return `null` when position is out of range.
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

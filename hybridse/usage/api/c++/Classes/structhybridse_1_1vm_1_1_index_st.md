@@ -11,7 +11,7 @@ title: hybridse::vm::IndexSt
 ## Summary
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[name](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-name)**| std::string <br>index name  |
 | **[index](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md#variable-index)**| uint32_t <br>position of index  |
@@ -54,4 +54,4 @@ first keys set
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

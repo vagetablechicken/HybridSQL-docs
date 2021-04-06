@@ -11,7 +11,7 @@ title: hybridse::vm::ExplainOutput
 ## Summary
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[input_schema](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-input_schema)**| vm::Schema  |
 | **[logical_plan](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md#variable-logical_plan)**| std::string  |
@@ -74,4 +74,4 @@ vm::Router router;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT

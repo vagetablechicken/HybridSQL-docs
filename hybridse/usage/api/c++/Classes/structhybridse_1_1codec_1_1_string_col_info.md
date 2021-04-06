@@ -18,14 +18,16 @@ title: hybridse::codec::StringColInfo
 
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[str_next_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_next_offset)**| uint32_t  |
 | **[str_start_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_start_offset)**| uint32_t  |
 
 ## Inherited members
 Inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)
-| **Inherited public functions** | Name           |
+}
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**()|  |
 |**[ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md#function-colinfo)**(const std::string & name, ::hybridse::type::Type type, uint32_t idx, uint32_t offset)|  |
@@ -79,4 +81,4 @@ uint32_t str_start_offset;
 
 -------------------------------
 
-Updated on  1 April 2021 at 16:11:23 PDT
+Updated on  6 April 2021 at 09:17:26 PDT
