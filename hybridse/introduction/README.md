@@ -2,7 +2,6 @@
 
 - [**Slack Channel**](https://hybridsql-ws.slack.com/archives/C01R7LAF6AY)
 - [**Discussions**](https://github.com/4paradigm/HybridSE/discussions)
-- [中文文档](README-zh.md)
 
 # Introduction
 
@@ -82,7 +81,7 @@ cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_INSTALL_DIR"
 make -j$(nproc) install
 ```
 
-checkout [HybridSE Quick start](https://github.com/4paradigm/HybridSQL-docs/blob/main/hybridse/usage/quick_start.md) for more information
+checkout [HybridSE Quick start](/hybridse/usage/quick_start.md) for more information
 
 ## Run tests
 
@@ -105,7 +104,7 @@ make -j$(nproc) hybridse_proto && make -j$(nproc) hybridse_parser && make -j$(np
 ./src/simple_engine_demo
 ```
 
-`simple_engine_demo` is a in-memory SQL engine implemented on HybridSE。For more information see [How to create a simple SQL engine](https://github.com/4paradigm/HybridSQL-docs/blob/main/hybridse/usage/simple_engine_demo.md)
+`simple_engine_demo` is a in-memory SQL engine implemented on HybridSE。For more information see [How to create a simple SQL engine](/hybridse/usage/simple_engine_demo.md)
 
 ## Run ToyDB
 
@@ -126,7 +125,7 @@ sh start_all.sh
 sh start_cli.sh
 ```
 
-ToyDB is a simple in-memory database powered by HybridSE, supporting basic CRUD operations. see more information at [ToyDB quick start](https://github.com/4paradigm/HybridSQL-docs/blob/main/hybridse/usage/toydb_usage/toydb_quickstart.md)
+ToyDB is a simple in-memory database powered by HybridSE, supporting basic CRUD operations. see more information at [ToyDB quick start](/hybridse/usage/toydb_usage/toydb_quickstart.md)
 
 ## Related Projects
 
