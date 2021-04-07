@@ -14,7 +14,7 @@
             * [数据查询语句(DQL)](hybridse/language_guide/query.md)
             * [数据操作语句(DML)](hybridse/language_guide/dml.md)
             * [数据定义语句(DDL)](hybridse/language_guide/ddl.md)
-        * C++ API文档(hybridse/usage/c++/reference.md)
+        * C++ API文档
           * [Classes](hybridse/usage/api/c++/Classes/README.md)
             * [hybridse::base::AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)
             * [hybridse::base::ConstIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_const_iterator.md)
