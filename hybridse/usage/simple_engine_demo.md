@@ -1,6 +1,6 @@
 # 实现一个简单SQL引擎
 
-​		本文旨在帮助开发者在C/C++项目中，使用C++编程接口用[HybridSE的C++SDK](./api/c++/SUMMARY.md)打造自己的SQL引擎。考虑到存储系统并非本文关注的重点，我们将简化存储层——使用内存表作为底层存储，这可以让我们更好关注引擎实现以及存储系统适配这些细节。
+​		本文旨在帮助开发者在C/C++项目中，使用C++编程接口打造自己的SQL引擎。考虑到存储系统并非本文关注的重点，我们将简化存储层——使用内存表作为底层存储，这可以让我们更好关注引擎实现以及存储系统适配这些细节。
 
 在深入详述实现细节以前，让我们简要概述实现一个简单内存表SQL引擎需要的步骤：
 
@@ -12,7 +12,7 @@
 
 ## 1. 内存表存储
 
-<img src="images/image-simple-storage.png" alt="Figure1-Memory Table Strong Structure" align="left" style="zoom:50%;" />
+![Figure1-Memory Table Strong Structure](images/image-simple-storage.png)
 
 ```c++
 typedef std::deque<std::pair<uint64_t, Row>> MemTimeTable;

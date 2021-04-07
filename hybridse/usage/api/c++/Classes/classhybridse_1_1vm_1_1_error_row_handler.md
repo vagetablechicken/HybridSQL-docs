@@ -25,8 +25,8 @@ A row's error handler, representing a error row.
 |**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md#function-getstatus)**()| base::Status <br>Return dataset status. Default is hybridse::common::kOk.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -38,8 +38,8 @@ Inherited from [hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classh
 |**[At](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-at)**(uint64_t pos) override| [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md) <br>Return 0 since Getcount isn't supported for a row.  |
 |**[GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-gethanldertype)**() override| const [HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype)  |
 
+
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -47,8 +47,8 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[~DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-~datahandler)**()|  |
 |**[GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0| const [HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) <br>Return the type of [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
 
+
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -146,6 +146,3 @@ Return dataset status. Default is hybridse::common::kOk.
 **Reimplements**: [hybridse::vm::DataHandler::GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

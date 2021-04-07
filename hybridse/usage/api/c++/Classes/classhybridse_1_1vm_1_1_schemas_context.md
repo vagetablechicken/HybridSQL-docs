@@ -17,7 +17,6 @@ class hybridse::vm::SchemasContext;
 Utility context to resolve column spec into detailed column information. This class should be explicitly initialized with schema source list info or some physical node with schema intiailized. If initialized by physical node, current context will take a relation name used when column search is assiociated with a relation name. and the node graph can be traversed to resolve column inherited from input nodes. 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[SchemasContext](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schemas_context.md#function-schemascontext)**()|  |
@@ -88,7 +87,6 @@ base::Status ResolveColumnIndexByName(
 
 Given relation name and column name, return schema slice index and column index within current context. 
 
-
 #### function ResolveColumnIndexByID
 
 ```cpp
@@ -102,7 +100,6 @@ base::Status ResolveColumnIndexByID(
 
 Given unique column id, return schema slice index and column index within schema slice within current context. 
 
-
 #### function ResolveColumnNameByID
 
 ```cpp
@@ -114,7 +111,6 @@ base::Status ResolveColumnNameByID(
 
 
 Given unique column id, return column name. 
-
 
 #### function ResolveColumnRefIndex
 
@@ -129,7 +125,6 @@ base::Status ResolveColumnRefIndex(
 
 Resolve index for column reference expression 
 
-
 #### function ResolveColumnID
 
 ```cpp
@@ -142,7 +137,6 @@ base::Status ResolveColumnID(
 
 
 Given relation name and column name, return column unique id under current context. 
-
 
 #### function ResolveColumnID
 
@@ -161,7 +155,6 @@ base::Status ResolveColumnID(
 
 Resolve source column by relation name and column name recursively. If it can be resolved in current node, `child_path_id` is -1, else `child_path_id` is the index of the child which the column is resolved from. 
 
-
 #### function ResolveExprDependentColumns
 
 ```cpp
@@ -173,7 +166,6 @@ base::Status ResolveExprDependentColumns(
 
 
 Resolve all columns input expression will depend on. Return column id list. 
-
 
 #### function ResolveExprDependentColumns
 
@@ -194,7 +186,6 @@ const std::string & GetName() const
 
 Get the relation name for this schema context, default "" 
 
-
 #### function GetRoot
 
 ```cpp
@@ -213,7 +204,6 @@ const codec::RowFormat * GetRowFormat(
 
 Get detailed format for `idx`th schema source. 
 
-
 #### function GetSchemaSource
 
 ```cpp
@@ -224,7 +214,6 @@ const SchemaSource * GetSchemaSource(
 
 
 Get `idx`th schema source. 
-
 
 #### function GetSchema
 
@@ -237,7 +226,6 @@ const codec::Schema * GetSchema(
 
 Get raw schema for `idx`th schema source. 
 
-
 #### function GetSchemaSourceSize
 
 ```cpp
@@ -246,7 +234,6 @@ size_t GetSchemaSourceSize() const
 
 
 Get num of total schema sources. 
-
 
 #### function SetName
 
@@ -259,7 +246,6 @@ void SetName(
 
 Set the relation name for this schema context. 
 
-
 #### function AddSource
 
 ```cpp
@@ -268,7 +254,6 @@ SchemaSource * AddSource()
 
 
 Add new schema source and return the mutable instance of added source. 
-
 
 #### function Merge
 
@@ -282,7 +267,6 @@ void Merge(
 
 Add schema sources from child and inherit column identifiers. 
 
-
 #### function MergeWithNewID
 
 ```cpp
@@ -295,7 +279,6 @@ void MergeWithNewID(
 
 
 Add schema sources from child with new column identifiers. The source informations are set to traceback which child column the new column is from. 
-
 
 #### function Clear
 
@@ -327,7 +310,6 @@ size_t GetColumnNum() const
 
 Get total column num of all schema sources. 
 
-
 #### function GetOutputSchema
 
 ```cpp
@@ -346,7 +328,6 @@ void BuildTrivial(
 
 Helper method to init schemas context with trival schema sources this can be commonly used when no plan node is provided. 
 
-
 #### function BuildTrivial
 
 ```cpp
@@ -356,6 +337,3 @@ void BuildTrivial(
 ```
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

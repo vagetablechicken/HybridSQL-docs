@@ -10,6 +10,12 @@ title: hybridse::vm::IndexSt
 
 ## Summary
 
+```cpp
+struct hybridse::vm::IndexSt;
+```
+
+represents index information, e.g, name, first keys, second key information 
+
 
 | **Public attributes**|    |
 | -------------- | -------------- |
@@ -52,6 +58,3 @@ std::vector< ColInfo > keys;
 
 first keys set 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

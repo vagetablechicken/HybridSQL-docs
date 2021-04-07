@@ -44,7 +44,6 @@ while (iterator->Valid()) {
 ```
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**()|  |
@@ -102,7 +101,6 @@ virtual bool Valid() const =0
 
 Return whether the iteration has elements or not. 
 
-
 #### function Next
 
 ```cpp
@@ -111,7 +109,6 @@ virtual void Next() =0
 
 
 Implemented by subclasses to move to the next element in the iteration when [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid) return `true`. 
-
 
 #### function GetKey
 
@@ -130,7 +127,6 @@ virtual Ref GetValue() =0
 
 Return the value of current element pari when [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-valid) return `true`. 
 
-
 #### function IsSeekable
 
 ```cpp
@@ -139,7 +135,6 @@ virtual bool IsSeekable() const =0
 
 
 Return whether the dataset is seekable or not. A dataset is seekable if it allows access to data with [Seek()](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seek) method 
-
 
 #### function Seek
 
@@ -152,7 +147,6 @@ virtual void Seek(
 
 Set the dataset's current position move to the first element whose key equals to `k` offset. 
 
-
 #### function SeekToFirst
 
 ```cpp
@@ -161,6 +155,3 @@ virtual void SeekToFirst() =0
 
 Move to the beginning of the dataset. 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

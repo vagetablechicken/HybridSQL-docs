@@ -20,7 +20,6 @@ The basic dataset operation abstraction.
 It contains the basic operations available on all row-based dataset handlers, such as [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md), Partitionhandler. 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()|  |
@@ -34,8 +33,8 @@ It contains the basic operations available on all row-based dataset handlers, su
 
 ## Inherited members
 Inherited by [hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md), [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
+
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -129,6 +128,3 @@ Return dataset status. Default is hybridse::common::kOk.
 **Reimplemented by**: [hybridse::vm::ErrorRowHandler::GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md#function-getstatus), [hybridse::vm::ErrorTableHandler::GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md#function-getstatus)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

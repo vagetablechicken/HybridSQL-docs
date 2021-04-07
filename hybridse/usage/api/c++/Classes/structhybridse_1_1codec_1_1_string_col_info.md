@@ -24,8 +24,8 @@ title: hybridse::codec::StringColInfo
 | **[str_start_offset](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_string_col_info.md#variable-str_start_offset)**| uint32_t  |
 
 ## Inherited members
+
 Inherited from [hybridse::codec::ColInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1codec_1_1_col_info.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -79,6 +79,3 @@ uint32_t str_start_offset;
 ```
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

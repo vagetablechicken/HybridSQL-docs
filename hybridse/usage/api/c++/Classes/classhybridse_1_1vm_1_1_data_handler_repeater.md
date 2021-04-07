@@ -20,7 +20,6 @@ A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybri
 Actually, we just keep one data_handler_ in container where elements are repeated logically. 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[DataHandlerRepeater](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md#function-datahandlerrepeater)**(std::shared_ptr< [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md) > data_handler, size_t size)| <br>Create [DataHandlerRepeater](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md) with a [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md) and elements number.  |
@@ -29,8 +28,8 @@ Actually, we just keep one data_handler_ in container where elements are repeate
 |**[Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md#function-get)**(size_t idx)| std::shared_ptr< [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md) > <br>Return the idx-th element. Return `null` when position is out of range.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -82,6 +81,3 @@ Return the idx-th element. Return `null` when position is out of range.
 **Reimplements**: [hybridse::vm::DataHandlerList::Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-get)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

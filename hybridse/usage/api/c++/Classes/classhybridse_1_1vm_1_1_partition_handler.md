@@ -20,7 +20,6 @@ The abstraction of partition dataset operation.
 A partition dataset is always organized by segments +&ndash; key1 --> segment1 partition &ndash;+&ndash; key2 --> segment2 +&ndash; key3 --> segment3 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[PartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md#function-partitionhandler)**()|  |
@@ -38,8 +37,8 @@ A partition dataset is always organized by segments +&ndash; key1 --> segment1 p
 
 ## Inherited members
 Inherited by [hybridse::vm::MemPartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md)
+
 Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -51,8 +50,8 @@ Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/clas
 |**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::string & pk)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
 |**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
 
+
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -63,8 +62,8 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)**() =0| const std::string & <br>Return the name of database.  |
 |**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**()| base::Status <br>Return dataset status. Default is hybridse::common::kOk.  |
 
+
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -101,7 +100,6 @@ inline virtual std::unique_ptr< RowIterator > GetIterator()
 
 Return the iterator of row iterator. Return null by default 
 
-
 #### function GetRawIterator
 
 ```cpp
@@ -113,7 +111,6 @@ inline virtual RowIterator * GetRawIterator()
 
 
 Return the iterator of row iterator Return null by default 
-
 
 #### function GetWindowIterator
 
@@ -129,7 +126,6 @@ inline virtual std::unique_ptr< WindowIterator > GetWindowIterator(
 
 Return WindowIterator so that user can use it to iterate datasets segment by segment. 
 
-
 #### function GetWindowIterator
 
 ```cpp
@@ -141,7 +137,6 @@ virtual std::unique_ptr< WindowIterator > GetWindowIterator() =0
 
 
 Return WindowIterator to iterate datasets segment-by-segment. 
-
 
 #### function GetHanlderType
 
@@ -181,7 +176,6 @@ inline virtual std::shared_ptr< TableHandler > GetSegment(
 
 Return Return table handler of specific segment binding to given key. Return `null` by default. 
 
-
 #### function GetSegments
 
 ```cpp
@@ -192,7 +186,6 @@ inline virtual std::vector< std::shared_ptr< TableHandler > > GetSegments(
 
 
 Return a sequence of table handles of specify segments binding to given keys set. 
-
 
 #### function GetHandlerTypeName
 
@@ -223,7 +216,3 @@ inline virtual const OrderType GetOrderType() const
 
 Return order type of the dataset, and return kNoneOrder by default. 
 
-
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

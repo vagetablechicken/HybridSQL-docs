@@ -24,8 +24,8 @@ title: hybridse::vm::MemWindowIterator
 |**[GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)**()| const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)  |
 
 ## Inherited members
+
 Inherited from [hybridse::codec::WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -66,7 +66,6 @@ virtual void Seek(
 
 Set the dataset's current position at the segment with key equals to `key`
 
-
 #### function SeekToFirst
 
 ```cpp
@@ -90,7 +89,6 @@ virtual void Next()
 
 Move to the next segment in the iteration if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
 
-
 #### function Valid
 
 ```cpp
@@ -102,7 +100,6 @@ virtual bool Valid()
 
 
 Return `true` if the iteration has elements. 
-
 
 #### function GetValue
 
@@ -116,7 +113,6 @@ virtual std::unique_ptr< RowIterator > GetValue()
 
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
 
-
 #### function GetRawValue
 
 ```cpp
@@ -128,7 +124,6 @@ virtual RowIterator * GetRawValue()
 
 
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) return `true`. 
-
 
 #### function GetKey
 
@@ -142,7 +137,3 @@ virtual const Row GetKey()
 
 Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) is `true`
 
-
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

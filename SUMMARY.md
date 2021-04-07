@@ -76,12 +76,12 @@
             * [hybridse::vm::Tablet](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md)
             * [hybridse::vm::Window](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window.md)
             * [hybridse::vm::WindowRange](hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_window_range.md)
-            * [represents](hybridse/usage/api/c++/Classes/structrepresents.md)
           * [Namespaces](hybridse/usage/api/c++/Namespaces/README.md)
             * [hybridse](hybridse/usage/api/c++/Namespaces/namespacehybridse.md)
             * [hybridse::base](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1base.md)
             * [hybridse::codec](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)
             * [hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)
+
 * FEDB
     * [介绍](fedb/README.md)
     * 使用文档

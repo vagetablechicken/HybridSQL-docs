@@ -60,6 +60,3 @@ Return the idx-th element.
 **Reimplemented by**: [hybridse::vm::DataHandlerVector::Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-get), [hybridse::vm::DataHandlerRepeater::Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md#function-get)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

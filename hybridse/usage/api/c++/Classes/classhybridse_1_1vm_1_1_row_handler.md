@@ -27,8 +27,8 @@ A row operation abstraction.
 
 ## Inherited members
 Inherited by [hybridse::vm::AysncRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md), [hybridse::vm::ErrorRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md), [hybridse::vm::MemRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_row_handler.md)
+
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -39,8 +39,8 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[GetDatabase](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getdatabase)**() =0| const std::string & <br>Return the name of database.  |
 |**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**()| base::Status <br>Return dataset status. Default is hybridse::common::kOk.  |
 
+
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
 
 |  Inherited Public functions|            |
 | -------------- | -------------- |
@@ -122,7 +122,6 @@ inline virtual const HandlerType GetHanlderType() override
 
 Return the HandlerType of the row handler. Return HandlerType::kRowHandler by default 
 
-
 #### function GetValue
 
 ```cpp
@@ -151,7 +150,3 @@ inline virtual const std::string GetHandlerTypeName() override
 
 Get the name of handler type. 
 
-
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT

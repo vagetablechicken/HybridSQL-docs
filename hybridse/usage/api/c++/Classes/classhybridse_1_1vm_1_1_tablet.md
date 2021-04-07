@@ -67,7 +67,6 @@ virtual std::shared_ptr< RowHandler > SubQuery(
 
 Return [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
 
-
 #### function SubQuery
 
 ```cpp
@@ -89,7 +88,3 @@ virtual std::shared_ptr< TableHandler > SubQuery(
 
 Return [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) by calling batch-request-mode query on subtask which is specified by task_id and sql 
 
-
--------------------------------
-
-Updated on  6 April 2021 at 09:17:26 PDT
