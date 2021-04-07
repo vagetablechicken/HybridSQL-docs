@@ -20,20 +20,18 @@ table_factor:
 
 #### Limitations
 
-| Type         | Limitations                                                  | Example                                   |
-| :----------- | :----------------------------------------------------------- | ----------------------------------------- |
-| SIMPLE QUERY | Most of simple queries are supported                         | `SELECT col1 FROM t1;`                    |
-| GROUP        | Only supported on  `BATCH MODE`. Group expressions are limited to `COLUMN` expression | `SELECT SUM(col1) from t1 GROUP BY col2;` |
-| WHERE        | Only on `BATCH MODE`.                                        |                                           |
-| LIMIT        | Only supported on `BATCH MODE`.                              |                                           |
-| WINDOW       | Supprted. And we invented some new traits of `WINDOW`        |                                           |
-| LAST JOIN    | New SQL traits targeting OLDA system.                        |                                           |
+| Statement Type | Limitations                                                  | Example                                   |
+| :------------- | :----------------------------------------------------------- | ----------------------------------------- |
+| SIMPLE QUERY   | Most of simple queries are supported                         | `SELECT col1 FROM t1;`                    |
+| GROUP          | Only supported on  `BATCH MODE`. Group expressions are limited to `COLUMN` expression | `SELECT SUM(col1) from t1 GROUP BY col2;` |
+| WHERE          | Only on `BATCH MODE`.                                        |                                           |
+| LIMIT          | Only supported on `BATCH MODE`.                              |                                           |
+| WINDOW         | Supprted. And we invented some new traits of `WINDOW`        |                                           |
+| LAST JOIN      | New SQL traits targeting OLDA system.                        |                                           |
 
 ### 1. SIMPLE QUERY Statement
 
-简单的Select语义指对**单张关系表**作表达式计算，不包含复杂的表关系计算。所谓复杂的表关系运算包含，过滤、分组、JOIN、Window、Union等。
-
-Simple `SELECT` 
+**Simple query statement** is a kind of select statement with simple structure. For example, it only  deal with  one single table and doesn't handle complex [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) (e.g., Filter, Group, Join, Union).
 
 #### Syntax
 
@@ -82,21 +80,23 @@ projection: { sql_expr [AS SQL_IDENTIFIER] | * }
 
 #### Window Type
 
-SQL引擎支持两类窗口：ROWS 和 ROWS_RANGE。SQL标准的RANGE类窗口FESQL系统目前暂不支持。他们直接的对比差异如下图所示
+We introduce a novel types of window frame **ROWS_RANGE**. It works well for some AI application where executions are expected strictly consistent between batch mode and request mode
 
-![image-20210203131721898](./images/window_frame_type.png)
+In the figure below shows the differences between the **ROWS**, **ROWS_RANGE**, and **RANGE** window frame. (**RANGE** window frame will be supprted in the future)
+
+![Figure 1. window frame type](./images/window_frame_type.png)
 
 #### Frame Bound Type
 
-| 语法                          | 描述                                                         |
-| :---------------------------- | :----------------------------------------------------------- |
-| CURRENT ROW                   | For `ROWS`, the bound is the current row.For `ROWS_RANGE`, the bound is the current row. For `RANGE`, the bound is the peers of the current row.Peers of the current row： 表示当前行order值相同的行 |
-| UNBOUNDED PRECEDING           | The bound is the first partition row.                        |
-| `UNBOUNDED FOLLOWING`         | The bound is the last partition row.                         |
-| *`expr`* PRECEDING闭区间      | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **equal** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **equal** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
-| *`expr`* FOLLOWING闭区间      | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **equal** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **equal** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
-| *`expr`* OPEN PRECEDING开区间 | For `ROWS`, the bound is *`expr-1`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **less than** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **less than** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
-| *`expr`* OPEN FOLLOWING开区间 | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **less than** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **less than** the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the peers |
+| Options                 | Description                                                  |
+| :---------------------- | :----------------------------------------------------------- |
+| CURRENT ROW             | For `ROWS`, the bound is the current row.For `ROWS_RANGE`, the bound is the current row. For `RANGE`, the bound is the peers of the current row.Peers of the current row： 表示当前行order值相同的行 |
+| UNBOUNDED PRECEDING     | The bound is the first partition row.                        |
+| `UNBOUNDED FOLLOWING`   | The bound is the last partition row.                         |
+| *`expr`* PRECEDING      | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **equal** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **equal** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
+| *`expr`* FOLLOWING      | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **equal** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **equal** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
+| *`expr`* OPEN PRECEDING | For `ROWS`, the bound is *`expr-1`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **less than** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **less than** to the current row value minus *`expr.`*if the current row value is `NULL`, the bound is the peers of the current row. |
+| *`expr`* OPEN FOLLOWING | For `ROWS`, the bound is *`expr`* rows before the current row.For `ROWS_RANGE`, the bound is the rows with values **less than** to the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the current row.For `RANGE`, the bound is the rows with values **less than** the current row value plus *`expr.`*if the current row value is `NULL`, the bound is the peers |
 
 #### Syntax
 
@@ -145,7 +145,7 @@ table_ref:
 
 #### Examples
 
-**有名窗口（Named Window）**
+**Named Window**
 
 ```SQL
 -- 
@@ -153,7 +153,7 @@ SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 3 PRECEDING AND CURRENT ROW)
 ```
 
-**匿名窗口**
+**Anonymous Window**
 
 ```SQL
 SELECT id, pk1, col1, std_ts,
@@ -161,20 +161,20 @@ sum(col1) OVER (PARTITION BY pk1 ORDER BY std_ts ROWS BETWEEN 1 PRECEDING AND CU
 from t1;
 ```
 
-**ROWS窗口**
+**ROWS frame Window**
 
 ```SQL
 -- ROWS example
--- desc: window ROWS, 前1000条到当前条
+-- desc: window ROWS from 1000 rows preceding to current row
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 1000 PRECEDING AND CURRENT ROW);
 ```
 
-**ROWS_RANGE窗口**
+**ROWS_RANGE frame Window**
 
 ```SQL
 -- ROWS example
--- desc: window ROWS, 前1000条到当前条
+-- desc: window ROWS from 1000 rows preceding to current row
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 1000s PRECEDING AND CURRENT ROW);
 ```
@@ -190,7 +190,7 @@ SELECT col1, col5, sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (UNION t2 PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 10s PRECEDING AND CURRENT ROW) limit 10;
 ```
 
-![image-20210204152105774](./images/window_union_1_table.png)
+![Figure 2. window union one table](./images/window_union_1_table.png)
 
 **window with union multiple tables**
 
@@ -199,7 +199,7 @@ SELECT col1, col5, sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (UNION t2, t3 PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 3 PRECEDING AND CURRENT ROW) limit 10;
 ```
 
-![image-20210204152526828](./images/window_union_2_table.png)
+![Figure 3. window union two tables](./images/window_union_2_table.png)
 
 **window with union while instance rows do not enter window**
 
@@ -208,7 +208,7 @@ SELECT col1, col5, sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (UNION t2 PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 3 PRECEDING AND CURRENT ROW INSTANCE_NOT_IN_WINDOW) limit 10;
 ```
 
-![image-20210204152439360](./images/window_union_1_table_instance_not_in_window.png)
+![Figure 4. window union one table INSTANCE_NOT_IN_WINDOW](./images/window_union_1_table_instance_not_in_window.png)
 
 **window with union subquery**
 
@@ -224,45 +224,31 @@ PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 3 PRECEDING AND CURRENT ROW) limit 
 
 #### New SQL Trait：Exclude CURRENT_TIME
 
-**ROWS窗口EXCLUDE CURRENT_TIME**
+**ROWS_RANGE frame Window and  EXCLUDE CURRENT_TIME**
 
 ```SQL
--- ROWS example
--- desc: window ROWS, 前1000条到当前条, 除了current row以外窗口内不包含当前时刻的其他数据
-SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
-WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 1000 PRECEDING AND CURRENT ROW EXCLUDE CURRENT_TIME);
-```
-
-**ROWS_RANGE窗口EXCLUDE CURRENT_TIME**
-
-```SQL
--- ROWS example
--- desc: window ROWS, 前1000s到当前条，除了current row以外窗口内不包含当前时刻的其他数据
+-- ROWS_RANGE EXCLUDE CURRENT_TIME example
+-- desc: window ROWS, from 1000s preceding to current row, excluding rows at current time except current row
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 1000s PRECEDING AND CURRENT ROW EXCLUDE CURRENT_TIME);
 ```
 
-![image-20210204152624503](./images/window_exclude_current_time.png)
+![Figure 5. window exclude current time](./images/window_exclude_current_time.png)
 
 #### New SQL Trait： MAXSIZE
 
-window frame定义了窗口的范围，FESQL引入MAXSIZE，来限制window内允许的有效窗口内最大数据条数
+We introduce new window option `MAXSIZE`. It limits the max size of window.
 
-![image-20210203131850391](./images/window_max_size.png)
+![Figure 6. window configuring max size](./images/window_max_size.png)
 
-**普通的ROWS_RANGE窗口的聚合操作**
+**ROWS_RANGE Window with max size**
 
+```sql
+-- ROWS_RANGE with max size examples
+-- desc: Window ROWS_RANGE from 10s preceding to current row and the window size can't exceed max_size
+SELECT count(col2) OVER w1 as w1_col2_cnt FROM t1 WINDOW 
+w1 AS (PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 10s PRECEDING AND CURRENT ROW) limit 10;
 ```
-SELECT``count``(col2) OVER w1 ``as` `w1_col2_cnt,``FROM` `t1``WINDOW w1 ``AS` `(PARTITION ``BY` `col1 ``ORDER` `BY` `col5 ROWS_RANGE ``BETWEEN` `10 PRECEDING ``AND` `CURRENT` `ROW) limit 10;
-```
-
-**普通的ROWS_RANGE窗口的聚合操作**
-
-```
-SELECT``count``(col2) OVER w2 ``as` `w1_col2_cnt,``FROM` `t1``WINDOW w2 ``AS` `(PARTITION ``BY` `col1 ``ORDER` `BY` `col5 ROWS_RANGE ``BETWEEN` `10 PRECEDING ``AND` `CURRENT` `ROW MAXSIZE 5) limit 10;
-```
-
-
 
 ### 3. LAST JOIN Statement
 `LAST JOIN` can be regarded as a variant of  `LEFT JOIN`, saying it can only pick up one **last** row from all matched rows under given condition.
@@ -272,8 +258,6 @@ SELECT``count``(col2) OVER w2 ``as` `w1_col2_cnt,``FROM` `t1``WINDOW w2 ``AS` `(
 ```SQL
 last_join_clause:
     table_ref last_join_item [ last_join_item ...]
-  
-  
 last_join_item:
     LAST JOIN table_ref [ORDER BY order_col] ON expr
    
@@ -289,50 +273,33 @@ table_ref:
 SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ON t1.col1 = t2.col1
 ```
 
-![image-20210203132611349](./images/last_join_without_order.png)
+![Figure 7. last join without order](./images/last_join_without_order.png)
 
-以左表第二行为例，符合条件的右表有2条，选择第一个匹配的拼接到左表。拼表结果如下：
+Join result is showed below:
 
-![image-20210203132630089](./images/last_join_without_order2.png)
+![Figure 8. last join without order result](./images/last_join_without_order2.png)
 
 **LAST JOIN with ORDER BY**
 
 ```SQL
--- desc: 简单拼表查询 with ORDER BY
+-- desc: Last Join with ORDER BY
 SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ORDER BY ts.std_ts ON t1.col1 = t2.col1
 ```
 
-![image-20210203132659546](./images/last_join_with_order1.png)
+![Figure 9. last join with order](./images/last_join_with_order1.png)
 
-以左表第二行为例，符合条件的右表有2条，按`std_ts`排序后，选择最后一条`2020-05-20 10:11:13`
+Joined result is shown below:
 
-最后的拼表结果如下：
-
-![image-20210203132722447](./images/last_join_with_order2.png)
-
-
-**LAST JOIN后作window查询**
-
-```SQL
-SELECT t1.col1 as id, t1.col2 as t1_col2, t1.col5 as t1_col5, t2.col5 as t2_col5, str1, sum(t1.col1) OVER w1 as w1_col1_sum
-FROM t1 last join t2 order by t2.col5 on t1.col1=t2.col1 and t1.col5 >= t2.col5
-WINDOW w1 AS (PARTITION BY t1.col2 ORDER BY t1.col5 ROWS_RANGE BETWEEN 3 PRECEDING AND CURRENT ROW) limit 10;
-
-```
+![Figure 10. last join with order result](./images/last_join_with_order2.png)
 
 #### Limitations
 
-last join有两种用法:
-
-1. Last Join with ORDER BY
-   1. 在性能敏感模式下（在RTDIB环境下）要求JOIN条件和ORDER BY列都能命中索引
-2. Last Join without ORDER BY 在性能敏感模式下（如RTIDB环境下）：
-   1. 如果是行拼接（右边部分是一个Row)，则没有边界限制
-   2. 如果是表拼接（右边部分是Table), 要求JOIN条件命中右表索引。
+| Statement type             |                                                              |
+| :------------------------- | :----------------------------------------------------------- |
+| Last Join with ORDER BY    | If query in performance_sensitive mode, the order expressions should match with the indexes, else we have no limitations. |
+| Last Join without ORDER BY | If query in performance_sensitive mode, the order expressions should match with the indexes, else we have no limitations. |
 
 ### 4. Group Statement
-
-所有的group by目前仅仅批模式支持（也就是控制台的调试SQL支持，离线模式还是开发中）
 
 #### Syntax
 
@@ -342,22 +309,23 @@ SELECT [projection, ...] FROM table_name GROUP BY sql_expr, [sql_expr ...]
 
 #### Limitations
 
-| 语句类型         | 状态                   |
-| :--------------- | :--------------------- |
-| 按列分组         | 已支持，请求模式不支持 |
-| 按复杂表达式分组 | 尚未支持               |
-|                  |                        |
+`Group By` is experimental. It is unsupported in request-mode and it has some limitations.
+
+| Statement Type             | Limititation                |
+| :------------------------- | :-------------------------- |
+| Group by column expression | Unsupported in request mode |
+| Group by other expression  | Unsupported                 |
 
 #### Examples
 
 ```SQL
--- desc: 简单SELECT分组KEY
+-- desc: group by column
   SELECT COL1 FROM t1 group by COL1;
--- desc: SELECT多KEY的分组
+-- desc: group by multi columns
   SELECT COL1, COL2 FROM t1 group by COL1, COL2;
--- desc: 简单SELECT分组聚合
+-- desc: group by column
   SELECT COL1, SUM(COL2) FROM t1 group by COL1;
--- desc: SELECT多KEY的分组聚合
+-- desc: group by multi columns
   SELECT COL1, COL2, SUM(COL3) FROM t1 group by COL1, COL2;
 ```
 
@@ -371,16 +339,16 @@ SELECT [projection, ...] FROM table_name WHERE sql_expr
 
 #### Limitations
 
-| 语句类型  | 状态                         |
-| :-------- | :--------------------------- |
-| Where语句 | 批处理已支持，请求模式不支持 |
+| Statement Type | Limititation                |
+| :------------- | :-------------------------- |
+| Where          | Unsupported in request mode |
 
 #### Examples
 
 ```SQL
--- desc: SELECT简单过滤
+-- desc: SELECT with simple filtering
   sql: SELECT COL1 FROM t1 where COL1 > 10;
--- desc: SELECT过滤条件是复杂逻辑关系表达式
+-- desc: SELECT with complex filtering
   sql: SELECT COL1 FROM t1 where COL1 > 10 and COL2 = 20 or COL1 =0;
 ```
 
@@ -391,12 +359,6 @@ SELECT [projection, ...] FROM table_name WHERE sql_expr
 ```SQL
 SELECT ... LIMIT INT_NUM
 ```
-
-#### Limitations
-
-| 语句类型 | 状态                                  |
-| :------- | :------------------------------------ |
-| LIMIT    | 已支持，请求模式下，LIMIT没有实际意义 |
 
 #### Examples
 
