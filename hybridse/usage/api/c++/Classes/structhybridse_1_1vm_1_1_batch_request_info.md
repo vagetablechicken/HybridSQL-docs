@@ -40,6 +40,3 @@ std::set< size_t > output_common_column_indices;
 ```
 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

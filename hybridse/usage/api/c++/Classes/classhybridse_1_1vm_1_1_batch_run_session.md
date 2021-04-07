@@ -21,7 +21,9 @@ summary: BatchRunSession is a kind of RunSession designed for batch mode query.
 |**[Run](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_run_session.md#function-run)**()| std::shared_ptr< [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) > <br>Query sql in batch mode. Return query result as [TableHandler]() pointer.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md#function-runsession)**([EngineMode](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode)|  |
@@ -82,6 +84,3 @@ std::shared_ptr< TableHandler > Run()
 
 Query sql in batch mode. Return query result as [TableHandler]() pointer. 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

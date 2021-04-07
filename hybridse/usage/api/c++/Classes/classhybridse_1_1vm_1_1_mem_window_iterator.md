@@ -24,7 +24,9 @@ title: hybridse::vm::MemWindowIterator
 |**[GetKey](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-getkey)**()| const [Row](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_row.md)  |
 
 ## Inherited members
+
 Inherited from [hybridse::codec::WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-windowiterator)**()|  |
@@ -135,6 +137,3 @@ virtual const Row GetKey()
 
 Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md#function-valid) is `true`
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

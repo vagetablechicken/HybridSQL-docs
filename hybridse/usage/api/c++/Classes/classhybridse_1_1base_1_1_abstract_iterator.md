@@ -155,6 +155,3 @@ virtual void SeekToFirst() =0
 
 Move to the beginning of the dataset. 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

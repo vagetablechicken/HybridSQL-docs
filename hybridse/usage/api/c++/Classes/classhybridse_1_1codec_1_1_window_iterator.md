@@ -150,6 +150,3 @@ virtual const Row GetKey() =0
 
 Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) is `true`
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

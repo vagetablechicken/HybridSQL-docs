@@ -32,7 +32,9 @@ BatchRequest-mode query is widely used in OLAD database. It requires a batch of 
 |**[common_column_indices](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md#function-common_column_indices)**() const| const std::set< size_t > & <br>Return a set of common column indices.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md#function-runsession)**([EngineMode](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-enginemode) engine_mode)|  |
@@ -146,6 +148,3 @@ inline const std::set< size_t > & common_column_indices() const
 
 Return a set of common column indices. 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

@@ -21,7 +21,9 @@ title: hybridse::vm::MemCatalog
 |**[IndexSupport](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md#function-indexsupport)**() override| bool <br>Return whether index is supported or not.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()|  |
@@ -91,6 +93,3 @@ Return whether index is supported or not.
 **Reimplements**: [hybridse::vm::Catalog::IndexSupport](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-indexsupport)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

@@ -29,7 +29,9 @@ Local tablet won't invoke rpc to run a task remotely.
 |**[GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md#function-getname)**() const| const std::string & <br>Return the name of tablet.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-tablet)**()|  |
@@ -132,6 +134,3 @@ Return the name of tablet.
 **Reimplements**: [hybridse::vm::Tablet::GetName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-getname)
 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

@@ -25,7 +25,9 @@ An const iterator over a key-value pairs dataset.
   * **V** value type of elements 
 
 ## Inherited members
+
 Inherited from [hybridse::base::AbstractIterator< K, V, const V & >](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)
+
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[AbstractIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-abstractiterator)**()|  |
@@ -41,6 +43,3 @@ Inherited from [hybridse::base::AbstractIterator< K, V, const V & >](/hybridse/u
 |**[SeekToFirst](/hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md#function-seektofirst)**() =0| void <br>Move to the beginning of the dataset.  |
 
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT

@@ -96,6 +96,3 @@ inline virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > GetProcedureInfo(
 
 Return ProcedureInfo instance with given database name `db` and procedure name `sp_name`
 
--------------------------------
-
-Updated on  6 April 2021 at 19:38:01 PDT
