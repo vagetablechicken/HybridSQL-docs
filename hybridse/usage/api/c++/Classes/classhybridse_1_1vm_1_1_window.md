@@ -44,8 +44,6 @@ title: hybridse::vm::Window
 ## Inherited members
 Inherited by [hybridse::vm::HistoryWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md)
 Inherited from [hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[MemTimeTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#function-memtimetablehandler)**()|  |
@@ -80,8 +78,6 @@ Inherited from [hybridse::vm::MemTimeTableHandler](/hybridse/usage/api/c++/Class
 | **[order_type_](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_handler.md#variable-order_type_)**|[OrderType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-ordertype)  |
 
 Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**()|  |
@@ -96,8 +92,6 @@ Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/clas
 |**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
 
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()|  |
@@ -109,8 +103,6 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**()| base::Status <br>Return dataset status. Default is hybridse::common::kOk.  |
 
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[ListV](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-listv)**()|  |
@@ -211,7 +203,6 @@ Returns the number of elements in this list.
 
 It count element by traverse the list 
 
-
 #### function At
 
 ```cpp
@@ -291,4 +282,4 @@ bool instance_not_in_window_;
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

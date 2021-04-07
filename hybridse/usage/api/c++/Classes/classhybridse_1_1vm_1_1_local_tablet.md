@@ -1,5 +1,6 @@
 ---
 title: hybridse::vm::LocalTablet
+summary: Local tablet is responsible to run a task locally. 
 
 ---
 # hybridse::vm::LocalTablet
@@ -8,7 +9,15 @@ title: hybridse::vm::LocalTablet
 
 `#include <engine.h>`
 
+Local tablet is responsible to run a task locally. 
 ## Summary
+
+```cpp
+class hybridse::vm::LocalTablet;
+```
+Local tablet is responsible to run a task locally. 
+
+Local tablet won't invoke rpc to run a task remotely. 
 
 
 |  Public functions|            |
@@ -21,8 +30,6 @@ title: hybridse::vm::LocalTablet
 
 ## Inherited members
 Inherited from [hybridse::vm::Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-tablet)**()|  |
@@ -62,11 +69,22 @@ virtual std::shared_ptr< RowHandler > SubQuery(
 ```
 
 
+**Parameters**: 
+
+  * **task_id** id of task 
+  * **db** name of database 
+  * **sql** represents a sql string if `is_procedure` is ture, or represents a procedure name 
+  * **row** request row 
+  * **is_procedure** whether sql is a procedure or not 
+  * **is_debug** whether printing debug information while running 
+
+
+**Return**: Return query result row as [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) pointer 
+
 **Reimplements**: [hybridse::vm::Tablet::SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)
 
 
-Return [RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md) by calling request-mode query on subtask which is specified by task_id and sql string 
-
+Run a task in request mode locally 
 
 #### function SubQuery
 
@@ -84,11 +102,24 @@ virtual std::shared_ptr< TableHandler > SubQuery(
 ```
 
 
+**Parameters**: 
+
+  * **task_id** id of task 
+  * **db** name of database 
+  * **sql** represents a sql string if `is_procedure` is ture, or represents a procedure name 
+  * **common_column_indices** a set of common column indices 
+  * **in_rows** a batch of request rows 
+  * **request_is_common** whether request is common or not 
+  * **is_procedure** whether run procedure or not 
+  * **is_debug** whether printing debug information while running 
+
+
+**Return**: Return query result rows as [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) pointer 
+
 **Reimplements**: [hybridse::vm::Tablet::SubQuery](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md#function-subquery)
 
 
-Return [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) by calling batch-request-mode query on subtask which is specified by task_id and sql 
-
+Run a task in batch-request mode locally 
 
 #### function GetName
 
@@ -103,4 +134,4 @@ Return the name of tablet.
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

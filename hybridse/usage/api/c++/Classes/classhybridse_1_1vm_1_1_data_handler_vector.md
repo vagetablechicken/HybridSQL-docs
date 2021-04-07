@@ -23,8 +23,6 @@ A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybri
 
 ## Inherited members
 Inherited from [hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-datahandlerlist)**()|  |
@@ -82,4 +80,4 @@ Return the idx-th element. Return `null` when position is out of range.
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

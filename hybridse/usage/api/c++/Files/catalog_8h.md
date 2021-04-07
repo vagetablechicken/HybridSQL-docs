@@ -77,7 +77,7 @@ using hybridse::codec::RowIterator;
 using hybridse::codec::Schema;
 using hybridse::codec::WindowIterator;
 
-constexpr uint32_t INVALID_POS = UINT32_MAX;  
+constexpr uint32_t INVALID_POS = UINT32_MAX;
 
 struct IndexSt {
     std::string name;           
@@ -415,4 +415,4 @@ class Catalog {
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

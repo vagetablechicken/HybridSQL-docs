@@ -20,7 +20,6 @@ A wrapper of table handler which is used as a asynchronous row handler.
 [AysncRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md) is statefull. It is running when created. GetValue is invoked, status will be changed if it is running at that moment. 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[AysncRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md#function-aysncrowhandler)**(size_t idx, std::shared_ptr< [TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md) > aysnc_table_handler)|  |
@@ -32,8 +31,6 @@ A wrapper of table handler which is used as a asynchronous row handler.
 
 ## Inherited members
 Inherited from [hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-rowhandler)**()|  |
@@ -46,8 +43,6 @@ Inherited from [hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classh
 |**[GetHandlerTypeName](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md#function-gethandlertypename)**() override| const std::string  |
 
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()|  |
@@ -57,8 +52,6 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[GetStatus](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-getstatus)**()| base::Status <br>Return dataset status. Default is hybridse::common::kOk.  |
 
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[ListV](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-listv)**()|  |
@@ -83,7 +76,6 @@ inline AysncRowHandler(
 
 Create with given table_handler and row position index. status_ is set with common::kRunning 
 
-
 #### function ~AysncRowHandler
 
 ```cpp
@@ -102,7 +94,6 @@ inline virtual const Row & GetValue() override
 
 
 Return the row value. Sync row value by invoking aysnc_table_handler_->At(idx_) if status isn't common::kRunning 
-
 
 #### function GetSchema
 
@@ -139,4 +130,4 @@ Return the name of database.
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

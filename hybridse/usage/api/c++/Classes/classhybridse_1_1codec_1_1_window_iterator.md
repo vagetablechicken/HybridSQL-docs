@@ -37,7 +37,6 @@ Assuming the dataset is logically organized by segments, we can use Valid, Next 
 ```
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[WindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-windowiterator)**()|  |
@@ -80,7 +79,6 @@ virtual void Seek(
 
 Set the dataset's current position at the segment with key equals to `key`
 
-
 #### function SeekToFirst
 
 ```cpp
@@ -104,7 +102,6 @@ virtual void Next() =0
 
 Move to the next segment in the iteration if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
-
 #### function Valid
 
 ```cpp
@@ -116,7 +113,6 @@ virtual bool Valid() =0
 
 
 Return `true` if the iteration has elements. 
-
 
 #### function GetValue
 
@@ -130,7 +126,6 @@ virtual std::unique_ptr< RowIterator > GetValue() =0
 
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
 
-
 #### function GetRawValue
 
 ```cpp
@@ -142,7 +137,6 @@ virtual RowIterator * GetRawValue() =0
 
 
 Return the RowIterator of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) return `true`. 
-
 
 #### function GetKey
 
@@ -156,7 +150,6 @@ virtual const Row GetKey() =0
 
 Return the key of current segment of dataset if [Valid()](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_window_iterator.md#function-valid) is `true`
 
-
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

@@ -12,8 +12,8 @@ title: hybridse::vm
 | struct | **[hybridse::vm::AscKeyComparor](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_asc_key_comparor.md)**  |
 | class | **[hybridse::vm::AysncRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_aysnc_row_handler.md)** <br>A wrapper of table handler which is used as a asynchronous row handler.  |
 | struct | **[hybridse::vm::BatchRequestInfo](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_batch_request_info.md)**  |
-| class | **[hybridse::vm::BatchRequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md)**  |
-| class | **[hybridse::vm::BatchRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_run_session.md)**  |
+| class | **[hybridse::vm::BatchRequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md)** <br>[BatchRequestRunSession]() is a kind of [RunSession]() designed for batch request mode query.  |
+| class | **[hybridse::vm::BatchRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_run_session.md)** <br>[BatchRunSession]() is a kind of [RunSession]() designed for batch mode query.  |
 | class | **[hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)** <br>A [Catalog]() handler which defines a set of operation for, e.g, database, table and index management.  |
 | class | **[hybridse::vm::CompileInfo](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info.md)**  |
 | class | **[hybridse::vm::CompileInfoCache](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_compile_info_cache.md)**  |
@@ -24,15 +24,15 @@ title: hybridse::vm
 | class | **[hybridse::vm::DataHandlerRepeater](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_repeater.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
 | class | **[hybridse::vm::DataHandlerVector](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md)** <br>A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md).  |
 | struct | **[hybridse::vm::DescComparor](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_desc_comparor.md)**  |
-| class | **[hybridse::vm::Engine](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine.md)**  |
-| class | **[hybridse::vm::EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)**  |
+| class | **[hybridse::vm::Engine](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine.md)** <br>An engine is responsible to compile SQL on the specific [Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md).  |
+| class | **[hybridse::vm::EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)** <br>An options class for controlling engine behaviour.  |
 | class | **[hybridse::vm::ErrorRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_row_handler.md)** <br>A row's error handler, representing a error row.  |
 | class | **[hybridse::vm::ErrorTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_error_table_handler.md)** <br>A table dataset's error handler, representing a error table.  |
-| struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md)**  |
+| struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md)** <br>An options class for controlling runtime interpreter behavior.  |
 | class | **[hybridse::vm::HistoryWindow](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_history_window.md)**  |
 | struct | **[hybridse::vm::IndexSt](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_index_st.md)**  |
 | class | **[hybridse::vm::JitOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_jit_options.md)**  |
-| class | **[hybridse::vm::LocalTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md)**  |
+| class | **[hybridse::vm::LocalTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md)** <br>Local tablet is responsible to run a task locally.  |
 | class | **[hybridse::vm::MemCatalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_catalog.md)**  |
 | class | **[hybridse::vm::MemPartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_partition_handler.md)**  |
 | class | **[hybridse::vm::MemRowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_row_handler.md)**  |
@@ -43,11 +43,11 @@ title: hybridse::vm
 | class | **[hybridse::vm::MemTimeTableIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_time_table_iterator.md)**  |
 | class | **[hybridse::vm::MemWindowIterator](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_mem_window_iterator.md)**  |
 | class | **[hybridse::vm::PartitionHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_partition_handler.md)** <br>The abstraction of partition dataset operation.  |
-| class | **[hybridse::vm::RequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_run_session.md)**  |
+| class | **[hybridse::vm::RequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_run_session.md)** <br>[RequestRunSession]() is a kind of [RunSession]() designed for request mode query.  |
 | class | **[hybridse::vm::RequestUnionTableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_union_table_handler.md)**  |
 | class | **[hybridse::vm::Router](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_router.md)**  |
 | class | **[hybridse::vm::RowHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_row_handler.md)** <br>A row operation abstraction.  |
-| class | **[hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)**  |
+| class | **[hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)** <br>A [RunSession]() maintain SQL running context, including compile information, procedure name.  |
 | class | **[hybridse::vm::SchemasContext](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schemas_context.md)**  |
 | class | **[hybridse::vm::SchemaSource](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_schema_source.md)**  |
 | class | **[hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)** <br>A table dataset operation abstraction.  |
@@ -304,4 +304,4 @@ constexpr uint32_t INVALID_POS = UINT32_MAX;
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

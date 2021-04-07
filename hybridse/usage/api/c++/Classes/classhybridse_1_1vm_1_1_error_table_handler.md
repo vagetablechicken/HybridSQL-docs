@@ -45,8 +45,6 @@ A table dataset's error handler, representing a error table.
 
 ## Inherited members
 Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[TableHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-tablehandler)**()|  |
@@ -58,8 +56,6 @@ Inherited from [hybridse::vm::TableHandler](/hybridse/usage/api/c++/Classes/clas
 |**[GetTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_table_handler.md#function-gettablet)**(const std::string & index_name, const std::vector< std::string > & pks)| std::shared_ptr< [Tablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_tablet.md) >  |
 
 Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-datahandler)**()|  |
@@ -67,8 +63,6 @@ Inherited from [hybridse::vm::DataHandler](/hybridse/usage/api/c++/Classes/class
 |**[GetHanlderType](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md#function-gethanldertype)**() =0| const [HandlerType](/hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md#enum-handlertype) <br>Return the type of [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md).  |
 
 Inherited from [hybridse::codec::ListV< Row >](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[ListV](/hybridse/usage/api/c++/Classes/classhybridse_1_1codec_1_1_list_v.md#function-listv)**()|  |
@@ -85,7 +79,6 @@ inline ErrorTableHandler()
 
 
 Create ErrorTableTable with initializing status_ with common::kCallMethodError 
-
 
 #### function ErrorTableHandler
 
@@ -294,4 +287,4 @@ OrderType order_type_;
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT

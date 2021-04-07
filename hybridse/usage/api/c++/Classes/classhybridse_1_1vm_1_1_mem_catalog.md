@@ -22,8 +22,6 @@ title: hybridse::vm::MemCatalog
 
 ## Inherited members
 Inherited from [hybridse::vm::Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md)
-}
-
 |  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()|  |
@@ -82,7 +80,6 @@ inline virtual std::shared_ptr< TableHandler > GetTable(
 
 Return a table handler with given table name 
 
-
 #### function IndexSupport
 
 ```cpp
@@ -96,4 +93,4 @@ Return whether index is supported or not.
 
 -------------------------------
 
-Updated on  6 April 2021 at 09:17:26 PDT
+Updated on  6 April 2021 at 19:38:01 PDT
