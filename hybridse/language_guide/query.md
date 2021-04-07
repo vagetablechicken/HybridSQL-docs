@@ -20,18 +20,18 @@ table_factor:
 
 #### Limitations
 
-| Type         | Limitations                                                  | Example                                   |
-| :----------- | :----------------------------------------------------------- | ----------------------------------------- |
-| SIMPLE QUERY | Most of simple queries are supported                         | `SELECT col1 FROM t1;`                    |
-| GROUP        | Only supported on  `BATCH MODE`. Group expressions are limited to `COLUMN` expression | `SELECT SUM(col1) from t1 GROUP BY col2;` |
-| WHERE        | Only on `BATCH MODE`.                                        |                                           |
-| LIMIT        | Only supported on `BATCH MODE`.                              |                                           |
-| WINDOW       | Supprted. And we invented some new traits of `WINDOW`        |                                           |
-| LAST JOIN    | New SQL traits targeting OLDA system.                        |                                           |
+| Statement Type | Limitations                                                  | Example                                   |
+| :------------- | :----------------------------------------------------------- | ----------------------------------------- |
+| SIMPLE QUERY   | Most of simple queries are supported                         | `SELECT col1 FROM t1;`                    |
+| GROUP          | Only supported on  `BATCH MODE`. Group expressions are limited to `COLUMN` expression | `SELECT SUM(col1) from t1 GROUP BY col2;` |
+| WHERE          | Only on `BATCH MODE`.                                        |                                           |
+| LIMIT          | Only supported on `BATCH MODE`.                              |                                           |
+| WINDOW         | Supprted. And we invented some new traits of `WINDOW`        |                                           |
+| LAST JOIN      | New SQL traits targeting OLDA system.                        |                                           |
 
 ### 1. SIMPLE QUERY Statement
 
-**Simple query statement** is a kind of select statement with simple structure. For example, it only  deal with  one single table and doesn't handle complex [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra)(e.g., Filter, Group, Join, Union).
+**Simple query statement** is a kind of select statement with simple structure. For example, it only  deal with  one single table and doesn't handle complex [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) (e.g., Filter, Group, Join, Union).
 
 #### Syntax
 
@@ -80,9 +80,9 @@ projection: { sql_expr [AS SQL_IDENTIFIER] | * }
 
 #### Window Type
 
-We introduce a novel types of window frame **ROWS_RANGE**. It works well for same AI application where executions in batch mode and request mode are expected strictly consistent.
+We introduce a novel types of window frame **ROWS_RANGE**. It works well for some AI application where executions are expected strictly consistent between batch mode and request mode
 
-The figure below demestrate the differences between the **ROWS**, **ROWS_RANGE**, and **RANGE** window frame. (**RANGE** window frame will be supprted in the future)
+In the figure below shows the differences between the **ROWS**, **ROWS_RANGE**, and **RANGE** window frame. (**RANGE** window frame will be supprted in the future)
 
 ![Figure 1. window frame type](./images/window_frame_type.png)
 
@@ -165,7 +165,7 @@ from t1;
 
 ```SQL
 -- ROWS example
--- desc: window ROWS, 前1000条到当前条
+-- desc: window ROWS from 1000 rows preceding to current row
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 1000 PRECEDING AND CURRENT ROW);
 ```
@@ -174,7 +174,7 @@ WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 1000 PRECEDING AND CU
 
 ```SQL
 -- ROWS example
--- desc: window ROWS, 前1000条到当前条
+-- desc: window ROWS from 1000 rows preceding to current row
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 1000s PRECEDING AND CURRENT ROW);
 ```
@@ -275,7 +275,7 @@ SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ON t1.col1 = 
 
 ![Figure 7. last join without order](./images/last_join_without_order.png)
 
-Join result as followed:
+Join result is showed below:
 
 ![Figure 8. last join without order result](./images/last_join_without_order2.png)
 
@@ -288,19 +288,16 @@ SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ORDER BY ts.s
 
 ![Figure 9. last join with order](./images/last_join_with_order1.png)
 
-Joined result as followed:
+Joined result is shown below:
 
 ![Figure 10. last join with order result](./images/last_join_with_order2.png)
 
 #### Limitations
 
-last join有两种用法:
-
-1. Last Join with ORDER BY
-   1. 在性能敏感模式下（在RTDIB环境下）要求JOIN条件和ORDER BY列都能命中索引
-2. Last Join without ORDER BY 在性能敏感模式下（如RTIDB环境下）：
-   1. 如果是行拼接（右边部分是一个Row)，则没有边界限制
-   2. 如果是表拼接（右边部分是Table), 要求JOIN条件命中右表索引。
+| Statement type             |                                                              |
+| :------------------------- | :----------------------------------------------------------- |
+| Last Join with ORDER BY    | If query in performance_sensitive mode, the order expressions should match with the indexes, else we have no limitations. |
+| Last Join without ORDER BY | If query in performance_sensitive mode, the order expressions should match with the indexes, else we have no limitations. |
 
 ### 4. Group Statement
 
@@ -314,7 +311,7 @@ SELECT [projection, ...] FROM table_name GROUP BY sql_expr, [sql_expr ...]
 
 `Group By` is experimental. It is unsupported in request-mode and it has some limitations.
 
-| 语句类型                   | 状态                        |
+| Statement Type             | Limititation                |
 | :------------------------- | :-------------------------- |
 | Group by column expression | Unsupported in request mode |
 | Group by other expression  | Unsupported                 |
@@ -342,9 +339,9 @@ SELECT [projection, ...] FROM table_name WHERE sql_expr
 
 #### Limitations
 
-| 语句类型 | 状态                        |
-| :------- | :-------------------------- |
-| Where    | Unsupported in request mode |
+| Statement Type | Limititation                |
+| :------------- | :-------------------------- |
+| Where          | Unsupported in request mode |
 
 #### Examples
 
