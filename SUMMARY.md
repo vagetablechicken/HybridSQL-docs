@@ -6,6 +6,7 @@
     * User Manual
         * [Quick Start](./hybridse/usage/quick_start.md)
         * [ToyDB Quick Start](hybridse/usage/toydb_usage/toydb_quickstart.md)
+        * [How to create a simple SQL engine](hybridse/usage/simple_engine_demo.md)
         * [SQL Language Guide](hybridse/language_guide/reference.md)
             * [Literals and Syntax](hybridse/language_guide/lexical.md)
             * [Expressions, Functions, and Operators](hybridse/language_guide/expressions_functions_and_operators.md)
