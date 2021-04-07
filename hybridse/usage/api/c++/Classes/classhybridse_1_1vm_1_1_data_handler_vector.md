@@ -22,11 +22,13 @@ A implementation of [DataHandlerList](/hybridse/usage/api/c++/Classes/classhybri
 |**[Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_vector.md#function-get)**(size_t idx)| std::shared_ptr< [DataHandler](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler.md) > <br>Return the idx-th element. Return `null` when position is out of range.  |
 
 ## Inherited members
+
 Inherited from [hybridse::vm::DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md)
-| **Inherited public functions** | Name           |
+
+|  Inherited Public functions|            |
 | -------------- | -------------- |
 |**[DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-datahandlerlist)**()|  |
-|**[~DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-~datahandlerlist)**()| virtual  |
+|**[~DataHandlerList](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-~datahandlerlist)**()|  |
 
 
 ## Public Functions
@@ -78,6 +80,3 @@ Return the idx-th element. Return `null` when position is out of range.
 **Reimplements**: [hybridse::vm::DataHandlerList::Get](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_data_handler_list.md#function-get)
 
 
--------------------------------
-
-Updated on  1 April 2021 at 16:11:23 PDT

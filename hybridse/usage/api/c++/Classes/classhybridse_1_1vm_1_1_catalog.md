@@ -20,7 +20,6 @@ A [Catalog]() handler which defines a set of operation for, e.g, database, table
 Users should implement the subclasses for their own purpose 
 
 
-
 |  Public functions|            |
 | -------------- | -------------- |
 |**[Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md#function-catalog)**()|  |
@@ -85,7 +84,6 @@ virtual std::shared_ptr< TableHandler > GetTable(
 
 Return a table handler with given table name 
 
-
 #### function GetProcedureInfo
 
 ```cpp
@@ -98,7 +96,3 @@ inline virtual std::shared_ptr< hybridse::sdk::ProcedureInfo > GetProcedureInfo(
 
 Return ProcedureInfo instance with given database name `db` and procedure name `sp_name`
 
-
--------------------------------
-
-Updated on  1 April 2021 at 16:11:23 PDT

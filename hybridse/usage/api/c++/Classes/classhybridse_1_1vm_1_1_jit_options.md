@@ -88,6 +88,3 @@ inline void set_enable_perf(
 ```
 
 
--------------------------------
-
-Updated on  1 April 2021 at 16:11:23 PDT

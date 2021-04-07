@@ -38,6 +38,3 @@ static inline bool Decode(
 ```
 
 
--------------------------------
-
-Updated on  1 April 2021 at 16:11:23 PDT

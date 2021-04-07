@@ -11,7 +11,7 @@ title: hybridse::vm::BatchRequestInfo
 ## Summary
 
 
-| Public attributes|    |
+| **Public attributes**|    |
 | -------------- | -------------- |
 | **[common_column_indices](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_column_indices)**| std::set< size_t >  |
 | **[common_node_set](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_batch_request_info.md#variable-common_node_set)**| std::set< size_t >  |
@@ -40,6 +40,3 @@ std::set< size_t > output_common_column_indices;
 ```
 
 
--------------------------------
-
-Updated on  1 April 2021 at 16:11:23 PDT

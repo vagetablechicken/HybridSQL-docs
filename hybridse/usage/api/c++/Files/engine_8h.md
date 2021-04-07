@@ -15,14 +15,14 @@ title: /Users/chenjing/work/4paradigm/HybridSE/include/vm/engine.h
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[hybridse::vm::EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)**  |
-| class | **[hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)**  |
-| class | **[hybridse::vm::BatchRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_run_session.md)**  |
-| class | **[hybridse::vm::RequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_run_session.md)**  |
-| class | **[hybridse::vm::BatchRequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md)**  |
-| struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md)**  |
-| class | **[hybridse::vm::Engine](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine.md)**  |
-| class | **[hybridse::vm::LocalTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md)**  |
+| class | **[hybridse::vm::EngineOptions](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine_options.md)** <br>An options class for controlling engine behaviour.  |
+| class | **[hybridse::vm::RunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_run_session.md)** <br>A [RunSession]() maintain SQL running context, including compile information, procedure name.  |
+| class | **[hybridse::vm::BatchRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_run_session.md)** <br>[BatchRunSession]() is a kind of [RunSession]() designed for batch mode query.  |
+| class | **[hybridse::vm::RequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_request_run_session.md)** <br>[RequestRunSession]() is a kind of [RunSession]() designed for request mode query.  |
+| class | **[hybridse::vm::BatchRequestRunSession](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_batch_request_run_session.md)** <br>[BatchRequestRunSession]() is a kind of [RunSession]() designed for batch request mode query.  |
+| struct | **[hybridse::vm::ExplainOutput](/hybridse/usage/api/c++/Classes/structhybridse_1_1vm_1_1_explain_output.md)** <br>An options class for controlling runtime interpreter behavior.  |
+| class | **[hybridse::vm::Engine](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_engine.md)** <br>An engine is responsible to compile SQL on the specific [Catalog](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_catalog.md).  |
+| class | **[hybridse::vm::LocalTablet](/hybridse/usage/api/c++/Classes/classhybridse_1_1vm_1_1_local_tablet.md)** <br>Local tablet is responsible to run a task locally.  |
 
 
 
@@ -73,49 +73,52 @@ namespace vm {
 using ::hybridse::codec::Row;
 
 class Engine;
-
 class EngineOptions {
  public:
     EngineOptions();
+
     inline void set_keep_ir(bool flag) { this->keep_ir_ = flag; }
     inline bool is_keep_ir() const { return this->keep_ir_; }
+
     inline void set_compile_only(bool flag) { this->compile_only_ = flag; }
     inline bool is_compile_only() const { return compile_only_; }
-    inline bool is_plan_only() const { return plan_only_; }
+
+
     inline void set_plan_only(bool flag) { plan_only_ = flag; }
-    inline bool is_performance_sensitive() const {
-        return performance_sensitive_;
-    }
+    inline bool is_plan_only() const { return plan_only_; }
+
     inline uint32_t max_sql_cache_size() const { return max_sql_cache_size_; }
+
+    inline void set_max_sql_cache_size(uint32_t size) {
+        max_sql_cache_size_ = size;
+    }
+
     inline void set_performance_sensitive(bool flag) {
         performance_sensitive_ = flag;
     }
+    inline bool is_performance_sensitive() const {
+        return performance_sensitive_;
+    }
 
-    inline bool is_cluster_optimzied() const { return cluster_optimized_; }
     inline EngineOptions* set_cluster_optimized(bool flag) {
         cluster_optimized_ = flag;
         return this;
     }
-    bool is_batch_request_optimized() const { return batch_request_optimized_; }
-    EngineOptions* set_batch_request_optimized(bool flag) {
+    inline bool is_cluster_optimzied() const { return cluster_optimized_; }
+
+    inline EngineOptions* set_batch_request_optimized(bool flag) {
         batch_request_optimized_ = flag;
         return this;
     }
-    inline void set_max_sql_cache_size(uint32_t size) {
-        max_sql_cache_size_ = size;
-    }
-    static EngineOptions NewEngineOptionWithClusterEnable(bool flag) {
-        EngineOptions options;
-        options.set_cluster_optimized(flag);
-        LOG(INFO) << "Engine Options with cluster_optimized_ " << flag;
-        return options;
-    }
+    inline bool is_batch_request_optimized() const { return batch_request_optimized_; }
 
-    bool is_enable_expr_optimize() const { return enable_expr_optimize_; }
+
     inline EngineOptions* set_enable_expr_optimize(bool flag) {
         enable_expr_optimize_ = flag;
         return this;
     }
+    inline bool is_enable_expr_optimize() const { return enable_expr_optimize_; }
+
 
     inline EngineOptions* set_enable_batch_window_parallelization(bool flag) {
         enable_batch_window_parallelization_ = flag;
@@ -125,13 +128,12 @@ class EngineOptions {
         return enable_batch_window_parallelization_;
     }
 
-    EngineOptions* set_enable_spark_unsaferow_format(bool flag);
-
+    inline EngineOptions* set_enable_spark_unsaferow_format(bool flag);
     inline bool is_enable_spark_unsaferow_format() const {
         return enable_spark_unsaferow_format_;
     }
 
-    hybridse::vm::JitOptions& jit_options() { return jit_options_; }
+    inline hybridse::vm::JitOptions& jit_options() { return jit_options_; }
 
  private:
     bool keep_ir_;
@@ -164,6 +166,7 @@ class RunSession {
     virtual std::shared_ptr<hybridse::vm::CompileInfo> GetCompileInfo() {
         return compile_info_;
     }
+
     bool SetCompileInfo(
         const std::shared_ptr<hybridse::vm::CompileInfo>& compile_info);
 
@@ -194,13 +197,15 @@ class BatchRunSession : public RunSession {
  private:
     const bool mini_batch_;
 };
-
 class RequestRunSession : public RunSession {
  public:
     RequestRunSession() : RunSession(kRequestMode) {}
     ~RequestRunSession() {}
     int32_t Run(const Row& in_row, Row* output);                    // NOLINT
+
     int32_t Run(uint32_t task_id, const Row& in_row, Row* output);  // NOLINT
+
+
     virtual const Schema& GetRequestSchema() const {
         return compile_info_->GetRequestSchema();
     }
@@ -220,10 +225,13 @@ class BatchRequestRunSession : public RunSession {
     const std::string& GetRequestName() const {
         return compile_info_->GetRequestName();
     }
-    int32_t Run(const uint32_t id, const std::vector<Row>& request_batch,
-                std::vector<Row>& output);  // NOLINT
+
     int32_t Run(const std::vector<Row>& request_batch,
                 std::vector<Row>& output);  // NOLINT
+
+    int32_t Run(const uint32_t id, const std::vector<Row>& request_batch,
+                std::vector<Row>& output);  // NOLINT
+
     void AddCommonColumnIdx(size_t idx) { common_column_indices_.insert(idx); }
 
     const std::set<size_t>& common_column_indices() const {
@@ -236,21 +244,22 @@ class BatchRequestRunSession : public RunSession {
 
 struct ExplainOutput {
     // just for request mode
-    vm::Schema input_schema;
-    std::string logical_plan;
-    std::string physical_plan;
-    std::string ir;
-    vm::Schema output_schema;
-    std::string request_name;
-    vm::Router router;
+    vm::Schema input_schema;    
+    std::string request_name;   
+    std::string logical_plan;   
+    std::string physical_plan;  
+    std::string ir;             
+    vm::Schema output_schema;   
+    vm::Router router;          
 };
+
 
 class Engine {
  public:
-    Engine(const std::shared_ptr<Catalog>& cl, const EngineOptions& options);
     explicit Engine(const std::shared_ptr<Catalog>& cl);
 
-    // Initialize LLVM environments
+    Engine(const std::shared_ptr<Catalog>& cl, const EngineOptions& options);
+
     static void InitializeGlobalLLVM();
 
     ~Engine();
@@ -267,6 +276,7 @@ class Engine {
     bool Explain(const std::string& sql, const std::string& db,
                  EngineMode engine_mode, ExplainOutput* explain_output,
                  base::Status* status);
+
     bool Explain(const std::string& sql, const std::string& db,
                  EngineMode engine_mode,
                  const std::set<size_t>& common_column_indices,
@@ -308,16 +318,19 @@ class LocalTablet : public Tablet {
           engine_(engine),
           sp_cache_(sp_cache) {}
     ~LocalTablet() {}
+
     std::shared_ptr<RowHandler> SubQuery(uint32_t task_id,
                                          const std::string& db,
                                          const std::string& sql, const Row& row,
                                          const bool is_procedure,
                                          const bool is_debug) override;
+
     virtual std::shared_ptr<TableHandler> SubQuery(
         uint32_t task_id, const std::string& db, const std::string& sql,
         const std::set<size_t>& common_column_indices,
         const std::vector<Row>& in_rows, const bool request_is_common,
         const bool is_procedure, const bool is_debug);
+
     const std::string& GetName() const { return name_; }
 
  private:
@@ -332,6 +345,4 @@ class LocalTablet : public Tablet {
 ```
 
 
--------------------------------
 
-Updated on  1 April 2021 at 16:11:24 PDT
