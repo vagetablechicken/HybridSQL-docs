@@ -3,7 +3,7 @@
 - [**Slack Channel**](https://hybridsql-ws.slack.com/archives/C01R7LAF6AY)
 - [**Discussions**](https://github.com/4paradigm/HybridSE/discussions)
 
-# What is HybridSE
+# 介绍
 
 HybridSE(Hybrid SQL Engine)是基于C++和LLVM实现的高性能混合SQL执行引擎，为AI应用、OLAD数据库、HTAP系统、SparkSQL、Flink Streaming SQL等提供一致性的SQL加速优化。
 
@@ -27,84 +27,93 @@ HybridSE是一个模块化的SQL编译器和执行器，提供了SQL语法校验
 
   同一套SQL语法解析和CodeGen代码生成逻辑，保证使用HybridSE的离线和在线系统落地时计算语意一致，SQL中内置UDF/UDAF语法也避免跨语言系统的函数一致性问题。
 
-# Getting Started
-## Prepare Code & Docker
 
-```shell
-git clone git@github.com:4paradigm/HybridSE.git
+
+# 快速开始
+
+## 依赖
+
++ [git](https://git-scm.com)
++ [docker](https://docs.docker.com/engine/install/)
+
+## 准备开发环境
+
+```bash
+git clone https://github.com/4paradigm/HybridSE.git
 cd HybridSE
 docker run -v `pwd`:/HybridSE -it ghcr.io/4paradigm/centos6_gcc7_hybridsql:latest
-cd /Hybridse
+cd /HybridSE
 # init enviroment before build
 source tools/init_env.profile.sh
 ```
 
 建议开发者使用我们提供的镜像编译和安装库。若需要使用自己的开发环境，请确保相关依赖库正确安装。编译环境和依赖库可参考 [HybridSQL-docker](https://github.com/4paradigm/HybridSQL-docker/blob/main/README.md)
 
-## Build
+## 编译
 
-```shell
+```bash
 cd /HybridSE
 mkdir -p build && cd build
 cmake ..
 # just compile the core library
-make -j4 hybridse_core
+make -j$(nproc) hybridse_core
 ```
 
-## Install
+## 安装
 
-```shell
+```bash
 cd /HybridSE
 mkdir -p build && cd build
 cmake ..  -DCMAKE_INSTALL_PREFIX="CONFIG_YOUR_HYRBIDSE_INSTALL_DIR"
-make -j4 install
+make -j$(nproc) install
 ```
 
-更详细的编译和安装配置可以参考 [快速开始HybridSE](../usage/quick_start.md) 
+更详细的编译和安装配置可参见文档：[快速开始HybridSE](/hybridse/usage/quick_start.md)
 
-## Run tests
+## 测试
 
-```shell
+```bash
 cd /HybridSE
 mkdir -p build & cd buid
 cmake .. -DTESTING_ENABLE=ON
 export SQL_CASE_BASE_DIR=/HybridSE 
-make -j4 && make -j4 test
+make -j$(nproc) && make -j$(nproc) test
 ```
 
-## Run simple engine demo
+## 运行 simple engine demo
 
-```shell
+```bash
 cd /HybridSE
 mkdir build
 cd build
 cmake ..
-make -j4 hybridse_proto && make -j4 hybridse_parser && make -j4 simple_engine_demo
+make -j$(nproc) hybridse_proto && make -j$(nproc) hybridse_parser && make -j$(nproc) simple_engine_demo
 ./src/simple_engine_demo
 ```
+`simple_engine_demo`是基于HyrbidSE实现的内存表SQL引擎。更多细节可参见文档：[如何实现一个简单引擎](/hybridse/usage/simple_engine_demo.md)
 
-`simple_engine_demo`是基于HyrbidSE实现的内存表SQL查询引擎。更多细节可参见文档[如何实现一个简单引擎](../usage/simple_engine_demo.md)
+## 运行 ToyDB
 
-## Run ToyDB
++ 编译 ToyDB
 
-- Build ToyDB
+  ```bash
+  cd /HybridSE
+  mkdir build 
+  cmake .. -DEXAMPLES_ENABLE=ON 
+  make -j$(nproc) hybridse_proto && make -j$(nproc) hybride_parser && make -j$(nproc) toydb
+  ```
 
-```shell
-cd /HybridSE
-mkdir build 
-cmake .. -DEXAMPLES_ENABLE=ON 
-make -j4 hybridse_proto && make -j4 hybride_parser && make toydb -j4
-```
++ 启动 ToyDB
 
-- Start ToyDB
+  ```
+  cd /HybridSE/examples/toydb/onebox
+  bash start_all.sh
+  bash start_cli.sh
+  ```
 
-```
-cd /HybridSE/examples/toydb/onebox
-sh start_all.sh
-sh start_cli.sh
-```
+ToyDB是基于HybridSE开发的简易单机内存数据库. 它支持基本的数据库操作和SQL查询语句。详细使用可参见：[ToyDB快速开始](/hybridse/usage/toydb_usage/toydb_quickstart.md)
 
-ToyDB是基于HybridSE开发的简易内存数据库. 它支持基本的数据库操作和SQL查询语句。详细使用参见 [ToyDB使用手册](./toydb_usage/toydb_quickstart.md)
+
 
 ## 生态项目
 
@@ -116,7 +125,7 @@ ToyDB是基于HybridSE开发的简易内存数据库. 它支持基本的数据�
 
 ## 未来规划
 
-### SQL兼容
+### ANSI SQL兼容
 
 HybridSE已经兼容主流的DDL、DML语法，并将逐步增强对ANSI SQL语法的兼容性，从而简化用户从其他SQL引擎迁移的成本。
 
@@ -143,7 +152,7 @@ HybridSE可拓展适配NoSQL、OLAP、OLTP等系统，已支持SparkSQL和FEDB�
 ## 反馈与参与
 
 - Bug、疑惑、修改欢迎提在[Github Issue](https://github.com/4paradigm/HybridSE/issues)
-- 想了解更多或者有想法可以参与到[Github Discussions](https://github.com/4paradigm/HybridSE/discussions)和[slack](https://hybridsql-ws.slack.com/archives/C01R7LAF6AY)交流
+- 想了解更多或者有想法可以参与到[Discussions](https://github.com/4paradigm/HybridSE/discussions)和[slack](https://hybridsql-ws.slack.com/archives/C01R7LAF6AY)交流
 
 ## 许可证
 
