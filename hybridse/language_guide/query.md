@@ -86,7 +86,7 @@ projection: { sql_expr [AS SQL_IDENTIFIER] | * }
 
 SQL引擎支持两类窗口：ROWS 和 ROWS_RANGE。SQL标准的RANGE类窗口FESQL系统目前暂不支持。他们直接的对比差异如下图所示
 
-<img src="./images/window_frame_type.png" alt="Figure 1: window frame type" style="width:800px" align="left"/>
+![Figure 1: window frame type](./images/window_frame_type.png)
 
 #### Frame Bound Type
 
@@ -243,14 +243,13 @@ WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS BETWEEN 1000 PRECEDING AND CU
 SELECT sum(col2) OVER w1 as w1_col2_sum FROM t1
 WINDOW w1 AS (PARTITION BY col1 ORDER BY col5 ROWS_RANGE BETWEEN 1000s PRECEDING AND CURRENT ROW EXCLUDE CURRENT_TIME);
 ```
-
-<img src="./images/window_exclude_current_time.png" alt="Figure 5: window exclude current time" style="width:500px" align="left"/>
+![Figure 5: window exclude current time](./images/window_exclude_current_time.png)
 
 #### 新SQL语法特性： MAXSIZE
 
 window frame定义了窗口的范围，FESQL引入MAXSIZE，来限制window内允许的有效窗口内最大数据条数
 
-<img src="./images/window_max_size.png" alt="Figure 6: window config max size" style="width:550px" align="left"/>
+![Figure 6: window config max size](./images/window_max_size.png)
 
 **普通的ROWS_RANGE窗口的聚合操作**
 
@@ -293,13 +292,12 @@ SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ON t1.col1 = 
 
 `LAST JOIN`时不配置 `Order By` ，则拼接第一条命中的数据行
 
-<img src="./images/last_join_without_order.png" alt="Figure 7: last join without order" style="width:600px" align="left"/>
-
+![Figure 7: last join without order](./images/last_join_without_order.png)
 
 
 以左表第二行为例，符合条件的右表有2条，选择第一个匹配的拼接到左表。拼表结果如下：
 
-<img src="./images/last_join_without_order2.png" alt="Figure 8: last join without order result" style="width:800px" align="left"/>
+![Figure 8: last join without order result](./images/last_join_without_order2.png)
 
 **LAST JOIN with ORDER BY**
 
@@ -309,14 +307,11 @@ SELECT t1.col1 as t1_col1, t2.col1 as t2_col2 from t1 LAST JOIN t2 ORDER BY ts.s
 ```
 
 `LAST JOIN`时配置 `Order By` ，则右表按Order列反向排序，拼接第一条命中的数据行
-
-<img src="./images/last_join_with_order1.png" alt="Figure 9: last join with order" style="width:600px" align="left"/>
-
+![Figure 9: last join with order](./images/last_join_with_order1.png)
 以左表第二行为例，符合条件的右表有2条，按`std_ts`排序后，选择最后一条`2020-05-20 10:11:13`
 
 最后的拼表结果如下：
-
-<img src="./images/last_join_with_order2.png" alt="Figure 10: last join with order result" style="width:800px" align="left"/>
+![Figure 10: last join with order result](./images/last_join_with_order2.png)
 
 
 **LAST JOIN后作window查询**
