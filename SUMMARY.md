@@ -1,10 +1,6 @@
 # Summary
 
-* [README](README.md)
-* FEDB
-  * [Introduction](fedb/README.md) 
-  * User Manual 
-    * [Deployment](fedb/usage/fedb_deploy.md)
+* [Home](home.md)
 * HybridSE
     * [Introduction](hybridse/introduction/README.md)
     * User Manual
@@ -86,3 +82,27 @@
             * [hybridse::codec](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)
             * [hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)
 
+* FEDB
+  * [Introduction](fedb/README.md) 
+  * User Manual 
+    * [Deployment](fedb/usage/fedb_deploy.md)
+* SparkFE
+    * [Introduction](sparkfe/introduction/introduction.md)
+    * Usage
+        * [SparkFE Docker Image](sparkfe/usage/use_sparkfe_docker_image.md)
+        * [SparkFE Distribution](sparkfe/usage/use_sparkfe_distribution.md)
+        * [More Usage For SparkFE](sparkfe/usage/more_usage.md)
+        * [Use HybridSQL Extensions](sparkfe/usage/use_hybridsql_extension.md)
+        * [SparkFE Configuration](sparkfe/usage/sparkfe_configuration.md)
+    * Development
+        * [Build From Scratch](sparkfe/development/build_from_scratch.md)
+        * [Build For Different Operating Systems](sparkfe/development/build_for_different_os.md)
+    * Under The Hook
+        * [Native Window Computing]()
+        * [NativeLastJoin Optimization]()
+        * [UnsafeRow Codec Optimization]()
+        * [Multiple Window Concurrently Computing]()
+    * [Benchmark](sparkfe/benchmark/README.md)
+        * [TaxiTour Multiple Window Benchmark]()
+    * [FAQ](sparkfe/faq.md)
+* [Contribution](contribution/README.md)
