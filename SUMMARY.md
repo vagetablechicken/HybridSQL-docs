@@ -83,6 +83,9 @@
             * [hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)
 
 * FEDB
+  * [Introduction](fedb/README.md) 
+  * User Manual 
+    * [Deployment](fedb/usage/fedb_deploy.md)
 * SparkFE
     * [Introduction](sparkfe/introduction/introduction.md)
     * Usage
@@ -102,4 +105,4 @@
     * [Benchmark](sparkfe/benchmark/README.md)
         * [TaxiTour Multiple Window Benchmark]()
     * [FAQ](sparkfe/faq.md)
-* [项目贡献](contribution/README.md)
+* [Contribution](contribution/README.md)
