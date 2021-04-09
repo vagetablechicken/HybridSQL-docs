@@ -31,11 +31,9 @@ The docker image has included the following directories.
 
 ## Build Docker Image
 
-镜像构建脚本同样使用Github托管，代码地址为 https://github.com/4paradigm/SparkFE/tree/main/docker 。
+The scripts of building docker image are maintained in Github as well. Please refer to https://github.com/4paradigm/SparkFE/tree/main/docker .
 
-使用以下命令可以从本地构建SparkFE容器镜像。
-
-You can build SparkFE docker image from local server. 
+You can build SparkFE docker image in local server.
 
 ```
 git clone https://github.com/4paradigm/SparkFE.git

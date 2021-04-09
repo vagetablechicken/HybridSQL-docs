@@ -2,8 +2,6 @@
 
 ## Introduction
 
-SparkFE发行版是基于LLVM优化的高性能原生Spark版本，和标准Spark发行版一样提供Scala、Java、Python和R编程接口，用户使用SparkFE发行版方法与标准版一致。
-
 SparkFE distribution is the LLVM-based and high-performance native Spark distribution. It provides Scala, Java, Python and R programming interfaces jsut like standard Spark and the usage is all the same.
 
 ## Download SparkFE Distribution

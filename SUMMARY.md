@@ -1,6 +1,6 @@
 # Summary
 
-* [README](README.md)
+* [Home](home.md)
 * HybridSE
     * [Introduction](hybridse/introduction/README.md)
     * User Manual
@@ -83,27 +83,23 @@
             * [hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)
 
 * FEDB
-    * [介绍](fedb/README.md)
-    * 使用文档
-        * [部署](fedb/usage/fedb_deploy.md)
 * SparkFE
-    * [介绍](sparkfe/introduction/introduction.md)
-    * 使用文档
-        * [使用SparkFE镜像](sparkfe/usage/use_sparkfe_docker_image.md)
-        * [使用SparkFE发行版](sparkfe/usage/use_sparkfe_distribution.md)
-        * [SparkFE更多用法](sparkfe/usage/more_usage.md)
-        * [使用HybridSQL拓展](sparkfe/usage/use_hybridsql_extension.md)
-        * [SparkFE配置](sparkfe/usage/sparkfe_configuration.md)
-    * 开发文档
-        * [从源码构建项目](sparkfe/development/build_from_scratch.md)
-        * [使用不同操作系统构建](sparkfe/development/build_for_different_os.md)
-    * 底层优化
-        * [NativeWindow优化]()
-        * [NativeLastJoin优化]()
-        * [UnsafeRow编码优化]()
-        * [窗口数据倾斜处理优化]()
-        * [多窗口并行计算优化]()
-    * [性能测试](sparkfe/benchmark/README.md)
-        * [TaxiTour多窗口测试]()
-    * [常见问题](sparkfe/faq.md)
+    * [Introduction](sparkfe/introduction/introduction.md)
+    * Usage
+        * [SparkFE Docker Image](sparkfe/usage/use_sparkfe_docker_image.md)
+        * [SparkFE Distribution](sparkfe/usage/use_sparkfe_distribution.md)
+        * [More Usage For SparkFE](sparkfe/usage/more_usage.md)
+        * [Use HybridSQL Extensions](sparkfe/usage/use_hybridsql_extension.md)
+        * [SparkFE Configuration](sparkfe/usage/sparkfe_configuration.md)
+    * Development
+        * [Build From Scratch](sparkfe/development/build_from_scratch.md)
+        * [Build For Different Operating Systems](sparkfe/development/build_for_different_os.md)
+    * Under The Hook
+        * [Native Window Computing]()
+        * [NativeLastJoin Optimization]()
+        * [UnsafeRow Codec Optimization]()
+        * [Multiple Window Concurrently Computing]()
+    * [Benchmark](sparkfe/benchmark/README.md)
+        * [TaxiTour Multiple Window Benchmark]()
+    * [FAQ](sparkfe/faq.md)
 * [项目贡献](contribution/README.md)
