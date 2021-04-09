@@ -7,10 +7,10 @@
 如果已有可用zookeeper集群可略过此步骤  
 #### 下载zookeeper安装包
 ```
-$ wget https://archive.apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
-$ tar -zxvf zookeeper-3.4.14.tar.gz
-$ cd zookeeper-3.4.14
-$ cp conf/zoo_sample.cfg conf/zoo.cfg
+wget https://archive.apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
+tar -zxvf zookeeper-3.4.14.tar.gz
+cd zookeeper-3.4.14
+cp conf/zoo_sample.cfg conf/zoo.cfg
 ``` 
 #### 修改配置文件
 打开文件conf/zoo.cfg修改dataDir和clientPort
@@ -20,16 +20,16 @@ clientPort=6181
 ```
 #### 启动zookeeper
 ```
-$ sh bin/zkServer.sh start
+sh bin/zkServer.sh start
 ```
 部署zookeeper集群[参考这里](https://zookeeper.apache.org/doc/r3.4.14/zookeeperStarted.html)
 ### 部署nameserver
 #### 1 下载FEDB部署包
 ````
-$ wget http://pkg.4paradigm.com/fedb/fedb-2.0.0.0.tar.gz
-$ tar -zxvf fedb-2.0.0.0.tar.gz
-$ mv fedb-2.0.0.0 fedb-ns-2.0.0.0
-$ cd fedb-ns-2.0.0.0
+wget https://github.com/4paradigm/fedb/releases/download/2.2.0/fedb-2.2.0-linux.tar.gz
+tar -zxvf fedb-2.2.0-linux.tar.gz
+mv fedb-2.2.0 fedb-ns-2.2.0
+cd fedb-ns-2.2.0
 ````
 #### 2 修改配置文件conf/nameserver.flags
 * 修改endpoint
@@ -50,10 +50,10 @@ sh bin/start_ns.sh start
 ### 部署tablet
 #### 1 下载FEDB部署包
 ```
-$ wget http://pkg.4paradigm.com/fedb/fedb-2.0.0.0.tar.gz
-$ tar -zxvf fedb-2.0.0.0.tar.gz
-$ mv fedb-2.0.0.0 fedb-tablet-2.0.0.0
-$ cd fedb-tablet-2.0.0.0
+wget https://github.com/4paradigm/fedb/releases/download/2.2.0/fedb-2.2.0-linux.tar.gz
+tar -zxvf fedb-2.2.0-linux.tar.gz
+mv fedb-2.2.0 fedb-tablet-2.2.0
+cd fedb-tablet-2.2.0
 ```
 #### 2 修改配置文件conf/tablet.flags
 * 修改endpoint
@@ -74,7 +74,7 @@ $ cd fedb-tablet-2.0.0.0
 * zk_cluster和zk_root_path配置和nameserver的保持一致
 #### 3 启动服务
 ```
-$ sh bin/start.sh start
+sh bin/start.sh start
 ```
 **注: 服务启动后会在bin目录下产生tablet.pid文件, 里边保存启动时的进程号。如果该文件内的pid正在运行则会启动失败**
 
