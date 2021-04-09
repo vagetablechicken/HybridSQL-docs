@@ -1,5 +1,3 @@
-[English version](README.md)
-
 
 ![](images/fedb_black.png)
 
