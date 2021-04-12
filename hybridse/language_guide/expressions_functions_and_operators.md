@@ -60,21 +60,21 @@ sql_call_expr:
 
 ### Limitations
 
-| 语句类型        | 状态                                                         |
-| :-------------- | :----------------------------------------------------------- |
-| 常量表达式      | 已支持                                                       |
-| 列表达式        | 已支持                                                       |
-| 算术运算表达式  | 已支持                                                       |
-| 逻辑运算表达式  | 已支持                                                       |
-| 比较函数与运算  | 已支持                                                       |
-| 类型运算表达式  | 已支持                                                       |
-| 位运算表达式    | 部分支持                                                     |
-| CASE WHEN表达式 | 已支持                                                       |
-| Between表达式   | 支持中                                                       |
-| IN 表达式       | 支持中                                                       |
-| LIKE 表达式     | 尚未支持                                                     |
-| 函数表达式      | 支持大部分SQL标准支持的UDF和UDAF函数，具体参考函数手册（待补充） |
-|                 |                                                              |
+| 语句类型        | 状态              |
+| :-------------- | :---------------- |
+| 常量表达式      | Support           |
+| 列表达式        | Support           |
+| 算术运算表达式  | Support           |
+| 逻辑运算表达式  | Support           |
+| 比较函数与运算  | Support           |
+| 类型运算表达式  | Support           |
+| 位运算表达式    | Support           |
+| CASE WHEN表达式 | Support           |
+| Between表达式   | In the future     |
+| IN 表达式       | In the future     |
+| LIKE 表达式     | In the future     |
+| 函数表达式      | Partially Support |
+|                 |                   |
 
 ### 1. Comparison Operators
 
