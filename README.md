@@ -1,3 +1,3 @@
 # HybridSQL Docs
 
-项目文档地址 https://docs.fedb.io/ 。
+The docs are in https://docs.fedb.io/ 。
