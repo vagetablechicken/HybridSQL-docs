@@ -17,10 +17,10 @@
 
 The date and time data types for representing temporal values are `DATE` and `TIMESTAMP`
 
-| Type      | Bytes | Range                                                        | Format          |
-| :-------- | :---- | :----------------------------------------------------------- | :-------------- |
-| DATE      | 4     | 1900-01-01 ~ 9999-12-31                                      | YYYY-MM-DD      |
-| TIMESTAMP | 8     | 1970-01-01 00:00:00/2038结束时间是第 **2147483647** 秒，北京时间 **2038-1-19 11:14:07**，格林尼治时间 2038年1月19日 凌晨 03:14:07 | YYYYMMDD HHMMSS |
+| Type      | Bytes | Range                   | Format          |
+| :-------- | :---- | :---------------------- | :-------------- |
+| DATE      | 4     | 1900-01-01 ~ 9999-12-31 | YYYY-MM-DD      |
+| TIMESTAMP | 8     |                         | YYYYMMDD HHMMSS |
 
 ------
 
