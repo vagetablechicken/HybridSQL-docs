@@ -4,7 +4,7 @@
 
 HybridSQL是针对AI等场景优化的SQL语法，SparkFE支持HybridSQL并且可以在拼表、滑动窗口计算等SQL功能上比SparkSQL有巨大的性能提升。
 
-更多HybridSQL语法细节可参考[HybridSE SQL语法手册](../../hybridse/language_guide/)。
+更多HybridSQL语法细节可参考[HybridSE SQL语法手册](../../hybridse/language_guide/reference.md)。
 
 ## 特殊拼表LastJoin
 
