@@ -7,7 +7,7 @@
         * [快速开始](hybridse/usage/quick_start.md)
         * [ToyDB使用手册](hybridse/usage/toydb_usage/toydb_quickstart.md)
         * [实现一个简单SQL引擎](hybridse/usage/simple_engine_demo.md)
-        * SQL语法手册
+        * [SQL语法手册]((hybridse/language_guide/reference.md))
             * [语言结构](hybridse/language_guide/lexical.md)
             * [表达式，函数和运算](hybridse/language_guide/expressions_functions_and_operators.md)
             * [数据类型](hybridse/language_guide//data_types.md)
