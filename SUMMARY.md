@@ -102,5 +102,4 @@
         * [Multiple Window Concurrently Computing](sparkfe/under_the_hook/multiple_window_concurrent_compute_optimization.md)
     * [Benchmark](sparkfe/benchmark/README.md)
         * [TaxiTour Multiple Window Benchmark](sparkfe/benchmark/taxi_tour_multiple_window_benchmark.md)
-    * [FAQ](sparkfe/faq.md)
-ls
+    * [FAQ](sparkfe/faq/faq.md)
