@@ -1,6 +1,5 @@
 # Summary
 
-* [首页](home.md)
 * HybridSE
     * [介绍](hybridse/introduction/README.md)
     * 使用文档

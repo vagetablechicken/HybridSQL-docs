@@ -27,7 +27,7 @@ WINDOW
 
 ## SparkFE多窗口特征并行计算
 
-SparkFE提供了多窗口并行计算优化的配置开关，参考[SparkFE配置](../usage/sparkfe_configuration.md)文档，可以通过以下配置来开启UnsafeRow优化。
+SparkFE提供了多窗口并行计算优化的配置开关，参考[SparkFE配置](../usage/sparkfe_configuration.md)文档，可以通过以下配置来开启多窗口并行计算优化。
 
 | 配置项 | 说明 | 默认值 | 备注 |
 | ----- | --- | ----- | ---- |

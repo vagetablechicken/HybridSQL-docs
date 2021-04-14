@@ -2,7 +2,7 @@
 
 ## 介绍
 
-LastJoin是SparkFE新增的一种适用于机器学习场景的拼表类型，详细介绍可参考[HybridSE语法介绍](../../hybridse/language_guide/)。
+LastJoin是SparkFE新增的一种适用于机器学习场景的拼表类型，详细介绍可参考[HybridSE语法介绍](../../hybridse/language_guide/reference.md)。
 
 ## LastJoin实现
 
