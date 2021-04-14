@@ -1,6 +1,4 @@
-![SparkFE Logo](../images/sparkfe_logo.png)
-
-## 介绍
+## 简介
 
 SparkFE是针对AI特征工程场景的基于LLVM优化的高性能Spark原生执行引擎。
 
