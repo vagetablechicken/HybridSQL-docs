@@ -4,7 +4,7 @@
 
 HybridSQL has SQL syntax extensions for AI scenarios. SparkFE supports HybridSQL and has significant performance improvement in joining tables, sliding window computing and other SQL functionalities.
 
-For more detail of HybridSQL syntax, please refer to[HybridSE Language Guide](../../hybridse/language_guide/)。
+For more detail of HybridSQL syntax, please refer to [HybridSE Language Guide](../../hybridse/language_guide/reference.md)。
 
 ## LastJoin: Custom Join Type
 
