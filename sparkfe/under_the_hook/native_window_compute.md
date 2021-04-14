@@ -21,7 +21,7 @@ window w as (partition by col1 order by col2 ROWS BETWEEN 10000 PRECEDING AND CU
 
 根据语意，Spark需要对`col1`列进行分区，所以的滑窗计算都是在每个分区内进行，对应的RDD操作为`repartition`。然后根据用户脚本，分区内的数据要以`col2`进行排序，排序后保留一个10000个数据的窗口缓冲区，对应的RDD操作为`sortWithinPartitions`。最终排序后的数据依次进入窗口缓冲区，根据窗口边界定义检查是否需要滑出，每滑入一行进行一组聚合计算输出一行结果。
 
-标准Spark使用RDD支持的结果，可以很高效地实现前面分区和排序的功能，但对于窗口滑动计算部分，目前是使用Scala语言进行实现的。虽然Spark 2.0开始了Tungsten模块对部分算子进行了Whole-stage code generation的优化，但从最终生成的物理计划可以看出，Window节点是没有被优化的，代码中也缺少对codegen接口的实现。
+标准Spark使用RDD的接口，可以很高效地实现前面分区和排序的功能，但对于窗口滑动计算部分，目前是使用Scala语言进行实现的。虽然Spark 2.0开始了Tungsten模块对部分算子进行了Whole-stage code generation的优化，但从最终生成的物理计划可以看出，Window节点是没有被优化的，代码中也缺少对codegen接口的实现。
 
 ![](../images/spark_window_physical_plan.png)
 
