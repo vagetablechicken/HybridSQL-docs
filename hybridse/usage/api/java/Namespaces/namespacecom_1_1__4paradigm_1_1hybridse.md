@@ -8,7 +8,6 @@ title: com._4paradigm.hybridse
 
 | Name           |
 | -------------- |
-| **[com._4paradigm.hybridse.element](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1element.md)**  |
 | **[com._4paradigm.hybridse.sdk](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1sdk.md)**  |
 | **[com._4paradigm.hybridse.utils](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1utils.md)**  |
 

@@ -14,7 +14,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[com._4paradigm.hybridse.sdk.HybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_hybrid_se_exception.md)**  |
+| class | **[com._4paradigm.hybridse.sdk.HybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_hybrid_se_exception.md)** <br>The general exception class throw when something goes wrong during compiling SQL queries.  |
 
 
 

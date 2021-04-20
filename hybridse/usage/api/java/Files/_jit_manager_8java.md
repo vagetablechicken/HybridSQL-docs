@@ -9,12 +9,13 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 | Name           |
 | -------------- |
 | **[com._4paradigm.hybridse.sdk](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1sdk.md)**  |
+| **[java.util](/hybridse/usage/api/java/Namespaces/namespacejava_1_1util.md)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[com._4paradigm.hybridse.sdk.JitManager](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_jit_manager.md)**  |
+| class | **[com._4paradigm.hybridse.sdk.JitManager](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_jit_manager.md)** <br>JIT manager provides a set of API to access jit, configure JitOptions and init llvm module.  |
 
 
 
@@ -51,7 +52,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.util.*;
-
 
 public class JitManager {
 

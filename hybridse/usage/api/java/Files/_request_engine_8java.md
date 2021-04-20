@@ -9,6 +9,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 | Name           |
 | -------------- |
 | **[com._4paradigm.hybridse.sdk](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1sdk.md)**  |
+| **[com._4paradigm.hybridse.vm](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1vm.md)**  |
 
 ## Classes
 
