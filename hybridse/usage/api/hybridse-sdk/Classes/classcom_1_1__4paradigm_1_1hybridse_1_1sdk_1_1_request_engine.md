@@ -32,13 +32,13 @@ Construct [RequestEngine](/hybridse/usage/api/java/Classes/classcom_1_1__4paradi
 
 **Parameters**: 
 
-  * **sql** 
-  * **database** 
+  * **sql** query the sql string 
+  * **database** query on the database 
 
 
 **Exceptions**: 
 
-  * **[UnsupportedHybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_unsupported_hybrid_se_exception.md)** 
+  * **[UnsupportedHybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_unsupported_hybrid_se_exception.md)** throw when query unsupported or has syntax error 
 
 
 #### function getPlan
@@ -56,9 +56,4 @@ inline synchronized void close()
 ```
 
 Close the request engine. 
-
-**Exceptions**: 
-
-  * **Exception** 
-
 

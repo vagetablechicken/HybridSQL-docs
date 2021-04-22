@@ -80,17 +80,16 @@
             * [hybridse::base](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1base.md)
             * [hybridse::codec](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1codec.md)
             * [hybridse::vm](hybridse/usage/api/c++/Namespaces/namespacehybridse_1_1vm.md)
-        * Java API
-            * [Classes](hybridse/usage/api/java/Classes/README.md)
-                * [com._4paradigm.hybridse.HybridSeLibrary](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_hybrid_se_library.md)
-                * [com._4paradigm.hybridse.LibraryLoader](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_library_loader.md)
-                * [com._4paradigm.hybridse.sdk.HybridSeException](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_hybrid_se_exception.md)
-                * [com._4paradigm.hybridse.sdk.JitManager](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_jit_manager.md)
-                * [com._4paradigm.hybridse.sdk.RequestEngine](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_request_engine.md)
-                * [com._4paradigm.hybridse.sdk.SerializableByteBuffer](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_serializable_byte_buffer.md)
-                * [com._4paradigm.hybridse.sdk.SQLEngine](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_s_q_l_engine.md)
-                * [com._4paradigm.hybridse.sdk.UnsupportedHybridSeException](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_unsupported_hybrid_se_exception.md)
-                * [com._4paradigm.hybridse.utils.ConfigReader](hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1utils_1_1_config_reader.md)
+    * Hybridse Java SDK
+      * [Classes](hybridse/usage/api/hybridse-sdk/Classes/README.md)
+        * [com._4paradigm.hybridse.HybridSeLibrary](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_hybrid_se_library.md)
+        * [com._4paradigm.hybridse.LibraryLoader](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_library_loader.md)
+        * [com._4paradigm.hybridse.sdk.HybridSeException](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_hybrid_se_exception.md)
+        * [com._4paradigm.hybridse.sdk.JitManager](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_jit_manager.md)
+        * [com._4paradigm.hybridse.sdk.RequestEngine](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_request_engine.md)
+        * [com._4paradigm.hybridse.sdk.SerializableByteBuffer](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_serializable_byte_buffer.md)
+        * [com._4paradigm.hybridse.sdk.SqlEngine](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_sql_engine.md)
+        * [com._4paradigm.hybridse.sdk.UnsupportedHybridSeException](hybridse/usage/api/hybridse-sdk/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_unsupported_hybrid_se_exception.md)
 * FEDB
   * [Introduction](fedb/README.md) 
   * User Manual 

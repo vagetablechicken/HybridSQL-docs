@@ -29,7 +29,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -48,12 +48,15 @@ import java.nio.ByteBuffer;
 
 public class SerializableByteBuffer implements Serializable {
 
-    transient private ByteBuffer buffer;
+    private transient ByteBuffer buffer;
 
-    static private final int MAGIC_END_TAG = 42;
+    private static final int MAGIC_END_TAG = 42;
 
     public SerializableByteBuffer() {}
-    public SerializableByteBuffer(ByteBuffer buffer) { this.buffer = buffer; }
+
+    public SerializableByteBuffer(ByteBuffer buffer) {
+        this.buffer = buffer;
+    }
 
     public ByteBuffer getBuffer() {
         return buffer;
@@ -85,10 +88,10 @@ public class SerializableByteBuffer implements Serializable {
 
         // object stream is backed by block stream, thus read bytes
         // operations should be buffered to ensure exact bytes are read
-        DataInputStream wrappedIStream = new DataInputStream(in);
+        DataInputStream wrappedInStream = new DataInputStream(in);
 
-        int capacity = wrappedIStream.readInt();
-        boolean isDirect = wrappedIStream.readBoolean();
+        int capacity = wrappedInStream.readInt();
+        boolean isDirect = wrappedInStream.readBoolean();
         if (isDirect) {
             buffer = ByteBuffer.allocateDirect(capacity);
         } else {
@@ -102,16 +105,15 @@ public class SerializableByteBuffer implements Serializable {
         }
 
         try {
-            wrappedIStream.readFully(bytes, 0, capacity);
+            wrappedInStream.readFully(bytes, 0, capacity);
         } catch (IOException e) {
-            throw new IOException("Byte buffer stream corrupt, " +
-                    "expect buffer bytes: " + capacity, e);
+            throw new IOException("Byte buffer stream corrupt, " + "expect buffer bytes: " + capacity, e);
         }
-        if (!buffer.hasArray()) {  // maybe direct
+        if (!buffer.hasArray()) { // maybe direct
             buffer.put(bytes, 0, capacity);
             buffer.rewind();
         }
-        int endTag = wrappedIStream.readInt();
+        int endTag = wrappedInStream.readInt();
         if (endTag != MAGIC_END_TAG) {
             throw new IOException("Byte buffer stream corrupt");
         }

@@ -9,7 +9,6 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 | Name           |
 | -------------- |
 | **[com._4paradigm.hybridse.sdk](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1sdk.md)**  |
-| **[com._4paradigm.hybridse.vm](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1vm.md)**  |
 
 ## Classes
 
@@ -30,7 +29,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -43,13 +42,18 @@ package com._4paradigm.hybridse.sdk;
 
 import com._4paradigm.hybridse.base.BaseStatus;
 import com._4paradigm.hybridse.type.TypeOuterClass;
-import com._4paradigm.hybridse.vm.*;
+import com._4paradigm.hybridse.vm.CompileInfo;
+import com._4paradigm.hybridse.vm.Engine;
+import com._4paradigm.hybridse.vm.EngineOptions;
+import com._4paradigm.hybridse.vm.PhysicalOpNode;
+import com._4paradigm.hybridse.vm.RequestRunSession;
+import com._4paradigm.hybridse.vm.SimpleCatalog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class RequestEngine implements AutoCloseable {
 
-    private static final Logger logger = LoggerFactory.getLogger(SQLEngine.class);
+    private static final Logger logger = LoggerFactory.getLogger(SqlEngine.class);
 
     private SimpleCatalog catalog;
     private EngineOptions options;
@@ -84,7 +88,7 @@ public class RequestEngine implements AutoCloseable {
     }
 
     @Override
-    synchronized public void close() throws Exception {
+    public synchronized void close() {
         engine.delete();
         engine = null;
 

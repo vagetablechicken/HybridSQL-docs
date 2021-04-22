@@ -1,8 +1,8 @@
 ---
-title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/SQLEngine.java
+title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/SqlEngine.java
 
 ---
-# /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/SQLEngine.java
+# /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/SqlEngine.java
 
 ## Namespaces
 
@@ -14,7 +14,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[com._4paradigm.hybridse.sdk.SQLEngine](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_s_q_l_engine.md)** <br>Implementation of HybridSE SQL simple engine that compiled queries with given sql and database.  |
+| class | **[com._4paradigm.hybridse.sdk.SqlEngine](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_sql_engine.md)** <br>Implementation of HybridSE SQL simple engine that compiled queries with given sql and database.  |
 
 
 
@@ -29,7 +29,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -42,14 +42,19 @@ package com._4paradigm.hybridse.sdk;
 
 import com._4paradigm.hybridse.base.BaseStatus;
 import com._4paradigm.hybridse.type.TypeOuterClass;
-import com._4paradigm.hybridse.vm.*;
+import com._4paradigm.hybridse.vm.BatchRunSession;
+import com._4paradigm.hybridse.vm.CompileInfo;
+import com._4paradigm.hybridse.vm.Engine;
+import com._4paradigm.hybridse.vm.EngineOptions;
+import com._4paradigm.hybridse.vm.PhysicalOpNode;
+import com._4paradigm.hybridse.vm.SimpleCatalog;
+import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.nio.ByteBuffer;
 
-public class SQLEngine implements AutoCloseable {
+public class SqlEngine implements AutoCloseable {
 
-    private static final Logger logger = LoggerFactory.getLogger(SQLEngine.class);
+    private static final Logger logger = LoggerFactory.getLogger(SqlEngine.class);
 
     private SimpleCatalog catalog;
     private EngineOptions options;
@@ -58,11 +63,13 @@ public class SQLEngine implements AutoCloseable {
     private CompileInfo compileInfo;
     private PhysicalOpNode plan;
 
-    public SQLEngine(String sql, TypeOuterClass.Database database) throws UnsupportedHybridSeException {
+    public SqlEngine(String sql, TypeOuterClass.Database database) throws UnsupportedHybridSeException {
         // Create the default engine options
         this.initilize(sql, database, createDefaultEngineOptions());
     }
-    public SQLEngine(String sql, TypeOuterClass.Database database, EngineOptions engineOptions) throws UnsupportedHybridSeException {
+
+    public SqlEngine(String sql, TypeOuterClass.Database database, EngineOptions engineOptions)
+            throws UnsupportedHybridSeException {
         this.initilize(sql, database, engineOptions);
     }
 
@@ -74,7 +81,8 @@ public class SQLEngine implements AutoCloseable {
         return engineOptions;
     }
 
-    public void initilize(String sql, TypeOuterClass.Database database, EngineOptions engineOptions) throws UnsupportedHybridSeException {
+    public void initilize(String sql, TypeOuterClass.Database database, EngineOptions engineOptions)
+            throws UnsupportedHybridSeException {
         options = engineOptions;
         catalog = new SimpleCatalog();
         session = new BatchRunSession();
@@ -83,7 +91,7 @@ public class SQLEngine implements AutoCloseable {
 
         BaseStatus status = new BaseStatus();
         boolean ok = engine.Get(sql, database.getName(), session, status);
-        if (! (ok && status.getMsg().equals("ok"))) {
+        if (!(ok && status.getMsg().equals("ok"))) {
             throw new UnsupportedHybridSeException("SQL parse error: " + status.getMsg() + "\n" + status.getTrace());
         }
         status.delete();
@@ -95,7 +103,7 @@ public class SQLEngine implements AutoCloseable {
         return plan;
     }
 
-    public ByteBuffer getIRBuffer() {
+    public ByteBuffer getIrBuffer() {
         long size = compileInfo.GetIRSize();
         ByteBuffer buffer = ByteBuffer.allocateDirect(Long.valueOf(size).intValue());
         compileInfo.GetIRBuffer(buffer);
@@ -104,7 +112,7 @@ public class SQLEngine implements AutoCloseable {
     }
 
     @Override
-    synchronized public void close() throws Exception {
+     public synchronized void close() throws Exception {
         engine.delete();
         engine = null;
 

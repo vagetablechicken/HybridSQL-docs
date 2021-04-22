@@ -1,8 +1,8 @@
 ---
-title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/UnsupportedHybridSeException.java
+title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/HybridSeException.java
 
 ---
-# /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/UnsupportedHybridSeException.java
+# /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/com/_4paradigm/hybridse/sdk/HybridSeException.java
 
 ## Namespaces
 
@@ -14,7 +14,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[com._4paradigm.hybridse.sdk.UnsupportedHybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_unsupported_hybrid_se_exception.md)**  |
+| class | **[com._4paradigm.hybridse.sdk.HybridSeException](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1sdk_1_1_hybrid_se_exception.md)** <br>The general exception class throw when something goes wrong during compiling SQL queries.  |
 
 
 
@@ -29,7 +29,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -40,17 +40,17 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 
 package com._4paradigm.hybridse.sdk;
 
-public class UnsupportedHybridSeException extends Exception {
+public class HybridSeException extends Exception {
 
     private String message;
     private Throwable cause;
 
-    public UnsupportedHybridSeException(String message) {
+    public HybridSeException(String message) {
         this.message = message;
         this.cause = null;
     }
 
-    public UnsupportedHybridSeException(String message, Throwable cause) {
+    public HybridSeException(String message, Throwable cause) {
         this.message = message;
         this.cause = cause;
     }

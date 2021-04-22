@@ -9,7 +9,6 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
 | Name           |
 | -------------- |
 | **[com._4paradigm.hybridse.sdk](/hybridse/usage/api/java/Namespaces/namespacecom_1_1__4paradigm_1_1hybridse_1_1sdk.md)**  |
-| **[java.util](/hybridse/usage/api/java/Namespaces/namespacejava_1_1util.md)**  |
 
 ## Classes
 
@@ -30,7 +29,7 @@ title: /Users/chenjing/work/4paradigm/HybridSE/java/hybridse-sdk/src/main/java/c
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,17 +44,20 @@ import com._4paradigm.hybridse.HybridSeLibrary;
 import com._4paradigm.hybridse.vm.Engine;
 import com._4paradigm.hybridse.vm.HybridSeJitWrapper;
 import com._4paradigm.hybridse.vm.JitOptions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JitManager {
 
-    static private Logger logger = LoggerFactory.getLogger(JitManager.class);
+    private static Logger logger = LoggerFactory.getLogger(JitManager.class);
 
     static {
         HybridSeLibrary.initCore();
@@ -63,11 +65,11 @@ public class JitManager {
     }
 
     // One jit currently only take one llvm module, since symbol may duplicate
-    static private Map<String, HybridSeJitWrapper> jits = new HashMap<>();
-    static private Set<String> initializedModuleTags = new HashSet<>();
+    private static Map<String, HybridSeJitWrapper> jits = new HashMap<>();
+    private static Set<String> initializedModuleTags = new HashSet<>();
 
-    synchronized static public HybridSeJitWrapper getJIT(String tag) {
-        if (! jits.containsKey(tag)) {
+    public static synchronized HybridSeJitWrapper getJit(String tag) {
+        if (!jits.containsKey(tag)) {
             HybridSeJitWrapper jit = HybridSeJitWrapper.Create(getJitOptions());
             if (jit == null) {
                 throw new RuntimeException("Fail to create native jit");
@@ -79,22 +81,21 @@ public class JitManager {
         return jits.get(tag);
     }
 
-    static private JitOptions getJitOptions() {
+    private static JitOptions getJitOptions() {
         JitOptions options = new JitOptions();
-        try (InputStream input = JitManager.class.getClassLoader().getResourceAsStream(
-                "jit.properties")) {
+        try (InputStream input = JitManager.class.getClassLoader().getResourceAsStream("jit.properties")) {
             Properties prop = new Properties(System.getProperties());
             if (input == null) {
                 return options;
             }
             prop.load(input);
-            String enableMCJIT = prop.getProperty("fesql.jit.enable_mcjit");
-            if (enableMCJIT != null && enableMCJIT.toLowerCase().equals("true")) {
+            String enableMcJit = prop.getProperty("fesql.jit.enable_mcjit");
+            if (enableMcJit != null && enableMcJit.toLowerCase().equals("true")) {
                 logger.info("Try enable llvm legacy mcjit support");
                 options.set_enable_mcjit(true);
             }
-            String enableVTune = prop.getProperty("fesql.jit.enable_vtune");
-            if (enableVTune != null && enableVTune.toLowerCase().equals("true")) {
+            String enableVtune = prop.getProperty("fesql.jit.enable_vtune");
+            if (enableVtune != null && enableVtune.toLowerCase().equals("true")) {
                 logger.info("Try enable intel jit events support");
                 options.set_enable_vtune(true);
             }
@@ -114,13 +115,13 @@ public class JitManager {
         return options;
     }
 
-    synchronized static private boolean hasModule(String tag) {
+    private static synchronized boolean hasModule(String tag) {
         return initializedModuleTags.contains(tag);
     }
 
-    synchronized static private void initModule(String tag, ByteBuffer moduleBuffer) {
-        HybridSeJitWrapper jit = getJIT(tag);
-        if (! moduleBuffer.isDirect()) {
+    private static synchronized void initModule(String tag, ByteBuffer moduleBuffer) {
+        HybridSeJitWrapper jit = getJit(tag);
+        if (!moduleBuffer.isDirect()) {
             throw new RuntimeException("JIT must use direct buffer");
         }
         if (!jit.AddModuleFromBuffer(moduleBuffer)) {
@@ -129,7 +130,7 @@ public class JitManager {
         initializedModuleTags.add(tag);
     }
 
-    synchronized static public void initJITModule(String tag, ByteBuffer moduleBuffer) {
+    public static synchronized void initJitModule(String tag, ByteBuffer moduleBuffer) {
 
         // ensure worker native
         HybridSeLibrary.initCore();
@@ -141,7 +142,7 @@ public class JitManager {
         }
     }
 
-    synchronized static public void removeModule(String tag) {
+    public static synchronized void removeModule(String tag) {
         initializedModuleTags.remove(tag);
         HybridSeJitWrapper jit = jits.remove(tag);
         if (jit != null) {
@@ -150,7 +151,7 @@ public class JitManager {
         }
     }
 
-    synchronized static public void clear() {
+    public static synchronized void clear() {
         initializedModuleTags.clear();
         for (Map.Entry<String, HybridSeJitWrapper> entry : jits.entrySet()) {
             HybridSeJitWrapper.DeleteJit(entry.getValue());

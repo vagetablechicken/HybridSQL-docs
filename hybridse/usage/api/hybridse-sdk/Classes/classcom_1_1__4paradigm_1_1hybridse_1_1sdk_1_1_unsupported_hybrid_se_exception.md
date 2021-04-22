@@ -1,12 +1,21 @@
 ---
 title: com._4paradigm.hybridse.sdk.UnsupportedHybridSeException
+summary: The general exception class throw when query unsupported sql. 
 
 ---
 # com._4paradigm.hybridse.sdk.UnsupportedHybridSeException
 
 
 
+The general exception class throw when query unsupported sql. 
 ## Summary
+
+```cpp
+class com._4paradigm.hybridse.sdk.UnsupportedHybridSeException;
+```
+The general exception class throw when query unsupported sql. 
+
+This includes, but is not limited to, SQL syntax error, Non-support Plan and so on.
 
 
 |  Public functions|            |

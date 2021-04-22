@@ -20,7 +20,7 @@ The shared library is extracted to a temp folder and loaded from there.
 
 |  Public functions|            |
 | -------------- | -------------- |
-|**[loadLibrary](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_library_loader.md#function-loadlibrary)**(String libraryPath)| synchronized static void <br>Firstly attempts to load the native library specified by the libraryPath.  |
+|**[loadLibrary](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_library_loader.md#function-loadlibrary)**(String libraryPath)| synchronized void <br>Firstly attempts to load the native library specified by the libraryPath.  |
 |**[extractResource](/hybridse/usage/api/java/Classes/classcom_1_1__4paradigm_1_1hybridse_1_1_library_loader.md#function-extractresource)**(String path, boolean isTemp)| String <br>Extract library in resource into filesystem.  |
 
 ## Public Functions
@@ -28,7 +28,7 @@ The shared library is extracted to a temp folder and loaded from there.
 #### function loadLibrary
 
 ```cpp
-static inline synchronized static void loadLibrary(
+static inline synchronized void loadLibrary(
     String libraryPath
 )
 ```
@@ -37,10 +37,10 @@ Firstly attempts to load the native library specified by the libraryPath.
 
 **Parameters**: 
 
-  * **libraryPath** 
+  * **libraryPath** library path 
 
 
-If that fails then it falls back to extracting the library from the classpath. 
+If that fails then it falls back to extracting the library from the classpath.
 
 #### function extractResource
 
@@ -61,8 +61,8 @@ Extract library in resource into filesystem.
 
 **Exceptions**: 
 
-  * **IOException** 
+  * **IOException** throw when IO Exception 
 
 
-**Return**: 
+**Return**: Return the absolute path of resource 
 
