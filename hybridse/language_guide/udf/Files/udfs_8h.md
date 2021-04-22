@@ -1,107 +1,108 @@
 ---
-title: udfs/udfs.h
+title: UDF and UDAF
 
 ---
+# UDF and UDAF
 
 ## Functions
 
-|                | Name           |
+| Name          | Description    |
 | -------------- | -------------- |
-| | **[abs](/hybridse/language_guide/udf/Files/udfs_8h.md#function-abs)**()<br>Return the absolute value of expr.  |
-| | **[acos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-acos)**()<br>Return the arc cosine of expr.  |
-| | **[add](/hybridse/language_guide/udf/Files/udfs_8h.md#function-add)**() |
-| | **[asin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-asin)**()<br>Return the arc sine of expr.  |
-| | **[at](/hybridse/language_guide/udf/Files/udfs_8h.md#function-at)**() |
-| | **[atan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan)**()<br>Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X.  |
-| | **[atan2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan2)**()<br>Return the arc tangent of Y / X..  |
-| | **[avg](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg)**()<br>Compute average of values.  |
-| | **[avg_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate)**()<br>Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate_where)**()<br>Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[avg_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_where)**()<br>Compute average of values match specified condition.  |
-| | **[bool](/hybridse/language_guide/udf/Files/udfs_8h.md#function-bool)**() |
-| | **[ceil](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceil)**()<br>Return the smallest integer value not less than the expr.  |
-| | **[ceiling](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceiling)**()<br>Return the smallest integer value not less than the expr.  |
-| | **[concat](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat)**() |
-| | **[concat_ws](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat_ws)**() |
-| | **[cos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cos)**()<br>Return the cosine of expr.  |
-| | **[cot](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cot)**()<br>Return the cotangent of expr.  |
-| | **[count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count)**()<br>Compute count of values.  |
-| | **[count_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate)**()<br>Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate_where)**()<br>Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[count_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_where)**()<br>Compute number of values match specified condition.  |
-| | **[date](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date)**() |
-| | **[date_format](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date_format)**() |
-| | **[day](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)**() |
-| | **[dayofmonth](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofmonth)**() |
-| | **[dayofweek](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofweek)**() |
-| | **[distinct_count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-distinct_count)**()<br>Compute distinct number of values.  |
-| | **[double](/hybridse/language_guide/udf/Files/udfs_8h.md#function-double)**() |
-| | **[exp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-exp)**()<br>Return the value of e (the base of natural logarithms) raised to the power of expr.  |
-| | **[first_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-first_value)**()<br>Returns the value of expr from the first row of the window frame.  |
-| | **[float](/hybridse/language_guide/udf/Files/udfs_8h.md#function-float)**() |
-| | **[floor](/hybridse/language_guide/udf/Files/udfs_8h.md#function-floor)**()<br>Return the largest integer value not less than the expr.  |
-| | **[fz_join](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_join)**() |
-| | **[fz_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split)**()<br>Used by feature zero, split string to list by delimeter. Null values are skipped.  |
-| | **[fz_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_key)**()<br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.  |
-| | **[fz_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_value)**()<br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.  |
-| | **[fz_top1_ratio](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_top1_ratio)**()<br>Compute the top1 key's ratio.  |
-| | **[fz_topn_frequency](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_topn_frequency)**()<br>Return the topN keys sorted by their frequency.  |
-| | **[fz_window_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split)**()<br>Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped.  |
-| | **[fz_window_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_key)**()<br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.  |
-| | **[fz_window_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_value)**()<br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.  |
-| | **[hour](/hybridse/language_guide/udf/Files/udfs_8h.md#function-hour)**() |
-| | **[identity](/hybridse/language_guide/udf/Files/udfs_8h.md#function-identity)**() |
-| | **[if_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-if_null)**()<br>If input is not null, return input value; else return default value.  |
-| | **[ifnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ifnull)**()<br>If input is not null, return input value; else return default value.  |
-| | **[inc](/hybridse/language_guide/udf/Files/udfs_8h.md#function-inc)**() |
-| | **[int16](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int16)**() |
-| | **[int32](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int32)**() |
-| | **[int64](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int64)**() |
-| | **[is_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-is_null)**()<br>Check if input value is null, return bool.  |
-| | **[isnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-isnull)**()<br>Check if input value is null, return bool.  |
-| | **[ln](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ln)**()<br>Return the natural logarithm of expr.  |
-| | **[log](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log)**()<br>log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base.  |
-| | **[log10](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log10)**()<br>Return the base-10 logarithm of expr.  |
-| | **[log2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log2)**()<br>Return the base-2 logarithm of expr.  |
-| | **[make_tuple](/hybridse/language_guide/udf/Files/udfs_8h.md#function-make_tuple)**() |
-| | **[max](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max)**()<br>Compute max of values.  |
-| | **[max_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate)**()<br>Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate_where)**()<br>Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[max_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_where)**()<br>Compute maximum of values match specified condition.  |
-| | **[maximum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-maximum)**() |
-| | **[min](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min)**()<br>Compute min of values.  |
-| | **[min_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate)**() |
-| | **[min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate_where)**() |
-| | **[min_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_where)**()<br>Compute minimum of values match specified condition.  |
-| | **[minimum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minimum)**() |
-| | **[minute](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minute)**() |
-| | **[month](/hybridse/language_guide/udf/Files/udfs_8h.md#function-month)**() |
-| | **[pow](/hybridse/language_guide/udf/Files/udfs_8h.md#function-pow)**()<br>Return the value of expr1 to the power of expr2.  |
-| | **[power](/hybridse/language_guide/udf/Files/udfs_8h.md#function-power)**()<br>Return the value of expr1 to the power of expr2.  |
-| | **[round](/hybridse/language_guide/udf/Files/udfs_8h.md#function-round)**()<br>Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode.  |
-| | **[second](/hybridse/language_guide/udf/Files/udfs_8h.md#function-second)**() |
-| | **[sin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sin)**()<br>Return the sine of expr.  |
-| | **[sqrt](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sqrt)**()<br>Return square root of expr.  |
-| | **[strcmp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-strcmp)**()<br>Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise.  |
-| | **[string](/hybridse/language_guide/udf/Files/udfs_8h.md#function-string)**() |
-| | **[substr](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substr)**()<br>Return a substring from string `str` starting at position `pos`.  |
-| | **[substring](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substring)**()<br>Return a substring from string `str` starting at position `pos`.  |
-| | **[sum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum)**()<br>Compute sum of values.  |
-| | **[sum_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_cate)**()<br>Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_cate_where)**()<br>Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.  |
-| | **[sum_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_where)**()<br>Compute sum of values match specified condition.  |
-| | **[tan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-tan)**()<br>Return the tangent of expr.  |
-| | **[timestamp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-timestamp)**() |
-| | **[top](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top)**()<br>Compute top k of values and output string separated by comma. The outputs are sorted in desc order.  |
-| | **[top_n_key_avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_avg_cate_where)**()<br>Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.  |
-| | **[top_n_key_count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_count_cate_where)**()<br>Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.  |
-| | **[top_n_key_max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_max_cate_where)**()<br>Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.  |
-| | **[top_n_key_min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_min_cate_where)**() |
-| | **[top_n_key_sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_sum_cate_where)**()<br>Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.  |
-| | **[truncate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-truncate)**()<br>Return the nearest integer that is not greater in magnitude than the expr.  |
-| | **[week](/hybridse/language_guide/udf/Files/udfs_8h.md#function-week)**() |
-| | **[weekofyear](/hybridse/language_guide/udf/Files/udfs_8h.md#function-weekofyear)**() |
-| | **[year](/hybridse/language_guide/udf/Files/udfs_8h.md#function-year)**() |
+| **[abs](/hybridse/language_guide/udf/Files/udfs_8h.md#function-abs)**()| <br>Return the absolute value of expr. |
+| **[acos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-acos)**()| <br>Return the arc cosine of expr. |
+| **[add](/hybridse/language_guide/udf/Files/udfs_8h.md#function-add)**()| |
+| **[asin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-asin)**()| <br>Return the arc sine of expr. |
+| **[at](/hybridse/language_guide/udf/Files/udfs_8h.md#function-at)**()| |
+| **[atan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan)**()| <br>Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X. |
+| **[atan2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan2)**()| <br>Return the arc tangent of Y / X.. |
+| **[avg](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg)**()| <br>Compute average of values. |
+| **[avg_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate)**()| <br>Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate_where)**()| <br>Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[avg_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_where)**()| <br>Compute average of values match specified condition. |
+| **[bool](/hybridse/language_guide/udf/Files/udfs_8h.md#function-bool)**()| |
+| **[ceil](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceil)**()| <br>Return the smallest integer value not less than the expr. |
+| **[ceiling](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceiling)**()| <br>Return the smallest integer value not less than the expr. |
+| **[concat](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat)**()| |
+| **[concat_ws](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat_ws)**()| |
+| **[cos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cos)**()| <br>Return the cosine of expr. |
+| **[cot](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cot)**()| <br>Return the cotangent of expr. |
+| **[count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count)**()| <br>Compute count of values. |
+| **[count_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate)**()| <br>Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate_where)**()| <br>Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[count_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_where)**()| <br>Compute number of values match specified condition. |
+| **[date](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date)**()| |
+| **[date_format](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date_format)**()| |
+| **[day](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)**()| |
+| **[dayofmonth](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofmonth)**()| |
+| **[dayofweek](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofweek)**()| |
+| **[distinct_count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-distinct_count)**()| <br>Compute distinct number of values. |
+| **[double](/hybridse/language_guide/udf/Files/udfs_8h.md#function-double)**()| |
+| **[exp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-exp)**()| <br>Return the value of e (the base of natural logarithms) raised to the power of expr. |
+| **[first_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-first_value)**()| <br>Returns the value of expr from the first row of the window frame. |
+| **[float](/hybridse/language_guide/udf/Files/udfs_8h.md#function-float)**()| |
+| **[floor](/hybridse/language_guide/udf/Files/udfs_8h.md#function-floor)**()| <br>Return the largest integer value not less than the expr. |
+| **[fz_join](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_join)**()| |
+| **[fz_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split)**()| <br>Used by feature zero, split string to list by delimeter. Null values are skipped. |
+| **[fz_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_key)**()| <br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. |
+| **[fz_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_value)**()| <br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. |
+| **[fz_top1_ratio](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_top1_ratio)**()| <br>Compute the top1 key's ratio. |
+| **[fz_topn_frequency](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_topn_frequency)**()| <br>Return the topN keys sorted by their frequency. |
+| **[fz_window_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped. |
+| **[fz_window_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_key)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. |
+| **[fz_window_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_value)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. |
+| **[hour](/hybridse/language_guide/udf/Files/udfs_8h.md#function-hour)**()| |
+| **[identity](/hybridse/language_guide/udf/Files/udfs_8h.md#function-identity)**()| |
+| **[if_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-if_null)**()| <br>If input is not null, return input value; else return default value. |
+| **[ifnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ifnull)**()| <br>If input is not null, return input value; else return default value. |
+| **[inc](/hybridse/language_guide/udf/Files/udfs_8h.md#function-inc)**()| |
+| **[int16](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int16)**()| |
+| **[int32](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int32)**()| |
+| **[int64](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int64)**()| |
+| **[is_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-is_null)**()| <br>Check if input value is null, return bool. |
+| **[isnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-isnull)**()| <br>Check if input value is null, return bool. |
+| **[ln](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ln)**()| <br>Return the natural logarithm of expr. |
+| **[log](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log)**()| <br>log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base. |
+| **[log10](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log10)**()| <br>Return the base-10 logarithm of expr. |
+| **[log2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log2)**()| <br>Return the base-2 logarithm of expr. |
+| **[make_tuple](/hybridse/language_guide/udf/Files/udfs_8h.md#function-make_tuple)**()| |
+| **[max](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max)**()| <br>Compute max of values. |
+| **[max_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate)**()| <br>Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate_where)**()| <br>Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[max_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_where)**()| <br>Compute maximum of values match specified condition. |
+| **[maximum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-maximum)**()| |
+| **[min](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min)**()| <br>Compute min of values. |
+| **[min_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate)**()| |
+| **[min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate_where)**()| |
+| **[min_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_where)**()| <br>Compute minimum of values match specified condition. |
+| **[minimum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minimum)**()| |
+| **[minute](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minute)**()| |
+| **[month](/hybridse/language_guide/udf/Files/udfs_8h.md#function-month)**()| |
+| **[pow](/hybridse/language_guide/udf/Files/udfs_8h.md#function-pow)**()| <br>Return the value of expr1 to the power of expr2. |
+| **[power](/hybridse/language_guide/udf/Files/udfs_8h.md#function-power)**()| <br>Return the value of expr1 to the power of expr2. |
+| **[round](/hybridse/language_guide/udf/Files/udfs_8h.md#function-round)**()| <br>Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode. |
+| **[second](/hybridse/language_guide/udf/Files/udfs_8h.md#function-second)**()| |
+| **[sin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sin)**()| <br>Return the sine of expr. |
+| **[sqrt](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sqrt)**()| <br>Return square root of expr. |
+| **[strcmp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-strcmp)**()| <br>Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise. |
+| **[string](/hybridse/language_guide/udf/Files/udfs_8h.md#function-string)**()| |
+| **[substr](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substr)**()| <br>Return a substring from string `str` starting at position `pos`. |
+| **[substring](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substring)**()| <br>Return a substring from string `str` starting at position `pos`. |
+| **[sum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum)**()| <br>Compute sum of values. |
+| **[sum_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_cate)**()| <br>Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_cate_where)**()| <br>Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[sum_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_where)**()| <br>Compute sum of values match specified condition. |
+| **[tan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-tan)**()| <br>Return the tangent of expr. |
+| **[timestamp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-timestamp)**()| |
+| **[top](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top)**()| <br>Compute top k of values and output string separated by comma. The outputs are sorted in desc order. |
+| **[top_n_key_avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_avg_cate_where)**()| <br>Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
+| **[top_n_key_count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_count_cate_where)**()| <br>Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
+| **[top_n_key_max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_max_cate_where)**()| <br>Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
+| **[top_n_key_min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_min_cate_where)**()| |
+| **[top_n_key_sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_sum_cate_where)**()| <br>Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
+| **[truncate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-truncate)**()| <br>Return the nearest integer that is not greater in magnitude than the expr. |
+| **[week](/hybridse/language_guide/udf/Files/udfs_8h.md#function-week)**()| |
+| **[weekofyear](/hybridse/language_guide/udf/Files/udfs_8h.md#function-weekofyear)**()| |
+| **[year](/hybridse/language_guide/udf/Files/udfs_8h.md#function-year)**()| |
 
 
 ## Functions Documentation
