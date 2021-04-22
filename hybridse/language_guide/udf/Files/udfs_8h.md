@@ -1,8 +1,8 @@
 ---
-title: UDF and UDAF
+title: UDF Documentation
 
 ---
-# UDF and UDAF
+# UDF Documentation
 
 ## Functions
 
@@ -115,11 +115,11 @@ abs()
 
 **Description**:
 
-Return the absolute value of expr. 
+Return the absolute value of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -138,8 +138,8 @@ SELECT ABS(-32);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function acos
 
@@ -149,11 +149,11 @@ acos()
 
 **Description**:
 
-Return the arc cosine of expr. 
+Return the arc cosine of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -172,7 +172,7 @@ SELECT ACOS(1);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function add
 
@@ -185,19 +185,19 @@ add()
 
 **Supported Types**:
 
-* [bool, bool]
-* [bool, number]
-* [bool, timestamp]
-* [int16, timestamp]
-* [int32, timestamp]
-* [int64, timestamp]
-* [number, bool]
-* [number, number]
-* [timestamp, bool]
-* [timestamp, int16]
-* [timestamp, int32]
-* [timestamp, int64]
-* [timestamp, timestamp] 
+* [`bool`, `bool`]
+* [`bool`, `number`]
+* [`bool`, `timestamp`]
+* [`int16`, `timestamp`]
+* [`int32`, `timestamp`]
+* [`int64`, `timestamp`]
+* [`number`, `bool`]
+* [`number`, `number`]
+* [`timestamp`, `bool`]
+* [`timestamp`, `int16`]
+* [`timestamp`, `int32`]
+* [`timestamp`, `int64`]
+* [`timestamp`, `timestamp`]
 
 ### function asin
 
@@ -207,11 +207,11 @@ asin()
 
 **Description**:
 
-Return the arc sine of expr. 
+Return the arc sine of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -230,7 +230,7 @@ SELECT ASIN(0.0);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function at
 
@@ -243,11 +243,11 @@ at()
 
 **Supported Types**:
 
-* [list_bool, int64]
-* [list_date, int64]
-* [list_number, int64]
-* [list_string, int64]
-* [list_timestamp, int64] 
+* [`list<bool>`, `int64`]
+* [`list<date>`, `int64`]
+* [`list<number>`, `int64`]
+* [`list<string>`, `int64`]
+* [`list<timestamp>`, `int64`]
 
 ### function atan
 
@@ -257,12 +257,12 @@ atan()
 
 **Description**:
 
-Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X. 
+Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X.
 
-**Parameters**: 
+**Parameters**:
 
-  * **X** 
-  * **Y** 
+* **X**
+* **Y**
 
 
 **Since**:
@@ -284,11 +284,11 @@ SELECT ATAN(0, -0);
 
 **Supported Types**:
 
-* [bool, bool]
-* [bool, number]
-* [number]
-* [number, bool]
-* [number, number] 
+* [`bool`, `bool`]
+* [`bool`, `number`]
+* [`number`]
+* [`number`, `bool`]
+* [`number`, `number`]
 
 ### function atan2
 
@@ -298,12 +298,12 @@ atan2()
 
 **Description**:
 
-Return the arc tangent of Y / X.. 
+Return the arc tangent of Y / X..
 
-**Parameters**: 
+**Parameters**:
 
-  * **X** 
-  * **Y** 
+* **X**
+* **Y**
 
 
 **Since**:
@@ -322,10 +322,10 @@ SELECT ATAN2(0, -0);
 
 **Supported Types**:
 
-* [bool, bool]
-* [bool, number]
-* [number, bool]
-* [number, number] 
+* [`bool`, `bool`]
+* [`bool`, `number`]
+* [`number`, `bool`]
+* [`number`, `number`]
 
 ### function avg
 
@@ -335,11 +335,11 @@ avg()
 
 **Description**:
 
-Compute average of values. 
+Compute average of values.
 
 **Supported Types**:
 
-* [list_number] 
+* [`list<number>`]
 
 ### function avg_cate
 
@@ -349,12 +349,12 @@ avg_cate()
 
 **Description**:
 
-Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **value** Specify value column to aggregate on. 
-  * **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **catagory** Specify catagory column to group by.
 
 
 
@@ -379,12 +379,12 @@ SELECT avg_cate(value, catagory) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_date]
-* [list_number, list_int16]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_number, list_string]
-* [list_number, list_timestamp] 
+* [`list<number>`, `list<date>`]
+* [`list<number>`, `list<int16>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<number>`, `list<string>`]
+* [`list<number>`, `list<timestamp>`]
 
 ### function avg_cate_where
 
@@ -394,13 +394,13 @@ avg_cate_where()
 
 **Description**:
 
-Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
 
 
 
@@ -425,12 +425,12 @@ SELECT avg_cate_where(catagory, value, condition) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date]
-* [list_number, list_bool, list_int16]
-* [list_number, list_bool, list_int32]
-* [list_number, list_bool, list_int64]
-* [list_number, list_bool, list_string]
-* [list_number, list_bool, list_timestamp] 
+* [`list<number>`, `list<bool>`, `list<date>`]
+* [`list<number>`, `list<bool>`, `list<int16>`]
+* [`list<number>`, `list<bool>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`]
 
 ### function avg_where
 
@@ -440,11 +440,11 @@ avg_where()
 
 **Description**:
 
-Compute average of values match specified condition. 
+Compute average of values match specified condition.
 
 **Supported Types**:
 
-* [list_number, list_bool] 
+* [`list<number>`, `list<bool>`]
 
 ### function bool
 
@@ -457,7 +457,7 @@ bool()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function ceil
 
@@ -467,11 +467,11 @@ ceil()
 
 **Description**:
 
-Return the smallest integer value not less than the expr. 
+Return the smallest integer value not less than the expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -490,8 +490,8 @@ SELECT CEIL(1.23);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function ceiling
 
@@ -501,11 +501,11 @@ ceiling()
 
 **Description**:
 
-Return the smallest integer value not less than the expr. 
+Return the smallest integer value not less than the expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -524,8 +524,8 @@ SELECT CEIL(1.23);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function concat
 
@@ -538,7 +538,7 @@ concat()
 
 **Supported Types**:
 
-* [...] 
+* [...]
 
 ### function concat_ws
 
@@ -551,11 +551,11 @@ concat_ws()
 
 **Supported Types**:
 
-* [bool, ...]
-* [date, ...]
-* [number, ...]
-* [string, ...]
-* [timestamp, ...] 
+* [`bool`, ...]
+* [`date`, ...]
+* [`number`, ...]
+* [`string`, ...]
+* [`timestamp`, ...]
 
 ### function cos
 
@@ -565,11 +565,11 @@ cos()
 
 **Description**:
 
-Return the cosine of expr. 
+Return the cosine of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** It is a single argument in radians.
+* **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -591,7 +591,7 @@ SELECT COS(0);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function cot
 
@@ -601,11 +601,11 @@ cot()
 
 **Description**:
 
-Return the cotangent of expr. 
+Return the cotangent of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -624,7 +624,7 @@ SELECT COT(1);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function count
 
@@ -634,16 +634,16 @@ count()
 
 **Description**:
 
-Compute count of values. 
+Compute count of values.
 
 **Supported Types**:
 
-* [list_bool]
-* [list_date]
-* [list_number]
-* [list_row]
-* [list_string]
-* [list_timestamp] 
+* [`list<bool>`]
+* [`list<date>`]
+* [`list<number>`]
+* [`list<row>`]
+* [`list<string>`]
+* [`list<timestamp>`]
 
 ### function count_cate
 
@@ -653,12 +653,12 @@ count_cate()
 
 **Description**:
 
-Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **value** Specify value column to aggregate on. 
-  * **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **catagory** Specify catagory column to group by.
 
 
 
@@ -674,8 +674,6 @@ Example:
 | 4   | x    |
 
 
-Example:
-
 
 
 ```sql
@@ -685,12 +683,12 @@ SELECT count_cate(value, catagory) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_date]
-* [list_number, list_int16]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_number, list_string]
-* [list_number, list_timestamp] 
+* [`list<number>`, `list<date>`]
+* [`list<number>`, `list<int16>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<number>`, `list<string>`]
+* [`list<number>`, `list<timestamp>`]
 
 ### function count_cate_where
 
@@ -700,13 +698,13 @@ count_cate_where()
 
 **Description**:
 
-Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
 
 
 
@@ -722,8 +720,6 @@ Example:
 | 4   | true   | x    |
 
 
-Example:
-
 
 
 ```sql
@@ -733,12 +729,12 @@ SELECT count_cate_where(catagory, value, condition) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date]
-* [list_number, list_bool, list_int16]
-* [list_number, list_bool, list_int32]
-* [list_number, list_bool, list_int64]
-* [list_number, list_bool, list_string]
-* [list_number, list_bool, list_timestamp] 
+* [`list<number>`, `list<bool>`, `list<date>`]
+* [`list<number>`, `list<bool>`, `list<int16>`]
+* [`list<number>`, `list<bool>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`]
 
 ### function count_where
 
@@ -748,14 +744,14 @@ count_where()
 
 **Description**:
 
-Compute number of values match specified condition. 
+Compute number of values match specified condition.
 
 **Supported Types**:
 
-* [list_date, list_bool]
-* [list_number, list_bool]
-* [list_string, list_bool]
-* [list_timestamp, list_bool] 
+* [`list<date>`, `list<bool>`]
+* [`list<number>`, `list<bool>`]
+* [`list<string>`, `list<bool>`]
+* [`list<timestamp>`, `list<bool>`]
 
 ### function date
 
@@ -768,8 +764,8 @@ date()
 
 **Supported Types**:
 
-* [string]
-* [timestamp] 
+* [`string`]
+* [`timestamp`]
 
 ### function date_format
 
@@ -782,8 +778,8 @@ date_format()
 
 **Supported Types**:
 
-* [date, string]
-* [timestamp, string] 
+* [`date`, `string`]
+* [`timestamp`, `string`]
 
 ### function day
 
@@ -796,9 +792,9 @@ day()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function dayofmonth
 
@@ -811,9 +807,9 @@ dayofmonth()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function dayofweek
 
@@ -826,9 +822,9 @@ dayofweek()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function distinct_count
 
@@ -838,15 +834,15 @@ distinct_count()
 
 **Description**:
 
-Compute distinct number of values. 
+Compute distinct number of values.
 
 **Supported Types**:
 
-* [list_bool]
-* [list_date]
-* [list_number]
-* [list_string]
-* [list_timestamp] 
+* [`list<bool>`]
+* [`list<date>`]
+* [`list<number>`]
+* [`list<string>`]
+* [`list<timestamp>`]
 
 ### function double
 
@@ -859,7 +855,7 @@ double()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function exp
 
@@ -869,11 +865,11 @@ exp()
 
 **Description**:
 
-Return the value of e (the base of natural logarithms) raised to the power of expr. 
+Return the value of e (the base of natural logarithms) raised to the power of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -890,7 +886,7 @@ SELECT EXP(0);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function first_value
 
@@ -900,9 +896,9 @@ first_value()
 
 **Description**:
 
-Returns the value of expr from the first row of the window frame. 
+Returns the value of expr from the first row of the window frame.
 
-**Supported Types**: 
+**Supported Types**:
 
 ### function float
 
@@ -915,7 +911,7 @@ float()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function floor
 
@@ -925,11 +921,11 @@ floor()
 
 **Description**:
 
-Return the largest integer value not less than the expr. 
+Return the largest integer value not less than the expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -948,8 +944,8 @@ SELECT FLOOR(1.23);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function fz_join
 
@@ -962,7 +958,7 @@ fz_join()
 
 **Supported Types**:
 
-* [list_string, string] 
+* [`list<string>`, `string`]
 
 ### function fz_split
 
@@ -972,11 +968,11 @@ fz_split()
 
 **Description**:
 
-Used by feature zero, split string to list by delimeter. Null values are skipped. 
+Used by feature zero, split string to list by delimeter. Null values are skipped.
 
 **Supported Types**:
 
-* [string, string] 
+* [`string`, `string`]
 
 ### function fz_split_by_key
 
@@ -986,11 +982,11 @@ fz_split_by_key()
 
 **Description**:
 
-Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. 
+Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.
 
 **Supported Types**:
 
-* [string, string, string] 
+* [`string`, `string`, `string`]
 
 ### function fz_split_by_value
 
@@ -1000,11 +996,11 @@ fz_split_by_value()
 
 **Description**:
 
-Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. 
+Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.
 
 **Supported Types**:
 
-* [string, string, string] 
+* [`string`, `string`, `string`]
 
 ### function fz_top1_ratio
 
@@ -1014,14 +1010,14 @@ fz_top1_ratio()
 
 **Description**:
 
-Compute the top1 key's ratio. 
+Compute the top1 key's ratio.
 
 **Supported Types**:
 
-* [list_date]
-* [list_number]
-* [list_string]
-* [list_timestamp] 
+* [`list<date>`]
+* [`list<number>`]
+* [`list<string>`]
+* [`list<timestamp>`]
 
 ### function fz_topn_frequency
 
@@ -1031,14 +1027,14 @@ fz_topn_frequency()
 
 **Description**:
 
-Return the topN keys sorted by their frequency. 
+Return the topN keys sorted by their frequency.
 
 **Supported Types**:
 
-* [list_date, list_int32]
-* [list_number, list_int32]
-* [list_string, list_int32]
-* [list_timestamp, list_int32] 
+* [`list<date>`, `list<int32>`]
+* [`list<number>`, `list<int32>`]
+* [`list<string>`, `list<int32>`]
+* [`list<timestamp>`, `list<int32>`]
 
 ### function fz_window_split
 
@@ -1048,11 +1044,11 @@ fz_window_split()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped. 
+Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped.
 
 **Supported Types**:
 
-* [list_string, list_string] 
+* [`list<string>`, `list<string>`]
 
 ### function fz_window_split_by_key
 
@@ -1062,11 +1058,11 @@ fz_window_split_by_key()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. 
+Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.
 
 **Supported Types**:
 
-* [list_string, list_string, list_string] 
+* [`list<string>`, `list<string>`, `list<string>`]
 
 ### function fz_window_split_by_value
 
@@ -1076,11 +1072,11 @@ fz_window_split_by_value()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. 
+Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.
 
 **Supported Types**:
 
-* [list_string, list_string, list_string] 
+* [`list<string>`, `list<string>`, `list<string>`]
 
 ### function hour
 
@@ -1093,8 +1089,8 @@ hour()
 
 **Supported Types**:
 
-* [int64]
-* [timestamp] 
+* [`int64`]
+* [`timestamp`]
 
 ### function identity
 
@@ -1107,11 +1103,11 @@ identity()
 
 **Supported Types**:
 
-* [bool]
-* [date]
-* [number]
-* [string]
-* [timestamp] 
+* [`bool`]
+* [`date`]
+* [`number`]
+* [`string`]
+* [`timestamp`]
 
 ### function if_null
 
@@ -1121,12 +1117,12 @@ if_null()
 
 **Description**:
 
-If input is not null, return input value; else return default value. 
+If input is not null, return input value; else return default value.
 
-**Parameters**: 
+**Parameters**:
 
-  * **input** Input value 
-  * **default** Default value if input is null
+* **input** Input value
+* **default** Default value if input is null
 
 
 **Since**:
@@ -1145,15 +1141,15 @@ SELECT if_null("hello", "default"), if_null(NULL, "default");
 
 **Supported Types**:
 
-* [bool, bool]
-* [date, date]
-* [double, double]
-* [float, float]
-* [int16, int16]
-* [int32, int32]
-* [int64, int64]
-* [string, string]
-* [timestamp, timestamp] 
+* [`bool`, `bool`]
+* [`date`, `date`]
+* [`double`, `double`]
+* [`float`, `float`]
+* [`int16`, `int16`]
+* [`int32`, `int32`]
+* [`int64`, `int64`]
+* [`string`, `string`]
+* [`timestamp`, `timestamp`]
 
 ### function ifnull
 
@@ -1163,12 +1159,12 @@ ifnull()
 
 **Description**:
 
-If input is not null, return input value; else return default value. 
+If input is not null, return input value; else return default value.
 
-**Parameters**: 
+**Parameters**:
 
-  * **input** Input value 
-  * **default** Default value if input is null
+* **input** Input value
+* **default** Default value if input is null
 
 
 **Since**:
@@ -1187,15 +1183,15 @@ SELECT if_null("hello", "default"), if_null(NULL, "default");
 
 **Supported Types**:
 
-* [bool, bool]
-* [date, date]
-* [double, double]
-* [float, float]
-* [int16, int16]
-* [int32, int32]
-* [int64, int64]
-* [string, string]
-* [timestamp, timestamp] 
+* [`bool`, `bool`]
+* [`date`, `date`]
+* [`double`, `double`]
+* [`float`, `float`]
+* [`int16`, `int16`]
+* [`int32`, `int32`]
+* [`int64`, `int64`]
+* [`string`, `string`]
+* [`timestamp`, `timestamp`]
 
 ### function inc
 
@@ -1208,7 +1204,7 @@ inc()
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function int16
 
@@ -1221,7 +1217,7 @@ int16()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function int32
 
@@ -1234,7 +1230,7 @@ int32()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function int64
 
@@ -1247,7 +1243,7 @@ int64()
 
 **Supported Types**:
 
-* [string] 
+* [`string`]
 
 ### function is_null
 
@@ -1257,11 +1253,11 @@ is_null()
 
 **Description**:
 
-Check if input value is null, return bool. 
+Check if input value is null, return bool.
 
-**Parameters**: 
+**Parameters**:
 
-  * **input** Input value
+* **input** Input value
 
 
 **Since**:
@@ -1271,11 +1267,11 @@ Check if input value is null, return bool.
 
 **Supported Types**:
 
-* [bool]
-* [date]
-* [number]
-* [string]
-* [timestamp] 
+* [`bool`]
+* [`date`]
+* [`number`]
+* [`string`]
+* [`timestamp`]
 
 ### function isnull
 
@@ -1285,11 +1281,11 @@ isnull()
 
 **Description**:
 
-Check if input value is null, return bool. 
+Check if input value is null, return bool.
 
-**Parameters**: 
+**Parameters**:
 
-  * **input** Input value
+* **input** Input value
 
 
 **Since**:
@@ -1299,11 +1295,11 @@ Check if input value is null, return bool.
 
 **Supported Types**:
 
-* [bool]
-* [date]
-* [number]
-* [string]
-* [timestamp] 
+* [`bool`]
+* [`date`]
+* [`number`]
+* [`string`]
+* [`timestamp`]
 
 ### function ln
 
@@ -1313,11 +1309,11 @@ ln()
 
 **Description**:
 
-Return the natural logarithm of expr. 
+Return the natural logarithm of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -1336,8 +1332,8 @@ SELECT LN(1);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function log
 
@@ -1347,12 +1343,12 @@ log()
 
 **Description**:
 
-log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base. 
+log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base.
 
-**Parameters**: 
+**Parameters**:
 
-  * **base** 
-  * **expr** 
+* **base**
+* **expr**
 
 
 **Since**:
@@ -1374,18 +1370,18 @@ SELECT LOG(10,100);
 
 **Supported Types**:
 
-* [bool]
-* [bool, bool]
-* [bool, date]
-* [bool, number]
-* [bool, string]
-* [bool, timestamp]
-* [number]
-* [number, bool]
-* [number, date]
-* [number, number]
-* [number, string]
-* [number, timestamp] 
+* [`bool`]
+* [`bool`, `bool`]
+* [`bool`, `date`]
+* [`bool`, `number`]
+* [`bool`, `string`]
+* [`bool`, `timestamp`]
+* [`number`]
+* [`number`, `bool`]
+* [`number`, `date`]
+* [`number`, `number`]
+* [`number`, `string`]
+* [`number`, `timestamp`]
 
 ### function log10
 
@@ -1395,11 +1391,11 @@ log10()
 
 **Description**:
 
-Return the base-10 logarithm of expr. 
+Return the base-10 logarithm of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -1418,8 +1414,8 @@ SELECT LOG10(100);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function log2
 
@@ -1429,11 +1425,11 @@ log2()
 
 **Description**:
 
-Return the base-2 logarithm of expr. 
+Return the base-2 logarithm of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -1452,8 +1448,8 @@ SELECT LOG2(65536);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function make_tuple
 
@@ -1466,7 +1462,7 @@ make_tuple()
 
 **Supported Types**:
 
-* [...] 
+* [...]
 
 ### function max
 
@@ -1476,14 +1472,14 @@ max()
 
 **Description**:
 
-Compute max of values. 
+Compute max of values.
 
 **Supported Types**:
 
-* [list_date]
-* [list_number]
-* [list_string]
-* [list_timestamp] 
+* [`list<date>`]
+* [`list<number>`]
+* [`list<string>`]
+* [`list<timestamp>`]
 
 ### function max_cate
 
@@ -1493,12 +1489,12 @@ max_cate()
 
 **Description**:
 
-Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **value** Specify value column to aggregate on. 
-  * **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **catagory** Specify catagory column to group by.
 
 
 
@@ -1523,12 +1519,12 @@ SELECT max_cate(value, catagory) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_date]
-* [list_number, list_int16]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_number, list_string]
-* [list_number, list_timestamp] 
+* [`list<number>`, `list<date>`]
+* [`list<number>`, `list<int16>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<number>`, `list<string>`]
+* [`list<number>`, `list<timestamp>`]
 
 ### function max_cate_where
 
@@ -1538,13 +1534,13 @@ max_cate_where()
 
 **Description**:
 
-Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
 
 
 
@@ -1569,12 +1565,12 @@ SELECT max_cate_where(catagory, value, condition) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date]
-* [list_number, list_bool, list_int16]
-* [list_number, list_bool, list_int32]
-* [list_number, list_bool, list_int64]
-* [list_number, list_bool, list_string]
-* [list_number, list_bool, list_timestamp] 
+* [`list<number>`, `list<bool>`, `list<date>`]
+* [`list<number>`, `list<bool>`, `list<int16>`]
+* [`list<number>`, `list<bool>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`]
 
 ### function max_where
 
@@ -1584,11 +1580,11 @@ max_where()
 
 **Description**:
 
-Compute maximum of values match specified condition. 
+Compute maximum of values match specified condition.
 
 **Supported Types**:
 
-* [list_number, list_bool] 
+* [`list<number>`, `list<bool>`]
 
 ### function maximum
 
@@ -1601,15 +1597,15 @@ maximum()
 
 **Supported Types**:
 
-* [bool, bool]
-* [date, date]
-* [double, double]
-* [float, float]
-* [int16, int16]
-* [int32, int32]
-* [int64, int64]
-* [string, string]
-* [timestamp, timestamp] 
+* [`bool`, `bool`]
+* [`date`, `date`]
+* [`double`, `double`]
+* [`float`, `float`]
+* [`int16`, `int16`]
+* [`int32`, `int32`]
+* [`int64`, `int64`]
+* [`string`, `string`]
+* [`timestamp`, `timestamp`]
 
 ### function min
 
@@ -1619,14 +1615,14 @@ min()
 
 **Description**:
 
-Compute min of values. 
+Compute min of values.
 
 **Supported Types**:
 
-* [list_date]
-* [list_number]
-* [list_string]
-* [list_timestamp] 
+* [`list<date>`]
+* [`list<number>`]
+* [`list<string>`]
+* [`list<timestamp>`]
 
 ### function min_cate
 
@@ -1637,10 +1633,10 @@ min_cate()
 **Description**:
 
 
-**Parameters**: 
+**Parameters**:
 
-  * **value** Specify value column to aggregate on. 
-  * **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **catagory** Specify catagory column to group by.
 
 
 Compute minimum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
@@ -1667,12 +1663,12 @@ SELECT min_cate(value, catagory) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_date]
-* [list_number, list_int16]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_number, list_string]
-* [list_number, list_timestamp] 
+* [`list<number>`, `list<date>`]
+* [`list<number>`, `list<int16>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<number>`, `list<string>`]
+* [`list<number>`, `list<timestamp>`]
 
 ### function min_cate_where
 
@@ -1683,11 +1679,11 @@ min_cate_where()
 **Description**:
 
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
 
 
 Compute minimum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
@@ -1715,12 +1711,12 @@ SELECT min_cate_where(catagory, value, condition) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date]
-* [list_number, list_bool, list_int16]
-* [list_number, list_bool, list_int32]
-* [list_number, list_bool, list_int64]
-* [list_number, list_bool, list_string]
-* [list_number, list_bool, list_timestamp] 
+* [`list<number>`, `list<bool>`, `list<date>`]
+* [`list<number>`, `list<bool>`, `list<int16>`]
+* [`list<number>`, `list<bool>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`]
 
 ### function min_where
 
@@ -1730,11 +1726,11 @@ min_where()
 
 **Description**:
 
-Compute minimum of values match specified condition. 
+Compute minimum of values match specified condition.
 
 **Supported Types**:
 
-* [list_number, list_bool] 
+* [`list<number>`, `list<bool>`]
 
 ### function minimum
 
@@ -1747,15 +1743,15 @@ minimum()
 
 **Supported Types**:
 
-* [bool, bool]
-* [date, date]
-* [double, double]
-* [float, float]
-* [int16, int16]
-* [int32, int32]
-* [int64, int64]
-* [string, string]
-* [timestamp, timestamp] 
+* [`bool`, `bool`]
+* [`date`, `date`]
+* [`double`, `double`]
+* [`float`, `float`]
+* [`int16`, `int16`]
+* [`int32`, `int32`]
+* [`int64`, `int64`]
+* [`string`, `string`]
+* [`timestamp`, `timestamp`]
 
 ### function minute
 
@@ -1768,8 +1764,8 @@ minute()
 
 **Supported Types**:
 
-* [int64]
-* [timestamp] 
+* [`int64`]
+* [`timestamp`]
 
 ### function month
 
@@ -1782,9 +1778,9 @@ month()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function pow
 
@@ -1794,12 +1790,12 @@ pow()
 
 **Description**:
 
-Return the value of expr1 to the power of expr2. 
+Return the value of expr1 to the power of expr2.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr1** 
-  * **expr2** 
+* **expr1**
+* **expr2**
 
 
 **Since**:
@@ -1818,10 +1814,10 @@ SELECT POW(2, 10);
 
 **Supported Types**:
 
-* [bool, bool]
-* [bool, number]
-* [number, bool]
-* [number, number] 
+* [`bool`, `bool`]
+* [`bool`, `number`]
+* [`number`, `bool`]
+* [`number`, `number`]
 
 ### function power
 
@@ -1831,12 +1827,12 @@ power()
 
 **Description**:
 
-Return the value of expr1 to the power of expr2. 
+Return the value of expr1 to the power of expr2.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr1** 
-  * **expr2** 
+* **expr1**
+* **expr2**
 
 
 **Since**:
@@ -1855,10 +1851,10 @@ SELECT POW(2, 10);
 
 **Supported Types**:
 
-* [bool, bool]
-* [bool, number]
-* [number, bool]
-* [number, number] 
+* [`bool`, `bool`]
+* [`bool`, `number`]
+* [`number`, `bool`]
+* [`number`, `number`]
 
 ### function round
 
@@ -1868,11 +1864,11 @@ round()
 
 **Description**:
 
-Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode. 
+Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -1891,8 +1887,8 @@ SELECT ROUND(1.23);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function second
 
@@ -1905,8 +1901,8 @@ second()
 
 **Supported Types**:
 
-* [int64]
-* [timestamp] 
+* [`int64`]
+* [`timestamp`]
 
 ### function sin
 
@@ -1916,11 +1912,11 @@ sin()
 
 **Description**:
 
-Return the sine of expr. 
+Return the sine of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** It is a single argument in radians.
+* **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -1942,7 +1938,7 @@ SELECT SIN(0);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function sqrt
 
@@ -1952,11 +1948,11 @@ sqrt()
 
 **Description**:
 
-Return square root of expr. 
+Return square root of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** It is a single argument in radians.
+* **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -1975,7 +1971,7 @@ SELECT SQRT(100);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function strcmp
 
@@ -1985,7 +1981,7 @@ strcmp()
 
 **Description**:
 
-Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise. 
+Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise.
 
 **Since**:
 0.1.0
@@ -2007,7 +2003,7 @@ select strcmp("text", "text");
 
 **Supported Types**:
 
-* [string, string] 
+* [`string`, `string`]
 
 ### function string
 
@@ -2020,10 +2016,10 @@ string()
 
 **Supported Types**:
 
-* [bool]
-* [date]
-* [number]
-* [timestamp] 
+* [`bool`]
+* [`date`]
+* [`number`]
+* [`timestamp`]
 
 ### function substr
 
@@ -2033,19 +2029,19 @@ substr()
 
 **Description**:
 
-Return a substring from string `str` starting at position `pos`. 
+Return a substring from string `str` starting at position `pos`.
 
-**Parameters**: 
+**Parameters**:
 
-  * **str** 
-  * **pos** define the begining of the substring.
+* **str**
+* **pos** define the begining of the substring.
 
 
 **Since**:
 0.1.0
 
 
-Example: : 
+Example: :
 
 ```sql
 select substr("hello world", 2);
@@ -2059,8 +2055,8 @@ select substr("hello world", 2);
 
 **Supported Types**:
 
-* [string, int32]
-* [string, int32, int32] 
+* [`string`, `int32`]
+* [`string`, `int32`, `int32`]
 
 ### function substring
 
@@ -2070,19 +2066,19 @@ substring()
 
 **Description**:
 
-Return a substring from string `str` starting at position `pos`. 
+Return a substring from string `str` starting at position `pos`.
 
-**Parameters**: 
+**Parameters**:
 
-  * **str** 
-  * **pos** define the begining of the substring.
+* **str**
+* **pos** define the begining of the substring.
 
 
 **Since**:
 0.1.0
 
 
-Example: : 
+Example: :
 
 ```sql
 select substr("hello world", 2);
@@ -2096,8 +2092,8 @@ select substr("hello world", 2);
 
 **Supported Types**:
 
-* [string, int32]
-* [string, int32, int32] 
+* [`string`, `int32`]
+* [`string`, `int32`, `int32`]
 
 ### function sum
 
@@ -2107,12 +2103,12 @@ sum()
 
 **Description**:
 
-Compute sum of values. 
+Compute sum of values.
 
 **Supported Types**:
 
-* [list_number]
-* [list_timestamp] 
+* [`list<number>`]
+* [`list<timestamp>`]
 
 ### function sum_cate
 
@@ -2122,12 +2118,12 @@ sum_cate()
 
 **Description**:
 
-Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **value** Specify value column to aggregate on. 
-  * **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **catagory** Specify catagory column to group by.
 
 
 
@@ -2152,12 +2148,12 @@ SELECT sum_cate(value, catagory) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_date]
-* [list_number, list_int16]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_number, list_string]
-* [list_number, list_timestamp] 
+* [`list<number>`, `list<date>`]
+* [`list<number>`, `list<int16>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<number>`, `list<string>`]
+* [`list<number>`, `list<timestamp>`]
 
 ### function sum_cate_where
 
@@ -2167,13 +2163,13 @@ sum_cate_where()
 
 **Description**:
 
-Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
+Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
 
 
 
@@ -2198,12 +2194,12 @@ SELECT sum_cate_where(catagory, value, condition) OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date]
-* [list_number, list_bool, list_int16]
-* [list_number, list_bool, list_int32]
-* [list_number, list_bool, list_int64]
-* [list_number, list_bool, list_string]
-* [list_number, list_bool, list_timestamp] 
+* [`list<number>`, `list<bool>`, `list<date>`]
+* [`list<number>`, `list<bool>`, `list<int16>`]
+* [`list<number>`, `list<bool>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`]
 
 ### function sum_where
 
@@ -2213,11 +2209,11 @@ sum_where()
 
 **Description**:
 
-Compute sum of values match specified condition. 
+Compute sum of values match specified condition.
 
 **Supported Types**:
 
-* [list_number, list_bool] 
+* [`list<number>`, `list<bool>`]
 
 ### function tan
 
@@ -2227,11 +2223,11 @@ tan()
 
 **Description**:
 
-Return the tangent of expr. 
+Return the tangent of expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** It is a single argument in radians.
+* **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -2250,7 +2246,7 @@ SELECT TAN(0);
 
 **Supported Types**:
 
-* [number] 
+* [`number`]
 
 ### function timestamp
 
@@ -2263,8 +2259,8 @@ timestamp()
 
 **Supported Types**:
 
-* [date]
-* [string] 
+* [`date`]
+* [`string`]
 
 ### function top
 
@@ -2274,18 +2270,18 @@ top()
 
 **Description**:
 
-Compute top k of values and output string separated by comma. The outputs are sorted in desc order. 
+Compute top k of values and output string separated by comma. The outputs are sorted in desc order.
 
 **Supported Types**:
 
-* [list_date, list_int32]
-* [list_date, list_int64]
-* [list_number, list_int32]
-* [list_number, list_int64]
-* [list_string, list_int32]
-* [list_string, list_int64]
-* [list_timestamp, list_int32]
-* [list_timestamp, list_int64] 
+* [`list<date>`, `list<int32>`]
+* [`list<date>`, `list<int64>`]
+* [`list<number>`, `list<int32>`]
+* [`list<number>`, `list<int64>`]
+* [`list<string>`, `list<int32>`]
+* [`list<string>`, `list<int64>`]
+* [`list<timestamp>`, `list<int32>`]
+* [`list<timestamp>`, `list<int64>`]
 
 ### function top_n_key_avg_cate_where
 
@@ -2295,14 +2291,14 @@ top_n_key_avg_cate_where()
 
 **Description**:
 
-Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
+Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column. 
-  * **n** Fetch top n keys.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
+* **n** Fetch top n keys.
 
 
 
@@ -2330,18 +2326,18 @@ OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date, list_int32]
-* [list_number, list_bool, list_date, list_int64]
-* [list_number, list_bool, list_int16, list_int32]
-* [list_number, list_bool, list_int16, list_int64]
-* [list_number, list_bool, list_int32, list_int32]
-* [list_number, list_bool, list_int32, list_int64]
-* [list_number, list_bool, list_int64, list_int32]
-* [list_number, list_bool, list_int64, list_int64]
-* [list_number, list_bool, list_string, list_int32]
-* [list_number, list_bool, list_string, list_int64]
-* [list_number, list_bool, list_timestamp, list_int32]
-* [list_number, list_bool, list_timestamp, list_int64] 
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
 
 ### function top_n_key_count_cate_where
 
@@ -2351,14 +2347,14 @@ top_n_key_count_cate_where()
 
 **Description**:
 
-Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
+Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column. 
-  * **n** Fetch top n keys.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
+* **n** Fetch top n keys.
 
 
 
@@ -2386,18 +2382,18 @@ OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date, list_int32]
-* [list_number, list_bool, list_date, list_int64]
-* [list_number, list_bool, list_int16, list_int32]
-* [list_number, list_bool, list_int16, list_int64]
-* [list_number, list_bool, list_int32, list_int32]
-* [list_number, list_bool, list_int32, list_int64]
-* [list_number, list_bool, list_int64, list_int32]
-* [list_number, list_bool, list_int64, list_int64]
-* [list_number, list_bool, list_string, list_int32]
-* [list_number, list_bool, list_string, list_int64]
-* [list_number, list_bool, list_timestamp, list_int32]
-* [list_number, list_bool, list_timestamp, list_int64] 
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
 
 ### function top_n_key_max_cate_where
 
@@ -2407,14 +2403,14 @@ top_n_key_max_cate_where()
 
 **Description**:
 
-Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
+Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column. 
-  * **n** Fetch top n keys.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
+* **n** Fetch top n keys.
 
 
 
@@ -2442,18 +2438,18 @@ OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date, list_int32]
-* [list_number, list_bool, list_date, list_int64]
-* [list_number, list_bool, list_int16, list_int32]
-* [list_number, list_bool, list_int16, list_int64]
-* [list_number, list_bool, list_int32, list_int32]
-* [list_number, list_bool, list_int32, list_int64]
-* [list_number, list_bool, list_int64, list_int32]
-* [list_number, list_bool, list_int64, list_int64]
-* [list_number, list_bool, list_string, list_int32]
-* [list_number, list_bool, list_string, list_int64]
-* [list_number, list_bool, list_timestamp, list_int32]
-* [list_number, list_bool, list_timestamp, list_int64] 
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
 
 ### function top_n_key_min_cate_where
 
@@ -2464,12 +2460,12 @@ top_n_key_min_cate_where()
 **Description**:
 
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column. 
-  * **n** Fetch top n keys.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
+* **n** Fetch top n keys.
 
 
 Compute minimum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
@@ -2499,18 +2495,18 @@ OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date, list_int32]
-* [list_number, list_bool, list_date, list_int64]
-* [list_number, list_bool, list_int16, list_int32]
-* [list_number, list_bool, list_int16, list_int64]
-* [list_number, list_bool, list_int32, list_int32]
-* [list_number, list_bool, list_int32, list_int64]
-* [list_number, list_bool, list_int64, list_int32]
-* [list_number, list_bool, list_int64, list_int64]
-* [list_number, list_bool, list_string, list_int32]
-* [list_number, list_bool, list_string, list_int64]
-* [list_number, list_bool, list_timestamp, list_int32]
-* [list_number, list_bool, list_timestamp, list_int64] 
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
 
 ### function top_n_key_sum_cate_where
 
@@ -2520,14 +2516,14 @@ top_n_key_sum_cate_where()
 
 **Description**:
 
-Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
+Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
 
-**Parameters**: 
+**Parameters**:
 
-  * **catagory** Specify catagory column to group by. 
-  * **value** Specify value column to aggregate on. 
-  * **condition** Specify condition column. 
-  * **n** Fetch top n keys.
+* **catagory** Specify catagory column to group by.
+* **value** Specify value column to aggregate on.
+* **condition** Specify condition column.
+* **n** Fetch top n keys.
 
 
 
@@ -2555,18 +2551,18 @@ OVER w;
 
 **Supported Types**:
 
-* [list_number, list_bool, list_date, list_int32]
-* [list_number, list_bool, list_date, list_int64]
-* [list_number, list_bool, list_int16, list_int32]
-* [list_number, list_bool, list_int16, list_int64]
-* [list_number, list_bool, list_int32, list_int32]
-* [list_number, list_bool, list_int32, list_int64]
-* [list_number, list_bool, list_int64, list_int32]
-* [list_number, list_bool, list_int64, list_int64]
-* [list_number, list_bool, list_string, list_int32]
-* [list_number, list_bool, list_string, list_int64]
-* [list_number, list_bool, list_timestamp, list_int32]
-* [list_number, list_bool, list_timestamp, list_int64] 
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<date>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int16>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int32>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<int64>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
 
 ### function truncate
 
@@ -2576,11 +2572,11 @@ truncate()
 
 **Description**:
 
-Return the nearest integer that is not greater in magnitude than the expr. 
+Return the nearest integer that is not greater in magnitude than the expr.
 
-**Parameters**: 
+**Parameters**:
 
-  * **expr** 
+* **expr**
 
 
 **Since**:
@@ -2599,8 +2595,8 @@ SELECT TRUNCATE(1.23);
 
 **Supported Types**:
 
-* [bool]
-* [number] 
+* [`bool`]
+* [`number`]
 
 ### function week
 
@@ -2613,9 +2609,9 @@ week()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function weekofyear
 
@@ -2628,9 +2624,9 @@ weekofyear()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
+* [`date`]
+* [`int64`]
+* [`timestamp`]
 
 ### function year
 
@@ -2643,10 +2639,6 @@ year()
 
 **Supported Types**:
 
-* [date]
-* [int64]
-* [timestamp] 
-
-
-
-
+* [`date`]
+* [`int64`]
+* [`timestamp`] 
