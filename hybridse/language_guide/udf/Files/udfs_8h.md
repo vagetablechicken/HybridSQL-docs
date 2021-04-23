@@ -1,8 +1,8 @@
 ---
-title: UDF Documentation
+title: Functions Documentation
 
 ---
-# UDF Documentation
+# Functions Documentation
 
 ## Functions
 
@@ -10,38 +10,38 @@ title: UDF Documentation
 | -------------- | -------------- |
 | **[abs](/hybridse/language_guide/udf/Files/udfs_8h.md#function-abs)**()| <br>Return the absolute value of expr. |
 | **[acos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-acos)**()| <br>Return the arc cosine of expr. |
-| **[add](/hybridse/language_guide/udf/Files/udfs_8h.md#function-add)**()| |
+| **[add](/hybridse/language_guide/udf/Files/udfs_8h.md#function-add)**()| <br>Compute sum of two arguments. |
 | **[asin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-asin)**()| <br>Return the arc sine of expr. |
-| **[at](/hybridse/language_guide/udf/Files/udfs_8h.md#function-at)**()| |
+| **[at](/hybridse/language_guide/udf/Files/udfs_8h.md#function-at)**()| <br>Returns the value of expression from the offset-th row of the ordered partition. |
 | **[atan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan)**()| <br>Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X. |
 | **[atan2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-atan2)**()| <br>Return the arc tangent of Y / X.. |
 | **[avg](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg)**()| <br>Compute average of values. |
 | **[avg_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate)**()| <br>Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_cate_where)**()| <br>Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[avg_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-avg_where)**()| <br>Compute average of values match specified condition. |
-| **[bool](/hybridse/language_guide/udf/Files/udfs_8h.md#function-bool)**()| |
+| **[bool](/hybridse/language_guide/udf/Files/udfs_8h.md#function-bool)**()| <br>Cast string expression to bool. |
 | **[ceil](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceil)**()| <br>Return the smallest integer value not less than the expr. |
 | **[ceiling](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ceiling)**()| <br>Return the smallest integer value not less than the expr. |
-| **[concat](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat)**()| |
-| **[concat_ws](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat_ws)**()| |
+| **[concat](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat)**()| <br>This function returns a string resulting from the joining of two or more string values in an end-to-end manner. (To add a separating value during joining, see concat_ws.) |
+| **[concat_ws](/hybridse/language_guide/udf/Files/udfs_8h.md#function-concat_ws)**()| <br>Returns a string resulting from the joining of two or more string value in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. |
 | **[cos](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cos)**()| <br>Return the cosine of expr. |
 | **[cot](/hybridse/language_guide/udf/Files/udfs_8h.md#function-cot)**()| <br>Return the cotangent of expr. |
-| **[count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count)**()| <br>Compute count of values. |
+| **[count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count)**()| <br>Compute number of values. |
 | **[count_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate)**()| <br>Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_cate_where)**()| <br>Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[count_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-count_where)**()| <br>Compute number of values match specified condition. |
-| **[date](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date)**()| |
-| **[date_format](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date_format)**()| |
-| **[day](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)**()| |
-| **[dayofmonth](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofmonth)**()| |
-| **[dayofweek](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofweek)**()| |
-| **[distinct_count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-distinct_count)**()| <br>Compute distinct number of values. |
-| **[double](/hybridse/language_guide/udf/Files/udfs_8h.md#function-double)**()| |
+| **[date](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date)**()| <br>Cast timestamp or string expression to date. |
+| **[date_format](/hybridse/language_guide/udf/Files/udfs_8h.md#function-date_format)**()| <br>Formats the datetime value according to the format string. |
+| **[day](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)**()| <br>Return the day of the month for a timestamp or date. |
+| **[dayofmonth](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofmonth)**()| <br>Return the day of the month for a timestamp or date. |
+| **[dayofweek](/hybridse/language_guide/udf/Files/udfs_8h.md#function-dayofweek)**()| <br>Return the day of week for a timestamp or date. |
+| **[distinct_count](/hybridse/language_guide/udf/Files/udfs_8h.md#function-distinct_count)**()| <br>Compute number of distinct values. |
+| **[double](/hybridse/language_guide/udf/Files/udfs_8h.md#function-double)**()| <br>Cast string expression to double. |
 | **[exp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-exp)**()| <br>Return the value of e (the base of natural logarithms) raised to the power of expr. |
 | **[first_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-first_value)**()| <br>Returns the value of expr from the first row of the window frame. |
-| **[float](/hybridse/language_guide/udf/Files/udfs_8h.md#function-float)**()| |
+| **[float](/hybridse/language_guide/udf/Files/udfs_8h.md#function-float)**()| <br>Cast string expression to float. |
 | **[floor](/hybridse/language_guide/udf/Files/udfs_8h.md#function-floor)**()| <br>Return the largest integer value not less than the expr. |
-| **[fz_join](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_join)**()| |
+| **[fz_join](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_join)**()| <br>Used by feature zero, for each string value from specified column of window, join by delimeter. Null values are skipped. |
 | **[fz_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split)**()| <br>Used by feature zero, split string to list by delimeter. Null values are skipped. |
 | **[fz_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_key)**()| <br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. |
 | **[fz_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_split_by_value)**()| <br>Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. |
@@ -50,14 +50,14 @@ title: UDF Documentation
 | **[fz_window_split](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped. |
 | **[fz_window_split_by_key](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_key)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. |
 | **[fz_window_split_by_value](/hybridse/language_guide/udf/Files/udfs_8h.md#function-fz_window_split_by_value)**()| <br>Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. |
-| **[hour](/hybridse/language_guide/udf/Files/udfs_8h.md#function-hour)**()| |
-| **[identity](/hybridse/language_guide/udf/Files/udfs_8h.md#function-identity)**()| |
+| **[hour](/hybridse/language_guide/udf/Files/udfs_8h.md#function-hour)**()| <br>Return the hour for a timestamp. |
+| **[identity](/hybridse/language_guide/udf/Files/udfs_8h.md#function-identity)**()| <br>Return value. |
 | **[if_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-if_null)**()| <br>If input is not null, return input value; else return default value. |
 | **[ifnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ifnull)**()| <br>If input is not null, return input value; else return default value. |
-| **[inc](/hybridse/language_guide/udf/Files/udfs_8h.md#function-inc)**()| |
-| **[int16](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int16)**()| |
-| **[int32](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int32)**()| |
-| **[int64](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int64)**()| |
+| **[inc](/hybridse/language_guide/udf/Files/udfs_8h.md#function-inc)**()| <br>Return expression + 1. |
+| **[int16](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int16)**()| <br>Cast string expression to int16. |
+| **[int32](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int32)**()| <br>Cast string expression to int32. |
+| **[int64](/hybridse/language_guide/udf/Files/udfs_8h.md#function-int64)**()| <br>Cast string expression to int64. |
 | **[is_null](/hybridse/language_guide/udf/Files/udfs_8h.md#function-is_null)**()| <br>Check if input value is null, return bool. |
 | **[isnull](/hybridse/language_guide/udf/Files/udfs_8h.md#function-isnull)**()| <br>Check if input value is null, return bool. |
 | **[ln](/hybridse/language_guide/udf/Files/udfs_8h.md#function-ln)**()| <br>Return the natural logarithm of expr. |
@@ -65,26 +65,26 @@ title: UDF Documentation
 | **[log10](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log10)**()| <br>Return the base-10 logarithm of expr. |
 | **[log2](/hybridse/language_guide/udf/Files/udfs_8h.md#function-log2)**()| <br>Return the base-2 logarithm of expr. |
 | **[make_tuple](/hybridse/language_guide/udf/Files/udfs_8h.md#function-make_tuple)**()| |
-| **[max](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max)**()| <br>Compute max of values. |
+| **[max](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max)**()| <br>Compute maximum of values. |
 | **[max_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate)**()| <br>Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_cate_where)**()| <br>Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[max_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-max_where)**()| <br>Compute maximum of values match specified condition. |
-| **[maximum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-maximum)**()| |
-| **[min](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min)**()| <br>Compute min of values. |
-| **[min_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate)**()| |
-| **[min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate_where)**()| |
+| **[maximum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-maximum)**()| <br>Compute maximum of two arguments. |
+| **[min](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min)**()| <br>Compute minimum of values. |
+| **[min_cate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate)**()| <br>Compute minimum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
+| **[min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_cate_where)**()| <br>Compute minimum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[min_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-min_where)**()| <br>Compute minimum of values match specified condition. |
-| **[minimum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minimum)**()| |
-| **[minute](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minute)**()| |
-| **[month](/hybridse/language_guide/udf/Files/udfs_8h.md#function-month)**()| |
+| **[minimum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minimum)**()| <br>Compute minimum of two arguments. |
+| **[minute](/hybridse/language_guide/udf/Files/udfs_8h.md#function-minute)**()| <br>Return the minute for a timestamp. |
+| **[month](/hybridse/language_guide/udf/Files/udfs_8h.md#function-month)**()| <br>Return the month part of a timestamp or date. |
 | **[pow](/hybridse/language_guide/udf/Files/udfs_8h.md#function-pow)**()| <br>Return the value of expr1 to the power of expr2. |
 | **[power](/hybridse/language_guide/udf/Files/udfs_8h.md#function-power)**()| <br>Return the value of expr1 to the power of expr2. |
 | **[round](/hybridse/language_guide/udf/Files/udfs_8h.md#function-round)**()| <br>Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode. |
-| **[second](/hybridse/language_guide/udf/Files/udfs_8h.md#function-second)**()| |
+| **[second](/hybridse/language_guide/udf/Files/udfs_8h.md#function-second)**()| <br>Return the second for a timestamp. |
 | **[sin](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sin)**()| <br>Return the sine of expr. |
 | **[sqrt](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sqrt)**()| <br>Return square root of expr. |
 | **[strcmp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-strcmp)**()| <br>Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise. |
-| **[string](/hybridse/language_guide/udf/Files/udfs_8h.md#function-string)**()| |
+| **[string](/hybridse/language_guide/udf/Files/udfs_8h.md#function-string)**()| <br>Return string converted from numeric expression. |
 | **[substr](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substr)**()| <br>Return a substring from string `str` starting at position `pos`. |
 | **[substring](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substring)**()| <br>Return a substring from string `str` starting at position `pos`. |
 | **[sum](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum)**()| <br>Compute sum of values. |
@@ -92,17 +92,17 @@ title: UDF Documentation
 | **[sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_cate_where)**()| <br>Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. |
 | **[sum_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-sum_where)**()| <br>Compute sum of values match specified condition. |
 | **[tan](/hybridse/language_guide/udf/Files/udfs_8h.md#function-tan)**()| <br>Return the tangent of expr. |
-| **[timestamp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-timestamp)**()| |
+| **[timestamp](/hybridse/language_guide/udf/Files/udfs_8h.md#function-timestamp)**()| <br>Cast int64, date or string expression to timestamp. |
 | **[top](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top)**()| <br>Compute top k of values and output string separated by comma. The outputs are sorted in desc order. |
 | **[top_n_key_avg_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_avg_cate_where)**()| <br>Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
 | **[top_n_key_count_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_count_cate_where)**()| <br>Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
 | **[top_n_key_max_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_max_cate_where)**()| <br>Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
-| **[top_n_key_min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_min_cate_where)**()| |
+| **[top_n_key_min_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_min_cate_where)**()| <br>Compute minimum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
 | **[top_n_key_sum_cate_where](/hybridse/language_guide/udf/Files/udfs_8h.md#function-top_n_key_sum_cate_where)**()| <br>Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. |
 | **[truncate](/hybridse/language_guide/udf/Files/udfs_8h.md#function-truncate)**()| <br>Return the nearest integer that is not greater in magnitude than the expr. |
-| **[week](/hybridse/language_guide/udf/Files/udfs_8h.md#function-week)**()| |
-| **[weekofyear](/hybridse/language_guide/udf/Files/udfs_8h.md#function-weekofyear)**()| |
-| **[year](/hybridse/language_guide/udf/Files/udfs_8h.md#function-year)**()| |
+| **[week](/hybridse/language_guide/udf/Files/udfs_8h.md#function-week)**()| <br>Return the week of year for a timestamp or date. |
+| **[weekofyear](/hybridse/language_guide/udf/Files/udfs_8h.md#function-weekofyear)**()| <br>Return the week of year for a timestamp or date. |
+| **[year](/hybridse/language_guide/udf/Files/udfs_8h.md#function-year)**()| <br>Return the year part of a timestamp or date. |
 
 
 ## Functions Documentation
@@ -115,11 +115,11 @@ abs()
 
 **Description**:
 
-Return the absolute value of expr.
+Return the absolute value of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -139,7 +139,7 @@ SELECT ABS(-32);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function acos
 
@@ -149,11 +149,11 @@ acos()
 
 **Description**:
 
-Return the arc cosine of expr.
+Return the arc cosine of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -172,7 +172,7 @@ SELECT ACOS(1);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function add
 
@@ -181,6 +181,21 @@ add()
 ```
 
 **Description**:
+
+Compute sum of two arguments. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select add(1, 2);
+-- output 3
+```
 
 
 **Supported Types**:
@@ -197,7 +212,7 @@ add()
 * [`timestamp`, `int16`]
 * [`timestamp`, `int32`]
 * [`timestamp`, `int64`]
-* [`timestamp`, `timestamp`]
+* [`timestamp`, `timestamp`] 
 
 ### function asin
 
@@ -207,11 +222,11 @@ asin()
 
 **Description**:
 
-Return the arc sine of expr.
+Return the arc sine of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -230,7 +245,7 @@ SELECT ASIN(0.0);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function at
 
@@ -240,6 +255,32 @@ at()
 
 **Description**:
 
+Returns the value of expression from the offset-th row of the ordered partition. 
+
+**Parameters**: 
+
+  * **offset** The number of rows forward from the current row from which to obtain the value.
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT at(value, 3) OVER w;
+-- output 3
+```
 
 **Supported Types**:
 
@@ -247,7 +288,7 @@ at()
 * [`list<date>`, `int64`]
 * [`list<number>`, `int64`]
 * [`list<string>`, `int64`]
-* [`list<timestamp>`, `int64`]
+* [`list<timestamp>`, `int64`] 
 
 ### function atan
 
@@ -257,12 +298,12 @@ atan()
 
 **Description**:
 
-Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X.
+Return the arc tangent of expr If called with one parameter, this function returns the arc tangent of expr. If called with two parameters X and Y, this function returns the arc tangent of Y / X. 
 
-**Parameters**:
+**Parameters**: 
 
-* **X**
-* **Y**
+  * **X** 
+  * **Y** 
 
 
 **Since**:
@@ -288,7 +329,7 @@ SELECT ATAN(0, -0);
 * [`bool`, `number`]
 * [`number`]
 * [`number`, `bool`]
-* [`number`, `number`]
+* [`number`, `number`] 
 
 ### function atan2
 
@@ -298,12 +339,12 @@ atan2()
 
 **Description**:
 
-Return the arc tangent of Y / X..
+Return the arc tangent of Y / X.. 
 
-**Parameters**:
+**Parameters**: 
 
-* **X**
-* **Y**
+  * **X** 
+  * **Y** 
 
 
 **Since**:
@@ -325,7 +366,7 @@ SELECT ATAN2(0, -0);
 * [`bool`, `bool`]
 * [`bool`, `number`]
 * [`number`, `bool`]
-* [`number`, `number`]
+* [`number`, `number`] 
 
 ### function avg
 
@@ -335,11 +376,41 @@ avg()
 
 **Description**:
 
-Compute average of values.
+Compute average of values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT avg(value) OVER w;
+-- output 2
+```
+
 
 **Supported Types**:
 
-* [`list<number>`]
+* [`list<number>`] 
 
 ### function avg_cate
 
@@ -349,12 +420,12 @@ avg_cate()
 
 **Description**:
 
-Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute average of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **value** Specify value column to aggregate on.
-* **catagory** Specify catagory column to group by.
+  * **value** Specify value column to aggregate on. 
+  * **catagory** Specify catagory column to group by.
 
 
 
@@ -384,7 +455,7 @@ SELECT avg_cate(value, catagory) OVER w;
 * [`list<number>`, `list<int32>`]
 * [`list<number>`, `list<int64>`]
 * [`list<number>`, `list<string>`]
-* [`list<number>`, `list<timestamp>`]
+* [`list<number>`, `list<timestamp>`] 
 
 ### function avg_cate_where
 
@@ -394,13 +465,13 @@ avg_cate_where()
 
 **Description**:
 
-Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute average of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
 
 
 
@@ -430,7 +501,7 @@ SELECT avg_cate_where(catagory, value, condition) OVER w;
 * [`list<number>`, `list<bool>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<string>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`] 
 
 ### function avg_where
 
@@ -440,11 +511,42 @@ avg_where()
 
 **Description**:
 
-Compute average of values match specified condition.
+Compute average of values match specified condition. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT avg_where(value, value > 2) OVER w;
+-- output 3.5
+```
+
 
 **Supported Types**:
 
-* [`list<number>`, `list<bool>`]
+* [`list<number>`, `list<bool>`] 
 
 ### function bool
 
@@ -454,10 +556,25 @@ bool()
 
 **Description**:
 
+Cast string expression to bool. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select bool("true");
+-- output true
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function ceil
 
@@ -467,11 +584,11 @@ ceil()
 
 **Description**:
 
-Return the smallest integer value not less than the expr.
+Return the smallest integer value not less than the expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -491,7 +608,7 @@ SELECT CEIL(1.23);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function ceiling
 
@@ -501,11 +618,11 @@ ceiling()
 
 **Description**:
 
-Return the smallest integer value not less than the expr.
+Return the smallest integer value not less than the expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -525,7 +642,7 @@ SELECT CEIL(1.23);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function concat
 
@@ -535,10 +652,25 @@ concat()
 
 **Description**:
 
+This function returns a string resulting from the joining of two or more string values in an end-to-end manner. (To add a separating value during joining, see concat_ws.) 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select concat("1", 2, 3, 4, 5.6, 7.8, Timestamp(1590115420000L));
+-- output "12345.67.82020-05-22 10:43:40"
+```
+
 
 **Supported Types**:
 
-* [...]
+* [...] 
 
 ### function concat_ws
 
@@ -548,6 +680,21 @@ concat_ws()
 
 **Description**:
 
+Returns a string resulting from the joining of two or more string value in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select concat("-", "1", 2, 3, 4, 5.6, 7.8, Timestamp(1590115420000L));
+-- output "1-2-3-4-5.6-7.8-2020-05-22 10:43:40"
+```
+
 
 **Supported Types**:
 
@@ -555,7 +702,7 @@ concat_ws()
 * [`date`, ...]
 * [`number`, ...]
 * [`string`, ...]
-* [`timestamp`, ...]
+* [`timestamp`, ...] 
 
 ### function cos
 
@@ -565,11 +712,11 @@ cos()
 
 **Description**:
 
-Return the cosine of expr.
+Return the cosine of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr** It is a single argument in radians.
+  * **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -591,7 +738,7 @@ SELECT COS(0);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function cot
 
@@ -601,11 +748,11 @@ cot()
 
 **Description**:
 
-Return the cotangent of expr.
+Return the cotangent of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -624,7 +771,7 @@ SELECT COT(1);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function count
 
@@ -634,7 +781,37 @@ count()
 
 **Description**:
 
-Compute count of values.
+Compute number of values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT count(value) OVER w;
+-- output 5
+```
+
 
 **Supported Types**:
 
@@ -643,7 +820,7 @@ Compute count of values.
 * [`list<number>`]
 * [`list<row>`]
 * [`list<string>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function count_cate
 
@@ -653,12 +830,12 @@ count_cate()
 
 **Description**:
 
-Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute count of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **value** Specify value column to aggregate on.
-* **catagory** Specify catagory column to group by.
+  * **value** Specify value column to aggregate on. 
+  * **catagory** Specify catagory column to group by.
 
 
 
@@ -688,7 +865,7 @@ SELECT count_cate(value, catagory) OVER w;
 * [`list<number>`, `list<int32>`]
 * [`list<number>`, `list<int64>`]
 * [`list<number>`, `list<string>`]
-* [`list<number>`, `list<timestamp>`]
+* [`list<number>`, `list<timestamp>`] 
 
 ### function count_cate_where
 
@@ -698,13 +875,13 @@ count_cate_where()
 
 **Description**:
 
-Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute count of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
 
 
 
@@ -734,7 +911,7 @@ SELECT count_cate_where(catagory, value, condition) OVER w;
 * [`list<number>`, `list<bool>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<string>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`] 
 
 ### function count_where
 
@@ -744,14 +921,45 @@ count_where()
 
 **Description**:
 
-Compute number of values match specified condition.
+Compute number of values match specified condition. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT count_where(value, value > 2) OVER w;
+-- output 2
+```
+
 
 **Supported Types**:
 
 * [`list<date>`, `list<bool>`]
 * [`list<number>`, `list<bool>`]
 * [`list<string>`, `list<bool>`]
-* [`list<timestamp>`, `list<bool>`]
+* [`list<timestamp>`, `list<bool>`] 
 
 ### function date
 
@@ -761,11 +969,28 @@ date()
 
 **Description**:
 
+Cast timestamp or string expression to date. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select date(timestamp(1590115420000));
+-- output 2020-05-22
+select date("2020-05-22");
+-- output 2020-05-22
+```
+
 
 **Supported Types**:
 
 * [`string`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function date_format
 
@@ -775,11 +1000,21 @@ date_format()
 
 **Description**:
 
+Formats the datetime value according to the format string. 
+
+Example:
+
+
+
+```sql
+select date_format(timestamp(1590115420000),"%Y-%m-%d %H:%M:%S");
+--output "2020-05-22 10:43:40"
+```
 
 **Supported Types**:
 
 * [`date`, `string`]
-* [`timestamp`, `string`]
+* [`timestamp`, `string`] 
 
 ### function day
 
@@ -789,12 +1024,30 @@ day()
 
 **Description**:
 
+Return the day of the month for a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Note: This function equals the `[day()](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)` function.
+
+Example: 
+
+```sql
+select dayofmonth(timestamp(1590115420000));
+-- output 22
+
+select day(timestamp(1590115420000));
+-- output 22
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function dayofmonth
 
@@ -804,12 +1057,30 @@ dayofmonth()
 
 **Description**:
 
+Return the day of the month for a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Note: This function equals the `[day()](/hybridse/language_guide/udf/Files/udfs_8h.md#function-day)` function.
+
+Example: 
+
+```sql
+select dayofmonth(timestamp(1590115420000));
+-- output 22
+
+select day(timestamp(1590115420000));
+-- output 22
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function dayofweek
 
@@ -819,12 +1090,27 @@ dayofweek()
 
 **Description**:
 
+Return the day of week for a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Note: This function equals the `[week()](/hybridse/language_guide/udf/Files/udfs_8h.md#function-week)` function.
+
+Example: 
+
+```sql
+select dayofweek(timestamp(1590115420000));
+-- output 6
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function distinct_count
 
@@ -834,7 +1120,37 @@ distinct_count()
 
 **Description**:
 
-Compute distinct number of values.
+Compute number of distinct values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 0    |
+| 2    |
+| 2    |
+| 4    |
+
+
+
+
+```sql
+SELECT distinct_count(value) OVER w;
+-- output 3
+```
+
 
 **Supported Types**:
 
@@ -842,7 +1158,7 @@ Compute distinct number of values.
 * [`list<date>`]
 * [`list<number>`]
 * [`list<string>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function double
 
@@ -852,10 +1168,25 @@ double()
 
 **Description**:
 
+Cast string expression to double. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select double("1.23");
+-- output 1.23
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function exp
 
@@ -865,11 +1196,11 @@ exp()
 
 **Description**:
 
-Return the value of e (the base of natural logarithms) raised to the power of expr.
+Return the value of e (the base of natural logarithms) raised to the power of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -886,7 +1217,7 @@ SELECT EXP(0);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function first_value
 
@@ -896,9 +1227,15 @@ first_value()
 
 **Description**:
 
-Returns the value of expr from the first row of the window frame.
+Returns the value of expr from the first row of the window frame. 
 
-**Supported Types**:
+
+
+```
+    @since 0.1.0
+```
+
+**Supported Types**: 
 
 ### function float
 
@@ -908,10 +1245,25 @@ float()
 
 **Description**:
 
+Cast string expression to float. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select float("1.23");
+-- output 1.23
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function floor
 
@@ -921,11 +1273,11 @@ floor()
 
 **Description**:
 
-Return the largest integer value not less than the expr.
+Return the largest integer value not less than the expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -945,7 +1297,7 @@ SELECT FLOOR(1.23);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function fz_join
 
@@ -955,10 +1307,25 @@ fz_join()
 
 **Description**:
 
+Used by feature zero, for each string value from specified column of window, join by delimeter. Null values are skipped. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select fz_join(fz_split("k1:v1,k2:v2", ","), " ");
+--  "k1:v1 k2:v2"
+```
+
 
 **Supported Types**:
 
-* [`list<string>`, `string`]
+* [`list<string>`, `string`] 
 
 ### function fz_split
 
@@ -968,11 +1335,16 @@ fz_split()
 
 **Description**:
 
-Used by feature zero, split string to list by delimeter. Null values are skipped.
+Used by feature zero, split string to list by delimeter. Null values are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`string`, `string`]
+* [`string`, `string`] 
 
 ### function fz_split_by_key
 
@@ -982,11 +1354,16 @@ fz_split_by_key()
 
 **Description**:
 
-Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.
+Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`string`, `string`, `string`]
+* [`string`, `string`, `string`] 
 
 ### function fz_split_by_value
 
@@ -996,11 +1373,16 @@ fz_split_by_value()
 
 **Description**:
 
-Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.
+Used by feature zero, split string by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`string`, `string`, `string`]
+* [`string`, `string`, `string`] 
 
 ### function fz_top1_ratio
 
@@ -1010,14 +1392,20 @@ fz_top1_ratio()
 
 **Description**:
 
-Compute the top1 key's ratio.
+Compute the top1 key's ratio. 
+
+
+
+```
+    @since 0.1.0
+```
 
 **Supported Types**:
 
 * [`list<date>`]
 * [`list<number>`]
 * [`list<string>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function fz_topn_frequency
 
@@ -1027,14 +1415,20 @@ fz_topn_frequency()
 
 **Description**:
 
-Return the topN keys sorted by their frequency.
+Return the topN keys sorted by their frequency. 
+
+
+
+```
+    @since 0.1.0
+```
 
 **Supported Types**:
 
 * [`list<date>`, `list<int32>`]
 * [`list<number>`, `list<int32>`]
 * [`list<string>`, `list<int32>`]
-* [`list<timestamp>`, `list<int32>`]
+* [`list<timestamp>`, `list<int32>`] 
 
 ### function fz_window_split
 
@@ -1044,11 +1438,16 @@ fz_window_split()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped.
+Used by feature zero, for each string value from specified column of window, split by delimeter and add segment to output list. Null values are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`list<string>`, `list<string>`]
+* [`list<string>`, `list<string>`] 
 
 ### function fz_window_split_by_key
 
@@ -1058,11 +1457,16 @@ fz_window_split_by_key()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped.
+Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each key to output list. Null and illegal segments are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`list<string>`, `list<string>`, `list<string>`]
+* [`list<string>`, `list<string>`, `list<string>`] 
 
 ### function fz_window_split_by_value
 
@@ -1072,11 +1476,16 @@ fz_window_split_by_value()
 
 **Description**:
 
-Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped.
+Used by feature zero, for each string value from specified column of window, split by delimeter and then split each segment as kv pair, then add each value to output list. Null and illegal segments are skipped. 
+
+**Since**:
+0.1.0
+
+
 
 **Supported Types**:
 
-* [`list<string>`, `list<string>`, `list<string>`]
+* [`list<string>`, `list<string>`, `list<string>`] 
 
 ### function hour
 
@@ -1086,11 +1495,24 @@ hour()
 
 **Description**:
 
+Return the hour for a timestamp. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select hour(timestamp(1590115420000));
+-- output 10
+```
+
 
 **Supported Types**:
 
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function identity
 
@@ -1100,6 +1522,19 @@ identity()
 
 **Description**:
 
+Return value. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select identity(1);
+-- output 1
+```
+
 
 **Supported Types**:
 
@@ -1107,7 +1542,7 @@ identity()
 * [`date`]
 * [`number`]
 * [`string`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function if_null
 
@@ -1117,12 +1552,12 @@ if_null()
 
 **Description**:
 
-If input is not null, return input value; else return default value.
+If input is not null, return input value; else return default value. 
 
-**Parameters**:
+**Parameters**: 
 
-* **input** Input value
-* **default** Default value if input is null
+  * **input** Input value 
+  * **default** Default value if input is null
 
 
 **Since**:
@@ -1149,7 +1584,7 @@ SELECT if_null("hello", "default"), if_null(NULL, "default");
 * [`int32`, `int32`]
 * [`int64`, `int64`]
 * [`string`, `string`]
-* [`timestamp`, `timestamp`]
+* [`timestamp`, `timestamp`] 
 
 ### function ifnull
 
@@ -1159,12 +1594,12 @@ ifnull()
 
 **Description**:
 
-If input is not null, return input value; else return default value.
+If input is not null, return input value; else return default value. 
 
-**Parameters**:
+**Parameters**: 
 
-* **input** Input value
-* **default** Default value if input is null
+  * **input** Input value 
+  * **default** Default value if input is null
 
 
 **Since**:
@@ -1191,7 +1626,7 @@ SELECT if_null("hello", "default"), if_null(NULL, "default");
 * [`int32`, `int32`]
 * [`int64`, `int64`]
 * [`string`, `string`]
-* [`timestamp`, `timestamp`]
+* [`timestamp`, `timestamp`] 
 
 ### function inc
 
@@ -1201,10 +1636,23 @@ inc()
 
 **Description**:
 
+Return expression + 1. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select inc(1);
+-- output 2
+```
+
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function int16
 
@@ -1214,10 +1662,25 @@ int16()
 
 **Description**:
 
+Cast string expression to int16. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select int16("123");
+-- output 123
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function int32
 
@@ -1227,10 +1690,25 @@ int32()
 
 **Description**:
 
+Cast string expression to int32. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select int32("12345");
+-- output 12345
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function int64
 
@@ -1240,10 +1718,25 @@ int64()
 
 **Description**:
 
+Cast string expression to int64. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select int64("1590115420000");
+-- output 1590115420000
+```
+
 
 **Supported Types**:
 
-* [`string`]
+* [`string`] 
 
 ### function is_null
 
@@ -1253,11 +1746,11 @@ is_null()
 
 **Description**:
 
-Check if input value is null, return bool.
+Check if input value is null, return bool. 
 
-**Parameters**:
+**Parameters**: 
 
-* **input** Input value
+  * **input** Input value
 
 
 **Since**:
@@ -1271,7 +1764,7 @@ Check if input value is null, return bool.
 * [`date`]
 * [`number`]
 * [`string`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function isnull
 
@@ -1281,11 +1774,11 @@ isnull()
 
 **Description**:
 
-Check if input value is null, return bool.
+Check if input value is null, return bool. 
 
-**Parameters**:
+**Parameters**: 
 
-* **input** Input value
+  * **input** Input value
 
 
 **Since**:
@@ -1299,7 +1792,7 @@ Check if input value is null, return bool.
 * [`date`]
 * [`number`]
 * [`string`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function ln
 
@@ -1309,11 +1802,11 @@ ln()
 
 **Description**:
 
-Return the natural logarithm of expr.
+Return the natural logarithm of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -1333,7 +1826,7 @@ SELECT LN(1);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function log
 
@@ -1343,12 +1836,12 @@ log()
 
 **Description**:
 
-log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base.
+log(base, expr) If called with one parameter, this function returns the natural logarithm of expr. If called with two parameters, this function returns the logarithm of expr to the base. 
 
-**Parameters**:
+**Parameters**: 
 
-* **base**
-* **expr**
+  * **base** 
+  * **expr** 
 
 
 **Since**:
@@ -1381,7 +1874,7 @@ SELECT LOG(10,100);
 * [`number`, `date`]
 * [`number`, `number`]
 * [`number`, `string`]
-* [`number`, `timestamp`]
+* [`number`, `timestamp`] 
 
 ### function log10
 
@@ -1391,11 +1884,11 @@ log10()
 
 **Description**:
 
-Return the base-10 logarithm of expr.
+Return the base-10 logarithm of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -1415,7 +1908,7 @@ SELECT LOG10(100);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function log2
 
@@ -1425,11 +1918,11 @@ log2()
 
 **Description**:
 
-Return the base-2 logarithm of expr.
+Return the base-2 logarithm of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -1449,7 +1942,7 @@ SELECT LOG2(65536);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function make_tuple
 
@@ -1462,7 +1955,7 @@ make_tuple()
 
 **Supported Types**:
 
-* [...]
+* [...] 
 
 ### function max
 
@@ -1472,14 +1965,44 @@ max()
 
 **Description**:
 
-Compute max of values.
+Compute maximum of values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT max(value) OVER w;
+-- output 4
+```
+
 
 **Supported Types**:
 
 * [`list<date>`]
 * [`list<number>`]
 * [`list<string>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function max_cate
 
@@ -1489,12 +2012,12 @@ max_cate()
 
 **Description**:
 
-Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute maximum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **value** Specify value column to aggregate on.
-* **catagory** Specify catagory column to group by.
+  * **value** Specify value column to aggregate on. 
+  * **catagory** Specify catagory column to group by.
 
 
 
@@ -1524,7 +2047,7 @@ SELECT max_cate(value, catagory) OVER w;
 * [`list<number>`, `list<int32>`]
 * [`list<number>`, `list<int64>`]
 * [`list<number>`, `list<string>`]
-* [`list<number>`, `list<timestamp>`]
+* [`list<number>`, `list<timestamp>`] 
 
 ### function max_cate_where
 
@@ -1534,13 +2057,13 @@ max_cate_where()
 
 **Description**:
 
-Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute maximum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
 
 
 
@@ -1570,7 +2093,7 @@ SELECT max_cate_where(catagory, value, condition) OVER w;
 * [`list<number>`, `list<bool>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<string>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`] 
 
 ### function max_where
 
@@ -1580,11 +2103,42 @@ max_where()
 
 **Description**:
 
-Compute maximum of values match specified condition.
+Compute maximum of values match specified condition. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT max_where(value, value <= 2) OVER w;
+-- output 2
+```
+
 
 **Supported Types**:
 
-* [`list<number>`, `list<bool>`]
+* [`list<number>`, `list<bool>`] 
 
 ### function maximum
 
@@ -1593,6 +2147,12 @@ maximum()
 ```
 
 **Description**:
+
+Compute maximum of two arguments. 
+
+**Since**:
+0.1.0
+
 
 
 **Supported Types**:
@@ -1605,7 +2165,7 @@ maximum()
 * [`int32`, `int32`]
 * [`int64`, `int64`]
 * [`string`, `string`]
-* [`timestamp`, `timestamp`]
+* [`timestamp`, `timestamp`] 
 
 ### function min
 
@@ -1615,14 +2175,44 @@ min()
 
 **Description**:
 
-Compute min of values.
+Compute minimum of values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT min(value) OVER w;
+-- output 0
+```
+
 
 **Supported Types**:
 
 * [`list<date>`]
 * [`list<number>`]
 * [`list<string>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function min_cate
 
@@ -1632,14 +2222,13 @@ min_cate()
 
 **Description**:
 
+Compute minimum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **value** Specify value column to aggregate on.
-* **catagory** Specify catagory column to group by.
+  * **value** Specify value column to aggregate on. 
+  * **catagory** Specify catagory column to group by.
 
-
-Compute minimum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
 
 Example:
@@ -1668,7 +2257,7 @@ SELECT min_cate(value, catagory) OVER w;
 * [`list<number>`, `list<int32>`]
 * [`list<number>`, `list<int64>`]
 * [`list<number>`, `list<string>`]
-* [`list<number>`, `list<timestamp>`]
+* [`list<number>`, `list<timestamp>`] 
 
 ### function min_cate_where
 
@@ -1678,15 +2267,14 @@ min_cate_where()
 
 **Description**:
 
+Compute minimum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
 
-
-Compute minimum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
 
 
 Example:
@@ -1716,7 +2304,7 @@ SELECT min_cate_where(catagory, value, condition) OVER w;
 * [`list<number>`, `list<bool>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<string>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`] 
 
 ### function min_where
 
@@ -1726,11 +2314,42 @@ min_where()
 
 **Description**:
 
-Compute minimum of values match specified condition.
+Compute minimum of values match specified condition. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT min_where(value, value > 2) OVER w;
+-- output 3
+```
+
 
 **Supported Types**:
 
-* [`list<number>`, `list<bool>`]
+* [`list<number>`, `list<bool>`] 
 
 ### function minimum
 
@@ -1739,6 +2358,12 @@ minimum()
 ```
 
 **Description**:
+
+Compute minimum of two arguments. 
+
+**Since**:
+0.1.0
+
 
 
 **Supported Types**:
@@ -1751,7 +2376,7 @@ minimum()
 * [`int32`, `int32`]
 * [`int64`, `int64`]
 * [`string`, `string`]
-* [`timestamp`, `timestamp`]
+* [`timestamp`, `timestamp`] 
 
 ### function minute
 
@@ -1761,11 +2386,24 @@ minute()
 
 **Description**:
 
+Return the minute for a timestamp. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select minute(timestamp(1590115420000));
+-- output 43
+```
+
 
 **Supported Types**:
 
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function month
 
@@ -1775,12 +2413,25 @@ month()
 
 **Description**:
 
+Return the month part of a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select month(timestamp(1590115420000));
+-- output 5
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function pow
 
@@ -1790,12 +2441,12 @@ pow()
 
 **Description**:
 
-Return the value of expr1 to the power of expr2.
+Return the value of expr1 to the power of expr2. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr1**
-* **expr2**
+  * **expr1** 
+  * **expr2** 
 
 
 **Since**:
@@ -1817,7 +2468,7 @@ SELECT POW(2, 10);
 * [`bool`, `bool`]
 * [`bool`, `number`]
 * [`number`, `bool`]
-* [`number`, `number`]
+* [`number`, `number`] 
 
 ### function power
 
@@ -1827,12 +2478,12 @@ power()
 
 **Description**:
 
-Return the value of expr1 to the power of expr2.
+Return the value of expr1 to the power of expr2. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr1**
-* **expr2**
+  * **expr1** 
+  * **expr2** 
 
 
 **Since**:
@@ -1854,7 +2505,7 @@ SELECT POW(2, 10);
 * [`bool`, `bool`]
 * [`bool`, `number`]
 * [`number`, `bool`]
-* [`number`, `number`]
+* [`number`, `number`] 
 
 ### function round
 
@@ -1864,11 +2515,11 @@ round()
 
 **Description**:
 
-Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode.
+Return the nearest integer value to expr (in floating-point format), rounding halfway cases away from zero, regardless of the current rounding mode. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -1888,7 +2539,7 @@ SELECT ROUND(1.23);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function second
 
@@ -1898,11 +2549,24 @@ second()
 
 **Description**:
 
+Return the second for a timestamp. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select second(timestamp(1590115420000));
+-- output 40
+```
+
 
 **Supported Types**:
 
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function sin
 
@@ -1912,11 +2576,11 @@ sin()
 
 **Description**:
 
-Return the sine of expr.
+Return the sine of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr** It is a single argument in radians.
+  * **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -1938,7 +2602,7 @@ SELECT SIN(0);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function sqrt
 
@@ -1948,11 +2612,11 @@ sqrt()
 
 **Description**:
 
-Return square root of expr.
+Return square root of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr** It is a single argument in radians.
+  * **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -1971,7 +2635,7 @@ SELECT SQRT(100);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function strcmp
 
@@ -1981,7 +2645,7 @@ strcmp()
 
 **Description**:
 
-Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise.
+Returns 0 if the strings are the same, -1 if the first argument is smaller than the second according to the current sort order, and 1 otherwise. 
 
 **Since**:
 0.1.0
@@ -2003,7 +2667,7 @@ select strcmp("text", "text");
 
 **Supported Types**:
 
-* [`string`, `string`]
+* [`string`, `string`] 
 
 ### function string
 
@@ -2013,13 +2677,31 @@ string()
 
 **Description**:
 
+Return string converted from numeric expression. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select string(123);
+-- output "123"
+
+select string(1.23);
+-- output "1.23"
+```
+
 
 **Supported Types**:
 
 * [`bool`]
 * [`date`]
 * [`number`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function substr
 
@@ -2029,22 +2711,29 @@ substr()
 
 **Description**:
 
-Return a substring from string `str` starting at position `pos`.
+Return a substring from string `str` starting at position `pos`. 
 
-**Parameters**:
+**Parameters**: 
 
-* **str**
-* **pos** define the begining of the substring.
+  * **str** 
+  * **pos** define the begining of the substring.
 
 
 **Since**:
 0.1.0
 
 
-Example: :
+Note: This function equals the `[substr()](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substr)` function.
+
+Example:
+
+
 
 ```sql
 select substr("hello world", 2);
+-- output "llo world"
+
+select substring("hello world", 2);
 -- output "llo world"
 ```
 
@@ -2056,7 +2745,7 @@ select substr("hello world", 2);
 **Supported Types**:
 
 * [`string`, `int32`]
-* [`string`, `int32`, `int32`]
+* [`string`, `int32`, `int32`] 
 
 ### function substring
 
@@ -2066,22 +2755,29 @@ substring()
 
 **Description**:
 
-Return a substring from string `str` starting at position `pos`.
+Return a substring from string `str` starting at position `pos`. 
 
-**Parameters**:
+**Parameters**: 
 
-* **str**
-* **pos** define the begining of the substring.
+  * **str** 
+  * **pos** define the begining of the substring.
 
 
 **Since**:
 0.1.0
 
 
-Example: :
+Note: This function equals the `[substr()](/hybridse/language_guide/udf/Files/udfs_8h.md#function-substr)` function.
+
+Example:
+
+
 
 ```sql
 select substr("hello world", 2);
+-- output "llo world"
+
+select substring("hello world", 2);
 -- output "llo world"
 ```
 
@@ -2093,7 +2789,7 @@ select substr("hello world", 2);
 **Supported Types**:
 
 * [`string`, `int32`]
-* [`string`, `int32`, `int32`]
+* [`string`, `int32`, `int32`] 
 
 ### function sum
 
@@ -2103,12 +2799,37 @@ sum()
 
 **Description**:
 
-Compute sum of values.
+Compute sum of values. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on.
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT sum(value) OVER w;
+-- output 10
+```
 
 **Supported Types**:
 
 * [`list<number>`]
-* [`list<timestamp>`]
+* [`list<timestamp>`] 
 
 ### function sum_cate
 
@@ -2118,12 +2839,12 @@ sum_cate()
 
 **Description**:
 
-Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute sum of values grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **value** Specify value column to aggregate on.
-* **catagory** Specify catagory column to group by.
+  * **value** Specify value column to aggregate on. 
+  * **catagory** Specify catagory column to group by.
 
 
 
@@ -2153,7 +2874,7 @@ SELECT sum_cate(value, catagory) OVER w;
 * [`list<number>`, `list<int32>`]
 * [`list<number>`, `list<int64>`]
 * [`list<number>`, `list<string>`]
-* [`list<number>`, `list<timestamp>`]
+* [`list<number>`, `list<timestamp>`] 
 
 ### function sum_cate_where
 
@@ -2163,13 +2884,13 @@ sum_cate_where()
 
 **Description**:
 
-Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order.
+Compute sum of values matching specified condition grouped by category key and output string. Each group is represented as 'K:V' and separated by comma in outputs and are sorted by key in ascend order. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
 
 
 
@@ -2199,7 +2920,7 @@ SELECT sum_cate_where(catagory, value, condition) OVER w;
 * [`list<number>`, `list<bool>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<string>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`] 
 
 ### function sum_where
 
@@ -2209,11 +2930,42 @@ sum_where()
 
 **Description**:
 
-Compute sum of values match specified condition.
+Compute sum of values match specified condition. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT sum_where(value, value > 2) OVER w;
+-- output 7
+```
+
 
 **Supported Types**:
 
-* [`list<number>`, `list<bool>`]
+* [`list<number>`, `list<bool>`] 
 
 ### function tan
 
@@ -2223,11 +2975,11 @@ tan()
 
 **Description**:
 
-Return the tangent of expr.
+Return the tangent of expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr** It is a single argument in radians.
+  * **expr** It is a single argument in radians.
 
 
 **Since**:
@@ -2246,7 +2998,7 @@ SELECT TAN(0);
 
 **Supported Types**:
 
-* [`number`]
+* [`number`] 
 
 ### function timestamp
 
@@ -2256,11 +3008,32 @@ timestamp()
 
 **Description**:
 
+Cast int64, date or string expression to timestamp. 
+
+**Since**:
+0.1.0
+
+
+Example:
+
+
+
+```sql
+select timestamp(1590115420000);
+-- output 2020-05-22 10:43:40
+
+select date("2020-05-22");
+-- output 2020-05-22 00:00:00
+
+select timestamp("2020-05-22 10:43:40");
+-- output 2020-05-22 10:43:40
+```
+
 
 **Supported Types**:
 
 * [`date`]
-* [`string`]
+* [`string`] 
 
 ### function top
 
@@ -2270,7 +3043,38 @@ top()
 
 **Description**:
 
-Compute top k of values and output string separated by comma. The outputs are sorted in desc order.
+Compute top k of values and output string separated by comma. The outputs are sorted in desc order. 
+
+**Parameters**: 
+
+  * **value** Specify value column to aggregate on. 
+  * **k** Fetch top n keys.
+
+
+**Since**:
+0.1.0
+
+
+
+Example:
+
+
+| value    |
+|  -------- |
+| 0    |
+| 1    |
+| 2    |
+| 3    |
+| 4    |
+
+
+
+
+```sql
+SELECT top(value, 3) OVER w;
+-- output "2,3,4"
+```
+
 
 **Supported Types**:
 
@@ -2281,7 +3085,7 @@ Compute top k of values and output string separated by comma. The outputs are so
 * [`list<string>`, `list<int32>`]
 * [`list<string>`, `list<int64>`]
 * [`list<timestamp>`, `list<int32>`]
-* [`list<timestamp>`, `list<int64>`]
+* [`list<timestamp>`, `list<int64>`] 
 
 ### function top_n_key_avg_cate_where
 
@@ -2291,14 +3095,14 @@ top_n_key_avg_cate_where()
 
 **Description**:
 
-Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
+Compute average of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
-* **n** Fetch top n keys.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column. 
+  * **n** Fetch top n keys.
 
 
 
@@ -2337,7 +3141,7 @@ OVER w;
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`] 
 
 ### function top_n_key_count_cate_where
 
@@ -2347,14 +3151,14 @@ top_n_key_count_cate_where()
 
 **Description**:
 
-Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
+Compute count of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
-* **n** Fetch top n keys.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column. 
+  * **n** Fetch top n keys.
 
 
 
@@ -2393,7 +3197,7 @@ OVER w;
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`] 
 
 ### function top_n_key_max_cate_where
 
@@ -2403,14 +3207,14 @@ top_n_key_max_cate_where()
 
 **Description**:
 
-Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
+Compute maximum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
-* **n** Fetch top n keys.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column. 
+  * **n** Fetch top n keys.
 
 
 
@@ -2449,7 +3253,7 @@ OVER w;
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`] 
 
 ### function top_n_key_min_cate_where
 
@@ -2459,16 +3263,15 @@ top_n_key_min_cate_where()
 
 **Description**:
 
+Compute minimum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
-* **n** Fetch top n keys.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column. 
+  * **n** Fetch top n keys.
 
-
-Compute minimum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
 
 
 Example:
@@ -2506,7 +3309,7 @@ OVER w;
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`] 
 
 ### function top_n_key_sum_cate_where
 
@@ -2516,14 +3319,14 @@ top_n_key_sum_cate_where()
 
 **Description**:
 
-Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma.
+Compute sum of values matching specified condition grouped by category key. Output string for top N keys in descend order. Each group is represented as 'K:V' and separated by comma. 
 
-**Parameters**:
+**Parameters**: 
 
-* **catagory** Specify catagory column to group by.
-* **value** Specify value column to aggregate on.
-* **condition** Specify condition column.
-* **n** Fetch top n keys.
+  * **catagory** Specify catagory column to group by. 
+  * **value** Specify value column to aggregate on. 
+  * **condition** Specify condition column. 
+  * **n** Fetch top n keys.
 
 
 
@@ -2562,7 +3365,7 @@ OVER w;
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int32>`]
 * [`list<number>`, `list<bool>`, `list<string>`, `list<int64>`]
 * [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int32>`]
-* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`]
+* [`list<number>`, `list<bool>`, `list<timestamp>`, `list<int64>`] 
 
 ### function truncate
 
@@ -2572,11 +3375,11 @@ truncate()
 
 **Description**:
 
-Return the nearest integer that is not greater in magnitude than the expr.
+Return the nearest integer that is not greater in magnitude than the expr. 
 
-**Parameters**:
+**Parameters**: 
 
-* **expr**
+  * **expr** 
 
 
 **Since**:
@@ -2596,7 +3399,7 @@ SELECT TRUNCATE(1.23);
 **Supported Types**:
 
 * [`bool`]
-* [`number`]
+* [`number`] 
 
 ### function week
 
@@ -2606,12 +3409,27 @@ week()
 
 **Description**:
 
+Return the week of year for a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select weekofyear(timestamp(1590115420000));
+-- output 21
+select week(timestamp(1590115420000));
+-- output 21
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function weekofyear
 
@@ -2621,12 +3439,27 @@ weekofyear()
 
 **Description**:
 
+Return the week of year for a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select weekofyear(timestamp(1590115420000));
+-- output 21
+select week(timestamp(1590115420000));
+-- output 21
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
-* [`timestamp`]
+* [`timestamp`] 
 
 ### function year
 
@@ -2636,9 +3469,26 @@ year()
 
 **Description**:
 
+Return the year part of a timestamp or date. 
+
+**Since**:
+0.1.0
+
+
+Example: 
+
+```sql
+select year(timestamp(1590115420000));
+-- output 2020
+```
+
 
 **Supported Types**:
 
 * [`date`]
 * [`int64`]
 * [`timestamp`] 
+
+
+
+
