@@ -13,6 +13,7 @@
             * [Data Query Language(DQL)](hybridse/language_guide/query.md)
             * [Data Manipulation Language(DML)](hybridse/language_guide/dml.md)
             * [Data Definition Language Reference(DDL)](hybridse/language_guide/ddl.md)
+            * [UDF Documentation](hybridse/language_guide/udf/Files/udfs_8h.md)
         * C++ API
           * [Classes](hybridse/usage/api/c++/Classes/README.md)
             * [hybridse::base::AbstractIterator](hybridse/usage/api/c++/Classes/classhybridse_1_1base_1_1_abstract_iterator.md)

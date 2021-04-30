@@ -6,6 +6,7 @@
 - [Query Syntax](query.md)
 - [Data Manipulation Language Reference](dml.md)
 - [Data Definition Language Reference](ddl.md)
+- [UDF Documentation](./udfs_8h.md)
 
 ## License
 
