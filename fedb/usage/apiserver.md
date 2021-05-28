@@ -2,6 +2,8 @@
 
 APIServer的部署见[部署FEDB](fedb_deploy.md)。
 
+JSON数据类型与FEDB数据类型对照，与各方法的具体细节，见[RFC](https://github.com/4paradigm/rfcs/blob/main/fedb/api-server.md)。 
+
 ## 使用说明
 
 假设FEDB已创建数据库db，与表trans：
@@ -24,18 +26,19 @@ APIServer为本地启动，端口8080。
 ### Put
 
 reqeust url: http://ip:port/dbs/{db_name}/tables/{table_name}
+
 http method: PUT 
 
 request body: 
 ```
 {
-    "value": [[
-    ...
-    ]]
+    "value": [
+    	[v1, v2, v3]
+    ]
 }
 ```
 
-目前仅支持一条插入，不可以插入多条数据。
+目前仅支持一条插入，不可以插入多条数据。数据需严格按照schema排列。
 
 #### example
 
@@ -57,7 +60,8 @@ response:
 ### GetProcedure
 
 request url: http://ip:port/dbs/{db_name}/procedures/{procedure_name} 
-http method: Get  
+
+http method: Get
 
 #### example
 
@@ -147,7 +151,9 @@ begin SELECT c1, c3, sum(c4) OVER w1 as w1_c4_sum FROM trans WINDOW w1 AS(PARTIT
 ### Execute Procedure 
 
 reqeust url: http://ip:port/dbs/{db_name}/procedures/{procedure_name}
+
 http method: POST
+
 request body: 
 
 ```
@@ -157,6 +163,9 @@ request body:
     "need_schema": true
 }
 ```
+
++ common_cols没有数据时，也可以不填入这个字段。
++ need_schema可以设置为false或者不填此字段，则response中不会有schema字段。
 
 #### example
 
@@ -204,6 +213,4 @@ response:
     }
 }
 ```
-
-need_schema可以设置为false或者不填，则response中不会有schema字段。
 

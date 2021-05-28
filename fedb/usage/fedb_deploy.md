@@ -45,7 +45,7 @@ cd fedb-ns-2.2.0
 **注: endpoint不能用0.0.0.0和127.0.0.1**
 #### 3 启动服务
 ```
-sh bin/start_ns.sh start
+sh bin/start.sh start nameserver
 ```
 ### 部署tablet
 #### 1 下载FEDB部署包
@@ -74,7 +74,7 @@ cd fedb-tablet-2.2.0
 * zk_cluster和zk_root_path配置和nameserver的保持一致
 #### 3 启动服务
 ```
-sh bin/start.sh start
+sh bin/start.sh start tablet
 ```
 **注: 服务启动后会在bin目录下产生tablet.pid文件, 里边保存启动时的进程号。如果该文件内的pid正在运行则会启动失败**
 
@@ -93,7 +93,7 @@ mv fedb-2.2.0 fedb-apiserver-2.2.0
 cd fedb-apiserver-2.2.0
 ```
 
-#### 2 启动服务
+#### 2 修改配置文件conf/apiserver.flags
 
 * 修改endpoint
 * 修改zk_cluster为需要转发到的fedb的zk集群地址
@@ -110,4 +110,10 @@ cd fedb-apiserver-2.2.0
 
 * endpoint不能用0.0.0.0和127.0.0.1。也可以选择不设置`--endpoint`，而只配置端口号 `--port`。
 * 还可自行配置APIServer的线程数，`--thread_pool_size`，默认为16。
+
+#### 3 启动服务
+
+```
+sh bin/start.sh start apiserver
+```
 
