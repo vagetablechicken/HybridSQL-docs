@@ -83,6 +83,7 @@ sh bin/start.sh start tablet
 ### 部署apiserver
 
 APIServer负责接收http请求，转发给fedb并返回结果。它是无状态的，而且并不是fedb必须部署的组件。
+运行前需确保fedb cluster已经启动，否则APIServer将初始化失败并退出进程。
 
 #### 1 下载FEDB部署包
 
